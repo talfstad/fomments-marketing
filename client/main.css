@@ -1,1 +1,250 @@
-/* CSS declarations go here */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "pnum";
+  font-variant-numeric: proportional-nums;
+  font-family: Camphor,Open Sans,Segoe UI,sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+main header {
+  position: relative;
+}
+
+#global-nav {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  z-index: 500;
+  height: 50px;
+  width: 100%;
+}
+
+#stripes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: skewY(-10deg);
+  transform-origin: 0;
+  background: linear-gradient(150deg,#4264aa 15%,#4264aa 70%,#5f7ec1 100%);
+}
+
+#stripes :nth-child(1) {
+  top: 0;
+  position: absolute;
+  height: 190px;
+  width: 33.33333%;
+  left: -16.66666%;
+  background: #4264aa;
+}
+
+#stripes :nth-child(2) {
+  top: 0;
+  position: absolute;
+  height: 190px;
+  width: 33.33333%;
+  left: 16.66666%;
+  right: auto;
+  background: #5f7ec1;
+}
+
+#stripes :nth-child(3) {
+  width: 50.33333%;
+  left: 49.99999%;
+  bottom: auto;
+  background: #4c70ba;
+  right: auto;
+  height: 190px;
+  position: absolute;
+}
+
+#stripes :nth-child(4) {
+  width: 33.33333%;
+  top: 380px;
+  right: -16.66666%;
+  background: #5f7ec1;
+  position: absolute;
+  height: 190px;
+}
+
+#stripes :nth-child(5) {
+  width: 33.33333%;
+  bottom: 0;
+  background: #5f7ec1;
+  height: 190px;
+  position: absolute;
+}
+
+#intro {
+  position: relative;
+  height: 660px;
+  align-items: center;
+  display: flex;
+}
+
+#intro .announcement {
+  align-items: center;
+  line-height: 26px;
+  margin: 0 0 35px;
+  padding: 0 12px 0 5px;
+  border-radius: 15px;
+  width: auto;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  background: rgba(0,0,140,.08);
+}
+
+#intro .announcement .new-pill {
+  padding: 0 6px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  background: #24b47e;
+  text-transform: uppercase;
+  border-radius: 10px;
+}
+
+#intro .message {
+  margin: 0 7px 0 6px;
+}
+
+#intro h1 {
+  font-size: 40px;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  color: #fff;
+}
+
+.common-body-text {
+    margin-top: 20px;
+    color: #eafdff;
+}
+
+#intro .container-lg {
+  margin-top: -2%;
+  padding-left: 30px;
+}
+
+#intro p {
+  max-width: 50%;
+}
+
+.container-lg {
+  margin: 0 auto;
+  width: 1040px;
+}
+.nav-root li {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.nav-root {
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+.global-nav .root-link {
+
+}
+
+.nav-section.logo {
+  padding-left: 30px !important;
+}
+
+#feels-real {
+  padding: 0 20px;
+  position: relative;
+  bottom: 30px;
+  /*display: -ms-flexbox;*/
+  display: flex;
+  /*-ms-flex-direction: column;*/
+  flex-direction: column;
+  /*-ms-flex-pack: center;*/
+  justify-content: center;
+  height: 580px;
+}
+
+#feels-real h2 {
+  display: flex;
+  color: #24b47e;
+  font-size: 22px;
+  line-height: 33px;
+  align-items: center;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  width: 50%;
+  flex: none;
+  margin: -160px 0 0 33px;
+  text-align: right;
+}
+
+.heading-icon {
+  flex: none;
+  order: 1;
+  margin: 0 0 0 25px;
+  display: block;
+  width: 66px;
+  height: 66px;
+}
+
+#feels-real .common-body-text {
+  width: 50%;
+  text-align: right;
+  flex: none;
+  font-size: 17px;
+  color: #6b7c93;
+}
+
+.common-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+}
+
+.common-button {
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  padding: 0 14px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  background: #efefef;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  color: #6772e5;
+  text-decoration: none;
+  transition: all .15s ease;
+}
+
+.signup-button {
+  margin-right: 23px;
+  color: #fff;
+  background: #3ecf8e;
+  text-shadow: 0 1px 3px rgba(36,180,126,.4);
+  white-space: nowrap;
+}
+
+
+#intro ul {
+  margin-top: 100px;
+  display: flex;
+}

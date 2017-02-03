@@ -1,25 +1,91 @@
 <head>
-  <title>fomments-marketing</title>
+  <title>Fomments</title>
 </head>
 
 <body>
-  <h1>Welcome to Meteor!</h1>
+  <header id="global-nav">
+    <div class="container-lg">
+      <ul class="nav-root">
+        <li class="nav-section logo">
+          <a href="" class="root-link">
+            <h1>
+              <svg width="115" height="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 195.6 51.98"><defs><style>.cls-1{font-size:48px;fill:#e1e4ea;font-family:Klavika-Bold, Klavika;font-weight:700;letter-spacing:-0.04em;}.cls-2{letter-spacing:-0.04em;}</style></defs><title>Asset 2</title><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><text class="cls-1" transform="translate(0 39.98)">f<tspan class="cls-2" x="15.55" y="0">omments</tspan></text></g></g></svg>
+            </h1>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <main>
+    <header>
+      <div id="stripes">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
 
-  {{> hello}}
-  {{> info}}
+      <section id="intro">
+        <div class="container-lg">
+          <span href="" class="announcement">
+            <span class="new-pill">
+              Beta
+            </span>
+            <span class="message">
+              <strong>Introducing fomments:</strong> Facebook comments that look and feel real.
+            </span>
+          </span>
+          <h1>The new standard in landing page comments</h1>
+          <p class="common-body-text">
+            Adding fomments to your landing page is the easiest way to build product trust, and increase ROI in any vertical.
+          </p>
+          <ul>
+            <li>
+              <a href="" class="signup-button common-button">
+                Choose a comment section
+              </a>
+            </li>
+            <li>
+              <a href="" class="common-button">
+                apply for vip
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </header>
+    <section id="primary">
+      <section id="feels-real" class="container-lg">
+        <h2>
+          <svg class="heading-icon">
+            <circle fill="#B9F4BC" cx="33" cy="33" r="33"></circle>
+            <path d="M15.7 45.3c-.7-2-.7-3.3-.7-8v-8.7c0-4.6 0-6 .7-8 .8-2.2 2.7-4 5-5 2-.6 3.3-.6 8-.6h8.7c4.6 0 6 0 8 .7 2.2.8 4 2.7 5 5 .6 2 .6 3.3.6 8v8.7c0 4.6 0 6-.7 8-.8 2.2-2.7 4-5 5-2 .6-3.3.6-8 .6h-8.7c-4.6 0-6 0-8-.7-2.2-.8-4-2.7-5-5z" fill="#6ED69A"></path>
+            <g>
+              <rect fill="rgb(185,244,188)" x="23" y="27" width="20" height="2" rx="1"></rect>
+              <circle fill="#1BB978" cx="27.000030639632655" cy="28" r="4"></circle>
+            </g>
+            <g>
+              <rect fill="rgb(27,185,120)" x="23" y="37" width="20" height="2" rx="1"></rect>
+              <circle fill="#1BB978" cx="38.99996936036756" cy="38" r="4"></circle>
+            </g>
+          </svg>
+          <span>
+            Looks identical and works just like facebook comments
+          </span>
+        </h2>
+        <p class="common-body-text">
+          Using a fomment section in your landing page means giving each
+          customer the ability to comment, like, report, reply, delete, edit,
+          and view facebook profiles of users just like real facebook comments.
+          This is all without actually being connected to facebook, and without
+          letting customers see each other's comments. You choose and configure which initial
+          comments will load, and choose how many likes each comment starts with.
+          Fomments stores customer comments in the browser so even on refresh,
+          customers will see the saved state of their comments.
+        </p>
+      </section>
+    </section>
+  </main>
+
 </body>
-
-<template name="hello">
-  <button>Click Me</button>
-  <p>You've pressed the button {{counter}} times.</p>
-</template>
-
-<template name="info">
-  <h2>Learn Meteor!</h2>
-  <ul>
-    <li><a href="https://www.meteor.com/try" target="_blank">Do the Tutorial</a></li>
-    <li><a href="http://guide.meteor.com" target="_blank">Follow the Guide</a></li>
-    <li><a href="https://docs.meteor.com" target="_blank">Read the Docs</a></li>
-    <li><a href="https://forums.meteor.com" target="_blank">Discussions</a></li>
-  </ul>
-</template>
