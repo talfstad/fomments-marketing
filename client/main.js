@@ -2,9 +2,18 @@ Meteor.startup(() => {
 
   $(() => {
 
+  // feature animation
+  setTimeout(() => {
     $('.tablet-portrait > div > img').animate({
-      'top': '-340px'
-    }, 2000);
+      'top': '-400px'
+    }, 2500, () => {
+      setTimeout(() => {
+        $('.tablet-portrait > div > img').animate({
+          'top': '0px'
+        }, 3000);
+      }, 2000);
+    });
+  }, 500);
 
 
     var clock = $('.counter').FlipClock(5000, {

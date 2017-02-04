@@ -169,6 +169,17 @@ main header {
   padding-left: 30px !important;
 }
 
+#feels-real i {
+  font-size: 40px;
+  margin-left: 30px;
+}
+
+#choose-comment-section i {
+  display: block;
+  font-size: 44px;
+  margin-bottom: 15px;
+}
+
 #feels-real {
   padding: 0 20px;
   position: relative;
@@ -180,13 +191,14 @@ main header {
   /*-ms-flex-pack: center;*/
   justify-content: center;
   height: 200px;
-  margin-top: 150px;
+  margin-top: 80px;
   margin-bottom: 100px;
 }
 
 #choose-comment-section p {
   color: #6b7c93;
   line-height: 26px;
+  text-align: center;
   font-size: 17px;
   font-weight: 400;
   margin: 20px auto;
@@ -237,6 +249,7 @@ main header {
   width: 50%;
   text-align: right;
   flex: none;
+  line-height: 30px;
   font-size: 17px;
   color: #6b7c93;
 }
@@ -316,6 +329,7 @@ main header {
   width: 100%;
   padding: 0;
   align-items: center;
+  height: 540px;
   /*border-radius: 0;*/
   background: #fff;
   border-top: 1px solid #dedede;
@@ -330,8 +344,9 @@ main header {
   margin-top: 50px;
 }
 
-.tablet-portrait img {
+.tablet-portrait > div > img {
   margin-top: 0;
+  top: 100px;
   overflow: hidden;
   position: relative;
 }
@@ -448,16 +463,12 @@ main header {
   line-height: 110px;
 }
 
-#github-section h2 {
-  color: #24b47e;
-  font-size: 22px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .025em;
-  flex: none;
-  padding-top: 100px;
-  margin: 0px 0 0 0px;
-  text-align: center;
+#github-section a {
+  width: 100px;
+  padding-top: 80px;
+  display: block;
+  margin: 0 auto;
+  font-size: 0px;
 }
 
 #github-section .wrap-text-left {
@@ -477,8 +488,8 @@ main header {
   text-align: center;
 }
 
-#github-section > h2 > a img {
+#github-section > a img {
   width: 100px;
-  display: flex;
-  margin: 0 auto;
+  /*display: flex;*/
+  /*margin: 0 auto;*/
 }
