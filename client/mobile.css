@@ -1,0 +1,24 @@
+@media (max-width: 1000px) {
+  .nav-section.logo h1 {
+    margin: 10px;
+  }
+  #global-nav {
+    position: relative;
+    background: #4264aa;
+    top: inherit;
+  }
+  #feels-real {
+    margin-bottom: 0;
+  }
+  #feels-real .common-body-text {
+    /*width: */
+  }
+  .app-features div {
+    margin: 0 auto;
+  }
+  .app-features {
+    position: relative;
+    top: inherit;
+    left: inherit;
+  }
+}
