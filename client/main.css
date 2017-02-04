@@ -368,12 +368,13 @@ main header {
 
 #join-vip-secondary {
   overflow: hidden;
+  min-height: 500px;
   background: #fff;
   border-top: 2px solid #ddd;
-  border-bottom: 2px solid #ddd;
 }
 
 #join-vip-secondary a {
+  border-bottom: 2px solid #ddd;
   padding: 70px 20px 65px 20px;
   display: block;
   margin: 0 auto;
@@ -421,4 +422,14 @@ main header {
 #join-vip-secondary a:hover .common-button {
   opacity: 1;
   transform: translate(-50%,-7px);
+}
+.nav-section.github-seal img {
+  width: 80px;
+  display: flex;
+}
+.nav-section.github-seal {
+  left: inherit;
+  top: 30px;
+  right: 50px;
+  opacity: .5;
 }
