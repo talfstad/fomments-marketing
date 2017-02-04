@@ -368,7 +368,6 @@ main header {
 
 #join-vip-secondary {
   overflow: hidden;
-  min-height: 500px;
   background: #fff;
   border-top: 2px solid #ddd;
 }
@@ -432,4 +431,54 @@ main header {
   top: 30px;
   right: 50px;
   opacity: .5;
+}
+
+#github-section {
+  background: #fff;
+  min-height: 500px;
+}
+
+#github-section span,
+#github-section .flip-clock-wrapper:before, #github-section .flip-clock-wrapper:after {
+  display: inline-table;
+}
+
+#github-section .flip-clock-wrapper {
+  width: inherit;
+  line-height: 110px;
+}
+
+#github-section h2 {
+  color: #24b47e;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  flex: none;
+  padding-top: 100px;
+  margin: 0px 0 0 0px;
+  text-align: center;
+}
+
+#github-section .wrap-text-left {
+  margin-top: 40px;
+  right: 20px;
+  position: absolute;
+}
+
+#github-section .wrap-text-right {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+#github-section .github-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#github-section > h2 > a img {
+  width: 100px;
+  display: flex;
+  margin: 0 auto;
 }
