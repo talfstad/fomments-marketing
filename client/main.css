@@ -3,6 +3,7 @@
 }
 
 body {
+  overflow-x: hidden;
   margin: 0;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -69,6 +70,14 @@ main header {
   right: auto;
   height: 190px;
   position: absolute;
+}
+
+.github-links :nth-child(1) {
+  margin-right: 20px;
+}
+
+.github-links :nth-child(3) {
+  margin-left: 20px;
 }
 
 #stripes :nth-child(4) {
@@ -139,7 +148,7 @@ main header {
 
 #intro .container-lg {
   margin-top: -2%;
-  padding-left: 30px;
+  /*padding-left: 30px;*/
 }
 
 #intro p {
@@ -148,7 +157,7 @@ main header {
 
 .container-lg {
   margin: 0 auto;
-  width: 1040px;
+  max-width: 1040px;
 }
 .nav-root li {
   position: absolute;
@@ -304,7 +313,7 @@ main header {
 #choose-comment-section {
   position: relative;
   height: 500px;
-  padding-top: 80px;
+  padding-top: 40px;
 }
 
 .app-features {
@@ -351,9 +360,33 @@ main header {
   position: relative;
 }
 
+.fw500 {
+  font-weight: bold !important;
+  font-size: 12px !important;
+}
+
 
 /* MOBILE */
+@media (max-width: 530px) {
+
+
+}
 @media (max-width: 1000px) {
+  #intro .container-lg {
+    position: inherit;
+    padding-left: 30px;
+  }
+  #intro .container-lg.feature {
+    right: 0;
+    position: inherit;
+  }
+  #feels-real.container-lg h2,
+  #feels-real.container-lg p  {
+    width: 100%;
+  }
+  #feels-real {
+    margin-right: 30px;
+  }
   .nav-section.logo h1 {
     margin: 10px;
   }
@@ -379,7 +412,10 @@ main header {
 }
 
 /**/
-
+.container-lg.feature {
+  position: relative;
+  right: 35px;
+}
 
 #join-vip-secondary {
   overflow: hidden;
@@ -441,11 +477,14 @@ main header {
   width: 80px;
   display: flex;
 }
+.nav-section.github-seal:hover {
+  opacity: 0.6;
+}
 .nav-section.github-seal {
   left: inherit;
   top: 30px;
   right: 50px;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 #github-section {
