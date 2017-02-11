@@ -14,11 +14,5 @@ Meteor.startup(() => {
       }, 2000);
     });
   }, 500);
-
-
-    var clock = $('.counter').FlipClock(5000, {
-  		clockFace: 'Counter'
-  	});
-
   });
 });

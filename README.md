@@ -1,5 +1,44 @@
+- modal needs to show only within the white part
 
-. load fomments into the div by putting an iframe in there and hosting a html file with
+- reset button for comments on marketing
+  . clears key and reloads the comments
+
+- random button loads random section from vertical
+
+- select box but has arrows on each side to quickly
+go through each item
+
+- background too large for comment area when expanded
+  . make main bg color grey, make a white section for the
+  current white section. aka give growing area the grey
+
+- relative time in fomments... set time relative to now
+
+- choose comment section button scrolls down to comment section
+
+
+
+
+
+
+download area
+
+
+
+- for non english show 'translated to <language>' message
+
+
+
+on load read the data-id to get the comments and load those comments up
+
+script waits until loaded then inits all fomments divs based on their data-id
+
+
+
+
+init on load, fomments script + div in the view on carosal change remove that view to kill it, init new view
+- make sure when killing fomments view unregister event from html
+
 
 . many different states, same code. store these states in github and serve through rawgit
 
