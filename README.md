@@ -1,3 +1,56 @@
+++ product stuff: 
+
+- check user id, check section id, load that state ajax or load a default state
+  if id for section not found
+
+  . JSON endpoint served by meteor for this
+  . product name in config fomments.com
+
+- dates are relative from now (2 days ago, etc.)
+- translated to text if not english (original english to -> language)
+- choose comment section button scrolls down to comment sections
+- bg for comment section is good
+- gui to switch comments (inputs etc)
+
+
+- react/redux fomments.com app
+- switch to diff comment sections
+
++++ login to fomments
+
+++ login stuff shows only some things
+- generic if not purchased vs purchased download instructions
+
+
++++ payment stuff
+
+- stripe hookup
+- login
+
+- login/password reset using meteor
+- buy comment sections
+- auto create account when you buy something from fomments.com
+
+
+++++ serve fomments json endpoints from a json
+endpoint checking user id accessing using mongoose/mongodb
+
+
+all app stuff
+login
+buy stuff generic marketing
+
+
+next week:
+- finalize marketing integrate real stuff
+
+
+
+
+
+
+
+
 - modal needs to show only within the white part
 
 - reset button for comments on marketing
@@ -85,3 +138,83 @@ loader:
 - reset button and download button drop down
 
 - meteor app finish, apply for free VIP design
+
+
+
+
+
+
+classification problems:
+
+identifying something is useful
+
+computers can identify like a million things super fast
+
+
+
+- any problem where identifying things fast is profitable
+
+landing page scoring
+angle strength prediction, if an angle is good or not
+
+
+
+classify offer, search offer networks to get approved for it, start running it immediately and message the updates
+
+- chat bot to get approved for the offer, auto input the offer into CJ
+
+- scrape all offers from offer networks on a search, reach out to am via skype chat bot to get approved, insert offer into cj auto, set rate auto
+
+- look at tracking data, determine when to jack and not to based on conversion rate. classify when to jack/not jack to maximize profit
+  . automate day parting, ghost click increase, etc
+
+- automatically optimize rate, %, etc. based on traffic for profitability
+  . determine how 'good' the traffic is based on traffic source and lander quality
+  . if bad traffic don't even jack them if effort to high. calculate a value
+
+-
+
+
+
+
+
+
+=========
+
+
+000
+
+fomments
+  . show more on less chars for reply
+
+finish templating
+  . left nav tabs (demographics)
+  . top right nav (language, vertical, download)
+  . sign up for pro design/modal, language packs purchase flow design
+
+
+
+- create content for fomments
+  . each demographic
+    . 25-35, 35-45, 45-55, 55+
+    . m/f
+
+    skin doesn't have male
+    muscle doesn't have female
+    diet is female
+
+
+  . 100 comments sections with 15-20 comments per section by friday
+
+  . adjust likes, date, edited or not, user, spam
+
+  get lifen: list of accounts, landers csv, link to example comments
+
+
+meteorize fomments
+
+
+
+
+CJ server from scratch
+  . this includes all grey hat
