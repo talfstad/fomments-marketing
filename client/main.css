@@ -3,6 +3,7 @@
 }
 
 body {
+  background-color: #f6f9fc;
   font-size: inherit;
   overflow-x: hidden;
   margin: 0;
@@ -22,6 +23,22 @@ ul {
 
 main header {
   position: relative;
+}
+
+#primary {
+  position: relative;
+  /*background-color: #fff;*/
+}
+
+#primary .white-tilted-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transform: skewY(-10deg);
+  transform-origin: 0;
+  background-color: #fff;
+
 }
 
 #global-nav {
@@ -154,7 +171,7 @@ main header {
 
 #intro p {
   max-width: 50%;
-  line-height: 25px;
+  line-height: 30px;
 }
 
 .container-lg {
@@ -198,18 +215,13 @@ main header {
 }
 
 #feels-real {
-  padding: 0 20px;
+  padding: 200px 20px 300px;
   position: relative;
-  /*bottom: 30px;*/
-  /*display: -ms-flexbox;*/
+  bottom: 30px;
   display: flex;
-  /*-ms-flex-direction: column;*/
   flex-direction: column;
-  /*-ms-flex-pack: center;*/
   justify-content: center;
-  height: 200px;
-  margin-top: 80px;
-  margin-bottom: 100px;
+  height: 400px;
 }
 
 #choose-comment-section p {
@@ -306,27 +318,23 @@ main header {
   display: flex;
 }
 
-#choose-comment-section:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 100%;
-    height: 180%;
-    top: 0;
-    transform: skewY(-10deg);
-    background: #f6f9fc;
+.stacked-container {
+  position: relative;
+  z-index: 1;
 }
 
 #choose-comment-section {
   position: relative;
-  padding-top: 40px;
+  z-index: 1;
+  bottom: 40px;
 }
 
 .app-features {
+  z-index: 1;
   position: absolute;
   left: 55%;
   display: flex;
-  top: 280px;
+  top: 310px;
   pointer-events: none;
   position: absolute;
 }
@@ -537,7 +545,7 @@ main header {
   /*margin: 0 auto;*/
 }
 
-#choose-comment-section form {
+#choose-comment-section form .choose-right-menu{
   float: right;
 }
 
@@ -546,6 +554,7 @@ main header {
   position: relative;
   border: 1px solid #cfd3d6;
   border-radius: 5px;
+  background-color: #fff;
   color: #000;
   padding: 9px;
   box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
@@ -575,21 +584,54 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
   float: left;
   position: relative;
   line-height: 20px;
-  background: #fff;
   border-radius: 5px;
 }
-
-#choose-comment-section form p:first-child {
-  margin-right: 15px;
+#choose-comment-section form .choose-menu p:first-child {
+  margin-left: 50px;
+  margin-right: 50px;
+}
+#choose-comment-section form .choose-menu p {
+  margin-left: 25px;
+}
+#choose-comment-section form p > label {
+  position: absolute;
+  color: #6f7c82;
+  padding: 7px 9px;
+  height: 34px;
+  display: block;
+  box-sizing: border-box;
+  pointer-events: none;
+  line-height: 1.5em;
+  z-index: 1;
+}
+#choose-comment-section form input {
+  position: relative;
+  width: 100%;
+  border: 1px solid #cfd3d6;
+  /*background: none;*/
+  border-radius: 5px;
+  box-sizing: border-box;
+  -webkit-transition: border-color .3s ease;
+  transition: border-color .3s ease;
+  color: #000;
+  font-size: 1em;
+  line-height: 1.5em;
+  padding: 8px;
+  height: 40px;
 }
 
-#choose-comment-section form p:last-child {
+#choose-comment-section form .choose-right-menu p:first-child {
+  margin-right: 30px;
+}
+
+#choose-comment-section form .choose-right-menu p:last-child {
   margin-right: 30px;
 }
 
 #choose-comment-section form .caption {
   background: transparent;
 }
+
 #choose-comment-section form .shim-select select {
   position: absolute;
   top: 0;
@@ -645,4 +687,17 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
     height: 17px;
     background-image: url(/images/flags-sprite.png);
     background-size: 207px 204px;
+}
+
+.comment-section-arrow {
+  color: #6772e5;
+  font-size: 30px;
+  position: absolute;
+  top: 5px;
+}
+.comment-section-arrow.right {
+  right: -45px;
+}
+.comment-section-arrow.left {
+  left: -45px;
 }

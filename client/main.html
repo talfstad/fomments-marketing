@@ -39,7 +39,7 @@
               <i class="fw500 fa fa-heart-o"></i>
             </span>
             <span class="message">
-              <strong>Open Source:</strong> We're proudly published on github.com
+              We're proudly hosted on github.com
             </span>
           </span>
           <h1>The new standard in landing page comments</h1>
@@ -52,12 +52,25 @@
                 Choose a comment section
               </a>
             </li>
-
+            <li>
+              <a href="" class="common-button">
+                create your own
+              </a>
+            </li>
           </ul>
         </div>
       </section>
     </header>
+    <section class="app-features">
+      <div class="tablet-portrait">
+        <div>
+          <img alt="" src="/images/comments.png">
+        </div>
+      </div>
+    </section>
     <section id="primary">
+      <div class="white-tilted-bg">
+      </div>
       <section id="feels-real" class="container-lg">
         <h2>
           <span>
@@ -73,38 +86,59 @@ will work even when a user refreshes the page.
 
           </p>
       </section>
-      <section class="app-features">
-        <div class="tablet-portrait">
-          <div>
-            <img alt="" src="/images/comments.png">
-          </div>
-        </div>
-      </section>
-      <section id="choose-comment-section">
-        <section  class="container-lg">
-          <h2>
-            <i class="fa fa-commenting-o section-icon"></i>
-            Choose a comment section
-          </h2>
-          <p class="common-body-text">
-            Pick a comment section by product, target market, and go!
-          </p>
-          <section id="comment-choice-container">
-              <header class="comment-choice-header">
-                <div class="age-demo-select-container">
-                  <a href="" class="common-button choose-radio">
-                    25-35
-                  </a>
-                  <a href="" class="common-button choose-radio">
-                    35-45
-                  </a>
-                  <a href="" class="common-button choose-radio">
-                    45-55
-                  </a>
-                  <a href="" class="common-button choose-radio">
-                    55-65+
-                  </a>
-                <form>
+
+    </section>
+    <section id="choose-comment-section">
+      <section  class="stacked-container container-lg">
+        <h2>
+          <i class="fa fa-commenting-o section-icon"></i>
+          Choose a comment section
+        </h2>
+        <p class="common-body-text">
+          Pick a comment section by product, target market, and go!
+        </p>
+        <section id="comment-choice-container">
+          <header class="comment-choice-header">
+            <div class="age-demo-select-container">
+              <!-- <a href="" class="common-button choose-radio">
+                25-35
+              </a>
+              <a href="" class="common-button choose-radio">
+                35-45
+              </a>
+              <a href="" class="common-button choose-radio">
+                45-55
+              </a>
+              <a href="" class="common-button choose-radio">
+                55-65+
+              </a> -->
+              <form>
+                <div class="choose-menu">
+                  <p>
+                    <a class="comment-section-arrow left" href="#">
+                      <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="comment-section-arrow right" href="#">
+                      <i class="fa fa-arrow-right"></i>
+                    </a>
+                    <span class="shim-select">
+                      <label for="vertical-select-label">
+                        <span>
+                          Section 1
+                        </span>
+                      </label>
+                      <select name="vertical-select" id="vertical-select">
+                        <option value="">Section 1</option>
+                        <option value="">Section 2</option>
+                        <option value="">Section 3</option>
+                        <option value="">Section 4</option>
+                      </select>
+                    </span>
+                  </p>
+                  <p>
+                    <label>Product name</label>
+                    <input type="text" id="fullname" name="fullname" required="">
+                  </p>
                   <p>
                     <span class="shim-select">
                       <label for="vertical-select-label">
@@ -131,9 +165,7 @@ will work even when a user refreshes the page.
                         </span>
                       </label>
                       <select name="country" id="country">
-                        <option value="">English (UK)</option>
-                        <option value="">English (AU)</option>
-                        <option value="">English (USA)</option>
+                        <option value="">English</option>
                         <option value="">French</option>
                         <option value="">German</option>
                         <option value="">Mandarin</option>
@@ -142,48 +174,48 @@ will work even when a user refreshes the page.
                       </select>
                     </span>
                   </p>
-                </form>
-              </div>
+                </div>
+              </form>
+            </div>
 
-              </header>
-              <section class="comments">
-                <div section-id="1" id="fomments"></div>
-              </section>
+          </header>
+          <section class="comments">
+            <div section-id="1" id="fomments"></div>
           </section>
-
         </section>
-      </section>
-      <section id="join-vip-secondary">
-        <a href="#" class="">
-          <span class="common-button">
-            sign up for pro
-          </span>
-          <p>
-            Ready for the next level? Get access to more comments and languages.
-          </p>
-        </a>
-      </section>
-      <section id="github-section">
-          <a target="_blank" href="https://github.com">
-            <img src="/images/GitHub-Mark-120px-plus.png" />
-            <img src="/images/GitHub_Logo.png" />
-          </a>
-
-          <!-- <span class="wrap-text-left">More than </span> <span class="counter"></span> <span class="wrap-text-right"> Happy Users</span> -->
-
-        <div class="github-links">
-
-          <!-- Place this tag where you want the button to render. -->
-          <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star" data-style="mega" data-count-href="/ntkme/github-buttons/stargazers" data-count-api="/repos/ntkme/github-buttons#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
-
-          <!-- Place this tag where you want the button to render. -->
-          <a class="github-button" href="https://github.com/buildcave" data-style="mega" data-count-href="/buildcave/followers" data-count-api="/users/buildcave#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @buildcave on GitHub">Follow @buildcave</a>
-
-          <!-- Place this tag where you want the button to render. -->
-          <a class="github-button" href="https://github.com/ntkme/github-buttons/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/ntkme/github-buttons/network" data-count-api="/repos/ntkme/github-buttons#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork ntkme/github-buttons on GitHub">Fork</a>
-        </div>
 
       </section>
+    </section>
+    <section id="join-vip-secondary" class="stacked-container">
+      <a href="#" class="">
+        <span class="common-button">
+          sign up for pro
+        </span>
+        <p>
+          Ready for the next level? Get access to more comments and languages.
+        </p>
+      </a>
+    </section>
+    <section id="github-section" class="stacked-container">
+      <a target="_blank" href="https://github.com">
+        <img src="/images/GitHub-Mark-120px-plus.png" />
+        <img src="/images/GitHub_Logo.png" />
+      </a>
+
+      <!-- <span class="wrap-text-left">More than </span> <span class="counter"></span> <span class="wrap-text-right"> Happy Users</span> -->
+
+      <div class="github-links">
+
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" href="https://github.com/ntkme/github-buttons" data-icon="octicon-star" data-style="mega" data-count-href="/ntkme/github-buttons/stargazers" data-count-api="/repos/ntkme/github-buttons#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ntkme/github-buttons on GitHub">Star</a>
+
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" href="https://github.com/buildcave" data-style="mega" data-count-href="/buildcave/followers" data-count-api="/users/buildcave#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @buildcave on GitHub">Follow @buildcave</a>
+
+        <!-- Place this tag where you want the button to render. -->
+        <a class="github-button" href="https://github.com/ntkme/github-buttons/fork" data-icon="octicon-repo-forked" data-style="mega" data-count-href="/ntkme/github-buttons/network" data-count-api="/repos/ntkme/github-buttons#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork ntkme/github-buttons on GitHub">Fork</a>
+      </div>
+
     </section>
   </main>
   <!-- Place this tag in your head or just before your close body tag. -->

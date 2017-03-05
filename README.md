@@ -1,4 +1,4 @@
-++ product stuff: 
+++ product stuff:
 
 - check user id, check section id, load that state ajax or load a default state
   if id for section not found
@@ -8,9 +8,19 @@
 
 - dates are relative from now (2 days ago, etc.)
 - translated to text if not english (original english to -> language)
-- choose comment section button scrolls down to comment sections
-- bg for comment section is good
+
+
+----
+DONE - bg for comment section is good
 - gui to switch comments (inputs etc)
+
+----
+login stuff!
+
+---
+- download area under comment section
+- choose comment section button scrolls down to comment sections
+
 
 
 - react/redux fomments.com app
