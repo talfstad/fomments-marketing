@@ -38,7 +38,7 @@ JsonRoutes.add('get', '/sections/:sectionId', (req, res) => {
     list: {
       skin3enspo007a: {
         id: 'skin3enspo007a',
-        content: "I've looked high and low for a facial product my sensitive skin could tolerate, and [[[XXXX]]] us it! I live in a very dry climate and this night cream provides excellent moisturizing while working on improving skin tone and fighting fine lines. This product is now part of my daily regimen.",
+        content: "I've looked high and low for a facial product my sensitive skin could tolerate, and PRODUCT_NAME us it! I live in a very dry climate and this night cream provides excellent moisturizing while working on improving skin tone and fighting fine lines. This product is now part of my daily regimen.",
         user: {
           id: 8987,
           name: 'Amy Rundt',
@@ -82,7 +82,7 @@ JsonRoutes.add('get', '/sections/:sectionId', (req, res) => {
       },
       skin3enspo008a: {
         id: 'skin3enspo008a',
-        content: "I asked for [[[XXXX]]] as a gift, as it was not something I would have considered purchasing on my own due to price. After using this product only one time, I saw a noticeable difference in my skin. My skin felt hydrated, nourished and seemed to have a new radiance. I'm in my mid-thirties and have a few fine lines around my mouth and on my forehead due to dry skin. The appearance of these lines seemed to improve overnight with one use. I absolutely hate most moisturizers because they never seem to soak into my skin. As stated in previous reviews, this product soaks into the skin almost immediately. This is the reason I wanted to give it a try. I will be purchasing this product once I'm out and have no problem paying $$$ for it. Well worth the price!",
+        content: "I asked for PRODUCT_NAME as a gift, as it was not something I would have considered purchasing on my own due to price. After using this product only one time, I saw a noticeable difference in my skin. My skin felt hydrated, nourished and seemed to have a new radiance. I'm in my mid-thirties and have a few fine lines around my mouth and on my forehead due to dry skin. The appearance of these lines seemed to improve overnight with one use. I absolutely hate most moisturizers because they never seem to soak into my skin. As stated in previous reviews, this product soaks into the skin almost immediately. This is the reason I wanted to give it a try. I will be purchasing this product once I'm out and have no problem paying $$$ for it. Well worth the price!",
         user: {
           id: 8987,
           name: 'Sheila Halloway',
@@ -126,7 +126,7 @@ JsonRoutes.add('get', '/sections/:sectionId', (req, res) => {
       },
       skin3enspo001a: {
         id: 'skin3enspo001a',
-        content: "As I get older, I am dealing with adult acne, signs of aging, and general combination skin issues (real oily over here, flaky over there...you know the drill). So, I decided I'd go hunting for some proven skin care products that could clear up my acne and help with signs of aging (NOTE..for night use only...you need a sunblock during the day when you get sun exposure). After a lot of research, I decided to try this product line. Their products seem to use some pretty rad new technology that enhances the level or effectiveness of their key active ingredient, OTC products (obviously, nothing is going to be as good as Rx...). After a month of pretty much nightly use, I would say I am definitely a fan of this line. I am using the [[[XXXX]]] followed by the night cream version. Like any new skin product, you do need time to adjust. You WILL experience dryness of the skin at first. I recommend (as do most dermatologists) trying this every other night or every two nights for a week or two and then switching to every night once you have developed a tolerance for the active ingredient. If you stop using it (like I did for several days while traveling), you may experience a few dry patches when you start back up again. However, the overall results have been great. The lines on my forehead are minimized, the terrible clogged pore bumps that I developed after an allergic reaction to a soap have finally cleared up, and I would say my acne is reduced (fingers crossed...). I am finding myself wearing WAY less makeup and getting compliments on my skin from total strangers, which is awesome and has never happened before in my whole life. Also, these products smell AH-MAZ-ING. Seriously, I LOVE putting them on at night because the scent is so incredible and totally unlike anything I've ever smelled in a beauty product before. Maybe it's fig and vetiver? I have no idea, but I love it. Overall, I think these products are worth the money, and a little seems to go a long way. ",
+        content: "As I get older, I am dealing with adult acne, signs of aging, and general combination skin issues (real oily over here, flaky over there...you know the drill). So, I decided I'd go hunting for some proven skin care products that could clear up my acne and help with signs of aging (NOTE..for night use only...you need a sunblock during the day when you get sun exposure). After a lot of research, I decided to try this product line. Their products seem to use some pretty rad new technology that enhances the level or effectiveness of their key active ingredient, OTC products (obviously, nothing is going to be as good as Rx...). After a month of pretty much nightly use, I would say I am definitely a fan of this line. I am using the PRODUCT_NAME followed by the night cream version. Like any new skin product, you do need time to adjust. You WILL experience dryness of the skin at first. I recommend (as do most dermatologists) trying this every other night or every two nights for a week or two and then switching to every night once you have developed a tolerance for the active ingredient. If you stop using it (like I did for several days while traveling), you may experience a few dry patches when you start back up again. However, the overall results have been great. The lines on my forehead are minimized, the terrible clogged pore bumps that I developed after an allergic reaction to a soap have finally cleared up, and I would say my acne is reduced (fingers crossed...). I am finding myself wearing WAY less makeup and getting compliments on my skin from total strangers, which is awesome and has never happened before in my whole life. Also, these products smell AH-MAZ-ING. Seriously, I LOVE putting them on at night because the scent is so incredible and totally unlike anything I've ever smelled in a beauty product before. Maybe it's fig and vetiver? I have no idea, but I love it. Overall, I think these products are worth the money, and a little seems to go a long way. ",
         user: {
           id: 8987,
           name: 'Olivia Welder',
@@ -214,7 +214,7 @@ JsonRoutes.add('get', '/sections/:sectionId', (req, res) => {
       },
       skin3enspo003b: {
         id: 'skin3enspo003b',
-        content: "I just recently started noticing deep wrinkles forming on my forehead. So far (39 years), I've done good as far as wrinkles go, but I do have sensitive skin. Don't want to look like a \"old lady\" anytime soon, so I needed to \"amp\" up my night cream, in comes this dream cream. In the few weeks that I have begun using [[[XXXX]]], the deep wrinkles that were starting to form, seem less apparent. I know that I may not be able to look young forever, but I'm gonna try!!!!!!!",
+        content: "I just recently started noticing deep wrinkles forming on my forehead. So far (39 years), I've done good as far as wrinkles go, but I do have sensitive skin. Don't want to look like a \"old lady\" anytime soon, so I needed to \"amp\" up my night cream, in comes this dream cream. In the few weeks that I have begun using PRODUCT_NAME, the deep wrinkles that were starting to form, seem less apparent. I know that I may not be able to look young forever, but I'm gonna try!!!!!!!",
         user: {
           id: 8987,
           name: 'Paige Payne',
@@ -258,7 +258,7 @@ JsonRoutes.add('get', '/sections/:sectionId', (req, res) => {
       },
       skin3ensqu002a: {
         id: 'skin3ensqu002a',
-        content: 'Is [[[XXXX]]] greasy at all? I have really sensitive skin... will I break out?',
+        content: 'Is PRODUCT_NAME greasy at all? I have really sensitive skin... will I break out?',
         user: {
           id: 8987,
           name: 'Dianne Sims',
