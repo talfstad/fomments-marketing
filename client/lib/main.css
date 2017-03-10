@@ -1,10 +1,17 @@
 * {
   box-sizing: border-box;
 }
+label {
+  font-weight: 500;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
 
 body {
   background-color: #f6f9fc;
-  font-size: inherit;
+  font-size: 16px;
   overflow-x: hidden;
   margin: 0;
   font-style: normal;
@@ -37,7 +44,6 @@ main header {
   transform: skewY(-10deg);
   transform-origin: 0;
   background-color: #fff;
-
 }
 
 #global-nav {
@@ -47,6 +53,7 @@ main header {
   z-index: 500;
   height: 50px;
   width: 100%;
+  padding: 0 35px;
 }
 
 #stripes {
@@ -153,9 +160,6 @@ main header {
 #intro .message a {
   color: #fff;
   font-weight: 600;
-}
-
-#intro .message strong {
   text-decoration: underline;
 }
 
@@ -191,17 +195,47 @@ main header {
 }
 .nav-section.signin {
   float: right;
-  margin-top: 15px;
-}
-
-.global-nav .root-link {
-
+  margin-top: 20px;
 }
 
 .nav-section.logo h1 {
   margin-top: 10px;
 }
 
+.installation-instructions {
+  padding: 0 30px;
+}
+
+.installation-instructions nav > .pill {
+  padding-left: 30px;
+}
+
+.installation-instructions > nav > ul > li .fa {
+  /*margin-right: 5px;*/
+}
+
+.installation-instructions nav {
+  width: 210px;
+  position: absolute;
+  right: 30px;
+}
+
+.installation-instructions > nav > ul > li.active a, .installation-instructions > nav > ul > li.active a:hover, .installation-instructions > nav > ul > li.active a:focus {
+  color: #24b47e;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(50,50,93,.1);
+  background-color: #fff;
+}
+
+.installation-instructions > nav > ul > li a, .installation-instructions > nav > ul > li a:hover, .installation-instructions > nav > ul > li a:focus {
+  font-size: 17px;
+  background-color: transparent;
+  line-height: 30px;
+  font-family: Camphor,Open Sans,Segoe UI,sans-serif;
+  padding: 3px 2px 3px 10px;
+  border-radius: 2px;
+  height: 34px;
+}
 
 #feels-real i {
   font-size: 40px;
@@ -279,7 +313,7 @@ main header {
 }
 
 #feels-real .common-body-text {
-  width: 50%;
+  width: 475px;
   text-align: right;
   flex: none;
   line-height: 30px;
@@ -289,6 +323,7 @@ main header {
 
 .common-button:hover {
   transform: translateY(-1px);
+  color: #6772e5;
   box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 }
 
@@ -307,6 +342,10 @@ main header {
   color: #6772e5;
   text-decoration: none;
   transition: all .15s ease;
+}
+
+.signup-button:hover {
+  color: #fff;
 }
 
 .signup-button {
@@ -406,11 +445,13 @@ main header {
   .nav-section.logo h1 {
     margin: 10px;
   }
-  #global-nav {
+  /*#global-nav {
     position: relative;
     background: #4264aa;
     top: inherit;
-  }
+    padding: 0 35px;
+  }*/
+
   #feels-real {
     margin-bottom: 0;
   }
@@ -722,4 +763,8 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
   color: #fff;
   text-decoration: none;
   transition: all .15s ease;
+}
+
+#editor {
+  margin-right: 245px;
 }

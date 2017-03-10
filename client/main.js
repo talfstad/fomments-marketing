@@ -14,16 +14,16 @@ Meteor.startup(() => {
   ReactDOM.render(routes, document.getElementById('fomments-main'));
 
   $(() => {
-    // feature animation
+    const $el = $('.tablet-portrait > div');
     setTimeout(() => {
-      $('.tablet-portrait > div > img').animate({
-        top: '-400px',
+      $el.animate({
+        scrollTop: 450,
       }, 2500, () => {
         setTimeout(() => {
-          $('.tablet-portrait > div > img').animate({
-            top: '0px',
+          $el.animate({
+            scrollTop: 50,
           }, 3000);
-        }, 2000);
+        }, 3000);
       });
     }, 500);
   });
