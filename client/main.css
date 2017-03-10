@@ -27,7 +27,6 @@ main header {
 
 #primary {
   position: relative;
-  /*background-color: #fff;*/
 }
 
 #primary .white-tilted-bg {
@@ -45,7 +44,6 @@ main header {
   position: absolute;
   top: 0;
   left: 0;
-  padding-left: 35px;
   z-index: 500;
   height: 50px;
   width: 100%;
@@ -127,8 +125,8 @@ main header {
   align-items: center;
   line-height: 26px;
   margin: 0 0 35px;
-  padding: 0 12px 0 5px;
-  border-radius: 15px;
+  padding-right: 15px;
+  border-radius: 50px;
   width: auto;
   display: inline-flex;
   font-size: 14px;
@@ -139,17 +137,26 @@ main header {
 }
 
 #intro .announcement .new-pill {
-  padding: 0 6px;
+  padding: 0 0px;
   font-size: 12px;
   line-height: 16px;
   font-weight: 600;
-  background: #24b47e;
+  /*background: #24b47e;*/
   text-transform: uppercase;
-  border-radius: 10px;
+  border-radius: 30px;
 }
 
 #intro .message {
   margin: 0 7px 0 6px;
+}
+
+#intro .message a {
+  color: #fff;
+  font-weight: 600;
+}
+
+#intro .message strong {
+  text-decoration: underline;
 }
 
 #intro h1 {
@@ -166,7 +173,7 @@ main header {
 }
 
 #intro .container-lg {
-  padding-top: 140px;
+  padding-top: 115px;
 }
 
 #intro p {
@@ -176,17 +183,15 @@ main header {
 
 .container-lg {
   margin: 0 auto;
+  position: relative;
   max-width: 1040px;
 }
 .nav-root li {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: inline-flex;
 }
-.nav-root {
-  position: relative;
-  padding: 0;
-  margin: 0;
+.nav-section.signin {
+  float: right;
+  margin-top: 15px;
 }
 
 .global-nav .root-link {
@@ -194,7 +199,7 @@ main header {
 }
 
 .nav-section.logo h1 {
-  margin-top: 50px;
+  margin-top: 10px;
 }
 
 
@@ -319,24 +324,23 @@ main header {
 }
 
 .stacked-container {
-  position: relative;
-  z-index: 1;
+  /*position: relative;
+  z-index: 1;*/
 }
 
 #choose-comment-section {
   position: relative;
   z-index: 1;
-  bottom: 40px;
+  bottom: 80px;
 }
 
 .app-features {
   z-index: 1;
   position: absolute;
-  left: 55%;
+  right: 0px;
+  bottom: -260px;
   display: flex;
-  top: 310px;
   pointer-events: none;
-  position: absolute;
 }
 .app-features > div {
   align-items: center;
@@ -364,7 +368,6 @@ main header {
   width: 400px;
   height: 625px;
   overflow: hidden;
-  margin-top: 50px;
 }
 
 .tablet-portrait > div > img {
@@ -485,17 +488,16 @@ main header {
   opacity: 1;
   transform: translate(-50%,-7px);
 }
+
 .nav-section.github-seal img {
-  width: 80px;
+  filter: invert(100%);
+  width: 40px;
   display: flex;
 }
 .nav-section.github-seal:hover {
   opacity: 0.6;
 }
 .nav-section.github-seal {
-  left: inherit;
-  top: 30px;
-  right: 50px;
   opacity: 0.5;
 }
 
@@ -700,4 +702,24 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 }
 .comment-section-arrow.left {
   left: -45px;
+}
+
+.login-link-text {
+  position: relative;
+  /*bottom: 5px;*/
+  cursor: pointer;
+  /*display: inline-block;*/
+  /*height: 40px;*/
+  /*line-height: 40px;*/
+  /*padding: 0 14px;*/
+  /*box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);*/
+  /*background: #efefef;*/
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  color: #fff;
+  text-decoration: none;
+  transition: all .15s ease;
 }
