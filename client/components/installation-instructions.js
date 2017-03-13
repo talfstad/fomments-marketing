@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import CodeMirror from 'codemirror';
+import { connect } from 'react-redux';
 
 // required for syntax highlighting
 require('../../node_modules/codemirror/mode/xml/xml');
@@ -13,18 +14,41 @@ class InstallationInstructions extends Component {
     this.initCodeMirror();
   }
 
-  initCodeMirror() {
-    const codeMirrorInitialValue =
+  componentDidUpdate() {
+    this.updateCodeMirrorValueFromProps();
+  }
+
+  updateCodeMirrorValueFromProps() {
+    const {
+      verticals,
+      activeState,
+    } = this.props;
+
+    const sectionId =
+      verticals[activeState.vertical]
+        .sections[activeState.section]
+        .languages[activeState.language];
+
+    // set new value and refresh
+    const codeMirrorValue =
 `<!-- Step 1: Place this code on your landing page
 where you want comments to appear. -->
 
-<div id="fomments" section-id="1dcef" product-name="skin cream"></div>
+<div id="fomments" section-id="${sectionId}" product-name="skin cream"></div>
 
 <!-- Step 2: Include fomments on your page once,
 ideally right after the opening <body> tag. -->
 
 <script type="text/javascript" src="http://localhost:8080/fomments.min.js"></script>`;
 
+    this.codemirror.setValue(codeMirrorValue);
+
+    setTimeout(() => {
+      this.codemirror.refresh();
+    }, 1000);
+  }
+
+  initCodeMirror() {
     // Detect tab switching, if section code init code mirror
     this.codemirror = CodeMirror.fromTextArea(this.editor, {
       lineNumbers: true,
@@ -32,13 +56,9 @@ ideally right after the opening <body> tag. -->
       mode: 'text/html',
       htmlMode: true,
       readOnly: true,
-      // showCursorWhenSelecting: false,
     });
-    this.codemirror.setValue(codeMirrorInitialValue);
 
-    setTimeout(() => {
-      this.codemirror.refresh();
-    }, 1000);
+    this.updateCodeMirrorValueFromProps();
   }
 
   render() {
@@ -78,4 +98,13 @@ ideally right after the opening <body> tag. -->
   }
 }
 
-export default InstallationInstructions;
+InstallationInstructions.propTypes = {
+  verticals: PropTypes.shape({}),
+  activeState: PropTypes.shape({}),
+};
+
+const mapStateToProps = state => ({
+  ...state.sectionControls,
+});
+
+export default connect(mapStateToProps)(InstallationInstructions);

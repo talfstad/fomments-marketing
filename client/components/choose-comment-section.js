@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 import InstallationInstructions from './installation-instructions';
+import * as actions from '../actions/index';
 
 require('../../node_modules/bootstrap-select/dist/js/bootstrap-select.js');
 
@@ -9,12 +11,136 @@ class ChooseCommentSection extends Component {
       style: 'btn-default btn-lg',
     });
   }
+
+  componentDidUpdate() {
+    $('.selectpicker').selectpicker('refresh');
+  }
+
+  handleVerticalChange(e) {
+    e.preventDefault();
+    const { updateCommentControls } = this.props;
+    const vertical = e.target.value;
+    // Vertical change resets section to first
+    updateCommentControls({
+      vertical,
+      section: 1,
+    });
+  }
+
+  handleLanguageChange(e) {
+    e.preventDefault();
+    const { updateCommentControls } = this.props;
+    const language = e.target.value;
+    updateCommentControls({ language });
+  }
+
+  handleSectionChange(e) {
+    e.preventDefault();
+    const { updateCommentControls } = this.props;
+    const section = e.target.value;
+    updateCommentControls({ section });
+  }
+
+  handleProductNameChange(e) {
+    e.preventDefault();
+    const { updateCommentControls } = this.props;
+    const productName = e.target.value;
+    updateCommentControls({ productName });
+  }
+
+  buildVerticalSelect() {
+    const {
+      activeState,
+      verticals,
+    } = this.props;
+
+    const verticalOptions = () =>
+      Object.keys(verticals).map(
+        key =>
+          <option
+            key={key}
+            value={key}
+          >
+            {verticals[key].name}
+          </option>,
+      );
+
+    return (
+      <select
+        onChange={e => this.handleVerticalChange(e)}
+        className="selectpicker show-menu-arrow"
+        defaultValue={activeState.vertical}
+      >
+        {verticalOptions()}
+      </select>
+    );
+  }
+
+  buildSectionSelect() {
+    const {
+      activeState,
+      verticals,
+    } = this.props;
+    const activeLanguage = activeState.language;
+    const { sections } = verticals[activeState.vertical];
+
+    const sectionOptions = () =>
+      Object.keys(sections).filter(key =>
+        sections[key].languages[activeLanguage])
+          .map(key =>
+            <option
+              key={key}
+              value={key}
+            >
+            Section {key}
+            </option>);
+
+    return (
+      <select
+        onChange={e => this.handleSectionChange(e)}
+        className="selectpicker show-menu-arrow"
+        name="section"
+        id="section"
+      >
+        {sectionOptions()}
+      </select>
+    );
+  }
+
+  buildLanguageSelect() {
+    const {
+      activeState,
+      languages,
+    } = this.props;
+
+    const languageOptions = () =>
+      Object.keys(languages).map(
+        key =>
+          <option
+            key={key}
+            value={key}
+            data-content={`<span class="flag-icon ${languages[key].flag}">${languages[key].name}</span>`}
+          >
+            English
+          </option>,
+      );
+
+    return (
+      <select
+        onChange={e => this.handleLanguageChange(e)}
+        defaultValue={activeState.language}
+        className="selectpicker show-menu-arrow"
+        name="language"
+        id="language"
+      >
+        {languageOptions()}
+      </select>
+    );
+  }
+
   render() {
     return (
-      <section
-        ref={(el) => { this.el = el; }}
-        id="choose-comment-section"
-      >
+      <section id="choose-comment-section">
         <section className="stacked-container container-lg">
           <h2>
             <i className="fa fa-commenting-o section-icon" />
@@ -30,77 +156,30 @@ class ChooseCommentSection extends Component {
                   <div className="form-group">
                     <small className="form-text text-muted">1. Select a vertical</small>
                     <div>
-                      <select className="selectpicker show-menu-arrow">
-                        <option value="app-install">App Install</option>
-                        <option value="diet">Diet</option>
-                        <option value="ed">Erectile Disfunction</option>
-                        <option value="muscle">Muscle</option>
-                        <option value="skin">Skin</option>
-                        <option value="sweepstakes">Sweepstakes</option>
-                        <option value="giveaway">Giveaway</option>
-                      </select>
+                      {this.buildVerticalSelect()}
                     </div>
                   </div>
                   <div className="form-group">
                     <small className="form-text text-muted">2. Select a language</small>
                     <div>
-                      <select defaultValue="english" className="selectpicker show-menu-arrow" name="country" id="country">
-                        <option
-                          value="chinese"
-                          data-content='<span class="flag-icon flag-icon-china">Chinese</span>'
-                        >
-                          Chinese
-                        </option>
-                        <option
-                          value="english"
-                          data-content='<span class="flag-icon flag-icon-us">English</span>'
-                        >
-                          English
-                        </option>
-                        <option
-                          value="french"
-                          data-content='<span class="flag-icon flag-icon-france">French</span>'
-                        >
-                          French
-                        </option>
-                        <option
-                          value="german"
-                          data-content='<span class="flag-icon flag-icon-germany">German</span>'
-                        >
-                          German
-                        </option>
-                        <option
-                          value="portuguese"
-                          data-content='<span class="flag-icon flag-icon-portuguese">Portuguese</span>'
-                        >
-                          Portuguese
-                        </option>
-                        <option
-                          value="spanish"
-                          data-content='<span class="flag-icon flag-icon-mexico">Spanish</span>'
-                        >
-                          Spanish
-                        </option>
-                      </select>
+                      {this.buildLanguageSelect()}
                     </div>
                   </div>
 
                   <div className="form-group">
                     <small className="form-text text-muted">3. Select a section</small>
                     <div>
-                      <select className="selectpicker show-menu-arrow" name="section" id="section">
-                        <option value="1">Section 1</option>
-                        <option value="2">Section 2</option>
-                        <option value="3">Section 3</option>
-                        <option value="4">Section 4</option>
-                        <option value="5">Section 5</option>
-                      </select>
+                      {this.buildSectionSelect()}
                     </div>
                   </div>
                   <div className="form-group">
                     <small className="form-text text-muted">4. (Optional) Product name</small>
                     <div>
-                      <input placeholder="Product name" className="form-control input-lg" />
+                      <input
+                        onChange={e => this.handleProductNameChange(e)}
+                        placeholder="Product name"
+                        className="form-control input-lg"
+                      />
                     </div>
                   </div>
                   <div className="form-group">
@@ -124,4 +203,15 @@ class ChooseCommentSection extends Component {
   }
 }
 
-export default ChooseCommentSection;
+ChooseCommentSection.propTypes = {
+  updateCommentControls: PropTypes.func,
+  verticals: PropTypes.shape({}),
+  languages: PropTypes.shape({}),
+  activeState: PropTypes.shape({}),
+};
+
+const mapStateToProps = state => ({
+  ...state.sectionControls,
+});
+
+export default connect(mapStateToProps, actions)(ChooseCommentSection);

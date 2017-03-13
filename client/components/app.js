@@ -1,32 +1,47 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
+import ReduxThunk from 'redux-thunk';
+import { createStore, applyMiddleware } from 'redux';
+
+import reducers from '../reducers';
+
 import Header from './header';
 import AboveTheFold from './above-the-fold';
 import AtTheFold from './at-the-fold';
 import ChooseCommentSection from './choose-comment-section';
 
+const createStoreWithMiddleware = applyMiddleware(
+  ReduxThunk,
+)(createStore);
+
+export const store = createStoreWithMiddleware(reducers);
+
 class App extends Component {
-  scrollToCommentSection(e) {
+  static scrollToCommentSection(e) {
     e.preventDefault();
+    const el = $('#choose-comment-section');
     $('html, body').animate({
-      scrollTop: $(this.chooseCommentSection.el).position().top,
+      scrollTop: $(el).position().top,
     }, 'slow');
   }
 
   render() {
     return (
-      <div>
-        <Header />
-        <main>
-          <AboveTheFold
-            scrollToCommentSection={e => this.scrollToCommentSection(e)}
-          />
-          <AtTheFold />
-          <ChooseCommentSection
-            ref={(el) => { this.chooseCommentSection = el; }}
-          />
-          <footer id="github-section" className="stacked-container" />
-        </main>
-      </div>
+      <Provider store={store}>
+        <div>
+          <Header />
+          <main>
+            <AboveTheFold
+              scrollToCommentSection={e => App.scrollToCommentSection(e)}
+            />
+            <AtTheFold />
+            <ChooseCommentSection
+              ref={(el) => { this.chooseCommentSection = el; }}
+            />
+            <footer id="github-section" className="stacked-container" />
+          </main>
+        </div>
+      </Provider>
     );
   }
 }
