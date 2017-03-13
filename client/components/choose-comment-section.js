@@ -1,7 +1,14 @@
 import React, { Component } from 'react';
 import InstallationInstructions from './installation-instructions';
 
+require('../../node_modules/bootstrap-select/dist/js/bootstrap-select.js');
+
 class ChooseCommentSection extends Component {
+  componentDidMount() {
+    $('.selectpicker').selectpicker({
+      style: 'btn-default btn-lg',
+    });
+  }
   render() {
     return (
       <section
@@ -19,68 +26,89 @@ class ChooseCommentSection extends Component {
           <section id="comment-choice-container">
             <header className="comment-choice-header">
               <div className="age-demo-select-container">
-                <form>
-                  <div className="choose-menu">
-                    <p>
-                      <a className="comment-section-arrow left" href="f#">
-                        <i className="fa fa-arrow-left" />
-                      </a>
-                      <a className="comment-section-arrow right" href="d#">
-                        <i className="fa fa-arrow-right" />
-                      </a>
-                      <span className="shim-select">
-                        <label htmlFor="vertical-select-label">
-                          <span>
-                      Section 1
-                    </span>
-                        </label>
-                        <select name="vertical-select" id="vertical-select">
-                          <option value="">Section 1</option>
-                          <option value="">Section 2</option>
-                          <option value="">Section 3</option>
-                          <option value="">Section 4</option>
-                        </select>
-                      </span>
-                    </p>
-                    <p>
-                      <label htmlFor="fullname">Product name</label>
-                      <input type="text" id="fullname" name="fullname" required="" />
-                    </p>
-                    <p>
-                      <span className="shim-select">
-                        <label htmlFor="vertical-select-label">
-                          <span>
-                      Skin
-                    </span>
-                        </label>
-                        <select name="vertical-select" id="vertical-select">
-                          <option value="">App Install</option>
-                          <option value="">Diet</option>
-                          <option value="">Erectile Disfunction</option>
-                          <option value="">Muscle</option>
-                          <option value="">Skin</option>
-                          <option value="">Sweepstakes</option>
-                          <option value="">Giveaway</option>
-                        </select>
-                      </span>
-                    </p>
-                    <p>
-                      <span className="shim-select">
-                        <label htmlFor="country">
-                          <span className="flag-icon flag-icon-us">
-                    English
-                  </span>
-                        </label>
-                        <select name="country" id="country">
-                          <option value="">English</option>
-                          <option value="">French</option>
-                          <option value="">German</option>
-                          <option value="">Mandarin</option>
-                          <option value="">Spanish</option>
+                <form className="form-inline section-control">
+                  <div className="form-group">
+                    <small className="form-text text-muted">1. Select a vertical</small>
+                    <div>
+                      <select className="selectpicker show-menu-arrow">
+                        <option value="app-install">App Install</option>
+                        <option value="diet">Diet</option>
+                        <option value="ed">Erectile Disfunction</option>
+                        <option value="muscle">Muscle</option>
+                        <option value="skin">Skin</option>
+                        <option value="sweepstakes">Sweepstakes</option>
+                        <option value="giveaway">Giveaway</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <small className="form-text text-muted">2. Select a language</small>
+                    <div>
+                      <select defaultValue="english" className="selectpicker show-menu-arrow" name="country" id="country">
+                        <option
+                          value="chinese"
+                          data-content='<span class="flag-icon flag-icon-china">Chinese</span>'
+                        >
+                          Chinese
+                        </option>
+                        <option
+                          value="english"
+                          data-content='<span class="flag-icon flag-icon-us">English</span>'
+                        >
+                          English
+                        </option>
+                        <option
+                          value="french"
+                          data-content='<span class="flag-icon flag-icon-france">French</span>'
+                        >
+                          French
+                        </option>
+                        <option
+                          value="german"
+                          data-content='<span class="flag-icon flag-icon-germany">German</span>'
+                        >
+                          German
+                        </option>
+                        <option
+                          value="portuguese"
+                          data-content='<span class="flag-icon flag-icon-portuguese">Portuguese</span>'
+                        >
+                          Portuguese
+                        </option>
+                        <option
+                          value="spanish"
+                          data-content='<span class="flag-icon flag-icon-mexico">Spanish</span>'
+                        >
+                          Spanish
+                        </option>
+                      </select>
+                    </div>
+                  </div>
 
-                        </select>
-                      </span>
-                    </p>
+                  <div className="form-group">
+                    <small className="form-text text-muted">3. Select a section</small>
+                    <div>
+                      <select className="selectpicker show-menu-arrow" name="section" id="section">
+                        <option value="1">Section 1</option>
+                        <option value="2">Section 2</option>
+                        <option value="3">Section 3</option>
+                        <option value="4">Section 4</option>
+                        <option value="5">Section 5</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <small className="form-text text-muted">4. (Optional) Product name</small>
+                    <div>
+                      <input placeholder="Product name" className="form-control input-lg" />
+                    </div>
+                  </div>
+                  <div className="form-group">
+                    <div className="reset-comment-section">
+                      <button className="btn btn-lg btn-default">
+                        <i className="fa fa-refresh" />
+                      </button>
+                    </div>
                   </div>
                 </form>
               </div>

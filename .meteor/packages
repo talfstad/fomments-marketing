@@ -21,7 +21,6 @@ shell-server@0.2.2            # Server-side component of the `meteor shell` comm
 simple:json-routes
 templating
 accounts-password
-useraccounts:unstyled
 aldeed:template-extension
-accounts-ui-unstyled
 twbs:bootstrap
+accounts-ui
