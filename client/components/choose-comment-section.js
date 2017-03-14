@@ -16,13 +16,19 @@ class ChooseCommentSection extends Component {
       verticals,
     } = this.props;
 
-    const { loadFommentSection } = this.props;
+    const {
+      loadFommentSection,
+      changeFommentSectionProductName,
+    } = this.props;
 
     const sectionId = verticals[activeState.vertical]
       .sections[activeState.section]
       .languages[activeState.language];
 
     loadFommentSection(sectionId);
+    setTimeout(() => {
+      changeFommentSectionProductName('Trevor HEY HEY');
+    }, 5000);
   }
 
   componentDidUpdate() {
@@ -206,7 +212,7 @@ class ChooseCommentSection extends Component {
               </div>
             </header>
             <section className="comments">
-              <div data-section-id="muscle-1-english" id="fomments" />
+              <div id="fomments" />
             </section>
             <InstallationInstructions />
           </section>
@@ -217,6 +223,7 @@ class ChooseCommentSection extends Component {
 }
 
 ChooseCommentSection.propTypes = {
+  changeFommentSectionProductName: PropTypes.func,
   updateCommentControls: PropTypes.func,
   loadFommentSection: PropTypes.func,
   verticals: PropTypes.shape({}),
