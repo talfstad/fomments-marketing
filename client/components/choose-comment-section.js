@@ -10,6 +10,19 @@ class ChooseCommentSection extends Component {
     $('.selectpicker').selectpicker({
       style: 'btn-default btn-lg',
     });
+
+    const {
+      activeState,
+      verticals,
+    } = this.props;
+
+    const { loadFommentSection } = this.props;
+
+    const sectionId = verticals[activeState.vertical]
+      .sections[activeState.section]
+      .languages[activeState.language];
+
+    loadFommentSection(sectionId);
   }
 
   componentDidUpdate() {
@@ -193,7 +206,7 @@ class ChooseCommentSection extends Component {
               </div>
             </header>
             <section className="comments">
-              <div id="fomments" />
+              <div data-section-id="muscle-1-english" id="fomments" />
             </section>
             <InstallationInstructions />
           </section>
@@ -205,6 +218,7 @@ class ChooseCommentSection extends Component {
 
 ChooseCommentSection.propTypes = {
   updateCommentControls: PropTypes.func,
+  loadFommentSection: PropTypes.func,
   verticals: PropTypes.shape({}),
   languages: PropTypes.shape({}),
   activeState: PropTypes.shape({}),

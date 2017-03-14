@@ -1,6 +1,8 @@
 const state = {
   sectionInfo: {
     id: 'skin-ens-01',
+    language: 'english',
+    translateText: 'Translated from',
     defaultCommentsToShow: 5,
     defaultCommentsToLoadAtOnce: 10,
     defaultRepliesToShow: 5,

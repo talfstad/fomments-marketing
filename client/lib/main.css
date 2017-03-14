@@ -238,11 +238,11 @@ main header {
 .installation-instructions > nav > ul > li a, .installation-instructions > nav > ul > li a:hover, .installation-instructions > nav > ul > li a:focus {
   font-size: 17px;
   background-color: transparent;
-  line-height: 30px;
+  line-height: 40px;
   font-family: Camphor,Open Sans,Segoe UI,sans-serif;
   padding: 3px 2px 3px 10px;
   border-radius: 2px;
-  height: 40px;
+  height: 46px;
 }
 
 .installation-instructions h2 {

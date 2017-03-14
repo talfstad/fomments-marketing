@@ -34,7 +34,7 @@ class InstallationInstructions extends Component {
 `<!-- Step 1: Place this code on your landing page
 where you want comments to appear. -->
 
-<div id="fomments" section-id="${sectionId}" product-name="skin cream"></div>
+<div id="fomments" data-section-id="${sectionId}" product-name="skin cream"></div>
 
 <!-- Step 2: Include fomments on your page once,
 ideally right after the opening <body> tag. -->

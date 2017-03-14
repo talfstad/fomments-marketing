@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-import ReduxThunk from 'redux-thunk';
 import { createStore, applyMiddleware } from 'redux';
-
+import ReduxThunk from 'redux-thunk';
+import SendFommentsExternalMessage from '../middleware/send-fomments-external-message';
 import reducers from '../reducers';
 
 import Header from './header';
@@ -12,6 +12,7 @@ import ChooseCommentSection from './choose-comment-section';
 
 const createStoreWithMiddleware = applyMiddleware(
   ReduxThunk,
+  SendFommentsExternalMessage,
 )(createStore);
 
 export const store = createStoreWithMiddleware(reducers);
