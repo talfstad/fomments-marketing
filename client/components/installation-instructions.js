@@ -28,13 +28,14 @@ class InstallationInstructions extends Component {
       verticals[activeState.vertical]
         .sections[activeState.section]
         .languages[activeState.language];
+    const productName = activeState.productName;
 
     // set new value and refresh
     const codeMirrorValue =
 `<!-- Step 1: Place this code on your landing page
 where you want comments to appear. -->
 
-<div id="fomments" data-section-id="${sectionId}" product-name="skin cream"></div>
+<div id="fomments" data-section-id="${sectionId}" product-name="${productName}"></div>
 
 <!-- Step 2: Include fomments on your page once,
 ideally right after the opening <body> tag. -->

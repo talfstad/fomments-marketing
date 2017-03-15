@@ -30,6 +30,11 @@ const INITIAL_STATE = {
             spanish: 'muscle-1-spanish',
           },
         },
+        2: {
+          languages: {
+            english: 'muscle-2-english',
+          },
+        },
       },
     },
     giveaway: {

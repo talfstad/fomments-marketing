@@ -11,24 +11,22 @@ class ChooseCommentSection extends Component {
       style: 'btn-default btn-lg',
     });
 
-    const {
-      activeState,
-      verticals,
-    } = this.props;
+    $('.selectpicker').on('hidden.bs.select', function(e) {
+      // blur the selects after they are selected
+      $(e.currentTarget).parent().find('button.dropdown-toggle').blur();
+    });
 
     const {
       loadFommentSection,
-      changeFommentSectionProductName,
+      activeState,
+      verticals,
     } = this.props;
 
     const sectionId = verticals[activeState.vertical]
       .sections[activeState.section]
       .languages[activeState.language];
 
-    loadFommentSection(sectionId);
-    setTimeout(() => {
-      changeFommentSectionProductName('Trevor HEY HEY');
-    }, 5000);
+    loadFommentSection(sectionId, this.productNameInput.value);
   }
 
   componentDidUpdate() {
@@ -37,34 +35,95 @@ class ChooseCommentSection extends Component {
 
   handleVerticalChange(e) {
     e.preventDefault();
-    const { updateCommentControls } = this.props;
     const vertical = e.target.value;
-    // Vertical change resets section to first
+
+    const {
+      updateCommentControls,
+      loadFommentSection,
+      activeState,
+      verticals,
+    } = this.props;
+
+    const [firstSection] = Object.keys(verticals[activeState.vertical].sections);
+
     updateCommentControls({
       vertical,
-      section: 1,
+      section: firstSection,
     });
+
+    const sectionId = verticals[vertical]
+      .sections[firstSection]
+      .languages[activeState.language];
+    loadFommentSection(sectionId, this.productNameInput.value);
   }
 
   handleLanguageChange(e) {
     e.preventDefault();
-    const { updateCommentControls } = this.props;
     const language = e.target.value;
-    updateCommentControls({ language });
+
+    const {
+      updateCommentControls,
+      loadFommentSection,
+      activeState,
+      verticals,
+    } = this.props;
+
+    const [firstSection] = Object.keys(verticals[activeState.vertical].sections);
+    updateCommentControls({
+      language,
+      section: firstSection,
+    });
+
+    const sectionId = verticals[activeState.vertical]
+      .sections[firstSection]
+      .languages[language];
+    loadFommentSection(sectionId, this.productNameInput.value);
   }
 
   handleSectionChange(e) {
     e.preventDefault();
-    const { updateCommentControls } = this.props;
     const section = e.target.value;
+
+    const {
+      updateCommentControls,
+      loadFommentSection,
+      activeState,
+      verticals,
+    } = this.props;
+
     updateCommentControls({ section });
+
+    const sectionId = verticals[activeState.vertical]
+      .sections[section]
+      .languages[activeState.language];
+    loadFommentSection(sectionId, this.productNameInput.value);
   }
 
   handleProductNameChange(e) {
     e.preventDefault();
-    const { updateCommentControls } = this.props;
+    const {
+      updateCommentControls,
+      changeFommentSectionProductName,
+    } = this.props;
     const productName = e.target.value;
     updateCommentControls({ productName });
+    changeFommentSectionProductName(productName);
+  }
+
+  handleResetCommentSection(e) {
+    e.preventDefault();
+    const {
+      loadFommentSection,
+      verticals,
+      activeState,
+    } = this.props;
+
+    const sectionId = verticals[activeState.vertical]
+      .sections[activeState.section]
+      .languages[activeState.language];
+
+    localStorage.removeItem(sectionId);
+    loadFommentSection(sectionId, this.productNameInput.value);
   }
 
   buildVerticalSelect() {
@@ -195,6 +254,7 @@ class ChooseCommentSection extends Component {
                     <small className="form-text text-muted">4. (Optional) Product name</small>
                     <div>
                       <input
+                        ref={(o) => { this.productNameInput = o; }}
                         onChange={e => this.handleProductNameChange(e)}
                         placeholder="Product name"
                         className="form-control input-lg"
@@ -203,7 +263,10 @@ class ChooseCommentSection extends Component {
                   </div>
                   <div className="form-group">
                     <div className="reset-comment-section">
-                      <button className="btn btn-lg btn-default">
+                      <button
+                        onClick={e => this.handleResetCommentSection(e)}
+                        className="btn btn-lg btn-default"
+                      >
                         <i className="fa fa-refresh" />
                       </button>
                     </div>

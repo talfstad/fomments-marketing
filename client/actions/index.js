@@ -10,11 +10,12 @@ export const updateCommentControls = updates => ({
   payload: updates,
 });
 
-export const loadFommentSection = sectionId => ({
+export const loadFommentSection = (sectionId, productName) => ({
   type: LOAD_FOMMENT_SECTION,
   externalMessageToFomments: {
     type: LOAD_FOMMENT_SECTION,
     sectionId,
+    productName,
   },
 });
 
