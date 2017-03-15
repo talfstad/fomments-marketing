@@ -1,5 +1,8 @@
 // Rest API serves states to fomments libraries via AJAX
-import SkinEns01 from './skin-ens-01';
+import Skin1English from './skin/skin-1-english';
+import Skin1Chinese from './skin/skin-1-chinese';
+import Diet1English from './diet/diet-1-english';
+import Muscle1English from './muscle/muscle-1-english';
 
 // Enable cross origin requests for all endpoints
 JsonRoutes.setResponseHeaders({
@@ -16,15 +19,23 @@ JsonRoutes.add('get', '/sections/:sectionId', (req, res) => {
   const sectionId = req.params.sectionId;
   // get section back..
   switch (sectionId) {
-    case 'skin-ens-01':
-      JsonRoutes.sendResult(res, { data: SkinEns01 });
+    case 'skin-1-english':
+      JsonRoutes.sendResult(res, { data: Skin1English });
       break;
-
+    case 'skin-1-chinese':
+      JsonRoutes.sendResult(res, { data: Skin1Chinese });
+      break;
+    case 'diet-1-english':
+      JsonRoutes.sendResult(res, { data: Diet1English });
+      break;
+    case 'muscle-1-english':
+      JsonRoutes.sendResult(res, { data: Muscle1English });
+      break;
     default: {
       const state = {
         sectionInfo: {
           id: sectionId,
-          translateText: 'Translated from',
+          translateText: 'Translated from English',
           defaultCommentsToShow: 5,
           defaultCommentsToLoadAtOnce: 10,
           defaultRepliesToShow: 5,

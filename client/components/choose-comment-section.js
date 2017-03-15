@@ -11,7 +11,7 @@ class ChooseCommentSection extends Component {
       style: 'btn-default btn-lg',
     });
 
-    $('.selectpicker').on('hidden.bs.select', function(e) {
+    $('.selectpicker').on('hidden.bs.select', (e) => {
       // blur the selects after they are selected
       $(e.currentTarget).parent().find('button.dropdown-toggle').blur();
     });

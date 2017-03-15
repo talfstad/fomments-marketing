@@ -1,7 +1,6 @@
 const state = {
   sectionInfo: {
-    id: 'skin-ens-01',
-    language: 'english',
+    id: 'skin-1-english',
     translateText: 'Translated from',
     defaultCommentsToShow: 5,
     defaultCommentsToLoadAtOnce: 10,
@@ -378,7 +377,7 @@ const state = {
     },
     skin3ensun001a: {
       id: 'skin3ensun001a',
-      content: "Want to look like Trump? Then DON'T use this product LOL",
+      content: "Want to look like Trump? Then DON'T use this product 😂  😂  😂",
       user: {
         id: 8987,
         name: 'Alicia Voss',
