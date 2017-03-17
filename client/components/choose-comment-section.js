@@ -133,15 +133,27 @@ class ChooseCommentSection extends Component {
     } = this.props;
 
     const verticalOptions = () =>
-      Object.keys(verticals).map(
-        key =>
-          <option
-            key={key}
-            value={key}
-          >
-            {verticals[key].name}
-          </option>,
-      );
+      Object.keys(verticals)
+        .sort((a, b) => {
+          const nameA = verticals[a].name.toUpperCase(); // ignore upper and lowercase
+          const nameB = verticals[b].name.toUpperCase(); // ignore upper and lowercase
+          if (nameA < nameB) {
+            return -1;
+          }
+          if (nameA > nameB) {
+            return 1;
+          }
+          return 0;
+        })
+        .map(
+          key =>
+            <option
+              key={key}
+              value={key}
+            >
+              {verticals[key].name}
+            </option>,
+        );
 
     return (
       <select

@@ -57,12 +57,12 @@ const INITIAL_STATE = {
       sections: {
         1: {
           languages: {
-            english: 'erectile-disfunction-1-english',
-            chinese: 'erectile-disfunction-1-chinese',
-            french: 'erectile-disfunction-1-french',
-            german: 'erectile-disfunction-1-german',
-            portuguese: 'erectile-disfunction-1-portuguese',
-            spanish: 'erectile-disfunction-1-spanish',
+            english: 'erectile-dysfunction-1-english',
+            chinese: 'erectile-dysfunction-1-chinese',
+            french: 'erectile-dysfunction-1-french',
+            german: 'erectile-dysfunction-1-german',
+            portuguese: 'erectile-dysfunction-1-portuguese',
+            spanish: 'erectile-dysfunction-1-spanish',
           },
         },
       },

@@ -1,12 +1,12 @@
 const state = {
   sectionInfo: {
-    id: 'skin-1-english',
-    translateText: 'Translated from',
+    id: 'skin-1-french',
+    translateText: "Traduit de l'anglais",
     defaultCommentsToShow: 5,
     defaultCommentsToLoadAtOnce: 10,
     defaultRepliesToShow: 5,
     defaultRepliesToLoadAtOnce: 10,
-    generalProductName: 'this',
+    generalProductName: '',
   },
   user: {
     id: 134,
@@ -24,9 +24,9 @@ const state = {
     oldest: false,
   },
   list: {
-    skin3enspo007a: {
-      id: 'skin3enspo007a',
-      content: "I've looked high and low for a facial product my sensitive skin could tolerate, and PRODUCT_NAME us it! I live in a very dry climate and this night cream provides excellent moisturizing while working on improving skin tone and fighting fine lines. This product is now part of my daily regimen.",
+    skin3frepo007a: {
+      id: 'skin3frepo007a',
+      content: "J'ai cherché absolument partout des produits pour le visage que ma peau sensible pourrait tolérer, et j'ai trouvé PRODUCT_NAME ! J'habite dans un endroit où le climat est très sec et cette crème de nuit hydrate vraiment bien tout en améliorant le teint et en réduisant les ridules. Ce produit fait maintenant partie de ma routine quotidienne.",
       user: {
         id: 8987,
         name: 'Adriana Lambert',
@@ -68,9 +68,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    skin3enspo008a: {
-      id: 'skin3enspo008a',
-      content: "I asked for PRODUCT_NAME as a gift, as it was not something I would have considered purchasing on my own due to price. After using this product only one time, I saw a noticeable difference in my skin. My skin felt hydrated, nourished and seemed to have a new radiance. I'm in my mid-thirties and have a few fine lines around my mouth and on my forehead due to dry skin. The appearance of these lines seemed to improve overnight with one use. I absolutely hate most moisturizers because they never seem to soak into my skin. As stated in previous reviews, this product soaks into the skin almost immediately. This is the reason I wanted to give it a try. I will be purchasing this product once I'm out and have no problem paying $$$ for it. Well worth the price!",
+    skin3frepo008a: {
+      id: 'skin3frepo008a',
+      content: "J'ai demandé PRODUCT_NAME comme cadeau, puisque je n'aurais pas envisagé de l'acheter moi-même à cause du prix. Après seulement une utilisation, j'ai vu une différence flagrante sur ma peau. Ma peau est hydratée, nourrie et semble plus lumineuse. J'ai la trentaine et j'ai quelques ridules autour de ma bouche et au niveau du front à cause de ma peau qui est sèche. L'apparence de ces ridules a semblé s'améliorer en une seule nuit. Je déteste la plupart des crèmes hydratantes parce qu'on dirait qu'elles ne pénètrent jamais dans ma peau. Comme ça a été dit dans d'autres commentaires, cette crème pénètre dans la peau presque immédiatement. C'est la raison pour laquelle je voulais l'essayer. Je rachèterai ce produit dès que je n'en aurai plus et que je serais prête à payer $$$. On en a pour son argent !",
       user: {
         id: 8980,
         name: 'Amanda Joseph',
@@ -112,9 +112,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    skin3enspo001a: {
-      id: 'skin3enspo001a',
-      content: "As I get older, I am dealing with adult acne, signs of aging, and general combination skin issues (real oily over here, flaky over there...you know the drill). So, I decided I'd go hunting for some proven skin care products that could clear up my acne and help with signs of aging (NOTE..for night use only...you need a sunblock during the day when you get sun exposure). After a lot of research, I decided to try this product line. Their products seem to use some pretty rad new technology that enhances the level or effectiveness of their key active ingredient, OTC products (obviously, nothing is going to be as good as Rx...). After a month of pretty much nightly use, I would say I am definitely a fan of this line. I am using the PRODUCT_NAME followed by the night cream version. Like any new skin product, you do need time to adjust. You WILL experience dryness of the skin at first. I recommend (as do most dermatologists) trying this every other night or every two nights for a week or two and then switching to every night once you have developed a tolerance for the active ingredient. If you stop using it (like I did for several days while traveling), you may experience a few dry patches when you start back up again. However, the overall results have been great. The lines on my forehead are minimized, the terrible clogged pore bumps that I developed after an allergic reaction to a soap have finally cleared up, and I would say my acne is reduced (fingers crossed...). I am finding myself wearing WAY less makeup and getting compliments on my skin from total strangers, which is awesome and has never happened before in my whole life. Also, these products smell AH-MAZ-ING. Seriously, I LOVE putting them on at night because the scent is so incredible and totally unlike anything I've ever smelled in a beauty product before. Maybe it's fig and vetiver? I have no idea, but I love it. Overall, I think these products are worth the money, and a little seems to go a long way. ",
+    skin3frepo001a: {
+      id: 'skin3frepo001a',
+      content: "Au fur et à mesure que je vieillis, je dois faire face à l'acné d'adultes, aux signes du vieillissement et des problèmes dus à ma peau mixte (très grasse par endroits, complètement desséchée à d'autres...vous voyez ce que je veux dire). Alors j'ai décidé de chercher des produits pour le visage qui ont fait leurs preuves et qui pourraient venir à bout de mon acné et m'aider avec les signes de vieillissement (NOTE.. à utiliser la nuit uniquement... il vous faut une protection solaire la journée quand votre peau est exposée à la lumière du soleil). Après de longues recherches, j'ai décidé d'essayer cette gamme de produits. Je crois que leurs produits utilisent une super nouvelle technologie qui améliore le niveau d'efficacité de leur ingrédient actif clé, sans prescription (évidemment, rien ne sera aussi bien que les prescriptions...). Après un mois d'utilisation quasi-quotidienne, je dirais que je suis complètement fan de cette gamme. J'utilise PRODUCT_NAME puis la crème de nuit. Comme tous les nouveaux produits pour la peau, il faut un temps d'adaptation. Vous AUREZ la peau sèche au début. Je recommande (comme la plupart des dermatologues) d'essayer de temps en temps ou un jour sur deux pendant une semaine ou deux et de passer à une utilisation quotidienne quand votre peau a développé une tolérance à l'ingrédient actif. Si vous arrêtez l'utilisation (comme je l'ai fait pendant quelques jours lorsque j'étais en voyage), votre peau pourrait devenir sèche par endroits quand vous recommencerez à l'utiliser. Cependant, globalement, les résultats ont été satisfaisants. Les rides de mon front ont été réduites, les horribles boutons causés par des pores obstruées et que j'ai eus après une réaction allergique à un savon ont finalement disparu, et je dirais que mon acné a diminué (je croise les doigts...). Je m'aperçois que je me maquille BEAUCOUP moins et qu'on me complimente sur ma peau, même des inconnus, ce qui est génial et ne m'était jamais arrivé de toute ma vie. Aussi, ces produits sentent SU-PER BON. Sérieusement, J'ADORE les utiliser chaque soir parce que l'odeur est incroyable et ne ressemble à aucun autre produit de beauté que j'ai pu utiliser avant. Peut-être figue et vétiver ? Je n'en ai aucune idée, mais j'adore. L'un dans l'autre, je pense qu'avec ces produits on en a pour son argent, et pas besoin d'en utiliser des tonnes.",
       user: {
         id: 10,
         name: 'Erica Andrews',
@@ -156,9 +156,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    skin3ensnu001a: {
-      id: 'skin3ensnu001a',
-      content: "This is the first skin product I can handle, my skin is very sensitive. There are days when I wish it moisturized better—my skin can't handle the usual skin care combinations.",
+    skin3frenu001a: {
+      id: 'skin3frenu001a',
+      content: "C'est le premier produit pour la peau que je peux supporter, ma peau est très sensible. Certain jours j'aimerais que l'effet hydratant soit plus marqué — ma peau ne supporte pas les produits habituels pour la peau.",
       user: {
         id: 11,
         name: 'Jessica Sparks',
@@ -200,9 +200,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    skin3enspo003b: {
-      id: 'skin3enspo003b',
-      content: "I just recently started noticing deep wrinkles forming on my forehead. So far (39 years), I've done good as far as wrinkles go, but I do have sensitive skin. Don't want to look like a \"old lady\" anytime soon, so I needed to \"amp\" up my night cream, in comes this dream cream. In the few weeks that I have begun using PRODUCT_NAME, the deep wrinkles that were starting to form, seem less apparent. I know that I may not be able to look young forever, but I'm gonna try!!!!!!!",
+    skin3frepo003b: {
+      id: 'skin3frepo003b',
+      content: "J'ai récemment remarqué que des rides profondes se formaient sur mon front. Pour l'instant (39 ans), je m'en sors bien niveau rides, mais j'ai une peau sensible. Je n'ai pas l'intention de ressembler à une « vieille » avant un bon moment, et c'est là que cette crème de rêve entre en scène. Après avoir utilisé PRODUCT_NAME ces dernières semaines, les rides profondes qui commençaient à se former semblent moins apparentes. Je sais que je ne vais pas pouvoir avoir toujours l'air jeune, mais je vais essayer !!!!!!!",
       user: {
         id: 13,
         name: 'Sage Tovar',
@@ -244,9 +244,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    skin3ensqu002a: {
-      id: 'skin3ensqu002a',
-      content: 'Is PRODUCT_NAME greasy at all? I have really sensitive skin... will I break out?',
+    skin3frequ002a: {
+      id: 'skin3frequ002a',
+      content: "Est-ce que PRODUCT_NAME laisse un effet gras ? J'ai une peau vraiment sensible... est-ce que ça me donnera des boutons ?",
       user: {
         id: 14,
         name: 'Natalie Cruz',
@@ -288,10 +288,10 @@ const state = {
       liked: false,
       edited: false,
       replies: {
-        skin3ensqu002ar1: {
-          id: 'skin3ensqu002ar1',
-          parentId: 'skin3ensqu002a',
-          content: 'I have sensitive skin too and have never had a problem.',
+        skin3frequ002ar1: {
+          id: 'skin3frequ002ar1',
+          parentId: 'skin3frequ002a',
+          content: "J'ai moi aussi une peau sensible et je n'ai jamais eu de problème.",
           user: {
             id: 11,
             name: 'Jessica Sparks',
@@ -331,10 +331,10 @@ const state = {
           spam: false,
           edited: false,
         },
-        skin3ensqu002ar2: {
-          id: 'skin3ensqu002ar2',
-          parentId: 'skin3ensqu002a',
-          content: 'Nope! Not greasy for me! And I already have kinda greasy skin to begin with. This seems to help the issue.',
+        skin3frequ002ar2: {
+          id: 'skin3frequ002ar2',
+          parentId: 'skin3frequ002a',
+          content: "Non ! Pas gras en ce qui me concerne ! Et j'ai déjà une peau plutôt grasse à la base. Mais on dirait que ça a aidé.",
           user: {
             id: 17,
             name: 'Sheila Stromberg',
@@ -376,9 +376,9 @@ const state = {
         },
       },
     },
-    skin3ensun001a: {
-      id: 'skin3ensun001a',
-      content: "Want to look like Trump? Then DON'T use this product 😂  😂  😂",
+    skin3freun001a: {
+      id: 'skin3freun001a',
+      content: "Vous voulez ressembler à Trump ? Alors N'UTILISEZ PAS ce produit. 😂  😂  😂",
       user: {
         id: 8987,
         name: 'Alicia Voss',
@@ -420,9 +420,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    skin3enspo011a: {
-      id: 'skin3enspo011a',
-      content: "I've become a bit of an addict when it comes to this skin cream. My skin keeps getting better and better to the point that other people are commenting. The problem is, the better my skin gets, the more I want to use! I apply the night cream every night before bed, along with their eye serum and sometimes the face serum. I even use the Night Cream on my neck and décolletage. I love the texture, I love the packaging, I love the scent, but most of all, I love the results.",
+    skin3frepo011a: {
+      id: 'skin3frepo011a',
+      content: "Je suis devenue complètement accroc à cette crème. Ma peau est de plus en plus belle, au point qu'on me fait des commentaires. Le problème est que plus ma peau est belle, plus j'ai envie d'utiliser ces produits ! Je mets la crème de nuit chaque soir avant d'aller me coucher, avec le sérum pour les yeux et parfois le sérum pour le visage. J'utilise aussi la Crème de Nuit pour le cou et le décolleté. J'adore la texture, j'adore le packaging, j'adore l'odeur, mais par-dessus tout, j'adore les résultats.",
       user: {
         id: 19,
         name: 'Jessica Porter',

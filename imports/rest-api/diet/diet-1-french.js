@@ -1,12 +1,12 @@
 const state = {
   sectionInfo: {
-    id: 'diet-1-english',
-    translateText: 'Translated from',
+    id: 'diet-1-french',
+    translateText: "Traduit de l'anglais",
     defaultCommentsToShow: 5,
     defaultCommentsToLoadAtOnce: 10,
     defaultRepliesToShow: 5,
-    generalProductName: 'this',
     defaultRepliesToLoadAtOnce: 10,
+    generalProductName: '',
   },
   user: {
     id: 134,
@@ -24,9 +24,9 @@ const state = {
     oldest: false,
   },
   list: {
-    diet3enspo008a: {
-      id: 'diet3enspo008a',
-      content: 'My wife has used this for a while now, and has lost about 17 lbs. over the last year. We have an active, hectic schedule and dieting and exercise is not easy to adhere to. This product is the perfect supplement for weight loss with our agenda! She was also diagnosed as pre-diabetic, and after starting with this product she has been able to stop taking the medication she was on as the ingredients also helps to balance out her blood sugar. We are fans for life!',
+    diet3frepo008a: {
+      id: 'diet3frepo008a',
+      content: "Ma femme l'utilise depuis un certain temps maintenant, et elle a perdu environ 8 kilos. au cours de la dernière année. Nous avons une vie active et trépidante et il n'est pas facile de respecter un régime et de faire de l'exercice. Ce produit est le supplément parfait pour la perte de poids avec notre emploi du temps ! Elle a également été diagnostiquée comme prédiabétique, et après avoir commencé avec ce produit, elle a pu arrêter de prendre le médicament, elle est sûre que les ingrédients aussi aident à équilibrer sa glycémie. Nous sommes fans pour la vie !",
       user: {
         id: 20,
         name: 'Shawn Markum',
@@ -68,9 +68,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    diet3enspo014a: {
-      id: 'diet3enspo014a',
-      content: "During my lifetime, I estimate that I have lost then regained the weight of your average Buick so I was intrigued by an article I read that credited an incredible weight loss to this product. I would point out that weight LOSS has not been the problem for me that KEEPING IT OFF has always been. My thinking was that the same reasons it worked to assist in losing pounds should also make it helpful in maintaining that loss. I'm pleased to say that I totally believe that it works in exactly that way. To maintain weight loss, of course, I have to remain sensible with my eating and not fall back into the patterns that caused the gain in the first place. Using this as suggested for maintenance on the bottle (1 capsule 1 hour before meals twice a day) has helped me to stay where I want to and worked to achieve. My husband, who has never had to diet before, is having excellent results following the Weight-Loss dosage of 3 capsules 1 hour before meals twice each day. There is no \"magic pill\" or supplement that will allow me to eat all I want of everything I want and still lose or maintain weight loss but this product is certainly a major help in getting to a healthier place and staying there! Obviously, I recommend it!",
+    diet3frepo014a: {
+      id: 'diet3frepo014a',
+      content: "Au cours de ma vie, j'estime que j'ai perdu et repris le poids d'une voiture moyenne j'ai été donc intriguée par un article que j'ai lu qui créditait ce produit d'une perte de poids incroyable. Je voudrais souligner que la perte de poids n'a pas été un problème pour moi mais que ne pas LE REGAGNER l'a toujours été. Ma idée est que les mêmes raisons qui travaillent pour aider à perdre des kilos devraient également le rendre utile dans le maintien du poids. Je suis heureuse de dire que je crois complètement que ça fonctionne exactement de cette façon. Pour maintenir la perte de poids, bien sûr, je dois rester attentive à mon alimentation et ne pas retomber dans les comportements qui ont causé le gain en premier lieu. Utiliser ce qui est suggéré pour l'entretien sur la bouteille (1 capsule 1 heure avant les repas deux fois par jour) m'a aidé à rester où je suis arrivée et ou je veux. Mon mari, qui n'a jamais fait de régime avant, obtient d'excellents résultats après en suivant le dosage conseillé pour la perte de poids de 3 capsules 1 heure avant les repas deux fois par jour. Il n'y a pas de « pilule miracle » ou de supplément qui me permettra de manger tout ce que je veux et de perdre de perdre du poids ou ne pas en gagner, mais ce produit est certainement une aide majeure pour arriver à un point plus sain et y rester ! Évidemment, je le recommande!",
       user: {
         id: 21,
         name: 'Amy Rundt',
@@ -112,9 +112,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    diet3ensnu001b: {
-      id: 'diet3ensnu001b',
-      content: "i've been using it for over a year and its slow but sure. i've lost 105 lbs with another 35 to go. it takes time and patience",
+    diet3frenu001b: {
+      id: 'diet3frenu001b',
+      content: "je l'utilise depuis plus d'un an et c'est lent mais sûr. j'ai perdu 48 kilos et j'en ai encore 15 à perdre. il faut du temps et de la patience",
       user: {
         id: 22,
         name: 'Andrea Ross',
@@ -156,9 +156,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    diet3enspo001a: {
-      id: 'diet3enspo001a',
-      content: 'If you are going to buy a diet pill I would buy PRODUCT_NAME! It works! I lost weight and I did not feel hungry AT ALL!!!!! I would order this again and again!!!!',
+    diet3frepo001a: {
+      id: 'diet3frepo001a',
+      content: "Si vous voulez acheter une pilule de régime que je recommanderai d'acheter PRODUCT_NAME ! Ça marche ! J'ai perdu du poids et je n'ai pas eu faim DU TOUT !!!!! J'en recommanderai si c'était à refaire !!!!",
       user: {
         id: 23,
         name: 'Kelly Clark',
@@ -200,9 +200,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    diet3ensqu003b: {
-      id: 'diet3ensqu003b',
-      content: 'im already thin but want to just tone up has anyone used it just for that?',
+    diet3frequ003b: {
+      id: 'diet3frequ003b',
+      content: "je suis déjà mince mais je voudrais juste gagner un peu de définition, est- ce que quelqu'un l'a déjà utilisé juste pour ça ?",
       user: {
         id: 24,
         name: 'Jordyn Arnet',
@@ -244,10 +244,10 @@ const state = {
       liked: false,
       edited: false,
       replies: {
-        diet3ensqu003br1: {
-          id: 'diet3ensqu003br1',
-          parentId: 'diet3ensqu003b',
-          content: 'I went from a size 4 to a size 2- I actually gained 3lbs but lost inches. Seems like I swapped out a little fat for some muscle.',
+        diet3frequ003br1: {
+          id: 'diet3frequ003br1',
+          parentId: 'diet3frequ003b',
+          content: "Je suis passée d'une taille 34 à une taille 32 - j'ai en fait gagné 1 kg mais a perdu des centimètres. On dirait que j'ai échangé un peu de graisse contre un peu de muscle.",
           user: {
             id: 25,
             name: 'Casey Norman',
@@ -289,9 +289,9 @@ const state = {
         },
       },
     },
-    diet3enspo003b: {
-      id: 'diet3enspo003b',
-      content: 'I am approximately 1 week in and am already seeing results in my belly fat. One thing that is great about this is there is no weird feeling when taking this as there is with other dietary products-completely normal all set for week 2',
+    diet3frepo003b: {
+      id: 'diet3frepo003b',
+      content: "J'en prends depuis environ 1 semaine et je vois déjà des résultats sur ma graisse du ventre. Un truc bien avec ça c'est qu'il n'y a pas de sensation bizarre en le prenant comme il y en a avec d'autres produits diététiques-totalement prête pour la semaine 2",
       user: {
         id: 26,
         name: 'Christine Rollins',
@@ -333,9 +333,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    diet3enspo004b: {
-      id: 'diet3enspo004b',
-      content: 'I love this stuff. Started off at 168lbs 3 weeks ago im now at 147 and thats fluctuating because i sometimes forget to take the pills. I dont even exercise yet and still dropping pounds! I have more energy, sleep better and dont nearly crave and eat as much as i used to. Needless to say i recommend this product to aid in any weight loss goals anyone may have!',
+    diet3frepo004b: {
+      id: 'diet3frepo004b',
+      content: "J'adore ce truc. J'ai commencé à 76kg il y a 3 semaines j'en suis maintenant à 67 et ça change parce que parfois j'oublie de prendre les pilules. Je ne fais même pas d'exercices et je perds encore des kilos ! J'ai plus d'énergie, dors mieux et je suis loin d'avoir des des fringales ou de manger comme j'en avais l'habitude. Inutile de dire que je recommande ce produit pour aider à tous les objectifs de perte de poids que tout le monde peut avoir !",
       user: {
         id: 27,
         name: 'Heather Jackson',
@@ -377,9 +377,9 @@ const state = {
       liked: false,
       edited: false,
     },
-    diet3ensqu001a: {
-      id: 'diet3ensqu001a',
-      content: "I'm waiting to see if someone's tried this before I buy.",
+    diet3frequ001a: {
+      id: 'diet3frequ001a',
+      content: "J'attends de voir si quelqu'un a essayé avant d'acheter.",
       user: {
         id: 28,
         name: 'Olivia Welder',
@@ -421,10 +421,10 @@ const state = {
       liked: false,
       edited: false,
       replies: {
-        diet3ensqu001ar1: {
-          id: 'diet3ensqu001ar1',
-          parentId: 'diet3ensqu001a',
-          content: 'Me too! I;m too scared to be the first. Anyone tried this',
+        diet3frequ001ar1: {
+          id: 'diet3frequ001ar1',
+          parentId: 'diet3frequ001a',
+          content: "Pareil ! J;ai trop la trouille pour être la première. Quelqu'un a essayé",
           user: {
             id: 29,
             name: 'Leah Dial',
@@ -464,10 +464,10 @@ const state = {
           spam: false,
           edited: false,
         },
-        diet3ensqu001ar2: {
-          id: 'diet3ensqu001ar2',
-          parentId: 'diet3ensqu001a',
-          content: "I guess I'm a trendsetter! I bought PRODUCT_NAME a couple weeks ago and I LOVE it. You will too!",
+        diet3frequ001ar2: {
+          id: 'diet3frequ001ar2',
+          parentId: 'diet3frequ001a',
+          content: "Je suppose que je suis un pionnière ! J'ai acheté PRODUCT_NAME il y a quelques semaines et je L'ADORE. Ça sera pareil pour vous !",
           user: {
             id: 23,
             name: 'Kelly Clark',
@@ -507,10 +507,10 @@ const state = {
           spam: false,
           edited: false,
         },
-        diet3ensqu001ar3: {
-          id: 'diet3ensqu001ar3',
-          parentId: 'diet3ensqu001a',
-          content: "it works! u'll love it!",
+        diet3frequ001ar3: {
+          id: 'diet3frequ001ar3',
+          parentId: 'diet3frequ001a',
+          content: 'ça marche ! vous allez adorer!',
           user: {
             id: 30,
             name: 'Brie Young',
