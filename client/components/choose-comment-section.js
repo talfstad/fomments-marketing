@@ -22,11 +22,11 @@ class ChooseCommentSection extends Component {
       verticals,
     } = this.props;
 
-    const sectionId = verticals[activeState.vertical]
+    const { demoId } = verticals[activeState.vertical]
       .sections[activeState.section]
       .languages[activeState.language];
 
-    loadFommentSection(sectionId, this.productNameInput.value);
+    loadFommentSection(demoId, this.productNameInput.value);
   }
 
   componentDidUpdate() {
@@ -51,10 +51,10 @@ class ChooseCommentSection extends Component {
       section: firstSection,
     });
 
-    const sectionId = verticals[vertical]
+    const { demoId } = verticals[vertical]
       .sections[firstSection]
       .languages[activeState.language];
-    loadFommentSection(sectionId, this.productNameInput.value);
+    loadFommentSection(demoId, this.productNameInput.value);
   }
 
   handleLanguageChange(e) {
@@ -74,10 +74,10 @@ class ChooseCommentSection extends Component {
       section: firstSection,
     });
 
-    const sectionId = verticals[activeState.vertical]
+    const { demoId } = verticals[activeState.vertical]
       .sections[firstSection]
       .languages[language];
-    loadFommentSection(sectionId, this.productNameInput.value);
+    loadFommentSection(demoId, this.productNameInput.value);
   }
 
   handleSectionChange(e) {
@@ -93,10 +93,10 @@ class ChooseCommentSection extends Component {
 
     updateCommentControls({ section });
 
-    const sectionId = verticals[activeState.vertical]
+    const { demoId } = verticals[activeState.vertical]
       .sections[section]
       .languages[activeState.language];
-    loadFommentSection(sectionId, this.productNameInput.value);
+    loadFommentSection(demoId, this.productNameInput.value);
   }
 
   handleProductNameChange(e) {
@@ -118,12 +118,12 @@ class ChooseCommentSection extends Component {
       activeState,
     } = this.props;
 
-    const sectionId = verticals[activeState.vertical]
+    const { demoId } = verticals[activeState.vertical]
       .sections[activeState.section]
       .languages[activeState.language];
 
-    localStorage.removeItem(sectionId);
-    loadFommentSection(sectionId, this.productNameInput.value);
+    localStorage.removeItem(demoId);
+    loadFommentSection(demoId, this.productNameInput.value);
   }
 
   buildVerticalSelect() {

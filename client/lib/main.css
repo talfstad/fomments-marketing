@@ -798,7 +798,7 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 .cm-attribute {
   color: #424770;
 }
-#editor {
+#installation {
   margin-right: 245px;
   font-size: 85%;
 }
@@ -828,14 +828,14 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
   overflow-x: hidden;
 }
 
-#editor .CodeMirror-linenumber {
+#installation .CodeMirror-linenumber {
   text-align: right;
   background: #f2feef;
   color: #5dc79e;
   border-radius: 2px 0 0 2px;
 }
 
-#editor .CodeMirror-gutter {
+#installation .CodeMirror-gutter {
   background: #f2feef;
 }
 

@@ -10,6 +10,7 @@ import AboveTheFold from './above-the-fold';
 import AtTheFold from './at-the-fold';
 import ChooseCommentSection from './choose-comment-section';
 
+
 const createStoreWithMiddleware = applyMiddleware(
   ReduxThunk,
   SendFommentsExternalMessage,

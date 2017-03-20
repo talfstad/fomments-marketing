@@ -7,5 +7,8 @@ Meteor.startup(() => {
   // smtp://USERNAME:PASSWORD@HOST:PORT
   process.env.MAIL_URL = 'smtp://trevor@buildcave.com:mK8tzWXY0Z7cAbhV@smtp-relay.sendinblue.com:587';
 
-  // code to run on server at startup
+  // publish user info to redux actions
+  Meteor.publish('userInfo', function () {
+    return Meteor.users.findOne(this.userId);
+  });
 });

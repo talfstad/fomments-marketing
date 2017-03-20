@@ -7,12 +7,42 @@ const INITIAL_STATE = {
       sections: {
         1: {
           languages: {
-            english: 'diet-1-english',
-            chinese: 'diet-1-chinese',
-            french: 'diet-1-french',
-            german: 'diet-1-german',
-            portuguese: 'diet-1-portuguese',
-            spanish: 'diet-1-spanish',
+            english: {
+              demoId: 'diet-1-english',
+              sectionId: 'diet-1-english',
+              role: 'diet1English',
+              price: 0,
+            },
+            chinese: {
+              demoId: 'diet-1-chinese',
+              sectionId: 'diet-1-chinese',
+              role: 'diet1Chinese',
+              price: 100,
+            },
+            french: {
+              demoId: 'diet-1-french',
+              sectionId: 'diet-1-french',
+              role: 'diet1French',
+              price: 100,
+            },
+            german: {
+              demoId: 'diet-1-german',
+              sectionId: 'diet-1-german',
+              role: 'diet1German',
+              price: 100,
+            },
+            portuguese: {
+              demoId: 'diet-1-portuguese',
+              sectionId: 'diet-1-portuguese',
+              role: 'diet1Portuguese',
+              price: 100,
+            },
+            spanish: {
+              demoId: 'diet-1-spanish',
+              sectionId: 'diet-1-spanish',
+              role: 'diet1Spanish',
+              price: 100,
+            },
           },
         },
       },
@@ -22,17 +52,42 @@ const INITIAL_STATE = {
       sections: {
         1: {
           languages: {
-            english: 'muscle-1-english',
-            chinese: 'muscle-1-chinese',
-            french: 'muscle-1-french',
-            german: 'muscle-1-german',
-            portuguese: 'muscle-1-portuguese',
-            spanish: 'muscle-1-spanish',
-          },
-        },
-        2: {
-          languages: {
-            english: 'muscle-2-english',
+            english: {
+              demoId: 'muscle-1-english',
+              sectionId: 'muscle-1-english',
+              role: 'muscle1English',
+              price: 0,
+            },
+            chinese: {
+              demoId: 'muscle-1-chinese',
+              sectionId: 'muscle-1-chinese',
+              role: 'muscle1Chinese',
+              price: 100,
+            },
+            french: {
+              demoId: 'muscle-1-french',
+              sectionId: 'muscle-1-french',
+              role: 'muscle1French',
+              price: 100,
+            },
+            german: {
+              demoId: 'muscle-1-german',
+              sectionId: 'muscle-1-german',
+              role: 'muscle1German',
+              price: 100,
+            },
+            portuguese: {
+              demoId: 'muscle-1-portuguese',
+              sectionId: 'muscle-1-portuguese',
+              role: 'muscle1Portuguese',
+              price: 100,
+            },
+            spanish: {
+              demoId: 'muscle-1-spanish',
+              sectionId: 'muscle-1-spanish',
+              role: 'muscle1Spanish',
+              price: 100,
+            },
           },
         },
       },
@@ -42,27 +97,87 @@ const INITIAL_STATE = {
       sections: {
         1: {
           languages: {
-            english: 'giveaway-1-english',
-            chinese: 'giveaway-1-chinese',
-            french: 'giveaway-1-french',
-            german: 'giveaway-1-german',
-            portuguese: 'giveaway-1-portuguese',
-            spanish: 'giveaway-1-spanish',
+            english: {
+              demoId: 'giveaway-1-english',
+              sectionId: 'giveaway-1-english',
+              role: 'giveaway1English',
+              price: 0,
+            },
+            chinese: {
+              demoId: 'giveaway-1-chinese',
+              sectionId: 'giveaway-1-chinese',
+              role: 'giveaway1Chinese',
+              price: 100,
+            },
+            french: {
+              demoId: 'giveaway-1-french',
+              sectionId: 'giveaway-1-french',
+              role: 'giveaway1French',
+              price: 100,
+            },
+            german: {
+              demoId: 'giveaway-1-german',
+              sectionId: 'giveaway-1-german',
+              role: 'giveaway1German',
+              price: 100,
+            },
+            portuguese: {
+              demoId: 'giveaway-1-portuguese',
+              sectionId: 'giveaway-1-portuguese',
+              role: 'giveaway1Portuguese',
+              price: 100,
+            },
+            spanish: {
+              demoId: 'giveaway-1-spanish',
+              sectionId: 'giveaway-1-spanish',
+              role: 'giveaway1Spanish',
+              price: 100,
+            },
           },
         },
       },
     },
-    erectileDisfunction: {
-      name: 'Erectile Disfunction',
+    erectileDysfunction: {
+      name: 'Erectile Dysfunction',
       sections: {
         1: {
           languages: {
-            english: 'erectile-dysfunction-1-english',
-            chinese: 'erectile-dysfunction-1-chinese',
-            french: 'erectile-dysfunction-1-french',
-            german: 'erectile-dysfunction-1-german',
-            portuguese: 'erectile-dysfunction-1-portuguese',
-            spanish: 'erectile-dysfunction-1-spanish',
+            english: {
+              demoId: 'erectile-dysfunction-1-english',
+              sectionId: 'erectile-dysfunction-1-english',
+              role: 'erectileDysfunction1English',
+              price: 0,
+            },
+            chinese: {
+              demoId: 'erectile-dysfunction-1-chinese',
+              sectionId: 'erectile-dysfunction-1-chinese',
+              role: 'erectileDysfunction1Chinese',
+              price: 100,
+            },
+            french: {
+              demoId: 'erectile-dysfunction-1-french',
+              sectionId: 'erectile-dysfunction-1-french',
+              role: 'erectileDysfunction1French',
+              price: 100,
+            },
+            german: {
+              demoId: 'erectile-dysfunction-1-german',
+              sectionId: 'erectile-dysfunction-1-german',
+              role: 'erectileDysfunction1German',
+              price: 100,
+            },
+            portuguese: {
+              demoId: 'erectile-dysfunction-1-portuguese',
+              sectionId: 'erectile-dysfunction-1-portuguese',
+              role: 'erectileDysfunction1Portuguese',
+              price: 100,
+            },
+            spanish: {
+              demoId: 'erectile-dysfunction-1-spanish',
+              sectionId: 'erectile-dysfunction-1-spanish',
+              role: 'erectileDysfunction1Spanish',
+              price: 100,
+            },
           },
         },
       },
@@ -72,12 +187,42 @@ const INITIAL_STATE = {
       sections: {
         1: {
           languages: {
-            english: 'skin-1-english',
-            chinese: 'skin-1-chinese',
-            french: 'skin-1-french',
-            german: 'skin-1-german',
-            portuguese: 'skin-1-portuguese',
-            spanish: 'skin-1-spanish',
+            english: {
+              demoId: 'skin-1-english',
+              sectionId: 'skin-1-english',
+              role: 'skin1English',
+              price: 0,
+            },
+            chinese: {
+              demoId: 'skin-1-chinese',
+              sectionId: 'skin-1-chinese',
+              role: 'skin1Chinese',
+              price: 100,
+            },
+            french: {
+              demoId: 'skin-1-french',
+              sectionId: 'skin-1-french',
+              role: 'skin1French',
+              price: 100,
+            },
+            german: {
+              demoId: 'skin-1-german',
+              sectionId: 'skin-1-german',
+              role: 'skin1German',
+              price: 100,
+            },
+            portuguese: {
+              demoId: 'skin-1-portuguese',
+              sectionId: 'skin-1-portuguese',
+              role: 'skin1Portuguese',
+              price: 100,
+            },
+            spanish: {
+              demoId: 'skin-1-spanish',
+              sectionId: 'skin-1-spanish',
+              role: 'skin1Spanish',
+              price: 100,
+            },
           },
         },
       },
@@ -87,12 +232,42 @@ const INITIAL_STATE = {
       sections: {
         1: {
           languages: {
-            english: 'app-download-1-english',
-            chinese: 'app-download-1-chinese',
-            french: 'app-download-1-french',
-            german: 'app-download-1-german',
-            portuguese: 'app-download-1-portuguese',
-            spanish: 'app-download-1-spanish',
+            english: {
+              demoId: 'app-download-1-english',
+              sectionId: 'app-download-1-english',
+              role: 'appDownload1English',
+              price: 0,
+            },
+            chinese: {
+              demoId: 'app-download-1-chinese',
+              sectionId: 'app-download-1-chinese',
+              role: 'appDownload1Chinese',
+              price: 100,
+            },
+            french: {
+              demoId: 'app-download-1-french',
+              sectionId: 'app-download-1-french',
+              role: 'appDownload1French',
+              price: 100,
+            },
+            german: {
+              demoId: 'app-download-1-german',
+              sectionId: 'app-download-1-german',
+              role: 'appDownload1German',
+              price: 100,
+            },
+            portuguese: {
+              demoId: 'app-download-1-portuguese',
+              sectionId: 'app-download-1-portuguese',
+              role: 'appDownload1Portuguese',
+              price: 100,
+            },
+            spanish: {
+              demoId: 'app-download-1-spanish',
+              sectionId: 'app-download-1-spanish',
+              role: 'appDownload1Spanish',
+              price: 100,
+            },
           },
         },
       },
