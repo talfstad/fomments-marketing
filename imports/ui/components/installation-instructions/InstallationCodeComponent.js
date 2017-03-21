@@ -1,5 +1,4 @@
 import React, { Component, PropTypes } from 'react';
-import { connect } from 'react-redux';
 
 import CodeMirror from 'codemirror';
 import 'codemirror/mode/xml/xml';
@@ -77,8 +76,4 @@ InstallationInstructions.propTypes = {
   activeState: PropTypes.shape({}),
 };
 
-const mapStateToProps = state => ({
-  ...state.sectionControls,
-});
-
-export default connect(mapStateToProps)(InstallationInstructions);
+export default InstallationInstructions;

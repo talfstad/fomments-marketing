@@ -6,7 +6,7 @@ import { updateCommentControls } from '/imports/actions/products/sections/update
 import 'bootstrap-select/dist/css/bootstrap-select.css';
 import 'bootstrap-select';
 
-import { ChooseCommentSectionComponent } from './component';
+import { ChooseCommentSectionComponent } from './ChooseCommentSectionComponent';
 
 const actions = {
   loadFommentSection,
@@ -15,6 +15,7 @@ const actions = {
 };
 
 const mapStateToProps = state => ({
+  ...state.sections,
   ...state.sectionControls,
 });
 

@@ -1,8 +1,9 @@
 import { connect } from 'react-redux';
 
-import { InstallationInstructionsComponent } from './component';
+import { InstallationInstructionsComponent } from './InstallationInstructionsComponent';
 
 const mapStateToProps = state => ({
+  ...state.sections,
   ...state.sectionControls,
   userId: state.user.id,
 });
