@@ -1,29 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Router, Route, browserHistory } from 'react-router';
-import App from './components/app';
+import { Meteor } from 'meteor/meteor';
+import { render } from 'react-dom';
 
-const routes = (
-  <Router history={browserHistory}>
-    <Route path="/" component={App} />
-  </Router>
-);
+import { renderRoutes } from '/imports/startup/client/routes';
 
 Meteor.startup(() => {
-  ReactDOM.render(routes, document.getElementById('fomments-main'));
-
-  $(() => {
-    const $el = $('.tablet-portrait > div');
-    setTimeout(() => {
-      $el.animate({
-        scrollTop: 450,
-      }, 2500, () => {
-        setTimeout(() => {
-          $el.animate({
-            scrollTop: 50,
-          }, 3000);
-        }, 3000);
-      });
-    }, 500);
-  });
+  render(renderRoutes(), document.getElementById('fomments-main'));
 });

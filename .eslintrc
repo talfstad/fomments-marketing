@@ -19,6 +19,8 @@
     'func-names': [0, 'as-needed'],
     'import/no-extraneous-dependencies': 'off',
     'import/extensions': ['off', 'never'],
+    'import/no-absolute-path': ['off', 'never'],
+    'import/prefer-default-export': ['off', 'never'],
     'react/jsx-filename-extension': ['error', { 'extensions': ['.js', '.jsx'] }]
   },
   'parser': 'babel-eslint'
