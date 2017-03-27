@@ -3,6 +3,8 @@ import InstallationInstructions from '/imports/ui/components/installation-instru
 
 export class ChooseCommentSectionComponent extends Component {
   componentDidMount() {
+    this.props.loadSections();
+
     $('.selectpicker').selectpicker({
       style: 'btn-default btn-lg',
     });
@@ -297,6 +299,7 @@ ChooseCommentSectionComponent.propTypes = {
   changeFommentSectionProductName: PropTypes.func,
   updateCommentControls: PropTypes.func,
   loadFommentSection: PropTypes.func,
+  loadSections: PropTypes.func,
   verticals: PropTypes.shape({}),
   languages: PropTypes.shape({}),
   activeState: PropTypes.shape({}),

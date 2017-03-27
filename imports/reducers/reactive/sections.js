@@ -1,4 +1,8 @@
 import { UPDATE_COMMENT_CONTROLS } from '/imports/actions/products/sections/update';
+import {
+  SECTIONS_SUBSCRIPTION_READY,
+  SECTIONS_SUBSCRIPTION_CHANGED,
+} from '/imports/actions/products/sections/load';
 
 const INITIAL_STATE = {
   verticals: {
@@ -241,6 +245,14 @@ const INITIAL_STATE = {
 
 export default (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case SECTIONS_SUBSCRIPTION_READY: {
+      console.log('SECTIONS_READY');
+      return { ...state };
+    }
+    case SECTIONS_SUBSCRIPTION_CHANGED: {
+      console.log('SECTIONS_CHANGED');
+      return { ...state };
+    }
     case UPDATE_COMMENT_CONTROLS: {
       return {
         ...state,

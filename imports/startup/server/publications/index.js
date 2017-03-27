@@ -1,1 +1,1 @@
-import './products';
+import './sections';
