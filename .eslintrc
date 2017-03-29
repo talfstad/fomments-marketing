@@ -14,7 +14,7 @@
     'import/resolver': 'meteor'
   },
   'rules': {
-    'no-undef': 'off',
+    # 'no-undef': 'off',
     'no-underscore-dangle': [0, 'never'],
     'func-names': [0, 'as-needed'],
     'import/no-extraneous-dependencies': 'off',

@@ -1,11 +1,26 @@
-import { UPDATE_COMMENT_CONTROLS } from '/imports/actions/products/sections/update';
+import {
+  UPDATE_COMMENT_CONTROLS,
+} from '/imports/actions/products/sections/update';
+
+import {
+  SECTIONS_SUBSCRIPTION_CHANGED,
+} from '/imports/actions/products/sections/load';
 
 const INITIAL_STATE = {
+  activeSections: [],
   activeState: {
-    vertical: 'muscle',
     language: 'english',
-    section: 1,
+    vertical: 'muscle',
+    section: {},
     productName: '',
+  },
+  verticals: {
+    appDownload: { name: 'App Download' },
+    diet: { name: 'Diet' },
+    erectileDysfunction: { name: 'Erectile Dysfunction' },
+    giveaway: { name: 'Giveaway' },
+    muscle: { name: 'Muscle' },
+    skin: { name: 'Skin' },
   },
   languages: {
     english: {
@@ -36,14 +51,27 @@ const INITIAL_STATE = {
 };
 
 export default (state = INITIAL_STATE, action) => {
+  const getActiveSections = () => {
+    // TODO: based on language & vertical, set active sections using payload
+    return state.activeSections;
+  };
+
   switch (action.type) {
+    case SECTIONS_SUBSCRIPTION_CHANGED: {
+      // TODO: based on language and vertical, set activeSections and set activeState section
+      // sort them
+      return state;
+    }
     case UPDATE_COMMENT_CONTROLS: {
+      // TODO: if payload has language or vertical recalc activeSections and set activeState section
+      // sort them
       return {
         ...state,
         activeState: {
           ...state.activeState,
           ...action.payload,
         },
+        activeSection: getActiveSections(),
       };
     }
     default:

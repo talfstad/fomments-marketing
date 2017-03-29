@@ -1,260 +1,104 @@
-import _ from 'lodash';
-import { UPDATE_COMMENT_CONTROLS } from '/imports/actions/products/sections/update';
 import {
   SECTIONS_SUBSCRIPTION_CHANGED,
 } from '/imports/actions/products/sections/load';
 
+import {
+  UPDATE_COMMENT_CONTROLS,
+} from '/imports/actions/products/sections/update';
+
 const INITIAL_STATE = {
+  sectionList: [],
+  activeSections: [],
+  activeState: {
+    language: 'english',
+    vertical: 'muscle',
+    section: {},
+    productName: '',
+  },
   verticals: {
-    diet: {
-      name: 'Diet',
-      sections: {
-        1: {
-          languages: {
-            english: {
-              demoId: 'diet-1-english',
-              sectionId: 'diet-1-english',
-              price: 0,
-            },
-            chinese: {
-              demoId: 'diet-1-chinese',
-              sectionId: 'diet-1-chinese',
-              price: 100,
-            },
-            french: {
-              demoId: 'diet-1-french',
-              sectionId: 'diet-1-french',
-              price: 100,
-            },
-            german: {
-              demoId: 'diet-1-german',
-              sectionId: 'diet-1-german',
-              price: 100,
-            },
-            portuguese: {
-              demoId: 'diet-1-portuguese',
-              sectionId: 'diet-1-portuguese',
-              price: 100,
-            },
-            spanish: {
-              demoId: 'diet-1-spanish',
-              sectionId: 'diet-1-spanish',
-              price: 100,
-            },
-          },
-        },
-      },
+    appDownload: { name: 'App Download' },
+    diet: { name: 'Diet' },
+    erectileDysfunction: { name: 'Erectile Dysfunction' },
+    giveaway: { name: 'Giveaway' },
+    muscle: { name: 'Muscle' },
+    skin: { name: 'Skin' },
+  },
+  languages: {
+    english: {
+      name: 'English',
+      flag: 'flag-icon-us',
     },
-    muscle: {
-      name: 'Muscle',
-      sections: {
-        1: {
-          languages: {
-            english: {
-              demoId: 'muscle-1-english',
-              sectionId: 'muscle-1-english',
-              price: 0,
-            },
-            chinese: {
-              demoId: 'muscle-1-chinese',
-              sectionId: 'muscle-1-chinese',
-              price: 100,
-            },
-            french: {
-              demoId: 'muscle-1-french',
-              sectionId: 'muscle-1-french',
-              price: 100,
-            },
-            german: {
-              demoId: 'muscle-1-german',
-              sectionId: 'muscle-1-german',
-              price: 100,
-            },
-            portuguese: {
-              demoId: 'muscle-1-portuguese',
-              sectionId: 'muscle-1-portuguese',
-              price: 100,
-            },
-            spanish: {
-              demoId: 'muscle-1-spanish',
-              sectionId: 'muscle-1-spanish',
-              price: 100,
-            },
-          },
-        },
-      },
+    chinese: {
+      name: 'Chinese',
+      flag: 'flag-icon-china',
     },
-    giveaway: {
-      name: 'Giveaway',
-      sections: {
-        1: {
-          languages: {
-            english: {
-              demoId: 'giveaway-1-english',
-              sectionId: 'giveaway-1-english',
-              price: 0,
-            },
-            chinese: {
-              demoId: 'giveaway-1-chinese',
-              sectionId: 'giveaway-1-chinese',
-              price: 100,
-            },
-            french: {
-              demoId: 'giveaway-1-french',
-              sectionId: 'giveaway-1-french',
-              price: 100,
-            },
-            german: {
-              demoId: 'giveaway-1-german',
-              sectionId: 'giveaway-1-german',
-              price: 100,
-            },
-            portuguese: {
-              demoId: 'giveaway-1-portuguese',
-              sectionId: 'giveaway-1-portuguese',
-              price: 100,
-            },
-            spanish: {
-              demoId: 'giveaway-1-spanish',
-              sectionId: 'giveaway-1-spanish',
-              price: 100,
-            },
-          },
-        },
-      },
+    french: {
+      name: 'French',
+      flag: 'flag-icon-france',
     },
-    erectileDysfunction: {
-      name: 'Erectile Dysfunction',
-      sections: {
-        1: {
-          languages: {
-            english: {
-              demoId: 'erectile-dysfunction-1-english',
-              sectionId: 'erectile-dysfunction-1-english',
-              price: 0,
-            },
-            chinese: {
-              demoId: 'erectile-dysfunction-1-chinese',
-              sectionId: 'erectile-dysfunction-1-chinese',
-              price: 100,
-            },
-            french: {
-              demoId: 'erectile-dysfunction-1-french',
-              sectionId: 'erectile-dysfunction-1-french',
-              price: 100,
-            },
-            german: {
-              demoId: 'erectile-dysfunction-1-german',
-              sectionId: 'erectile-dysfunction-1-german',
-              price: 100,
-            },
-            portuguese: {
-              demoId: 'erectile-dysfunction-1-portuguese',
-              sectionId: 'erectile-dysfunction-1-portuguese',
-              price: 100,
-            },
-            spanish: {
-              demoId: 'erectile-dysfunction-1-spanish',
-              sectionId: 'erectile-dysfunction-1-spanish',
-              price: 100,
-            },
-          },
-        },
-      },
+    german: {
+      name: 'German',
+      flag: 'flag-icon-germany',
     },
-    skin: {
-      name: 'Skin',
-      sections: {
-        1: {
-          languages: {
-            english: {
-              demoId: 'skin-1-english',
-              sectionId: 'skin-1-english',
-              price: 0,
-            },
-            chinese: {
-              demoId: 'skin-1-chinese',
-              sectionId: 'skin-1-chinese',
-              price: 100,
-            },
-            french: {
-              demoId: 'skin-1-french',
-              sectionId: 'skin-1-french',
-              price: 100,
-            },
-            german: {
-              demoId: 'skin-1-german',
-              sectionId: 'skin-1-german',
-              price: 100,
-            },
-            portuguese: {
-              demoId: 'skin-1-portuguese',
-              sectionId: 'skin-1-portuguese',
-              price: 100,
-            },
-            spanish: {
-              demoId: 'skin-1-spanish',
-              sectionId: 'skin-1-spanish',
-              price: 100,
-            },
-          },
-        },
-      },
+    portuguese: {
+      name: 'Portuguese',
+      flag: 'flag-icon-portuguese',
     },
-    appDownload: {
-      name: 'App Download',
-      sections: {
-        1: {
-          languages: {
-            english: {
-              demoId: 'app-download-1-english',
-              sectionId: 'app-download-1-english',
-              price: 0,
-            },
-            chinese: {
-              demoId: 'app-download-1-chinese',
-              sectionId: 'app-download-1-chinese',
-              price: 100,
-            },
-            french: {
-              demoId: 'app-download-1-french',
-              sectionId: 'app-download-1-french',
-              price: 100,
-            },
-            german: {
-              demoId: 'app-download-1-german',
-              sectionId: 'app-download-1-german',
-              price: 100,
-            },
-            portuguese: {
-              demoId: 'app-download-1-portuguese',
-              sectionId: 'app-download-1-portuguese',
-              price: 100,
-            },
-            spanish: {
-              demoId: 'app-download-1-spanish',
-              sectionId: 'app-download-1-spanish',
-              price: 100,
-            },
-          },
-        },
-      },
+    spanish: {
+      name: 'Spanish',
+      flag: 'flag-icon-mexico',
     },
   },
 };
 
 export default (state = INITIAL_STATE, action) => {
+  const getActiveSections = () => {
+    let sections = action.payload;
+    if (action.type === UPDATE_COMMENT_CONTROLS) {
+      sections = state.sectionList;
+    }
+
+    const {
+      vertical = state.activeState.vertical,
+      language = state.activeState.language,
+    } = action.payload;
+    return sections.filter(section =>
+      (section.vertical === vertical && section.language === language));
+  };
+
+  const getActiveSection = () => {
+    const { section } = action.payload;
+    if (section) {
+      // If updating section return the new one
+      return section;
+    }
+
+    return getActiveSections()[0];
+  };
+
   switch (action.type) {
     case SECTIONS_SUBSCRIPTION_CHANGED: {
       return {
         ...state,
-        ...(_.keyBy(action.payload, '_id')),
+        sectionList: [...action.payload],
+        activeState: {
+          ...state.activeState,
+          section: getActiveSection(),
+        },
+        activeSections: getActiveSections(),
       };
     }
     case UPDATE_COMMENT_CONTROLS: {
+      // TODO: if payload has language or vertical recalc activeSections and set activeState section
+      // sort them
       return {
         ...state,
-        ...action.payload,
+        activeState: {
+          ...state.activeState,
+          ...action.payload,
+          section: getActiveSection(),
+        },
+        activeSections: getActiveSections(),
       };
     }
     default:

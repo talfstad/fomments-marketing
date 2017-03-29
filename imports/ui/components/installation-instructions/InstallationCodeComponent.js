@@ -20,15 +20,11 @@ class InstallationInstructions extends Component {
 
   updateCodeMirrorValueFromProps() {
     const {
-      verticals,
       activeState,
     } = this.props;
 
-    const { sectionId } =
-      verticals[activeState.vertical]
-        .sections[activeState.section]
-        .languages[activeState.language];
-    const productName = activeState.productName;
+    const { sectionId } = activeState.section;
+    const { productName } = activeState;
     const productAttribute =
       (productName.replace(/ /g, '').length > 0 ? ` product-name="${productName}"` : '');
 
@@ -72,7 +68,6 @@ ideally right after the opening <body> tag. -->
 }
 
 InstallationInstructions.propTypes = {
-  verticals: PropTypes.shape({}),
   activeState: PropTypes.shape({}),
 };
 

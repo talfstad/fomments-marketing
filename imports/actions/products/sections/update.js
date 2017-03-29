@@ -1,7 +1,7 @@
-export const UPDATE_COMMENT_CONTROLS = 'updateCommentControls';
+export const UPDATE_COMMENT_CONTROLS = 'updateActiveState';
 
 // updates is an object for activeState override. ex: { language: 'german' }
-export const updateCommentControls = updates => ({
+export const updateActiveState = updates => ({
   type: UPDATE_COMMENT_CONTROLS,
   payload: updates,
 });

@@ -4,7 +4,6 @@ import InstallationInstructions from '/imports/ui/components/installation-instru
 export class ChooseCommentSectionComponent extends Component {
   componentDidMount() {
     this.props.loadSections();
-
     $('.selectpicker').selectpicker({
       style: 'btn-default btn-lg',
     });
@@ -13,18 +12,15 @@ export class ChooseCommentSectionComponent extends Component {
       // blur the selects after they are selected
       $(e.currentTarget).parent().find('button.dropdown-toggle').blur();
     });
+  }
 
-    const {
-      loadFommentSection,
-      activeState,
-      verticals,
-    } = this.props;
-
-    const { demoId } = verticals[activeState.vertical]
-      .sections[activeState.section]
-      .languages[activeState.language];
-
-    loadFommentSection(demoId, this.productNameInput.value);
+  componentWillReceiveProps(nextProps) {
+    const currentSection = this.props.activeState.section;
+    const nextSection = nextProps.activeState.section;
+    if (currentSection.sectionId !== nextSection.sectionId) {
+      const { loadFommentSection } = this.props;
+      loadFommentSection(nextSection.sectionId, this.productNameInput.value);
+    }
   }
 
   componentDidUpdate() {
@@ -36,23 +32,12 @@ export class ChooseCommentSectionComponent extends Component {
     const vertical = e.target.value;
 
     const {
-      updateCommentControls,
-      loadFommentSection,
-      activeState,
-      verticals,
+      updateActiveState,
     } = this.props;
 
-    const [firstSection] = Object.keys(verticals[activeState.vertical].sections);
-
-    updateCommentControls({
+    updateActiveState({
       vertical,
-      section: firstSection,
     });
-
-    const { demoId } = verticals[vertical]
-      .sections[firstSection]
-      .languages[activeState.language];
-    loadFommentSection(demoId, this.productNameInput.value);
   }
 
   handleLanguageChange(e) {
@@ -60,51 +45,35 @@ export class ChooseCommentSectionComponent extends Component {
     const language = e.target.value;
 
     const {
-      updateCommentControls,
-      loadFommentSection,
-      activeState,
-      verticals,
+      updateActiveState,
     } = this.props;
 
-    const [firstSection] = Object.keys(verticals[activeState.vertical].sections);
-    updateCommentControls({
+    updateActiveState({
       language,
-      section: firstSection,
     });
-
-    const { demoId } = verticals[activeState.vertical]
-      .sections[firstSection]
-      .languages[language];
-    loadFommentSection(demoId, this.productNameInput.value);
   }
 
   handleSectionChange(e) {
     e.preventDefault();
-    const section = e.target.value;
+    const sectionId = e.target.value;
 
     const {
-      updateCommentControls,
-      loadFommentSection,
-      activeState,
-      verticals,
+      activeSections,
+      updateActiveState,
     } = this.props;
 
-    updateCommentControls({ section });
-
-    const { demoId } = verticals[activeState.vertical]
-      .sections[section]
-      .languages[activeState.language];
-    loadFommentSection(demoId, this.productNameInput.value);
+    const section = activeSections.find(val => val.sectionId === sectionId);
+    updateActiveState({ section });
   }
 
   handleProductNameChange(e) {
     e.preventDefault();
     const {
-      updateCommentControls,
+      updateActiveState,
       changeFommentSectionProductName,
     } = this.props;
     const productName = e.target.value;
-    updateCommentControls({ productName });
+    updateActiveState({ productName });
     changeFommentSectionProductName(productName);
   }
 
@@ -112,16 +81,13 @@ export class ChooseCommentSectionComponent extends Component {
     e.preventDefault();
     const {
       loadFommentSection,
-      verticals,
       activeState,
     } = this.props;
 
-    const { demoId } = verticals[activeState.vertical]
-      .sections[activeState.section]
-      .languages[activeState.language];
+    const { sectionId } = activeState.section;
 
-    localStorage.removeItem(demoId);
-    loadFommentSection(demoId, this.productNameInput.value);
+    localStorage.removeItem(sectionId);
+    loadFommentSection(sectionId, this.productNameInput.value);
   }
 
   buildVerticalSelect() {
@@ -129,20 +95,10 @@ export class ChooseCommentSectionComponent extends Component {
       activeState,
       verticals,
     } = this.props;
+    const { vertical } = activeState;
 
     const verticalOptions = () =>
       Object.keys(verticals)
-        .sort((a, b) => {
-          const nameA = verticals[a].name.toUpperCase(); // ignore upper and lowercase
-          const nameB = verticals[b].name.toUpperCase(); // ignore upper and lowercase
-          if (nameA < nameB) {
-            return -1;
-          }
-          if (nameA > nameB) {
-            return 1;
-          }
-          return 0;
-        })
         .map(
           key =>
             <option
@@ -157,40 +113,9 @@ export class ChooseCommentSectionComponent extends Component {
       <select
         onChange={e => this.handleVerticalChange(e)}
         className="selectpicker show-menu-arrow"
-        defaultValue={activeState.vertical}
+        defaultValue={vertical}
       >
         {verticalOptions()}
-      </select>
-    );
-  }
-
-  buildSectionSelect() {
-    const {
-      activeState,
-      verticals,
-    } = this.props;
-    const activeLanguage = activeState.language;
-    const { sections } = verticals[activeState.vertical];
-
-    const sectionOptions = () =>
-      Object.keys(sections).filter(key =>
-        sections[key].languages[activeLanguage])
-          .map(key =>
-            <option
-              key={key}
-              value={key}
-            >
-            Section {key}
-            </option>);
-
-    return (
-      <select
-        onChange={e => this.handleSectionChange(e)}
-        className="selectpicker show-menu-arrow"
-        name="section"
-        id="section"
-      >
-        {sectionOptions()}
       </select>
     );
   }
@@ -208,9 +133,7 @@ export class ChooseCommentSectionComponent extends Component {
             key={key}
             value={key}
             data-content={`<span class="flag-icon ${languages[key].flag}">${languages[key].name}</span>`}
-          >
-            English
-          </option>,
+          />,
       );
 
     return (
@@ -222,6 +145,32 @@ export class ChooseCommentSectionComponent extends Component {
         id="language"
       >
         {languageOptions()}
+      </select>
+    );
+  }
+
+  buildSectionSelect() {
+    const {
+      activeSections,
+    } = this.props;
+
+    const sectionOptions = () =>
+      activeSections.map(section =>
+        <option
+          key={section.sectionId}
+          value={section.sectionId}
+        >
+          {section.name}
+        </option>);
+
+    return (
+      <select
+        onChange={e => this.handleSectionChange(e)}
+        className="selectpicker show-menu-arrow"
+        name="section"
+        id="section"
+      >
+        {sectionOptions()}
       </select>
     );
   }
@@ -297,10 +246,13 @@ export class ChooseCommentSectionComponent extends Component {
 
 ChooseCommentSectionComponent.propTypes = {
   changeFommentSectionProductName: PropTypes.func,
-  updateCommentControls: PropTypes.func,
+  activeSections: PropTypes.arrayOf(PropTypes.object),
+  updateActiveState: PropTypes.func,
+  verticals: PropTypes.shape({}),
   loadFommentSection: PropTypes.func,
   loadSections: PropTypes.func,
-  verticals: PropTypes.shape({}),
   languages: PropTypes.shape({}),
-  activeState: PropTypes.shape({}),
+  activeState: PropTypes.shape({
+    section: PropTypes.shape({}),
+  }),
 };

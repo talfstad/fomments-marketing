@@ -1,31 +1,29 @@
 import React, { Component, PropTypes } from 'react';
 
-import PurchaseSection from './purchase-section';
+// import PurchaseSection from './purchase-section';
 import InstallationCodeComponent from './InstallationCodeComponent';
-import Signup from '../signup';
+// import Signup from '../signup';
 
 export class InstallationInstructionsComponent extends Component {
-
   buildInstallationSection() {
     const {
       verticals,
       activeState,
-      user,
+      // user,
     } = this.props;
-    const {
-      price,
-    } = verticals[activeState.vertical]
-          .sections[activeState.section]
-          .languages[activeState.language];
 
-    if (price > 0) {
-      // if (user) {
-        // Logged in, if showing we do not have the product
-        return <PurchaseSection />;
-      // }
-      // Not logged in, show create account
-      // return <Signup />;
-    }
+    // const {
+    //   price,
+    // } = activeState.section;
+    //
+    // if (price > 0) {
+    //   if (user) {
+    //     // Logged in, if showing we do not have the product
+    //     return <PurchaseSection />;
+    //   }
+    //   // Not logged in, show create account
+    //   return <Signup />;
+    // }
 
     return (
       <InstallationCodeComponent
@@ -74,8 +72,6 @@ export class InstallationInstructionsComponent extends Component {
 
 InstallationInstructionsComponent.propTypes = {
   verticals: PropTypes.shape({}),
-  activeState: PropTypes.shape({
-    price: PropTypes.number,
-  }),
-  user: PropTypes.shape({}),
+  activeState: PropTypes.shape({}),
+  // user: PropTypes.shape({}),
 };
