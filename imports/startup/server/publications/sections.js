@@ -27,6 +27,7 @@ Meteor.publish(SECTIONS_SUB, function () {
       sections = {
         ...sections,
         [fields._id]: {
+          ...sections[fields._id],
           ...fields,
         },
       };
@@ -41,7 +42,6 @@ Meteor.publish(SECTIONS_SUB, function () {
 
   const getSectionIdWithPurchase = purchaseId => Object.keys(sections).filter((sectionId) => {
     const { purchase = {} } = sections[sectionId];
-    // console.log(purchase._id);
     if (purchase._id === purchaseId) {
       return true;
     }
@@ -53,6 +53,7 @@ Meteor.publish(SECTIONS_SUB, function () {
     added(id, fields) {
       const changedSection = {
         ...sections[fields.sectionId],
+        sectionId: fields.dataSectionId,
         purchase: {
           _id: id,
           ...fields,
@@ -73,8 +74,10 @@ Meteor.publish(SECTIONS_SUB, function () {
 
       const changedSection = {
         ...sections[sectionIdWithPurchase],
+        sectionId: sections[sectionIdWithPurchase].sectionId,
         purchase: {
           _id: id,
+          ...sections[sectionIdWithPurchase].purchase,
           ...fields,
         },
       };
