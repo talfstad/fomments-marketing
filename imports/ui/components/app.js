@@ -7,7 +7,7 @@ import ChooseCommentSection from '/imports/ui/components/choose-comment-section'
 
 import 'font-awesome/css/font-awesome.css';
 
-import '/imports/ui/css/AppComponent.scss';
+import '/imports/ui/css/app.scss';
 
 class App extends PureComponent {
   static scrollToCommentSection(e) {

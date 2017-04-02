@@ -4,7 +4,7 @@ import { Router, Route, browserHistory } from 'react-router';
 
 import store from '/imports/store';
 
-import AppComponent from '/imports/ui/components/AppComponent';
+import AppComponent from '/imports/ui/components/app';
 
 export const renderRoutes = () => (
   <Provider store={store}>

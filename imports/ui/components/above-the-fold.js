@@ -25,19 +25,20 @@ class AboveTheFold extends PureComponent {
                 </span>
               </span>
               <span className="message">
-            Code examples of demos proudly hosted at <a href="3f">github.com</a>
+                Code examples &amp; full feature list proudly hosted at <a href="3f">github.com</a>
               </span>
             </span>
             <h1>The new standard in landing page comments</h1>
             <p className="common-body-text">
-      Adding fomments to your landing page is the easiest way to build product trust,
-      and instantly increase ROI in every vertical.
-    </p>
+              Experience the most realistic Facebook comment sections
+              for landing pages to ever be conceived
+            </p>
             <ul>
               <li>
                 <a onClick={scrollToCommentSection} href="" className="signup-button common-button">
-          Choose a comment section
-        </a>
+                  <i className="fa fa-arrow-down mr5" />
+                  Choose a comment section
+                </a>
               </li>
               <li>
                 <a href="" className="common-button">

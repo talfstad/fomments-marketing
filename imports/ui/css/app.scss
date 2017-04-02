@@ -11,6 +11,8 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+.mr5 { margin-right: 5px; }
+
 body {
   background-color: #f6f9fc;
   font-size: 16px;
@@ -124,7 +126,7 @@ main header {
 
 #intro {
   position: relative;
-  height: 660px;
+  height: 570px;
   padding: 0 35px;
   /*align-items: center;*/
   /*display: flex;*/
@@ -174,7 +176,7 @@ main header {
 }
 
 .common-body-text {
-    margin-top: 40px;
+    margin-top: 55px;
     color: #eafdff;
 }
 
@@ -271,7 +273,6 @@ main header {
 #feels-real {
   padding: 200px 20px 300px;
   position: relative;
-  bottom: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -373,7 +374,7 @@ a.signup-button {
 
 
 #intro ul {
-  margin-top: 80px;
+  margin-top: 40px;
   display: flex;
 }
 
@@ -392,7 +393,7 @@ a.signup-button {
   z-index: 1;
   position: absolute;
   right: 0px;
-  bottom: -260px;
+  bottom: -350px;
   display: flex;
   pointer-events: none;
 }
@@ -425,7 +426,6 @@ a.signup-button {
 }
 
 .tablet-portrait > div > img {
-  top: 50px;
   position: relative;
 }
 

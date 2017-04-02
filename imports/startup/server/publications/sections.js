@@ -42,14 +42,12 @@ Meteor.publish(SECTIONS_SUB, function () {
 
   const getSectionIdWithPurchase = purchaseId => Object.keys(sections).filter((sectionId) => {
     const { purchase = {} } = sections[sectionId];
-    if (purchase._id === purchaseId) {
-      return true;
-    }
-    return false;
+    return (purchase._id === purchaseId);
   });
 
   // Sub Document purchases!
-  const purchasesSubHandle = Purchases.find({}).observeChanges({
+  const { userId } = this;
+  const purchasesSubHandle = Purchases.find({ userId }).observeChanges({
     added(id, fields) {
       const changedSection = {
         ...sections[fields.sectionId],
@@ -71,12 +69,10 @@ Meteor.publish(SECTIONS_SUB, function () {
 
     changed(id, fields) {
       const [sectionIdWithPurchase] = getSectionIdWithPurchase(id);
-
       const changedSection = {
         ...sections[sectionIdWithPurchase],
-        sectionId: sections[sectionIdWithPurchase].sectionId,
+        sectionId: fields.dataSectionId || sections[sectionIdWithPurchase].purchase.dataSectionId,
         purchase: {
-          _id: id,
           ...sections[sectionIdWithPurchase].purchase,
           ...fields,
         },
@@ -87,7 +83,7 @@ Meteor.publish(SECTIONS_SUB, function () {
         [sectionIdWithPurchase]: changedSection,
       };
 
-      self.changed('sections', sectionIdWithPurchase, sections[sectionIdWithPurchase]);
+      self.changed('sections', sectionIdWithPurchase, changedSection);
     },
 
     removed(id) {

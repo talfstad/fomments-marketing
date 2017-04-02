@@ -7,7 +7,7 @@ import { loadSections } from '/imports/actions/products/sections/load';
 import 'bootstrap-select/dist/css/bootstrap-select.css';
 import 'bootstrap-select';
 
-import { ChooseCommentSectionComponent } from './ChooseCommentSectionComponent';
+import { ChooseCommentSectionComponent } from './choose-comment-section';
 
 const actions = {
   loadFommentSection,

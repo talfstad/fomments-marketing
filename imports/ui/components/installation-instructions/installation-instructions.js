@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
 // import PurchaseSection from './purchase-section';
-import InstallationCodeComponent from './InstallationCodeComponent';
+import InstallationCodeComponent from './installation-code';
 // import Signup from '../signup';
 
 export class InstallationInstructionsComponent extends Component {
@@ -51,7 +51,7 @@ export class InstallationInstructionsComponent extends Component {
               <a data-toggle="pill" href="#help-guide">
                 <i className="fa fa-video-camera" />
                 <span>
-                  15 Second Video
+                  Install Breakdown
                 </span>
               </a>
             </li>

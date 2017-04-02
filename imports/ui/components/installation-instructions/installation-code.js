@@ -62,7 +62,12 @@ ideally right after the opening <body> tag. -->
 
   render() {
     return (
-      <textarea ref={(c) => { this.editor = c; }} />
+      <div>
+        <textarea ref={(c) => { this.editor = c; }} />
+        <p className="common-body-text">
+          unlocked icon: All English sections are free, test today
+        </p>
+      </div>
     );
   }
 }

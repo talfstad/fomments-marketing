@@ -17,7 +17,8 @@ export class ChooseCommentSectionComponent extends Component {
   componentWillReceiveProps(nextProps) {
     const currentSection = this.props.activeState.section;
     const nextSection = nextProps.activeState.section;
-    if (currentSection.sectionId !== nextSection.sectionId) {
+
+    if (currentSection._id !== nextSection._id) {
       const { loadFommentSection } = this.props;
       loadFommentSection(nextSection.sectionId, this.productNameInput.value);
     }
@@ -62,7 +63,7 @@ export class ChooseCommentSectionComponent extends Component {
       updateActiveState,
     } = this.props;
 
-    const section = activeSections.find(val => val.sectionId === sectionId);
+    const section = activeSections.find(val => val._id === sectionId);
     updateActiveState({ section });
   }
 
@@ -152,19 +153,21 @@ export class ChooseCommentSectionComponent extends Component {
   buildSectionSelect() {
     const {
       activeSections,
+      activeState,
     } = this.props;
 
     const sectionOptions = () =>
       activeSections.map(section =>
         <option
-          key={section.sectionId}
-          value={section.sectionId}
+          key={section._id}
+          value={section._id}
         >
           {section.name}
         </option>);
 
     return (
       <select
+        defaultValue={activeState.section._id}
         onChange={e => this.handleSectionChange(e)}
         className="selectpicker show-menu-arrow"
         name="section"
@@ -181,11 +184,11 @@ export class ChooseCommentSectionComponent extends Component {
         <section className="stacked-container container-lg">
           <h2>
             <i className="fa fa-commenting-o section-icon" />
-    Choose a comment section
-  </h2>
+            Choose a comment section
+          </h2>
           <p className="common-body-text">
-    Pick a comment section by product, target market, and go!
-  </p>
+            Follow these steps to experience how real these fomments feel
+          </p>
           <section id="comment-choice-container">
             <header className="comment-choice-header">
               <div className="age-demo-select-container">

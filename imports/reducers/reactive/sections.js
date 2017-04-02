@@ -11,7 +11,7 @@ const INITIAL_STATE = {
   activeSections: [],
   activeState: {
     language: 'english',
-    vertical: 'muscle',
+    vertical: 'skin',
     section: {},
     productName: '',
   },
@@ -67,13 +67,27 @@ export default (state = INITIAL_STATE, action) => {
   };
 
   const getActiveSection = () => {
+    const { activeState } = state;
+    const {
+      vertical = activeState.vertical,
+      language = activeState.language,
+    } = action.payload;
     const { section } = action.payload;
+
     if (section) {
       // If updating section return the new one
       return section;
     }
 
-    return getActiveSections()[0];
+    // Intent: Don't reset activeState.section on update unless
+    // we have changed a select option that impacts it.
+    const activeSections = getActiveSections();
+    if (activeState.section.vertical !== vertical ||
+      activeState.section.language !== language) {
+      return activeSections[0];
+    }
+    // Return the new version of the current section
+    return activeSections.find(activeSection => activeSection._id === activeState.section._id);
   };
 
   switch (action.type) {
