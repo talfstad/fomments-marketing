@@ -22,12 +22,27 @@ class InstallationInstructions extends Component {
     const {
       activeState,
     } = this.props;
-
-    const { sectionId } = activeState.section;
+    const { section } = activeState;
     const { productName } = activeState;
     const productAttribute =
       (productName.replace(/ /g, '').length > 0 ? ` product-name="${productName}"` : '');
 
+    // Intent: add overlay to make sure anytime the value has a 'purchase-to-unlock'
+    // keyword, we blur it!
+    this.codemirror.addOverlay({
+      token(stream) {
+        if (stream.match('purchase-to-unlock')) {
+          return 'blur-text';
+        }
+        stream.next();
+        return null;
+      },
+    });
+
+    let { sectionId } = section;
+    if (!section.purchase && section.language !== 'english') {
+      sectionId = 'purchase-to-unlock';
+    }
     // set new value and refresh
     const codeMirrorValue =
 `<!-- Step 1: Place this code on your landing page
@@ -47,6 +62,60 @@ ideally right after the opening <body> tag. -->
     }, 1000);
   }
 
+  buildPurchaseArea() {
+    const { activeState } = this.props;
+    const { section } = activeState;
+
+    const englishSectionContent = () => (
+      <div>
+        <div className="col-sm-1 lock-box">
+          <i className="fa fa-unlock" />
+        </div>
+        <div className="col-sm-11">
+          <p>
+            This section is unlocked. English sections for all verticals are free to use.
+          </p>
+        </div>
+      </div>
+    );
+
+    const purchasedSectionContent = () => (
+      <div>
+        <div className="col-sm-1 lock-box">
+          <i className="fa fa-unlock" />
+        </div>
+        <div className="col-sm-11">
+          <p>
+            This section has been unlocked and is now ready to use.
+          </p>
+        </div>
+      </div>
+    );
+
+    const purchaseFormSectionContent = () => (
+      <div>
+        <div className="col-sm-1 lock-box">
+          <i className="fa fa-unlock" />
+        </div>
+        <div className="col-sm-11">
+          <p>
+            Purchase form REPLACEME
+          </p>
+        </div>
+      </div>
+    );
+
+    if (section.language === 'english') {
+      return englishSectionContent();
+    }
+
+    if (section.purchase) {
+      return purchasedSectionContent();
+    }
+
+    return purchaseFormSectionContent();
+  }
+
   initCodeMirror() {
     // Detect tab switching, if section code init code mirror
     this.codemirror = CodeMirror.fromTextArea(this.editor, {
@@ -64,9 +133,9 @@ ideally right after the opening <body> tag. -->
     return (
       <div>
         <textarea ref={(c) => { this.editor = c; }} />
-        <p className="common-body-text">
-          unlocked icon: All English sections are free, test today
-        </p>
+        <div className="row info-box">
+          {this.buildPurchaseArea()}
+        </div>
       </div>
     );
   }

@@ -852,3 +852,41 @@ form.section-control .form-group small {
   padding-bottom: 10px;
   display: block;
 }
+
+.info-box {
+  border: 1px solid #e5e6e9;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(50, 50, 93, 0.1);
+  background-color: #fff;
+}
+
+#help-guide .info-box,
+#installation .info-box {
+  margin-top: 15px;
+  margin-left: 0;
+  width: 100%;
+}
+#installation p {
+  text-align: left;
+}
+#installation .info-box .lock-box {
+  font-size: 30px;
+  text-align: center;
+  background: #f2feef;
+  border-right: 1px solid #ddd;
+}
+
+#installation .info-box .lock-box i {
+  margin: 20px auto;
+}
+
+#installation .info-box .lock-box i.fa-unlock {
+  color: #5dc79e;
+}
+
+.cm-blur-text {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+ }

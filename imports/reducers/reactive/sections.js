@@ -93,15 +93,19 @@ export default (state = INITIAL_STATE, action) => {
       return section;
     }
 
-    // Intent: Don't reset activeState.section on update unless
-    // we have changed a select option that impacts it.
     const activeSections = getActiveSections();
+    const updatedActiveSection = activeSections.find(
+      activeSection => activeSection._id === activeState.section._id);
+
+    // Intent: Don't reset activeState.section on update unless
+    // we have changed a select option that impacts it or it has been deleted.
     if (activeState.section.vertical !== vertical ||
-      activeState.section.language !== language) {
+      activeState.section.language !== language ||
+      !updatedActiveSection) {
       return activeSections[0];
     }
     // Return the new version of the current section
-    return activeSections.find(activeSection => activeSection._id === activeState.section._id);
+    return updatedActiveSection;
   };
 
   switch (action.type) {
@@ -117,8 +121,6 @@ export default (state = INITIAL_STATE, action) => {
       };
     }
     case UPDATE_COMMENT_CONTROLS: {
-      // TODO: if payload has language or vertical recalc activeSections and set activeState section
-      // sort them
       return {
         ...state,
         activeState: {

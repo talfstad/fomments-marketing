@@ -62,7 +62,9 @@ export class InstallationInstructionsComponent extends Component {
             {this.buildInstallationSection()}
           </div>
           <div id="help-guide" className="tab-pane fade">
-            <div className="wistia_embed wistia_async_e47iwqtqdl" style={{ height: '413px', width: '735px' }}>&nbsp;</div>
+            <div style={{ height: '413px', width: '735px' }}>
+              <div className="wistia_embed wistia_async_e47iwqtqdl">&nbsp;</div>
+            </div>
           </div>
         </div>
       </section>
