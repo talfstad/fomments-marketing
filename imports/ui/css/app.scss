@@ -372,6 +372,20 @@ a.signup-button {
   white-space: nowrap;
 }
 
+.purchase-section-button:hover {
+  color: #fff;
+}
+.purchase-section-button {
+  border: none;
+  float: right;
+  position: relative;
+  bottom: 5px;
+  color: #fff;
+  background: #3ecf8e;
+  text-shadow: 0 1px 3px rgba(36,180,126,.4);
+  white-space: nowrap;
+}
+
 
 #intro ul {
   margin-top: 40px;
@@ -869,6 +883,7 @@ form.section-control .form-group small {
 #installation p {
   text-align: left;
 }
+
 #installation .info-box .lock-box {
   font-size: 30px;
   text-align: center;
@@ -876,6 +891,13 @@ form.section-control .form-group small {
   border-right: 1px solid #ddd;
 }
 
+#installation .info-box .unlock-box {
+  font-size: 30px;
+  text-align: center;
+  border-right: 1px solid #ddd;
+}
+
+#installation .info-box .unlock-box i,
 #installation .info-box .lock-box i {
   margin: 20px auto;
 }

@@ -94,12 +94,17 @@ ideally right after the opening <body> tag. -->
 
     const purchaseFormSectionContent = () => (
       <div>
-        <div className="col-sm-1 lock-box">
-          <i className="fa fa-unlock" />
+        <div className="col-sm-1 unlock-box">
+          <i className="fa fa-lock" />
         </div>
         <div className="col-sm-11">
           <p>
-            Purchase form REPLACEME
+            Instant unlock $97
+            use on all landing pages
+            no limitation
+            <button className="common-button purchase-section-button">
+              Purchase
+            </button>
           </p>
         </div>
       </div>
