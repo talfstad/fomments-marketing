@@ -52,16 +52,30 @@ const INITIAL_STATE = {
 };
 
 export default (state = INITIAL_STATE, action) => {
+  // Intent: integrate puchase and section to give the composed object outputs
+  const getSectionListWithPurchasedSectionIdsFromPayload = () =>
+    action.payload.map((section) => {
+      if (section.purchase) {
+        return {
+          ...section,
+          sectionId: section.purchase.dataSectionId,
+        };
+      }
+      return section;
+    });
+
   const getActiveSections = () => {
-    let sections = action.payload;
-    if (action.type === UPDATE_COMMENT_CONTROLS) {
-      sections = state.sectionList;
+    let sections = state.sectionList;
+    if (action.type === SECTIONS_SUBSCRIPTION_CHANGED) {
+      sections = getSectionListWithPurchasedSectionIdsFromPayload();
     }
 
+    const { activeState } = state;
     const {
-      vertical = state.activeState.vertical,
-      language = state.activeState.language,
+      vertical = activeState.vertical,
+      language = activeState.language,
     } = action.payload;
+
     return sections.filter(section =>
       (section.vertical === vertical && section.language === language));
   };
@@ -94,7 +108,7 @@ export default (state = INITIAL_STATE, action) => {
     case SECTIONS_SUBSCRIPTION_CHANGED: {
       return {
         ...state,
-        sectionList: [...action.payload],
+        sectionList: [...getSectionListWithPurchasedSectionIdsFromPayload()],
         activeState: {
           ...state.activeState,
           section: getActiveSection(),

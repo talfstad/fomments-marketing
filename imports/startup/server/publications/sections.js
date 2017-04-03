@@ -51,7 +51,6 @@ Meteor.publish(SECTIONS_SUB, function () {
     added(id, fields) {
       const changedSection = {
         ...sections[fields.sectionId],
-        sectionId: fields.dataSectionId,
         purchase: {
           _id: id,
           ...fields,
@@ -71,7 +70,6 @@ Meteor.publish(SECTIONS_SUB, function () {
       const [sectionIdWithPurchase] = getSectionIdWithPurchase(id);
       const changedSection = {
         ...sections[sectionIdWithPurchase],
-        sectionId: fields.dataSectionId || sections[sectionIdWithPurchase].purchase.dataSectionId,
         purchase: {
           ...sections[sectionIdWithPurchase].purchase,
           ...fields,
