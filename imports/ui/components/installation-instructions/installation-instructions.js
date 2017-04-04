@@ -1,29 +1,12 @@
 import React, { Component, PropTypes } from 'react';
-
-// import PurchaseSection from './purchase-section';
 import InstallationCodeComponent from './installation-code';
-// import Signup from '../signup';
 
 export class InstallationInstructionsComponent extends Component {
   buildInstallationSection() {
     const {
       verticals,
       activeState,
-      // user,
     } = this.props;
-
-    // const {
-    //   price,
-    // } = activeState.section;
-    //
-    // if (price > 0) {
-    //   if (user) {
-    //     // Logged in, if showing we do not have the product
-    //     return <PurchaseSection />;
-    //   }
-    //   // Not logged in, show create account
-    //   return <Signup />;
-    // }
 
     return (
       <InstallationCodeComponent
@@ -75,5 +58,4 @@ export class InstallationInstructionsComponent extends Component {
 InstallationInstructionsComponent.propTypes = {
   verticals: PropTypes.shape({}),
   activeState: PropTypes.shape({}),
-  // user: PropTypes.shape({}),
 };

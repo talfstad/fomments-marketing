@@ -6,11 +6,12 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case USER_REACTIVE_SOURCE_CHANGED:
+    case USER_REACTIVE_SOURCE_CHANGED: {
       return {
         ...action.payload,
         ready: true,
       };
+    }
     default:
       return state;
   }

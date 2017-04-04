@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { startSubscription } from 'meteor-redux-middlewares';
-import Sections from '/imports/api/meteor/collections/sections';
+
+import { Sections } from '/imports/api/meteor/collections';
 
 export const SECTIONS_SUBSCRIPTION_READY = 'SECTIONS_SUBSCRIPTION_READY';
 export const SECTIONS_SUBSCRIPTION_CHANGED = 'SECTIONS_SUBSCRIPTION_CHANGED';

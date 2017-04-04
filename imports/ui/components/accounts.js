@@ -9,13 +9,13 @@ class Accounts extends Component {
     // blaze accounts from in that div
     // this.view = Blaze.renderWithData(Template.atForm, { state: 'forgotPwd' }, this.container);
     // this.view = Blaze.render(Template.atForm, this.container);
-    this.view = Blaze.render(Template.loginButtons, this.container);
+    // this.view = Blaze.render(Template.loginButtons, this.container);
   }
 
   componentWillUnmount() {
     // Go find the forms we created and destroy them
     // We need to clean up those forms ourselves.
-    Blaze.remove(this.view);
+    // Blaze.remove(this.view);
   }
 
   render() {

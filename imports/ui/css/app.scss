@@ -885,16 +885,14 @@ form.section-control .form-group small {
 }
 
 #installation .info-box .lock-box {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
   background: #f2feef;
-  border-right: 1px solid #ddd;
 }
 
 #installation .info-box .unlock-box {
-  font-size: 30px;
+  font-size: 25px;
   text-align: center;
-  border-right: 1px solid #ddd;
 }
 
 #installation .info-box .unlock-box i,
@@ -904,6 +902,10 @@ form.section-control .form-group small {
 
 #installation .info-box .lock-box i.fa-unlock {
   color: #5dc79e;
+}
+
+#installation .purchase-content {
+  border-left: 1px solid #ddd;
 }
 
 .cm-blur-text {

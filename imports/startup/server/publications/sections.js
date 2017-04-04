@@ -1,7 +1,11 @@
 import _ from 'lodash';
 import { Meteor } from 'meteor/meteor';
-import Sections from '/imports/api/meteor/collections/sections';
-import Purchases from '/imports/api/meteor/collections/purchases';
+
+import {
+  Sections,
+  Purchases,
+} from '/imports/api/meteor/collections/';
+
 import { SECTIONS_SUB } from '/imports/actions/products/sections/load';
 
 Meteor.publish(SECTIONS_SUB, function () {
