@@ -26,3 +26,5 @@ twbs:bootstrap
 alanning:roles
 fourseven:scss
 aldeed:collection2-core@2.0.0
+ddp-rate-limiter
+mdg:validated-method

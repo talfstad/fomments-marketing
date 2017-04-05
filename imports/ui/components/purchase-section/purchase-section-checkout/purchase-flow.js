@@ -4,13 +4,14 @@ import { connect } from 'react-redux';
 import * as purchaseFlowActions from '/imports/actions/flows/purchase-flow.js';
 
 import StripePurchaseForm from './stripe-purchase-form';
-import SigninOrCreateUserAndLogin from './signin-or-create-user-and-login';
+import LoginOrCreateUserAndLogin from './login-or-create-user-and-login';
 
 const PurchaseForm = (props) => {
   const {
     setShowPurchaseFlow,
     loginOrCreateUser,
     user,
+    purchaseFlow,
     section,
   } = props;
 
@@ -19,7 +20,8 @@ const PurchaseForm = (props) => {
   }
 
   return (
-    <SigninOrCreateUserAndLogin
+    <LoginOrCreateUserAndLogin
+      errors={purchaseFlow.login.errors}
       setShowPurchaseFlow={val => setShowPurchaseFlow(val)}
       section={section}
       loginOrCreateUser={loginOrCreateUser}
@@ -30,6 +32,7 @@ PurchaseForm.propTypes = {
   setShowPurchaseFlow: PropTypes.func,
   loginOrCreateUser: PropTypes.func,
   user: PropTypes.shape({}),
+  purchaseFlow: PropTypes.shape({}),
   section: PropTypes.shape({}),
 };
 
@@ -40,6 +43,7 @@ const actions = {
 const mapStateToProps = state => ({
   user: state.user,
   section: state.sections.activeState.section,
+  purchaseFlow: state.purchaseFlow,
 });
 
 export default connect(mapStateToProps, actions)(PurchaseForm);

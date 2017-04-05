@@ -1,18 +1,21 @@
 import {
-  PURCHASE_FLOW_USER_LOGIN_ERROR,
+  PURCHASE_FLOW_USER_LOGIN_ERRORS,
 } from '/imports/actions/flows/purchase-flow';
 
 const initialState = {
-  error: {},
+  login: {
+    errors: [],
+  },
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
-    case PURCHASE_FLOW_USER_LOGIN_ERROR: {
-      console.log(action.payload);
+    case PURCHASE_FLOW_USER_LOGIN_ERRORS: {
       return {
         ...state,
-        loginError: action.payload,
+        login: {
+          errors: action.payload,
+        },
       };
     }
     default:
