@@ -6,6 +6,11 @@ import ValidateLoginSchema from '../../api/meteor/schemas/validation/login';
 
 export const PURCHASE_FLOW_USER_LOGIN_ERRORS = 'PURCHASE_FLOW_USER_LOGIN_ERROR';
 
+export const resetLoginErrors = () => ({
+  type: PURCHASE_FLOW_USER_LOGIN_ERRORS,
+  payload: [],
+});
+
 export const loginOrCreateUser = ({ email, password }) => (dispatch) => {
   const loginFormValidationContext = ValidateLoginSchema.namedContext();
   loginFormValidationContext.validate({ email, password });
@@ -32,7 +37,7 @@ export const loginOrCreateUser = ({ email, password }) => (dispatch) => {
                   type: PURCHASE_FLOW_USER_LOGIN_ERRORS,
                   payload: [{
                     name: 'password',
-                    message: 'Could not create user',
+                    message: createError.reason,
                   }],
                 });
               }

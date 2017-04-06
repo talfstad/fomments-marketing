@@ -1,7 +1,54 @@
-import React, { Component } from 'react';
-import Accounts from './accounts';
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import * as loginActions from '../../actions/user/login';
 
 class Header extends Component {
+  handleLogout(e) {
+    e.preventDefault();
+    const { logUserOut } = this.props;
+    logUserOut();
+  }
+
+  buildLoginDropdown() {
+    const { user } = this.props;
+
+    const buildSignedInDropdownMenu = () => {
+      return [
+        <li key="1">
+          <a className="dropdown-item" href="a#">My Account</a>
+        </li>,
+        <li key="2">
+          <a onClick={e => this.handleLogout(e)} className="dropdown-item" href="a#">Logout</a>
+        </li>,
+      ];
+    };
+
+    const buildSignedOutDropdownMenu = () => {
+      return (
+        <li>
+          <a onClick={e => this.handleLogout(e)} className="dropdown-item" href="a#">Login form here</a>
+        </li>
+      );
+    };
+
+    return (
+      <div className="button-group">
+        <button
+          type="button"
+          className="login-button btn dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <i className="gold-member fa fa-trophy" /> {user._id ? user.emails[0].address : 'Sign in'} <span className="caret" />
+        </button>
+        <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+          {user._id ? buildSignedInDropdownMenu() : buildSignedOutDropdownMenu()}
+        </ul>
+      </div>
+    );
+  }
+
   render() {
     return (
       <header id="global-nav">
@@ -37,7 +84,7 @@ class Header extends Component {
               </a>
             </li>
             <li className="nav-section signin">
-              <Accounts />
+              {this.buildLoginDropdown()}
             </li>
           </ul>
         </div>
@@ -46,4 +93,17 @@ class Header extends Component {
   }
 }
 
-export default Header;
+Header.propTypes = {
+  user: PropTypes.shape({}),
+  logUserOut: PropTypes.func,
+};
+
+const actions = {
+  logUserOut: loginActions.logUserOut,
+};
+
+const mapStateToProps = state => ({
+  user: state.user,
+});
+
+export default connect(mapStateToProps, actions)(Header);

@@ -1,16 +1,35 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
-const EnglishSectionContent = () => (
-  <div className="row info-box">
-    <div className="col-sm-1 lock-box">
-      <i className="fa fa-unlock" />
+const EnglishSectionContent = (props) => {
+  const { section } = props;
+
+  return (
+    <div className="row info-box">
+      <div className="col-sm-1 table-cell lock-box">
+        <i className="fa fa-unlock" />
+      </div>
+      <div className="col-sm-11 table-cell purchase-content">
+        <p>
+          <span className="flag-icon flag-icon-us" />
+          <span className="capitialize"> {section.vertical} </span>
+          {section.name} in
+          <span className="capitialize"> {section.language}</span>
+        </p>
+        <div className="purchase-feature-list">
+          <p>
+            <i className="fa fa-check" /> Use on all of your landing pages
+          </p>
+          <p>
+            <i className="fa fa-check" /> Customize product name on the fly
+          </p>
+        </div>
+      </div>
     </div>
-    <div className="col-sm-11 purchase-content">
-      <p>
-        This section is unlocked. English sections for all verticals are free to use.
-      </p>
-    </div>
-  </div>
-);
+  );
+};
+
+EnglishSectionContent.propTypes = {
+  section: PropTypes.shape({}),
+};
 
 export default EnglishSectionContent;

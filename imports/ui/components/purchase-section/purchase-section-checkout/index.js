@@ -21,7 +21,6 @@ class PurchaseSectionCheckout extends Component {
 
   render() {
     const { showPurchaseFlow } = this.state;
-
     if (showPurchaseFlow) {
       return (
         <PurchaseFlow
@@ -37,16 +36,16 @@ class PurchaseSectionCheckout extends Component {
         </div>
         <div className="col-sm-11 purchase-content">
           <p>
-            Instant unlock $97
-            use on all landing pages
-            no limitation
-            <button
-              onClick={e => this.handleStartPurchaseFlowClick(e)}
-              className="common-button purchase-section-button"
-            >
-              Purchase
-            </button>
+            Product name
           </p>
+          <p>feature list</p>
+          <p>price</p>
+          <button
+            onClick={e => this.handleStartPurchaseFlowClick(e)}
+            className="common-button purchase-section-button"
+          >
+            Unlock
+          </button>
         </div>
       </div>
     );

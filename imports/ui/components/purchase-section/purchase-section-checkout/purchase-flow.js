@@ -9,6 +9,7 @@ import LoginOrCreateUserAndLogin from './login-or-create-user-and-login';
 const PurchaseForm = (props) => {
   const {
     setShowPurchaseFlow,
+    resetLoginErrors,
     loginOrCreateUser,
     user,
     purchaseFlow,
@@ -22,6 +23,7 @@ const PurchaseForm = (props) => {
   return (
     <LoginOrCreateUserAndLogin
       errors={purchaseFlow.login.errors}
+      resetLoginErrors={() => resetLoginErrors()}
       setShowPurchaseFlow={val => setShowPurchaseFlow(val)}
       section={section}
       loginOrCreateUser={loginOrCreateUser}
@@ -29,6 +31,7 @@ const PurchaseForm = (props) => {
 };
 
 PurchaseForm.propTypes = {
+  resetLoginErrors: PropTypes.func,
   setShowPurchaseFlow: PropTypes.func,
   loginOrCreateUser: PropTypes.func,
   user: PropTypes.shape({}),
@@ -38,6 +41,7 @@ PurchaseForm.propTypes = {
 
 const actions = {
   loginOrCreateUser: purchaseFlowActions.loginOrCreateUser,
+  resetLoginErrors: purchaseFlowActions.resetLoginErrors,
 };
 
 const mapStateToProps = state => ({

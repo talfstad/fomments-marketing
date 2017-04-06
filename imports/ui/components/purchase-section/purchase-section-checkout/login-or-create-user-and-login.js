@@ -1,6 +1,11 @@
 import React, { Component, PropTypes } from 'react';
 
 class LoginOrCreateUserAndLogin extends Component {
+  componentWillUnmount() {
+    const { resetLoginErrors } = this.props;
+    resetLoginErrors();
+  }
+
   getErrorForField(field) {
     const { errors } = this.props;
     const error = errors.find(o => o.name === field);
@@ -70,6 +75,7 @@ class LoginOrCreateUserAndLogin extends Component {
 }
 
 LoginOrCreateUserAndLogin.propTypes = {
+  resetLoginErrors: PropTypes.func,
   loginOrCreateUser: PropTypes.func,
   setShowPurchaseFlow: PropTypes.func,
   errors: PropTypes.arrayOf(PropTypes.object),

@@ -20,6 +20,9 @@ export class InstallationInstructionsComponent extends Component {
     return (
       <section className="installation-instructions constainer-lg">
         <h2><i className="fa fa-tachometer" /> Landing Page Installation</h2>
+        <p>
+          Simply follow the instructions below
+        </p>
         <nav>
           <ul className="nav nav-stacked nav-pills">
             <li className="active">

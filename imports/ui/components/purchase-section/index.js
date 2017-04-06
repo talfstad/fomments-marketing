@@ -11,14 +11,14 @@ class PurchaseSectionContainer extends Component {
     const { section } = activeState;
 
     if (section.language === 'english') {
-      return <EnglishSectionContent />;
+      return <EnglishSectionContent section={section} />;
     }
 
     if (section.purchase) {
-      return <IsPurchasedSectionContent />;
+      return <IsPurchasedSectionContent section={section} />;
     }
 
-    return <PurchaseSectionCheckout />;
+    return <PurchaseSectionCheckout section={section} />;
   }
 
   render() {
