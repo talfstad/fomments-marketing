@@ -40,7 +40,12 @@ class Header extends Component {
           aria-haspopup="true"
           aria-expanded="false"
         >
-          <i className="gold-member fa fa-trophy" /> {user._id ? user.emails[0].address : 'Sign in'} <span className="caret" />
+          {user._id ?
+            <span>
+              <i className="gold-member fa fa-trophy" /> {user.emails[0].address}
+            </span> :
+            <span>Sign in</span>
+          } <span className="caret" />
         </button>
         <ul className="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
           {user._id ? buildSignedInDropdownMenu() : buildSignedOutDropdownMenu()}
