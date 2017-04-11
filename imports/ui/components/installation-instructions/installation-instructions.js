@@ -37,7 +37,23 @@ export class InstallationInstructionsComponent extends Component {
               <a data-toggle="pill" href="#help-guide">
                 <i className="fa fa-video-camera" />
                 <span>
-                  Install Breakdown
+                  Installation
+                </span>
+              </a>
+            </li>
+            <li>
+              <a data-toggle="pill" href="#help-guide">
+                <i className="fa fa-file" />
+                <span>
+                  Documentation
+                </span>
+              </a>
+            </li>
+            <li>
+              <a data-toggle="pill" href="#help-guide">
+                <i className="fa fa-phone" />
+                <span>
+                  Contact us
                 </span>
               </a>
             </li>

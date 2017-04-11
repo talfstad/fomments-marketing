@@ -981,3 +981,21 @@ form.section-control .form-group small {
 .gold-member {
   color: gold;
 }
+
+.header-login {
+  $bg-color: #3ecf8e;
+  padding: 10px;
+
+  .btn.create-account {
+    &:hover {
+      background: darken($bg-color, 5%);
+    }
+    color: #fff;
+    background: $bg-color;
+    margin-right: 10px;
+  }
+
+  .btn.submit {
+    color: #6772e5;
+  }
+}
