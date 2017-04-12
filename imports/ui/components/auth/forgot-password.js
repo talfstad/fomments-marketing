@@ -53,7 +53,7 @@ class ForgotPassword extends Component {
   render() {
     return (
       <form onSubmit={e => this.handleForgotPassword(e)}>
-        <h3>forgot your password</h3>
+        <h3>forgot password</h3>
         <div className="form-group">
           <label htmlFor="email">Email Address</label>
           <input

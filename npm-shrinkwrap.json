@@ -3291,6 +3291,23 @@
       "resolved": "https://registry.npmjs.org/resolve-from/-/resolve-from-1.0.1.tgz",
       "dev": true
     },
+    "restler": {
+      "version": "3.4.0",
+      "from": "restler@>=3.2.2 <4.0.0",
+      "resolved": "https://registry.npmjs.org/restler/-/restler-3.4.0.tgz",
+      "dependencies": {
+        "iconv-lite": {
+          "version": "0.2.11",
+          "from": "iconv-lite@0.2.11",
+          "resolved": "https://registry.npmjs.org/iconv-lite/-/iconv-lite-0.2.11.tgz"
+        },
+        "qs": {
+          "version": "1.2.0",
+          "from": "qs@1.2.0",
+          "resolved": "https://registry.npmjs.org/qs/-/qs-1.2.0.tgz"
+        }
+      }
+    },
     "restore-cursor": {
       "version": "1.0.1",
       "from": "restore-cursor@>=1.0.1 <2.0.0",
@@ -3335,10 +3352,20 @@
       "from": "sanctuary-def@>=0.6.0 <0.7.0",
       "resolved": "https://registry.npmjs.org/sanctuary-def/-/sanctuary-def-0.6.0.tgz"
     },
+    "sax": {
+      "version": "0.5.8",
+      "from": "sax@>=0.5.0 <0.6.0",
+      "resolved": "https://registry.npmjs.org/sax/-/sax-0.5.8.tgz"
+    },
     "semver": {
       "version": "5.3.0",
       "from": "semver@>=5.3.0 <5.4.0",
       "resolved": "https://registry.npmjs.org/semver/-/semver-5.3.0.tgz"
+    },
+    "sendinblue-api": {
+      "version": "1.0.8",
+      "from": "sendinblue-api@latest",
+      "resolved": "https://registry.npmjs.org/sendinblue-api/-/sendinblue-api-1.0.8.tgz"
     },
     "set-blocking": {
       "version": "2.0.0",
@@ -3728,6 +3755,16 @@
       "resolved": "https://registry.npmjs.org/write/-/write-0.2.1.tgz",
       "dev": true
     },
+    "xml2js": {
+      "version": "0.4.0",
+      "from": "xml2js@0.4.0",
+      "resolved": "https://registry.npmjs.org/xml2js/-/xml2js-0.4.0.tgz"
+    },
+    "xmlbuilder": {
+      "version": "8.2.2",
+      "from": "xmlbuilder@>=0.4.2",
+      "resolved": "https://registry.npmjs.org/xmlbuilder/-/xmlbuilder-8.2.2.tgz"
+    },
     "xtend": {
       "version": "4.0.1",
       "from": "xtend@>=4.0.0 <5.0.0",
@@ -3737,6 +3774,11 @@
       "version": "2.1.2",
       "from": "yallist@>=2.0.0 <3.0.0",
       "resolved": "https://registry.npmjs.org/yallist/-/yallist-2.1.2.tgz"
+    },
+    "yaml": {
+      "version": "0.2.3",
+      "from": "yaml@0.2.3",
+      "resolved": "https://registry.npmjs.org/yaml/-/yaml-0.2.3.tgz"
     },
     "yargs": {
       "version": "3.10.0",

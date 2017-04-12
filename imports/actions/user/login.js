@@ -92,9 +92,7 @@ export const forgotPassword = ({ email }) => (dispatch) => {
   forgotPasswordValidationSchema.validate({ email });
 
   if (forgotPasswordValidationSchema.isValid()) {
-    Accounts.forgotPassword({
-      email,
-    }, (resetPasswordError) => {
+    Meteor.call('fommentsForgotPassword', { email }, (resetPasswordError) => {
       if (resetPasswordError) {
         dispatch({
           type: HEADER_CREATE_USER_ERRORS,
