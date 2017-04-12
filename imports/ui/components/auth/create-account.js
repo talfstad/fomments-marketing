@@ -36,11 +36,15 @@ class CreateAccount extends Component {
 
   handleCreateAccount(e) {
     if (e) e.preventDefault();
-    const { createAccount } = this.props;
+    const {
+      createAccount,
+      closeDropdown,
+    } = this.props;
     const email = this.emailInput.value;
     const password = this.passwordInput.value;
     const confirmPassword = this.confirmPasswordInput.value;
     createAccount({ email, password, confirmPassword });
+    closeDropdown();
   }
 
   render() {
@@ -101,6 +105,7 @@ CreateAccount.propTypes = {
   user: PropTypes.shape({}),
   showCreateAccount: PropTypes.func,
   createAccount: PropTypes.func,
+  closeDropdown: PropTypes.func,
 };
 
 export default CreateAccount;
