@@ -2,7 +2,9 @@ import React, { Component, PropTypes } from 'react';
 
 class CreateAccount extends Component {
   componentDidMount() {
-    $(this.confirmPasswordInput).focus();
+    setTimeout(() => {
+      $(this.confirmPasswordInput).focus();
+    });
   }
 
   componentWillUnmount() {

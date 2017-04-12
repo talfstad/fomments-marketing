@@ -7,27 +7,38 @@ import CreateAccount from './create-account';
 import * as loginActions from '../../../actions/user/login';
 
 class LoginDropDown extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showing: false,
+      closable: true,
+    };
+  }
+
   componentDidMount() {
     // Intent: Close dropdown only when click out of dropdown.
     // Use this.closeable to keep internal state
+    $(this.dropdownContainer).on('show.bs.dropdown', () => {
+      this.setState({ showing: true });
+    });
     $(this.dropdownContainer).on('shown.bs.dropdown', () => {
-      this.closeable = true;
-      $(this.emailInput).focus();
+      this.setState({ closeable: true });
     });
 
     $(this.dropdownContainer).on('click', () => {
-      this.closeable = false;
+      this.setState({ closeable: false });
+      setTimeout(() => {
+        this.setState({ closeable: true });
+      });
     });
 
     $(this.dropdownContainer).on('hide.bs.dropdown', () => {
       // Intent: reset login form on close if showing create account
-      if (this.closeable) this.showCreateAccount(false);
-
-      setTimeout(() => {
-        this.closeable = !this.closeable;
-      });
-
-      return this.closeable;
+      if (this.state.closeable) {
+        this.setState({ showing: false });
+        this.showCreateAccount(false);
+      }
+      return this.state.closeable;
     });
   }
 
@@ -57,24 +68,29 @@ class LoginDropDown extends Component {
       logUserIn,
       createAccount,
     } = this.props;
+    const { showing } = this.state;
     const { login = {} } = user;
     const { isShowingCreateAccount = false } = login;
-    return (
-      isShowingCreateAccount ?
-        <CreateAccount
-          showCreateAccount={show => this.showCreateAccount(show)}
-          createAccount={createAccount}
-          closeDropdown={() => this.closeDropdown()}
-          user={user}
-        />
+
+    if (showing) {
+      return (
+        isShowingCreateAccount ?
+          <CreateAccount
+            showCreateAccount={show => this.showCreateAccount(show)}
+            createAccount={createAccount}
+            closeDropdown={() => this.closeDropdown()}
+            user={user}
+          />
         :
-        <Login
-          showCreateAccount={show => this.showCreateAccount(show)}
-          closeDropdown={() => this.closeDropdown()}
-          logUserIn={logUserIn}
-          user={user}
-        />
-    );
+          <Login
+            showCreateAccount={show => this.showCreateAccount(show)}
+            closeDropdown={() => this.closeDropdown()}
+            logUserIn={logUserIn}
+            user={user}
+          />
+      );
+    }
+    return <noscript />;
   }
 
   render() {

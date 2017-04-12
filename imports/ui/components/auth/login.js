@@ -1,6 +1,12 @@
 import React, { Component, PropTypes } from 'react';
 
 class Login extends Component {
+  componentDidMount() {
+    setTimeout(() => {
+      $(this.emailInput).focus();
+    });
+  }
+
   getErrorForField(field) {
     const { user } = this.props;
     const { login = {} } = user;
@@ -82,6 +88,7 @@ class Login extends Component {
 }
 
 Login.propTypes = {
+  dropdownContainer: PropTypes.shape({}),
   showCreateAccount: PropTypes.func,
   closeDropdown: PropTypes.func,
   logUserIn: PropTypes.func,
