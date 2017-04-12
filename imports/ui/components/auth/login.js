@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 
+import ForgotPassword from './forgot-password';
+
 class Login extends Component {
   componentDidMount() {
     setTimeout(() => {
@@ -18,6 +20,13 @@ class Login extends Component {
     return <noscript />;
   }
 
+  showForgotPassword(show) {
+    const {
+      showForgotPassword,
+    } = this.props;
+    showForgotPassword(show);
+  }
+
   handleSignIn(e) {
     e.preventDefault();
     const {
@@ -33,62 +42,79 @@ class Login extends Component {
     closeDropdown();
   }
 
+  handleShowForgotPassword(e) {
+    e.preventDefault();
+    this.showForgotPassword(true);
+  }
 
   render() {
     const {
       showCreateAccount,
+      user,
+      forgotPassword,
     } = this.props;
+    const { login = {} } = user;
+    const { isShowingForgotPassword = false } = login;
 
     return (
-      <form onSubmit={e => this.handleSignIn(e)}>
-        <h3>Account</h3>
-        <div className="form-group">
-          <label htmlFor="email">Email Address</label>
-          <input
-            ref={(c) => { this.emailInput = c; }}
-            id="email"
-            type="email"
-            className="form-control"
-            aria-describedby="email-help"
-            placeholder="Enter Email Address"
-          />
-          {this.getErrorForField('email')}
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <small id="forgot-password" className="pull-right form-text text-muted">
-            <a href="d#">Forgot Password</a>
-          </small>
-          <input
-            ref={(c) => { this.passwordInput = c; }}
-            id="password"
-            type="password"
-            className="form-control"
-            placeholder="Enter Password"
-          />
-          {this.getErrorForField('password')}
-        </div>
-        <div className="form-group">
-          <button
-            type="submit"
-            className="submit pull-right btn btn-default"
-          >
-            Submit
-          </button>
-          <button
-            onClick={(e) => { e.preventDefault(); showCreateAccount(true); }}
-            className="create-account pull-right btn"
-          >
-            Create Account
-          </button>
-        </div>
-      </form>
+      isShowingForgotPassword ?
+        <ForgotPassword
+          showForgotPassword={show => this.showForgotPassword(show)}
+          forgotPassword={forgotPassword}
+          closeDropdown={() => this.closeDropdown()}
+          user={user}
+        />
+      :
+        <form onSubmit={e => this.handleSignIn(e)}>
+          <h3>Account Sign in</h3>
+          <div className="form-group">
+            <label htmlFor="email">Email Address</label>
+            <input
+              ref={(c) => { this.emailInput = c; }}
+              id="email"
+              type="email"
+              className="form-control"
+              aria-describedby="email-help"
+              placeholder="Enter Email Address"
+            />
+            {this.getErrorForField('email')}
+          </div>
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <small id="forgot-password" className="pull-right form-text text-muted">
+              <a href="#a" onClick={e => this.handleShowForgotPassword(e)}>Forgot Password</a>
+            </small>
+            <input
+              ref={(c) => { this.passwordInput = c; }}
+              id="password"
+              type="password"
+              className="form-control"
+              placeholder="Enter Password"
+            />
+            {this.getErrorForField('password')}
+          </div>
+          <div className="form-group">
+            <button
+              type="submit"
+              className="submit pull-right btn btn-default"
+            >
+              Submit
+            </button>
+            <button
+              onClick={(e) => { e.preventDefault(); showCreateAccount(true); }}
+              className="create-account pull-right btn"
+            >
+              Create Account
+            </button>
+          </div>
+        </form>
     );
   }
 }
 
 Login.propTypes = {
-  dropdownContainer: PropTypes.shape({}),
+  forgotPassword: PropTypes.func,
+  showForgotPassword: PropTypes.func,
   showCreateAccount: PropTypes.func,
   closeDropdown: PropTypes.func,
   logUserIn: PropTypes.func,

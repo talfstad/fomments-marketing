@@ -67,6 +67,8 @@ class LoginDropDown extends Component {
       user = {},
       logUserIn,
       createAccount,
+      showForgotPassword,
+      forgotPassword,
     } = this.props;
     const { showing } = this.state;
     const { login = {} } = user;
@@ -83,6 +85,8 @@ class LoginDropDown extends Component {
           />
         :
           <Login
+            showForgotPassword={showForgotPassword}
+            forgotPassword={forgotPassword}
             showCreateAccount={show => this.showCreateAccount(show)}
             closeDropdown={() => this.closeDropdown()}
             logUserIn={logUserIn}
@@ -136,6 +140,8 @@ class LoginDropDown extends Component {
 }
 
 LoginDropDown.propTypes = {
+  forgotPassword: PropTypes.func,
+  showForgotPassword: PropTypes.func,
   logUserIn: PropTypes.func,
   createAccount: PropTypes.func,
   showCreateAccount: PropTypes.func,
@@ -146,6 +152,8 @@ LoginDropDown.propTypes = {
 };
 
 const actions = {
+  showForgotPassword: loginActions.showForgotPassword,
+  forgotPassword: loginActions.forgotPassword,
   showCreateAccount: loginActions.showCreateAccount,
   createAccount: loginActions.createAccount,
   logUserOut: loginActions.logUserOut,

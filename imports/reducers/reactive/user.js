@@ -2,6 +2,7 @@ import { USER_REACTIVE_SOURCE_CHANGED } from '/imports/actions/user/load';
 import {
   HEADER_LOGIN_ERRORS,
   HEADER_SHOW_CREATE_ACCOUNT,
+  HEADER_SHOW_FORGOT_PASSWORD,
   HEADER_CREATE_USER_ERRORS,
 } from '/imports/actions/user/login';
 
@@ -11,6 +12,18 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case HEADER_SHOW_FORGOT_PASSWORD: {
+      // Intent: reset errors
+      return {
+        ...state,
+        login: {
+          ...state.login,
+          errors: [],
+          isShowingCreateAccount: false,
+          isShowingForgotPassword: action.payload,
+        },
+      };
+    }
     case HEADER_SHOW_CREATE_ACCOUNT: {
       // Intent: reset errors
       return {

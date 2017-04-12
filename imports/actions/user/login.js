@@ -1,10 +1,12 @@
 import _ from 'lodash';
 import { Meteor } from 'meteor/meteor';
 import ValidateLoginSchema from '../../api/meteor/schemas/validation/login';
+import ForgotPasswordValidationSchema from '../../api/meteor/schemas/validation/forgot-password';
 
 export const HEADER_LOGIN_ERRORS = 'HEADER_LOGIN_ERRORS';
 export const HEADER_SHOW_CREATE_ACCOUNT = 'SHOW_CREATE_ACCOUNT';
 export const HEADER_CREATE_USER_ERRORS = 'HEADER_CREATE_USER_ERRORS';
+export const HEADER_SHOW_FORGOT_PASSWORD = 'HEADER_SHOW_FORGOT_PASSWORD';
 
 // Intent: thunk, never calls dispatch, just logs user out
 export const logUserOut = () => () =>
@@ -82,5 +84,50 @@ export const createAccount = ({ email, password, confirmPassword }) => (dispatch
 
 export const showCreateAccount = show => ({
   type: HEADER_SHOW_CREATE_ACCOUNT,
+  payload: show,
+});
+
+export const forgotPassword = ({ email }) => (dispatch) => {
+  const forgotPasswordValidationSchema = ForgotPasswordValidationSchema.namedContext();
+  forgotPasswordValidationSchema.validate({ email });
+
+  if (forgotPasswordValidationSchema.isValid()) {
+    Accounts.forgotPassword({
+      email,
+    }, (resetPasswordError) => {
+      if (resetPasswordError) {
+        dispatch({
+          type: HEADER_CREATE_USER_ERRORS,
+          payload: [{
+            name: 'email',
+            message: resetPasswordError.reason,
+          }],
+        });
+      } else {
+        // Intent: Map success message the same way we map errors.
+        dispatch({
+          type: HEADER_CREATE_USER_ERRORS,
+          payload: [{
+            name: 'email',
+            type: 'success',
+            message: 'Sent reset password email',
+          }],
+        });
+      }
+    });
+  } else {
+    // Map simplschema validation errors to error messages
+    const validationErrors = _.map(forgotPasswordValidationSchema.validationErrors(), o =>
+      _.extend({ message: forgotPasswordValidationSchema.keyErrorMessage(o.name) }, o));
+
+    dispatch({
+      type: HEADER_CREATE_USER_ERRORS,
+      payload: validationErrors,
+    });
+  }
+};
+
+export const showForgotPassword = show => ({
+  type: HEADER_SHOW_FORGOT_PASSWORD,
   payload: show,
 });

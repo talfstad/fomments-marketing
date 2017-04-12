@@ -52,7 +52,7 @@ class CreateAccount extends Component {
   render() {
     return (
       <form onSubmit={e => this.handleCreateAccount(e)}>
-        <h3>Create Account</h3>
+        <h3>Create New Account</h3>
         <div className="form-group">
           <label htmlFor="email">Email Address</label>
           <input
