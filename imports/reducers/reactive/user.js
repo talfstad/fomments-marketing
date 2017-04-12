@@ -12,10 +12,12 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case HEADER_SHOW_CREATE_ACCOUNT: {
+      // Intent: reset errors
       return {
         ...state,
         login: {
           ...state.login,
+          errors: [],
           isShowingCreateAccount: action.payload,
         },
       };
