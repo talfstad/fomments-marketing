@@ -1,5 +1,9 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+
+import Login from './login';
+import Logout from './logout';
+import CreateAccount from './create-account';
 import * as loginActions from '../../../actions/user/login';
 
 class LoginDropDown extends Component {
@@ -16,9 +20,13 @@ class LoginDropDown extends Component {
     });
 
     $(this.dropdownContainer).on('hide.bs.dropdown', () => {
+      // Intent: reset login form on close if showing create account
+      if (this.closeable) this.showCreateAccount(false);
+
       setTimeout(() => {
         this.closeable = !this.closeable;
       });
+
       return this.closeable;
     });
   }
@@ -32,93 +40,47 @@ class LoginDropDown extends Component {
     }
   }
 
-  getErrorForField(field) {
-    const { user } = this.props;
-    const { login = {} } = user;
-    const { errors = [] } = login;
-    const error = errors.find(o => o.name === field);
-    if (error) {
-      return <small className="form-text text-danger text-muted">{error.message}</small>;
-    }
-    return <noscript />;
-  }
-
-  handleLogout(e) {
-    e.preventDefault();
-    const { logUserOut } = this.props;
-    logUserOut();
-  }
-
-  buildLogoutDropdownMenu() {
-    return [
-      <li key="1">
-        <a className="dropdown-item" href="a#">My Account</a>
-      </li>,
-      <li key="2">
-        <a onClick={e => this.handleLogout(e)} className="dropdown-item" href="a#">Logout</a>
-      </li>,
-    ];
-  }
-
-  handleSignIn(e) {
-    e.preventDefault();
-    const {
-      logUserIn,
-    } = this.props;
-
-    logUserIn({
-      email: this.emailInput.value,
-      password: this.passwordInput.value,
-    });
-
+  closeDropdown() {
     $(this.dropdownContainer).removeClass('open');
   }
 
-  buildLoginDropdownMenu() {
+  showCreateAccount(show) {
+    const {
+      showCreateAccount,
+    } = this.props;
+    showCreateAccount(show);
+  }
+
+  buildLoginForm() {
+    const {
+      user = {},
+      logUserIn,
+      createAccount,
+    } = this.props;
+    const { login = {} } = user;
+    const { isShowingCreateAccount = false } = login;
     return (
-      <form onSubmit={e => this.handleSignIn(e)}>
-        <div className="form-group">
-          <label htmlFor="email">Email Address</label>
-          <input
-            ref={(c) => { this.emailInput = c; }}
-            id="email"
-            type="email"
-            className="form-control"
-            aria-describedby="email-help"
-            placeholder="Enter Email Address"
-          />
-          {this.getErrorForField('email')}
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <small id="forgot-password" className="pull-right form-text text-muted">
-            <a href="d#">Forgot Password</a>
-          </small>
-          <input
-            ref={(c) => { this.passwordInput = c; }}
-            id="password"
-            type="password"
-            className="form-control"
-            placeholder="Enter Password"
-          />
-          {this.getErrorForField('password')}
-        </div>
-        <div className="form-group">
-          <button
-            type="submit"
-            className="submit pull-right btn btn-default"
-          >
-            Submit
-          </button>
-          <button className="create-account pull-right btn">Create Account</button>
-        </div>
-      </form>
+      isShowingCreateAccount ?
+        <CreateAccount
+          showCreateAccount={show => this.showCreateAccount(show)}
+          createAccount={createAccount}
+          closeDropdown={() => this.closeDropdown()}
+          user={user}
+        />
+        :
+        <Login
+          showCreateAccount={show => this.showCreateAccount(show)}
+          closeDropdown={() => this.closeDropdown()}
+          logUserIn={logUserIn}
+          user={user}
+        />
     );
   }
 
   render() {
     const {
       user,
+      logUserOut,
     } = this.props;
 
     return (
@@ -145,7 +107,12 @@ class LoginDropDown extends Component {
           className="header-login dropdown-menu dropdown-menu-right"
           aria-labelledby="dropdownMenuButton"
         >
-          {user._id ? this.buildLogoutDropdownMenu() : this.buildLoginDropdownMenu()}
+          {user._id ?
+            <Logout
+              logUserOut={logUserOut}
+            />
+            :
+            this.buildLoginForm()}
         </ul>
       </div>
     );
@@ -154,6 +121,8 @@ class LoginDropDown extends Component {
 
 LoginDropDown.propTypes = {
   logUserIn: PropTypes.func,
+  createAccount: PropTypes.func,
+  showCreateAccount: PropTypes.func,
   logUserOut: PropTypes.func,
   user: PropTypes.shape({
     errors: PropTypes.arrayOf(PropTypes.object),
@@ -161,6 +130,8 @@ LoginDropDown.propTypes = {
 };
 
 const actions = {
+  showCreateAccount: loginActions.showCreateAccount,
+  createAccount: loginActions.createAccount,
   logUserOut: loginActions.logUserOut,
   logUserIn: loginActions.logUserIn,
 };
