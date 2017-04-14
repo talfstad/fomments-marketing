@@ -11,34 +11,33 @@ class LoginDropDown extends Component {
     super(props);
     this.state = {
       showing: false,
-      closable: true,
     };
   }
 
   componentDidMount() {
     // Intent: Close dropdown only when click out of dropdown.
-    // Use this.closeable to keep internal state
+    // Use this.closeable to keep internal state to not cause lifecycle events
     $(this.dropdownContainer).on('show.bs.dropdown', () => {
       this.setState({ showing: true });
     });
     $(this.dropdownContainer).on('shown.bs.dropdown', () => {
-      this.setState({ closeable: true });
+      this.closeable = true;
     });
 
     $(this.dropdownContainer).on('click', () => {
-      this.setState({ closeable: false });
+      this.closeable = false;
       setTimeout(() => {
-        this.setState({ closeable: true });
+        this.closeable = true;
       });
     });
 
     $(this.dropdownContainer).on('hide.bs.dropdown', () => {
       // Intent: reset login form on close if showing create account
-      if (this.state.closeable) {
+      if (this.closeable) {
         this.setState({ showing: false });
         this.showCreateAccount(false);
       }
-      return this.state.closeable;
+      return this.closeable;
     });
   }
 
@@ -102,7 +101,7 @@ class LoginDropDown extends Component {
       user,
       logUserOut,
     } = this.props;
-console.log(user);
+
     return (
       <div
         ref={(c) => { this.dropdownContainer = c; }}

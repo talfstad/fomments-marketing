@@ -28,6 +28,11 @@ export const logUserIn = ({ email, password }) => (dispatch) => {
             message: loginError.reason,
           }],
         });
+      } else {
+        dispatch({
+          type: HEADER_LOGIN_ERRORS,
+          payload: [],
+        });
       }
     });
   } else {
@@ -68,6 +73,11 @@ export const createAccount = ({ email, password, confirmPassword }) => (dispatch
               name: 'confirm-password',
               message: createError.reason,
             }],
+          });
+        } else {
+          dispatch({
+            type: HEADER_CREATE_USER_ERRORS,
+            payload: [],
           });
         }
       });
