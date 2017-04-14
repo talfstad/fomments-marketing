@@ -102,7 +102,7 @@ class LoginDropDown extends Component {
       user,
       logUserOut,
     } = this.props;
-
+console.log(user);
     return (
       <div
         ref={(c) => { this.dropdownContainer = c; }}

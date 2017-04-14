@@ -4,14 +4,30 @@ import {
   HEADER_SHOW_CREATE_ACCOUNT,
   HEADER_SHOW_FORGOT_PASSWORD,
   HEADER_CREATE_USER_ERRORS,
+  RESET_PASSWORD_ERRORS,
 } from '/imports/actions/user/login';
 
 const initialState = {
   ready: false,
+  resetPassword: {
+    errors: [],
+  },
+  login: {
+    errors: [],
+  },
 };
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case RESET_PASSWORD_ERRORS: {
+      return {
+        ...state,
+        resetPassword: {
+          ...state.resetPassword,
+          errors: action.payload,
+        },
+      };
+    }
     case HEADER_SHOW_FORGOT_PASSWORD: {
       // Intent: reset errors
       return {
@@ -47,6 +63,7 @@ export default (state = initialState, action) => {
     }
     case USER_REACTIVE_SOURCE_CHANGED: {
       return {
+        ...initialState,
         ...action.payload,
         ready: true,
       };

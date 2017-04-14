@@ -1,24 +1,43 @@
 import React, { Component, PropTypes } from 'react';
+import * as loginActions from '/imports/actions/user/login';
+import { connect } from 'react-redux';
 import Modal from '../modal';
 
 class ResetPasswordModal extends Component {
   componentDidMount() {
+    $(this.modal.el).modal('show');
+
     $(this.passwordInput).focus();
+
+    const { history } = this.props;
+    $(this.modal.el).on('hidden.bs.modal', () => {
+      history.push('/');
+    });
+  }
+
+  componentDidUpdate() {
+    const { resetPasswordErrors } = this.props;
+    if (resetPasswordErrors.length < 1) {
+      this.closeModal();
+    }
+  }
+
+  getPasswordToken() {
+    const { history } = this.props;
+    return history.location.pathname.replace('/reset-password/', '');
   }
 
   getErrorForField(field) {
-    const { user } = this.props;
-    const { login = {} } = user;
-    const { errors = [] } = login;
-    const error = errors.find(o => o.name === field);
+    const { resetPasswordErrors } = this.props;
+    const error = resetPasswordErrors.find(o => o.name === field);
     if (error) {
       return <small className="form-text text-danger text-muted">{error.message}</small>;
     }
-    // Intent: if no error, always show confirm password helper
-    if (field === 'confirm-password') {
-      return <small className="form-text text-muted">Please confirm your new password</small>;
-    }
     return <noscript />;
+  }
+
+  closeModal() {
+    $(this.modal.el).modal('hide');
   }
 
   handleResetPassword(e) {
@@ -26,14 +45,19 @@ class ResetPasswordModal extends Component {
     const {
       resetPassword,
     } = this.props;
+    const token = this.getPasswordToken();
     const password = this.passwordInput.value;
     const confirmPassword = this.confirmPasswordInput.value;
-    resetPassword({ password, confirmPassword });
+    resetPassword({ token, password, confirmPassword }, (errors) => {
+      if (errors.length < 1) {
+        this.closeModal();
+      }
+    });
   }
 
   render() {
     return (
-      <Modal>
+      <Modal ref={(c) => { this.modal = c; }}>
         <div className="reset-password-modal modal-dialog" role="document">
           <form onSubmit={e => this.handleResetPassword(e)}>
             <div className="modal-content">
@@ -51,6 +75,7 @@ class ResetPasswordModal extends Component {
                     className="form-control"
                     placeholder="Enter Password"
                   />
+                  {this.getErrorForField('password')}
                 </div>
                 <div className="form-group">
                   <label htmlFor="confirm-password">Confirm New Password</label>
@@ -61,6 +86,7 @@ class ResetPasswordModal extends Component {
                     className="form-control"
                     placeholder="Confirm Password"
                   />
+                  {this.getErrorForField('confirm-password')}
                 </div>
               </div>
               <div className="modal-footer">
@@ -76,7 +102,17 @@ class ResetPasswordModal extends Component {
 }
 
 ResetPasswordModal.propTypes = {
+  resetPasswordErrors: PropTypes.arrayOf(PropTypes.object),
+  history: PropTypes.shape({}),
   resetPassword: PropTypes.func,
 };
 
-export default ResetPasswordModal;
+const actions = {
+  resetPassword: loginActions.resetPassword,
+};
+
+const mapStateToProps = state => ({
+  resetPasswordErrors: state.user.resetPassword.errors,
+});
+
+export default connect(mapStateToProps, actions)(ResetPasswordModal);

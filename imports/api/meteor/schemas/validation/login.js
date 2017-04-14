@@ -5,6 +5,7 @@ const LoginValidationSchema = new SimpleSchema({
   email: EmailAddress,
   password: {
     type: String,
+    min: 6,
   },
 });
 

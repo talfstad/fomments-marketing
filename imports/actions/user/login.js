@@ -2,11 +2,13 @@ import _ from 'lodash';
 import { Meteor } from 'meteor/meteor';
 import ValidateLoginSchema from '../../api/meteor/schemas/validation/login';
 import ForgotPasswordValidationSchema from '../../api/meteor/schemas/validation/forgot-password';
+import ValidateResetPasswordSchema from '../../api/meteor/schemas/validation/reset-password';
 
 export const HEADER_LOGIN_ERRORS = 'HEADER_LOGIN_ERRORS';
 export const HEADER_SHOW_CREATE_ACCOUNT = 'SHOW_CREATE_ACCOUNT';
 export const HEADER_CREATE_USER_ERRORS = 'HEADER_CREATE_USER_ERRORS';
 export const HEADER_SHOW_FORGOT_PASSWORD = 'HEADER_SHOW_FORGOT_PASSWORD';
+export const RESET_PASSWORD_ERRORS = 'RESET_PASSWORD_ERRORS';
 
 // Intent: thunk, never calls dispatch, just logs user out
 export const logUserOut = () => () =>
@@ -129,3 +131,47 @@ export const showForgotPassword = show => ({
   type: HEADER_SHOW_FORGOT_PASSWORD,
   payload: show,
 });
+
+export const resetPassword = ({ token, password, confirmPassword }) => (dispatch) => {
+  const resetPasswordFormValidationContext = ValidateResetPasswordSchema.namedContext();
+  resetPasswordFormValidationContext.validate({ password, confirmPassword });
+
+  if (resetPasswordFormValidationContext.isValid()) {
+    // Intent: verify passwords match
+    if (password !== confirmPassword) {
+      dispatch({
+        type: RESET_PASSWORD_ERRORS,
+        payload: [{
+          name: 'confirm-password',
+          message: 'Passwords do not match',
+        }],
+      });
+    } else {
+      Accounts.resetPassword(token, password, (resetError) => {
+        if (resetError) {
+          dispatch({
+            type: RESET_PASSWORD_ERRORS,
+            payload: [{
+              name: 'confirm-password',
+              message: resetError.reason,
+            }],
+          });
+        } else {
+          dispatch({
+            type: RESET_PASSWORD_ERRORS,
+            payload: [],
+          });
+        }
+      });
+    }
+  } else {
+    // Map simplschema validation errors to error messages
+    const validationErrors = _.map(resetPasswordFormValidationContext.validationErrors(), o =>
+      _.extend({ message: resetPasswordFormValidationContext.keyErrorMessage(o.name) }, o));
+
+    dispatch({
+      type: RESET_PASSWORD_ERRORS,
+      payload: validationErrors,
+    });
+  }
+};
