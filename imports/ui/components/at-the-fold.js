@@ -4,7 +4,7 @@ class AtTheFold extends Component {
   componentDidMount() {
     setTimeout(() => {
       $(this.tabletEl).animate({
-        scrollTop: 1300,
+        scrollTop: 150,
       }, 2500, () => {
         setTimeout(() => {
           $(this.tabletEl).animate({

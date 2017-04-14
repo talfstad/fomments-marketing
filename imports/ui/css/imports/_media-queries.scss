@@ -1,5 +1,5 @@
 #intro {
   @include large-screens {
-    height: 640px;
+    height: 640px !important;
   }
 }

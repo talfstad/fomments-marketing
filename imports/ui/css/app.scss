@@ -1004,3 +1004,32 @@ form.section-control .form-group small {
   vertical-align: middle;
   }
 }
+
+.reset-password-modal {
+  .reset-password-button {
+    $bg-color: #3ecf8e;
+
+    &:hover {
+      background: darken($bg-color, 5%);
+    }
+
+    color: #fff;
+    background: $bg-color;
+    border: 1px solid transparent;
+  }
+
+  .cancel-button {
+    margin-right: 10px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  h4 {
+    margin-top: 0;
+    color: #6772e5;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+}
