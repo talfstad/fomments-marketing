@@ -65,7 +65,7 @@ class Login extends Component {
           user={user}
         />
       :
-        <form onSubmit={e => this.handleSignIn(e)}>
+        <form className="clearfix login-form" onSubmit={e => this.handleSignIn(e)}>
           <h3>Account Sign in</h3>
           <div className="form-group">
             <label htmlFor="email">Email Address</label>

@@ -948,14 +948,36 @@ form.section-control .form-group small {
 }
 
 .header-login {
+  width: 230px;
+
+  .login-form {
+    padding: 10px;
+  }
+
+  li > a.dropdown-item {
+    padding: 8px 15px;
+    display: block;
+
+    &:hover {
+      background-color: darken(#fff, 5%);
+    }
+
+    .fa-sign-out,
+    .fa-cog {
+      font-size: 16px;
+    }
+  }
+
+  .divider {
+    margin: 0;
+  }
+
   h3 {
     margin-top: 0;
     color: #6772e5;
     text-transform: uppercase;
     font-size: 14px;
   }
-  width: 230px;
-  padding: 10px;
 
   .btn.create-account {
     $bg-color: #3ecf8e;
