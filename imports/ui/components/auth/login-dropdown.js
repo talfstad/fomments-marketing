@@ -129,6 +129,7 @@ class LoginDropDown extends Component {
           {user._id ?
             <Logout
               logUserOut={logUserOut}
+              closeDropdown={() => this.closeDropdown()}
             />
             :
             this.buildLoginForm()}

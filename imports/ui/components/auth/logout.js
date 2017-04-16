@@ -15,6 +15,8 @@ class Logout extends Component {
 
   handleShowAccountModal(e) {
     if (e) e.preventDefault();
+    const { closeDropdown } = this.props;
+    closeDropdown();
     this.setShowAccountModal(true);
   }
 
@@ -59,6 +61,7 @@ class Logout extends Component {
 }
 
 Logout.propTypes = {
+  closeDropdown: PropTypes.func,
   logUserOut: PropTypes.func,
 };
 
