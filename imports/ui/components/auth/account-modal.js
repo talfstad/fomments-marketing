@@ -4,7 +4,6 @@ import Modal from '../modal';
 
 class AccountModal extends Component {
   componentDidMount() {
-    // Are we logged in? if not redirect to /
     const {
       setShowAccountModal,
     } = this.props;
@@ -12,12 +11,26 @@ class AccountModal extends Component {
     this.show();
 
     $(this.modal.el).on('hidden.bs.modal', () => {
-      this.ifRoutedRedirectRootPath();
       if (setShowAccountModal) setShowAccountModal(false);
+      this.redirectToHome();
     });
   }
 
-  ifRoutedRedirectRootPath() {
+  componentWillReceiveProps(nextProps) {
+    const {
+      user,
+    } = nextProps;
+
+    if (!user.loggingIn && !user._id) {
+      this.redirectToHome();
+    }
+  }
+
+  componentWillUnmount() {
+    this.hide();
+  }
+
+  redirectToHome() {
     const {
       history,
     } = this.props;

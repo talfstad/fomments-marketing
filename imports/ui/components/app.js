@@ -47,9 +47,10 @@ class App extends Component {
               <Route path="/reset-password" component={ResetPasswordModal} />
               <Route
                 path="/account"
-                render={() =>
+                render={props =>
                   (this.state.showAccountModal ?
                     <AccountModal
+                      {...props}
                       setShowAccountModal={show => this.setShowAccountModal(show)}
                     />
                   :
