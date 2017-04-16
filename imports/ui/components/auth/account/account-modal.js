@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
-import Modal from '../modal';
+import Modal from '../../modal';
+import AccountTabs from './account-tabs';
 
 class AccountModal extends Component {
   componentDidMount() {
@@ -53,13 +54,13 @@ class AccountModal extends Component {
     return (
       <Modal ref={(c) => { this.modal = c; }}>
         <div className="account-modal modal-dialog" role="document">
-          <div className="modal-content">
+          <div className="modal-content no-footer clearfix">
             <div className="modal-header">
               <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
               <h4 className="modal-title">Account</h4>
             </div>
             <div className="modal-body">
-              HEY THIS IS ACCOUNT INFO
+              <AccountTabs />
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import AccountModal from './account-modal';
+import AccountModal from './account/account-modal';
 
 class Logout extends Component {
   constructor(props) {

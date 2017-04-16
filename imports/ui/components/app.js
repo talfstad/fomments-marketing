@@ -5,7 +5,7 @@ import AboveTheFold from '/imports/ui/components/above-the-fold';
 import AtTheFold from '/imports/ui/components/at-the-fold';
 import ChooseCommentSection from '/imports/ui/components/choose-comment-section';
 import ResetPasswordModal from '/imports/ui/components/auth/reset-password-modal';
-import AccountModal from '/imports/ui/components/auth/account-modal';
+import AccountModal from '/imports/ui/components/auth/account/account-modal';
 
 // Intent: load all Schemas onto collectionsttaches schemas to all
 import '/imports/api/meteor/collections';
