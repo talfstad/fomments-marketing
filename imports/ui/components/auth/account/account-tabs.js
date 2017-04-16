@@ -1,12 +1,34 @@
 import React, { Component, PropTypes } from 'react';
+import ChangePassword from './change-password';
 
 class AccountTabs extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentTab: '#purchases',
+    };
+  }
+
+  componentDidMount() {
+    $(this.tabs).on('shown.bs.tab', (e) => {
+      const currentTab = $(e.target).attr('href');
+      this.setCurrentTab(currentTab);
+    });
+  }
+
+  setCurrentTab(tab) {
+    this.setState({ currentTab: tab });
+  }
+
   render() {
     return (
       <section className="">
         <div className="col-sm-3">
           <nav>
-            <ul className="nav nav-stacked nav-pills">
+            <ul
+              className="nav nav-stacked nav-pills"
+              ref={(c) => { this.tabs = c; }}
+            >
               <li className="active">
                 <a data-toggle="pill" href="#purchases">
                   <i className="fa fa-shopping-cart" />
@@ -40,9 +62,9 @@ class AccountTabs extends Component {
               <h2>purchases</h2>
             </div>
             <div id="change-password" className="tab-pane fade">
-              <div>
-                <h2>Change Password</h2>
-              </div>
+              { this.state.currentTab === '#change-password' ?
+                <ChangePassword />
+              : <noscript />}
             </div>
             <div id="support" className="tab-pane fade">
               <div>

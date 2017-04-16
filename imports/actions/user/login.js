@@ -3,12 +3,14 @@ import { Meteor } from 'meteor/meteor';
 import ValidateLoginSchema from '../../api/meteor/schemas/validation/login';
 import ForgotPasswordValidationSchema from '../../api/meteor/schemas/validation/forgot-password';
 import ValidateResetPasswordSchema from '../../api/meteor/schemas/validation/reset-password';
+import ValidateChangePasswordSchema from '../../api/meteor/schemas/validation/change-password';
 
 export const HEADER_LOGIN_ERRORS = 'HEADER_LOGIN_ERRORS';
 export const HEADER_SHOW_CREATE_ACCOUNT = 'SHOW_CREATE_ACCOUNT';
 export const HEADER_CREATE_USER_ERRORS = 'HEADER_CREATE_USER_ERRORS';
 export const HEADER_SHOW_FORGOT_PASSWORD = 'HEADER_SHOW_FORGOT_PASSWORD';
 export const RESET_PASSWORD_ERRORS = 'RESET_PASSWORD_ERRORS';
+export const CHANGE_PASSWORD_ERRORS = 'CHANGE_PASSWORD_ERRORS';
 
 // Intent: thunk, never calls dispatch, just logs user out
 export const logUserOut = () => () =>
@@ -181,6 +183,60 @@ export const resetPassword = ({ token, password, confirmPassword }) => (dispatch
 
     dispatch({
       type: RESET_PASSWORD_ERRORS,
+      payload: validationErrors,
+    });
+  }
+};
+
+
+export const resetChangePasswordErrors = () => ({
+  type: CHANGE_PASSWORD_ERRORS,
+  payload: [],
+});
+
+export const changePassword = ({ oldPassword, newPassword, confirmNewPassword }) => (dispatch) => {
+  const changePasswordFormValidationContext = ValidateChangePasswordSchema.namedContext();
+  changePasswordFormValidationContext.validate({ oldPassword, newPassword });
+
+  if (changePasswordFormValidationContext.isValid()) {
+    // Intent: verify passwords match
+    if (newPassword !== confirmNewPassword) {
+      dispatch({
+        type: CHANGE_PASSWORD_ERRORS,
+        payload: [{
+          name: 'oldPassword',
+          message: 'Passwords do not match',
+        }],
+      });
+    } else {
+      Accounts.changePassword(oldPassword, newPassword, (changeError) => {
+        if (changeError) {
+          dispatch({
+            type: CHANGE_PASSWORD_ERRORS,
+            payload: [{
+              name: 'oldPassword',
+              message: changeError.reason,
+            }],
+          });
+        } else {
+          dispatch({
+            type: CHANGE_PASSWORD_ERRORS,
+            payload: [{
+              name: 'confirmNewPassword',
+              type: 'success',
+              message: 'Password has been successfully updated.',
+            }],
+          });
+        }
+      });
+    }
+  } else {
+    // Map simplschema validation errors to error messages
+    const validationErrors = _.map(changePasswordFormValidationContext.validationErrors(), o =>
+      _.extend({ message: changePasswordFormValidationContext.keyErrorMessage(o.name) }, o));
+
+    dispatch({
+      type: CHANGE_PASSWORD_ERRORS,
       payload: validationErrors,
     });
   }

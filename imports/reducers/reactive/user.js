@@ -5,11 +5,15 @@ import {
   HEADER_SHOW_FORGOT_PASSWORD,
   HEADER_CREATE_USER_ERRORS,
   RESET_PASSWORD_ERRORS,
+  CHANGE_PASSWORD_ERRORS,
 } from '/imports/actions/user/login';
 
 const initialState = {
   ready: false,
   resetPassword: {
+    errors: [],
+  },
+  changePassword: {
     errors: [],
   },
   login: {
@@ -19,6 +23,15 @@ const initialState = {
 
 export default (state = initialState, action) => {
   switch (action.type) {
+    case CHANGE_PASSWORD_ERRORS: {
+      return {
+        ...state,
+        changePassword: {
+          ...state.changePassword,
+          errors: action.payload,
+        },
+      };
+    }
     case RESET_PASSWORD_ERRORS: {
       return {
         ...state,
