@@ -52,7 +52,7 @@ class ForgotPassword extends Component {
 
   render() {
     return (
-      <form onSubmit={e => this.handleForgotPassword(e)}>
+      <form className="clearfix login-form" onSubmit={e => this.handleForgotPassword(e)}>
         <h3>forgot password</h3>
         <div className="form-group">
           <label htmlFor="email">Email Address</label>

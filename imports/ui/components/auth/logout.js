@@ -1,6 +1,23 @@
 import React, { Component, PropTypes } from 'react';
+import AccountModal from './account-modal';
 
 class Logout extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showAccountModal: false,
+    };
+  }
+
+  setShowAccountModal(show) {
+    this.setState({ showAccountModal: show });
+  }
+
+  handleShowAccountModal(e) {
+    if (e) e.preventDefault();
+    this.setShowAccountModal(true);
+  }
+
   handleLogout(e) {
     e.preventDefault();
     const { logUserOut } = this.props;
@@ -12,8 +29,9 @@ class Logout extends Component {
       <div>
         <li key="1">
           <a
+            href="#f"
             className="dropdown-item"
-            href="a#"
+            onClick={e => this.handleShowAccountModal(e)}
           >
               My Account
               <i className="pull-right fa fa-cog" />
@@ -29,6 +47,12 @@ class Logout extends Component {
             <i className="pull-right fa fa-sign-out" />
           </a>
         </li>
+        {this.state.showAccountModal ?
+          <AccountModal
+            setShowAccountModal={show => this.setShowAccountModal(show)}
+          />
+        :
+          <noscript />}
       </div>
     );
   }
