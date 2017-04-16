@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import InstallationInstructions from '/imports/ui/components/installation-instructions';
+import InstallationTabs from '/imports/ui/components/installation-instructions/installation-tabs';
 
 export class ChooseCommentSectionComponent extends Component {
   componentDidMount() {
@@ -240,7 +240,7 @@ export class ChooseCommentSectionComponent extends Component {
             <section className="comments">
               <div id="fomments" />
             </section>
-            <InstallationInstructions />
+            <InstallationTabs />
           </section>
         </section>
       </section>

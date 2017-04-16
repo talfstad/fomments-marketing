@@ -247,7 +247,7 @@ main header {
   right: 30px;
 }
 
-.installation-instructions > nav > ul > li.active a, .installation-instructions > nav > ul > li.active a:hover, .installation-instructions > nav > ul > li.active a:focus {
+.installation-instructions nav > ul > li.active a, .installation-instructions nav > ul > li.active a:hover, .installation-instructions nav > ul > li.active a:focus {
   color: #24b47e;
   border: 1px solid #e5e6e9;
   font-weight: 500;
@@ -255,7 +255,7 @@ main header {
   background-color: #fff;
 }
 
-.installation-instructions > nav > ul > li a, .installation-instructions > nav > ul > li a:hover, .installation-instructions > nav > ul > li a:focus {
+.installation-instructions nav > ul > li a, .installation-instructions nav > ul > li a:hover, .installation-instructions nav > ul > li a:focus {
   font-size: 17px;
   background-color: transparent;
   line-height: 40px;
@@ -784,10 +784,20 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 #installation {
   margin-right: 245px;
   font-size: 85%;
+
+  .code-col-section {
+    &:nth-child(1) {
+      padding-right: 8px;
+    }
+    &:nth-child(2) {
+      padding-left: 8px;
+    }
+  }
 }
+
 .CodeMirror {
   border: 1px solid #e5e6e9;
-  border-radius: 3px;
+  border-radius: 0px 0px 3px 3px;
   height: 200px !important;
 }
 .CodeMirror-cursor {
@@ -1107,5 +1117,25 @@ form.section-control .form-group small {
     font-family: Camphor,Open Sans,Segoe UI,sans-serif;
     border-radius: 2px;
     height: 46px;
+  }
+}
+
+.installation-instructions-tabs-container {
+  margin-top: 30px;
+}
+
+
+
+#choose-comment-section .installation-code-header {
+  background: #fff;
+  border-top: 1px solid #e5e6e9;
+  border-left: 1px solid #e5e6e9;
+  border-right: 1px solid #e5e6e9;
+  border-radius: 3px 3px 0px 0px;
+
+  p {
+    text-align: left;
+    padding: 7px 0 10px 30px;
+    margin-bottom: 0;
   }
 }

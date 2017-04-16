@@ -1,11 +1,13 @@
 import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
 
 import CodeMirror from 'codemirror';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/elegant.css';
 
-import PurchaseSection from '../purchase-section';
+import PurchaseSection from '../../purchase-section';
+import FeatureHighlights from '../feature-highlights';
 
 class InstallationInstructions extends Component {
   componentDidMount() {
@@ -78,12 +80,36 @@ ideally right after the opening <body> tag. -->
   }
 
   render() {
+    const {
+      activeState,
+      languages,
+      verticals,
+    } = this.props;
+    const { section } = activeState;
+    const vertical = section.vertical ? (verticals[section.vertical]).name : '';
+    const flag = section.language ? (languages[section.language]).flag : '';
+
     return (
       <div>
+        <div className="installation-code-header">
+          <p>
+            <span className={`flag-icon ${flag}`} />
+            <span className="capitialize"> {vertical} </span>
+            {section.name} in
+            <span className="capitialize"> {section.language}</span>
+          </p>
+        </div>
         <div>
           <textarea ref={(c) => { this.editor = c; }} />
         </div>
-        <PurchaseSection />
+        <div className="row">
+          <div className="col-sm-6 code-col-section">
+            <FeatureHighlights section={section} />
+          </div>
+          <div className="col-sm-6 code-col-section">
+            <PurchaseSection />
+          </div>
+        </div>
       </div>
     );
   }
@@ -91,6 +117,12 @@ ideally right after the opening <body> tag. -->
 
 InstallationInstructions.propTypes = {
   activeState: PropTypes.shape({}),
+  languages: PropTypes.shape({}),
+  verticals: PropTypes.shape({}),
 };
 
-export default InstallationInstructions;
+const mapStateToProps = state => ({
+  ...state.sections,
+});
+
+export default connect(mapStateToProps)(InstallationInstructions);
