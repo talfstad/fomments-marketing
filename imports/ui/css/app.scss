@@ -1093,7 +1093,8 @@ form.section-control .form-group small {
   ul li.active a {
     $active-color: #24b47e;
 
-    &:focus {
+    &:focus,
+    &:hover {
       background: inherit;
       color: $active-color;
     }
