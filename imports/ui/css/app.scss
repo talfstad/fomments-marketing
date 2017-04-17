@@ -198,6 +198,7 @@ main header {
 #intro p {
   max-width: 50%;
   line-height: 30px;
+  font-size: 18px;
 }
 
 .container-lg {
@@ -782,15 +783,15 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
   color: #424770;
 }
 #installation {
-  margin-right: 245px;
+  margin-right: 220px;
   font-size: 85%;
 
   .code-col-section {
     &:nth-child(1) {
-      padding-right: 8px;
+      padding-right: 5px;
     }
     &:nth-child(2) {
-      padding-left: 8px;
+      padding-left: 5px;
     }
   }
 }
@@ -803,6 +804,10 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 .CodeMirror-cursor {
   display: none;
 }
+.CodeMirror-lines {
+  padding-top: 12px;
+}
+
 .cm-tag, .cm-bracket {
   color: #6772e5 !important;
   font-weight: 600;
@@ -854,7 +859,7 @@ form.section-control .form-group small {
 
 #help-guide .info-box,
 #installation .info-box {
-  margin-top: 15px;
+  margin-top: 8px;
   margin-left: 0;
   width: 100%;
 }
@@ -899,7 +904,8 @@ form.section-control .form-group small {
   text-align: left;
   font-size: 15px;
 }
-#choose-comment-section .purchase-feature-list {
+
+#choose-comment-section .purchase-content .purchase-feature-list {
   width: 265px;
   margin: 0 auto;
   border-top: 1px solid #ddd;
@@ -1123,8 +1129,6 @@ form.section-control .form-group small {
 .installation-instructions-tabs-container {
   margin-top: 30px;
 }
-
-
 
 #choose-comment-section .installation-code-header {
   $text-color: #6b7c93;

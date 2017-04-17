@@ -1,4 +1,7 @@
-import { USER_REACTIVE_SOURCE_CHANGED } from '/imports/actions/user/load';
+import {
+  USER_REACTIVE_SOURCE_CHANGED,
+} from '/imports/actions/user/load';
+
 import {
   HEADER_LOGIN_ERRORS,
   HEADER_SHOW_CREATE_ACCOUNT,
@@ -9,7 +12,6 @@ import {
 } from '/imports/actions/user/login';
 
 const initialState = {
-  ready: false,
   resetPassword: {
     errors: [],
   },
@@ -74,11 +76,11 @@ export default (state = initialState, action) => {
         },
       };
     }
+
     case USER_REACTIVE_SOURCE_CHANGED: {
       return {
         ...initialState,
         ...action.payload,
-        ready: true,
       };
     }
     default:

@@ -35,16 +35,41 @@ class InstallationInstructions extends Component {
     this.setState({ copied });
   }
 
-  handleCopyToClipboard() {
-    const { copied } = this.state;
-
-    if (!copied) {
-      this.setCopied(true);
-
-      setTimeout(() => {
-        this.setCopied(false);
-      }, 4000);
+  getCodeMirrorValue() {
+    if (this.codemirror) {
+      return this.codemirror.getValue();
     }
+    return '';
+  }
+
+  buildCopyToClipboardButton() {
+    const { copied } = this.state;
+    if (copied) {
+      return (
+        <span className="green">
+          <img src="/images/clippy-green.svg" width="13" alt="Copy to clipboard" /> Copied!
+        </span>
+      );
+    }
+
+    return (
+      <span>
+        <img className="clippy" src="/images/clippy-blue.svg" width="13" alt="Copy to clipboard" /> Clipboard
+      </span>
+    );
+  }
+
+  initCodeMirror() {
+    // Detect tab switching, if section code init code mirror
+    this.codemirror = CodeMirror.fromTextArea(this.editor, {
+      lineNumbers: true,
+      theme: 'elegant',
+      mode: 'text/html',
+      htmlMode: true,
+      readOnly: true,
+    });
+
+    this.updateCodeMirrorValueFromProps();
   }
 
   updateCodeMirrorValueFromProps() {
@@ -91,41 +116,16 @@ ideally right after the opening <body> tag. -->
     }, 1000);
   }
 
-  initCodeMirror() {
-    // Detect tab switching, if section code init code mirror
-    this.codemirror = CodeMirror.fromTextArea(this.editor, {
-      lineNumbers: true,
-      theme: 'elegant',
-      mode: 'text/html',
-      htmlMode: true,
-      readOnly: true,
-    });
-
-    this.updateCodeMirrorValueFromProps();
-  }
-
-  buildCopyToClipboardButton() {
+  handleCopyToClipboard() {
     const { copied } = this.state;
-    if (copied) {
-      return (
-        <span className="green">
-          <img src="/images/clippy-green.svg" width="13" alt="Copy to clipboard" /> Copied!
-        </span>
-      );
-    }
 
-    return (
-      <span>
-        <img className="clippy" src="/images/clippy-blue.svg" width="13" alt="Copy to clipboard" /> Clipboard
-      </span>
-    );
-  }
+    if (!copied) {
+      this.setCopied(true);
 
-  getCodeMirrorValue() {
-    if (this.codemirror) {
-      return this.codemirror.getValue();
+      setTimeout(() => {
+        this.setCopied(false);
+      }, 4000);
     }
-    return '';
   }
 
   render() {

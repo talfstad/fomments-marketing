@@ -30,8 +30,7 @@ class AboveTheFold extends PureComponent {
             </span>
             <h1>The new standard in landing page comments</h1>
             <p className="common-body-text">
-              Experience the most realistic Facebook comment sections
-              for landing pages to ever be conceived
+              You hope your landing page comments will help conversions, but these really do.
             </p>
             <ul>
               <li>

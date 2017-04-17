@@ -32,16 +32,17 @@ class AtTheFold extends Component {
           <section id="feels-real" className="container-lg">
             <h2>
               <span>
-                Poorly designed comments are destroying
-                your conversion rate, and it&apos;s obvious
+                Poorly designed comments aren&apos;t helping your conversion rate.
+                <br /> we change that.
               </span>
               <i className="fa fa-angle-double-right" />
 
             </h2>
             <p className="common-body-text">
-              Everyday we rely on personal recommendations before we decide to buy.
-              So do your customers. That&apos;s why fomments is split test proven
-              to increase conversion rate over your current, non-functional, comment section.
+              &quot;Nearly half (45%) of digital buyers worldwide said
+              <br />that reading reviews, comments and feedback
+              <br />influenced their digital shopping behavior.&quot;
+              <br /><em>&mdash; PricewaterhouseCoopers</em>
             </p>
           </section>
         </section></div>
