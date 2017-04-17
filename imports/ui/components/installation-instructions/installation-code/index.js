@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
+import CopyToClipboard from 'react-copy-to-clipboard';
+
 import CodeMirror from 'codemirror';
 import 'codemirror/mode/xml/xml';
 import 'codemirror/lib/codemirror.css';
@@ -10,6 +12,13 @@ import PurchaseSection from '../../purchase-section';
 import FeatureHighlights from '../feature-highlights';
 
 class InstallationInstructions extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      copied: false,
+    };
+  }
+
   componentDidMount() {
     this.initCodeMirror();
   }
@@ -20,6 +29,22 @@ class InstallationInstructions extends Component {
 
   componentWillUnmount() {
     this.codemirror.toTextArea();
+  }
+
+  setCopied(copied) {
+    this.setState({ copied });
+  }
+
+  handleCopyToClipboard() {
+    const { copied } = this.state;
+
+    if (!copied) {
+      this.setCopied(true);
+
+      setTimeout(() => {
+        this.setCopied(false);
+      }, 4000);
+    }
   }
 
   updateCodeMirrorValueFromProps() {
@@ -79,6 +104,30 @@ ideally right after the opening <body> tag. -->
     this.updateCodeMirrorValueFromProps();
   }
 
+  buildCopyToClipboardButton() {
+    const { copied } = this.state;
+    if (copied) {
+      return (
+        <span className="green">
+          <img src="/images/clippy-green.svg" width="13" alt="Copy to clipboard" /> Copied!
+        </span>
+      );
+    }
+
+    return (
+      <span>
+        <img className="clippy" src="/images/clippy-blue.svg" width="13" alt="Copy to clipboard" /> Clipboard
+      </span>
+    );
+  }
+
+  getCodeMirrorValue() {
+    if (this.codemirror) {
+      return this.codemirror.getValue();
+    }
+    return '';
+  }
+
   render() {
     const {
       activeState,
@@ -91,13 +140,20 @@ ideally right after the opening <body> tag. -->
 
     return (
       <div>
-        <div className="installation-code-header">
-          <p>
+        <div className="clearfix installation-code-header">
+          <div className="pull-left title">
             <span className={`flag-icon ${flag}`} />
             <span className="capitialize"> {vertical} </span>
-            {section.name} in
-            <span className="capitialize"> {section.language}</span>
-          </p>
+            &middot; {section.name} &middot; <span className="capitialize">{section.language}</span>
+          </div>
+          <CopyToClipboard
+            text={this.getCodeMirrorValue()}
+            onCopy={() => this.handleCopyToClipboard()}
+          >
+            <button className="btn btn-default pull-right">
+              {this.buildCopyToClipboardButton()}
+            </button>
+          </CopyToClipboard>
         </div>
         <div>
           <textarea ref={(c) => { this.editor = c; }} />
