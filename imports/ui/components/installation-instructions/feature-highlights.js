@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 const FeatureHighlights = (props) => {
   const { section } = props;
@@ -13,11 +13,20 @@ const FeatureHighlights = (props) => {
           <p>
             <i className="fa fa-check" /> Customize product name on the fly
           </p>
+          {section.language !== 'english' ?
+            <p>
+              <i className="fa fa-check" /> Professionally translated
+            </p>
+          :
+            <noscript />}
         </div>
       </div>
     </div>
   );
 };
 
+FeatureHighlights.propTypes = {
+  section: PropTypes.shape({}),
+};
 
 export default FeatureHighlights;

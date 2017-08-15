@@ -383,7 +383,7 @@ const state = {
         id: 8987,
         name: 'Alicia Voss',
         url: 'https://www.facebook.com/profile.php?id=100011005093521',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12360101_126322524411250_6865430425445577401_n.jpg?oh=4256eb1eeeb88ec5d30c8fde2c59d355&oe=593128DF',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12360101_126322524411250_6865430425445577401_n.jpg?oh=4402e0477ae038983a6ac0e3fba24c8e&oe=5A1E76DF',
         affiliation: {
           name: 'Nashville, Tennessee',
           url: 'https://www.facebook.com/places/Things-to-do-in-Nashville-Tennessee/106220079409935/',

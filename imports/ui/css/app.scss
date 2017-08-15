@@ -800,6 +800,10 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
   border: 1px solid #e5e6e9;
   border-radius: 0px 0px 3px 3px;
   height: 200px !important;
+
+  pre {
+    font-size: 13px;
+  }
 }
 .CodeMirror-cursor {
   display: none;
@@ -807,11 +811,15 @@ box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 .CodeMirror-lines {
   padding-top: 12px;
 }
+.CodeMirror-linenumber {
+  font-size: 13px;
+}
 
 .cm-tag, .cm-bracket {
   color: #6772e5 !important;
   font-weight: 600;
 }
+
 .cm-s-elegant span.cm-number, .cm-s-elegant span.cm-string, .cm-s-elegant span.cm-atom {
   color: #24b47e !important;
 }
@@ -1127,7 +1135,7 @@ form.section-control .form-group small {
 }
 
 .installation-instructions-tabs-container {
-  margin-top: 30px;
+  // margin-top: 30px;
 }
 
 #choose-comment-section .installation-code-header {
@@ -1188,4 +1196,8 @@ form.section-control .form-group small {
 
 .text-success {
   color: #24b47e;
+}
+
+.installation-code-container {
+  // margin: 35px;
 }

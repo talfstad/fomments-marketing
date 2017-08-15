@@ -3,7 +3,8 @@ import InstallationCodeComponent from './installation-code';
 
 const InstallationTabs = () =>
   <section className="installation-instructions constainer-lg">
-    <h2><i className="fa fa-tachometer" /> Landing Page Installation</h2>
+    <h2><i className="fa fa-tachometer" /> Add to your landing page</h2>
+    <p className="common-body-text">Installation is simple and fast with 2 lines of code</p>
     <div className="installation-instructions-tabs-container">
       <nav>
         <ul className="nav nav-stacked nav-pills">

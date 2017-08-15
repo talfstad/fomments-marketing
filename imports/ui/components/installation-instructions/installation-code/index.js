@@ -8,9 +8,6 @@ import 'codemirror/mode/xml/xml';
 import 'codemirror/lib/codemirror.css';
 import 'codemirror/theme/elegant.css';
 
-import PurchaseSection from '../../purchase-section';
-import FeatureHighlights from '../feature-highlights';
-
 class InstallationInstructions extends Component {
   constructor(props) {
     super(props);
@@ -79,7 +76,7 @@ class InstallationInstructions extends Component {
     const { section } = activeState;
     const { productName } = activeState;
     const productAttribute =
-      (productName.replace(/ /g, '').length > 0 ? ` product-name="${productName}"` : '');
+      (productName.replace(/ /g, '').length > 0 ? ` data-product-name="${productName}"` : '');
 
     // Intent: add overlay to make sure anytime the value has a 'purchase-to-unlock'
     // keyword, we blur it!
@@ -105,7 +102,7 @@ where you want comments to appear. -->
 <div id="fomments" data-section-id="${sectionId}"${productAttribute}></div>
 
 <!-- Step 2: Include fomments on your page once,
-ideally right after the opening <body> tag. -->
+ideally right before the closing </body> tag. -->
 
 <script type="text/javascript" src="http://localhost:8080/fomments.min.js"></script>`;
 
@@ -139,34 +136,38 @@ ideally right after the opening <body> tag. -->
     const flag = section.language ? (languages[section.language]).flag : '';
 
     return (
-      <div>
-        <div className="clearfix installation-code-header">
-          <div className="pull-left title">
-            <span className={`flag-icon ${flag}`} />
-            <span className="capitialize"> {vertical} </span>
-            &middot; {section.name} &middot; <span className="capitialize">{section.language}</span>
+      <section className="installation-instructions constainer-lg">
+        <h2><i className="fa fa-tachometer" /> Add to your landing page</h2>
+        <p className="common-body-text">Installation is simple and fast with 2 lines of code</p>
+        <div className="installation-code-container">
+          <div className="clearfix installation-code-header">
+            <div className="pull-left title">
+              <span className={`flag-icon ${flag}`} />
+              <span className="capitialize"> {vertical} </span>
+              &middot; {section.name} &middot; <span className="capitialize">{section.language}</span>
+            </div>
+            <CopyToClipboard
+              text={this.getCodeMirrorValue()}
+              onCopy={() => this.handleCopyToClipboard()}
+            >
+              <button className="btn btn-default pull-right">
+                {this.buildCopyToClipboardButton()}
+              </button>
+            </CopyToClipboard>
           </div>
-          <CopyToClipboard
-            text={this.getCodeMirrorValue()}
-            onCopy={() => this.handleCopyToClipboard()}
-          >
-            <button className="btn btn-default pull-right">
-              {this.buildCopyToClipboardButton()}
-            </button>
-          </CopyToClipboard>
-        </div>
-        <div>
-          <textarea ref={(c) => { this.editor = c; }} />
-        </div>
-        <div className="row">
-          <div className="col-sm-6 code-col-section">
-            <FeatureHighlights section={section} />
+          <div>
+            <textarea ref={(c) => { this.editor = c; }} />
           </div>
-          <div className="col-sm-6 code-col-section">
-            <PurchaseSection />
-          </div>
+          {/* <div className="row">
+            <div className="col-sm-6 code-col-section">
+              <FeatureHighlights section={section} />
+            </div>
+            <div className="col-sm-6 code-col-section">
+              <PurchaseSection />
+            </div>
+          </div> */}
         </div>
-      </div>
+      </section>
     );
   }
 }
