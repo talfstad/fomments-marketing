@@ -31,7 +31,7 @@ const state = {
         id: 8987,
         name: 'Adriana Lambert',
         url: 'https://www.facebook.com/profile.php?id=100011148813038',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12509573_104011629980464_5019445164081070870_n.jpg?oh=869c806184c0f22002de5ce27477bfeb&oe=595FAA94',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12509573_104011629980464_5019445164081070870_n.jpg?oh=8d4930f096ceff0e0ea22cf5946204fc&oe=5A256B94',
         affiliation: {
           name: 'San Francisco, California',
           url: 'https://www.facebook.com/places/Things-to-do-in-San-Francisco-California/114952118516947/',
@@ -75,7 +75,7 @@ const state = {
         id: 8980,
         name: 'Amanda Joseph',
         url: 'https://www.facebook.com/profile.php?id=100011366823102',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12729360_104346239954270_739311851540977485_n.jpg?oh=b85d2de07fe87201565dcd1cf9924b8c&oe=592FCE20',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12729360_104346239954270_739311851540977485_n.jpg?oh=1766cb80a931d9c4ddd540984e364439&oe=5A1D1C20',
         affiliation: {
           name: 'Manahawkin, New Jersey',
           url: 'https://www.facebook.com/places/Things-to-do-in-Manahawkin-New-Jersey/113646691982626/',
@@ -119,7 +119,7 @@ const state = {
         id: 10,
         name: 'Erica Andrews',
         url: 'https://www.facebook.com/erica.andrews.9277',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/14947510_203899380056756_6266137659386474274_n.jpg?oh=7ae20106860c3c84d52eee50c53309ec&oe=59273650',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/14947510_203899380056756_6266137659386474274_n.jpg?oh=3195dbe6c7c1b68dbcace9d573db19cd&oe=59ECF750',
         affiliation: {
           name: 'Moreno Valley, Califonira',
           url: 'https://www.facebook.com/places/Things-to-do-in-Moreno-Valley-California/108010312560935/',
@@ -163,7 +163,7 @@ const state = {
         id: 11,
         name: 'Jessica Sparks',
         url: 'https://www.facebook.com/profile.php?id=100010872131960',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/1424307_119715538400850_990636754802458890_n.jpg?oh=553deb87e5cb08896a8bc410f96aad89&oe=5970B618',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/1424307_119715538400850_990636754802458890_n.jpg?oh=956935d18fac5d0bb44e73b4902331a0&oe=5A367718',
         affiliation: {
           name: 'Bend, Oregon',
           url: 'https://www.facebook.com/places/Things-to-do-in-Bend-Oregon/108137335874390/',
@@ -207,7 +207,7 @@ const state = {
         id: 13,
         name: 'Sage Tovar',
         url: 'https://www.facebook.com/profile.php?id=100011119832570',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13627009_256702558043737_3558121537047212601_n.jpg?oh=0b081999599fb0c2ae85003f94939d59&oe=595E858C',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13627009_256702558043737_3558121537047212601_n.jpg?oh=22960468e5bc3193a46c9dbd3692a864&oe=5A24468C',
         affiliation: {
           name: 'Tuscan, Arizona',
           url: 'https://www.facebook.com/places/Things-to-do-in-Tucson-Arizona/109570449061083/',
@@ -251,7 +251,7 @@ const state = {
         id: 14,
         name: 'Natalie Cruz',
         url: 'https://www.facebook.com/profile.php?id=100011149472047',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12800358_170083336706648_5524710852176825560_n.jpg?oh=645f63583a53fce9ea22845267c842e9&oe=5926A15B',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12800358_170083336706648_5524710852176825560_n.jpg?oh=674ddaea19598528bbc9483d63ab45a3&oe=59EC625B',
         affiliation: {
           name: 'San Diego, California',
           url: 'https://www.facebook.com/places/Things-to-do-in-San-Diego-California/110714572282163/',
@@ -296,7 +296,7 @@ const state = {
             id: 11,
             name: 'Jessica Sparks',
             url: 'https://www.facebook.com/profile.php?id=100010872131960',
-            image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/1424307_119715538400850_990636754802458890_n.jpg?oh=553deb87e5cb08896a8bc410f96aad89&oe=5970B618',
+            image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/1424307_119715538400850_990636754802458890_n.jpg?oh=956935d18fac5d0bb44e73b4902331a0&oe=5A367718',
             affiliation: {
               name: 'Bend, Oregon',
               url: 'https://www.facebook.com/places/Things-to-do-in-Bend-Oregon/108137335874390/',
@@ -337,12 +337,12 @@ const state = {
           content: '¡No! Para mí no es grasienta, y yo tengo la piel grasa de entrada. Esto parece ayudar con el problema.',
           user: {
             id: 17,
-            name: 'Sheila Stromberg',
-            url: 'https://www.facebook.com/sheila.stromberg.90',
-            image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/14572237_144974749297017_4294860622691965077_n.jpg?oh=3957e8325018463be7fcb1109a3544b3&oe=595C11E8',
+            name: 'Rebecca Otis',
+            url: 'https://www.facebook.com/rebecca.otis.77',
+            image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/14046080_124350174682000_1689271629575574994_n.jpg?oh=a9f4ff60fb246b581ef0651b668080c9&oe=5A2118F6',
             affiliation: {
-              name: 'Phoenix, Arizona',
-              url: 'https://www.facebook.com/places/Things-to-do-in-Phoenix-Arizona/105540216147364/',
+              name: 'Owensboro, Kentucky',
+              url: 'https://www.facebook.com/places/Things-to-do-in-Owensboro-Kentucky/105579309475779/',
             },
           },
           options: {
@@ -383,7 +383,7 @@ const state = {
         id: 8987,
         name: 'Alicia Voss',
         url: 'https://www.facebook.com/profile.php?id=100011005093521',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12360101_126322524411250_6865430425445577401_n.jpg?oh=4256eb1eeeb88ec5d30c8fde2c59d355&oe=593128DF',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12360101_126322524411250_6865430425445577401_n.jpg?oh=4402e0477ae038983a6ac0e3fba24c8e&oe=5A1E76DF',
         affiliation: {
           name: 'Nashville, Tennessee',
           url: 'https://www.facebook.com/places/Things-to-do-in-Nashville-Tennessee/106220079409935/',
@@ -425,9 +425,9 @@ const state = {
       content: 'Me he vuelto un poco adicta con esta crema para la piel. Mi piel sigue mejorando hasta el punto que otras personas lo están comentando. El problema es que cuanto más mejora mi piel, ¡más la quiero usar! Aplico la crema de noche todos los días antes de acostarme, junto con el suero para los ojos y a veces el suero para la cara. Incluso uso la crema de noche en el cuello y escote. Me encanta la textura, la presentación, el olor, pero sobre todo, me encantan los resultados.',
       user: {
         id: 19,
-        name: 'Jessica Porter',
-        url: 'https://www.facebook.com/jessica.porter.9237244',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/14441035_100677647064410_7150795135082358068_n.jpg?oh=1e925e3dbab6dd3f2075790dfb215c81&oe=59292765',
+        name: 'Shannon Peterson',
+        url: 'https://www.facebook.com/profile.php?id=100010838748876',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12366319_135909910113633_3387013511677142158_n.jpg?oh=56b697fd05b70c13a7c4e21a9021e47f&oe=5A2F2BA9',
         affiliation: {
           name: 'Grand Rapids, Ohio',
           url: 'https://www.facebook.com/places/Things-to-do-in-Grand-Rapids-Ohio/103159043057749/',

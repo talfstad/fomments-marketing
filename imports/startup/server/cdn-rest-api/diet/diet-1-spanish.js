@@ -31,7 +31,7 @@ const state = {
         id: 20,
         name: 'Shawn Markum',
         url: 'https://www.facebook.com/profile.php?id=100011156805047',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13654344_259320557783169_246698169767573020_n.jpg?oh=6e006e39bc7c268f2fe9ef7d025a7a2b&oe=5929C9B2',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13654344_259320557783169_246698169767573020_n.jpg?oh=e637407e23f15aa5a033a6a548eb70a8&oe=59EF8AB2',
         affiliation: {
           name: 'Phoenix, Arizona',
           url: 'https://www.facebook.com/places/Things-to-do-in-Phoenix-Arizona/105540216147364/',
@@ -75,7 +75,7 @@ const state = {
         id: 21,
         name: 'Amy Rundt',
         url: 'https://www.facebook.com/profile.php?id=100011832856163',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13083214_115980738806354_4982907304538696246_n.jpg?oh=6f71a8bb7e1b5d6eb5b163c0919828c3&oe=59254BE1',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13083214_115980738806354_4982907304538696246_n.jpg?oh=66576bdbda96b6acf725fd8cec43881f&oe=59EB0CE1',
         affiliation: {
           name: 'Los Angeles, California',
           url: 'https://www.facebook.com/places/Things-to-do-in-Los-Angeles-California/110970792260960/',
@@ -119,7 +119,7 @@ const state = {
         id: 22,
         name: 'Andrea Ross',
         url: 'https://www.facebook.com/profile.php?id=100011337991086',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12651213_101327320255201_1142509366217758274_n.jpg?oh=99540e6df5fd3f512c41ffb51d2d4573&oe=595B052A',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12651213_101327320255201_1142509366217758274_n.jpg?oh=d4bf94490e99a684f24a7e1065cdb30c&oe=5A20C62A',
         affiliation: {
           name: 'Roms River, New Jersey',
           url: 'https://www.facebook.com/places/Things-to-do-in-Toms-River-New-Jersey/105801999453382/',
@@ -163,7 +163,7 @@ const state = {
         id: 23,
         name: 'Kelly Clark',
         url: 'https://www.facebook.com/profile.php?id=100011348220945',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12647010_100950806959860_1371791499132826737_n.jpg?oh=347ec3f537d9b34f13fa2e1be6fd1dde&oe=592CC992',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12647010_100950806959860_1371791499132826737_n.jpg?oh=d341bc728bc18f54a0e3eebb2b6d6cd3&oe=59F28A92',
         affiliation: {
           name: 'San Diego, California',
           url: 'https://www.facebook.com/places/Things-to-do-in-San-Diego-California/110714572282163/',
@@ -207,7 +207,7 @@ const state = {
         id: 24,
         name: 'Jordyn Arnet',
         url: 'https://www.facebook.com/profile.php?id=100011047147882',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12494653_112781429100095_8608710850666740637_n.jpg?oh=c93eee6bbd81396fda914f9967faf81b&oe=5968F325',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12494653_112781429100095_8608710850666740637_n.jpg?oh=cdb8daa1bba86506dcb7fbb41183f4fe&oe=5A2EB425',
         affiliation: {
           name: 'Kansas City, Missouri',
           url: 'https://www.facebook.com/places/Things-to-do-in-Kansas-City-Missouri/108591349161413/',
@@ -252,7 +252,7 @@ const state = {
             id: 25,
             name: 'Casey Norman',
             url: 'https://www.facebook.com/profile.php?id=100011033052060',
-            image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/11048774_122436311467470_5679839926743067992_n.jpg?oh=4625e4590c6f19d5124a46f7e4c17d0d&oe=5972D14B',
+            image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/11048774_122436311467470_5679839926743067992_n.jpg?oh=9da9d0a89d6daf00116c7986c660ca19&oe=5A38924B',
             affiliation: {
               name: 'Dallas, Texas',
               url: 'https://www.facebook.com/places/Things-to-do-in-Dallas-Texas/111762725508574/',
@@ -294,9 +294,9 @@ const state = {
       content: 'Llevo aproximadamenten 1 semana y ya estoy viendo resultados en la grasa de mi barriga. Una cosa genial de esto es que no te sientes raro cuando tomas esto como ocurre con otros productos dietéticos- completamente normal preparado para la semana 2',
       user: {
         id: 26,
-        name: 'Christine Rollins',
-        url: 'https://www.facebook.com/christine.rollins.5',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/14117962_110748009378468_6812744580892833942_n.jpg?oh=0ed6749521e0a490c9953772e3906d0b&oe=59614CE7',
+        name: 'Rebecca Otis',
+        url: 'https://www.facebook.com/rebecca.otis.77',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/14046080_124350174682000_1689271629575574994_n.jpg?oh=a9f4ff60fb246b581ef0651b668080c9&oe=5A2118F6',
         affiliation: {
           name: 'Portland, Oregon',
           url: 'https://www.facebook.com/places/Things-to-do-in-Portland-Oregon/112548152092705/',
@@ -340,7 +340,7 @@ const state = {
         id: 27,
         name: 'Heather Jackson',
         url: 'https://www.facebook.com/profile.php?id=100012639579438',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13925377_166742037090448_8792391243972420509_n.jpg?oh=da767cd216dea5299d797fc9f1a3cc0e&oe=59306533',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13925377_166742037090448_8792391243972420509_n.jpg?oh=c206f63ac06a1eb0b04eb181f7292758&oe=5A1DB333',
         affiliation: {
           name: 'San Diego State University',
           url: 'https://www.facebook.com/SanDiegoState/?pnref=lhc&rf=105454902822165',
@@ -384,7 +384,7 @@ const state = {
         id: 28,
         name: 'Olivia Welder',
         url: 'https://www.facebook.com/profile.php?id=100011769988244',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/l/t1.0-1/p160x160/13095920_145451232523875_2584695763402003509_n.jpg?oh=fd6f882dffe6ed6bfe03dc93e386ba40&oe=596D4CF7',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/l/t1.0-1/p160x160/13095920_145451232523875_2584695763402003509_n.jpg?oh=e93444a855cbb32c8988b901f7c9d373&oe=5A330DF7',
         affiliation: {
           name: 'University of Wisconsin-Madison',
           url: 'https://www.facebook.com/UWMadison/?pnref=lhc',
@@ -429,7 +429,7 @@ const state = {
             id: 29,
             name: 'Leah Dial',
             url: 'https://www.facebook.com/leah.dial.1',
-            image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/14192780_127899600998474_4174307873671008077_n.jpg?oh=c1ff95e723b19be7672a6bc2f9f00c12&oe=59648EE3',
+            image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/14192780_127899600998474_4174307873671008077_n.jpg?oh=554792d307807154b84ee503ef8490f4&oe=5A2A4FE3',
             affiliation: {
               name: 'Dutch Flat, California',
               url: 'https://www.facebook.com/places/Things-to-do-in-Dutch-Flat-California/108281079196624/',
@@ -472,7 +472,7 @@ const state = {
             id: 23,
             name: 'Kelly Clark',
             url: 'https://www.facebook.com/profile.php?id=100011348220945',
-            image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12647010_100950806959860_1371791499132826737_n.jpg?oh=347ec3f537d9b34f13fa2e1be6fd1dde&oe=592CC992',
+            image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12647010_100950806959860_1371791499132826737_n.jpg?oh=d341bc728bc18f54a0e3eebb2b6d6cd3&oe=59F28A92',
             affiliation: {
               name: 'San Diego, California',
               url: 'https://www.facebook.com/places/Things-to-do-in-San-Diego-California/110714572282163/',
@@ -515,7 +515,7 @@ const state = {
             id: 30,
             name: 'Brie Young',
             url: 'https://www.facebook.com/profile.php?id=100010868470418',
-            image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13614945_261536890885258_7295318734645234627_n.jpg?oh=beefe2dd51c64d6970a2a3e49007fd01&oe=592A78BD',
+            image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13614945_261536890885258_7295318734645234627_n.jpg?oh=e53351c79cfdc0e308591e90833c4b94&oe=59F039BD',
             affiliation: {
               name: 'Miami, Florida',
               url: 'https://www.facebook.com/places/Things-to-do-in-Miami-Florida/110148382341970/',

@@ -31,7 +31,7 @@ const state = {
         id: 50,
         name: 'Caleb Reid',
         url: 'https://www.facebook.com/profile.php?id=100010796076736',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12341021_109410546095481_3611520917320886164_n.jpg?oh=547d26eaf14e5b15d2bccc3dae7771fa&oe=5970FF5D',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12341021_109410546095481_3611520917320886164_n.jpg?oh=fb58b3eae0a3dea1372bfbcbc6824989&oe=5A36C05D',
         affiliation: {
           name: 'Chaffey College',
           url: 'https://www.facebook.com/chaffeycollege/?pnref=lhc',
@@ -75,7 +75,7 @@ const state = {
         id: 51,
         name: 'Steve Wilburn',
         url: 'https://www.facebook.com/steve.wilburn.7547',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/10273648_150836851952427_2942748058217376560_n.jpg?oh=56e2659eeb95749bea9d51fefc42081c&oe=59261ADB',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/18222154_423982387971204_6847227343208469749_n.jpg?oh=2078362788374e682a44b0c0412f00e2&oe=5A25ED7B',
         affiliation: {
           name: 'Aliso Viejo, California',
           url: 'https://www.facebook.com/places/Things-to-do-in-Aliso-Viejo-California/107460889283809/',
@@ -119,7 +119,7 @@ const state = {
         id: 52,
         name: 'Richard Avila',
         url: 'https://www.facebook.com/richard.avila.7334',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/14937430_190174551435079_8466357377613520698_n.jpg?oh=d33be89d99b39e9057de82c570547127&oe=5972A4C2',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/14937430_190174551435079_8466357377613520698_n.jpg?oh=3fa2b5b31cadfcbce29beb1ecc982599&oe=5A3865C2',
         affiliation: {
           name: 'Tupelo, Mississippi',
           url: 'https://www.facebook.com/places/Things-to-do-in-Tupelo-Mississippi/103105283062515/',
@@ -161,12 +161,12 @@ const state = {
       content: "J'achète PRODUCT_NAME pour aider à augmenter les niveaux des tests. Avais l'habitude de prendre des prescriptions, mais elles étaient trop fortes. Ça fonctionne mieux à long terme. M'aide énormément au travail et aussi dans la chambre à coucher. Je le recommande.",
       user: {
         id: 53,
-        name: 'David Lancaster',
-        url: 'https://www.facebook.com/david.lancaster.5682',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/14937276_192785677843848_4595580508833045003_n.jpg?oh=de158fe48c1116f8424dbad651d9a348&oe=596AF392',
+        name: 'Kyle Stokes',
+        url: 'https://www.facebook.com/profile.php?id=100010847341053',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/c0.0.160.160/p160x160/12279225_101298560241722_632505774365292155_n.jpg?oh=3023d2b8facd2b660b4c818963a64d0d&oe=5A22D280',
         affiliation: {
-          name: 'Portland, Oregon',
-          url: 'https://www.facebook.com/places/Things-to-do-in-Portland-Oregon/112548152092705/',
+          name: 'Corona, California',
+          url: 'https://www.facebook.com/places/Things-to-do-in-Corona-California/107633995923829/',
         },
       },
       options: {
@@ -208,7 +208,7 @@ const state = {
             id: 54,
             name: 'Brett Fletcher',
             url: 'https://www.facebook.com/profile.php?id=100012091775653',
-            image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13076961_102611140151945_5588378468461390978_n.jpg?oh=1264eafbf545a88115055f81e43b3de6&oe=595890FB',
+            image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13076961_102611140151945_5588378468461390978_n.jpg?oh=69edc207c40c048cecdb20a6a11e0e51&oe=5A1E51FB',
             affiliation: {
               name: 'Encinitas, California',
               url: 'https://www.facebook.com/places/Things-to-do-in-Encinitas-California/109680939058152/',
@@ -249,12 +249,12 @@ const state = {
           content: "Non, mais j'essaie de m'assurer de faire quelque chose d'actif juste après que je l'ai prise. Je ne sais pas si c'est ce qui me réussit si bien. C'est sûr que ça marche",
           user: {
             id: 53,
-            name: 'David Lancaster',
-            url: 'https://www.facebook.com/david.lancaster.5682',
-            image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/14937276_192785677843848_4595580508833045003_n.jpg?oh=de158fe48c1116f8424dbad651d9a348&oe=596AF392',
+            name: 'Kyle Stokes',
+            url: 'https://www.facebook.com/profile.php?id=100010847341053',
+            image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/c0.0.160.160/p160x160/12279225_101298560241722_632505774365292155_n.jpg?oh=3023d2b8facd2b660b4c818963a64d0d&oe=5A22D280',
             affiliation: {
-              name: 'Portland, Oregon',
-              url: 'https://www.facebook.com/places/Things-to-do-in-Portland-Oregon/112548152092705/',
+              name: 'Corona, California',
+              url: 'https://www.facebook.com/places/Things-to-do-in-Corona-California/107633995923829/',
             },
           },
           options: {
@@ -295,7 +295,7 @@ const state = {
         id: 55,
         name: 'Chris Gonser',
         url: 'https://www.facebook.com/profile.php?id=100010682209081',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/c0.14.160.160/p160x160/12342634_133880436978029_3690309777400325362_n.jpg?oh=0a4d57e10a9c6880376f8158aff40a55&oe=5929A1E4',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/c0.14.160.160/p160x160/12342634_133880436978029_3690309777400325362_n.jpg?oh=101fc4ae7534527ed5f5a55a957df5ff&oe=59EF62E4',
         affiliation: {
           name: 'Palomar College',
           url: 'https://www.facebook.com/palomarcollege/?pnref=lhc',
@@ -339,7 +339,7 @@ const state = {
         id: 56,
         name: 'Abraham Manning',
         url: 'https://www.facebook.com/profile.php?id=100011866708695',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13051662_126417534430469_2162057319129429776_n.jpg?oh=e4c1819e2468b55a0589a1d558c745d3&oe=5964E031',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13051662_126417534430469_2162057319129429776_n.jpg?oh=5646f123ad441ced53b6e66be127763e&oe=5A2AA131',
         affiliation: {
           name: 'Plano, Texas',
           url: 'https://www.facebook.com/places/Things-to-do-in-Plano-Texas/107925612568471/',
@@ -383,7 +383,7 @@ const state = {
         id: 57,
         name: 'Rodney Hubbard',
         url: 'https://www.facebook.com/profile.php?id=100010821693436',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13012714_219266798444042_2047772693556622204_n.jpg?oh=2194001350be0df19762b3252f0c4db9&oe=59608E0B',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/18199548_418653151838738_2116672655278962897_n.jpg?oh=4f36f9b75cc0b46c83388129f2324f3c&oe=59F0A511',
         affiliation: {
           name: 'Riverside City College',
           url: 'https://www.facebook.com/RiversideCityCollege/?pnref=lhc',
@@ -427,7 +427,7 @@ const state = {
         id: 58,
         name: 'Liam Senn',
         url: 'https://www.facebook.com/profile.php?id=100011789816888',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13062094_141376632931996_4933252980144514169_n.jpg?oh=586a20ec65f4d6d507e6b946b8a1b071&oe=59702A62',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13062094_141376632931996_4933252980144514169_n.jpg?oh=b4ff6b1e1a661db12cad2d10f3c38ffa&oe=5A35EB62',
         affiliation: {
           name: 'Los Angeles, California',
           url: 'https://www.facebook.com/places/Things-to-do-in-Los-Angeles-California/110970792260960/',
@@ -471,7 +471,7 @@ const state = {
         id: 59,
         name: 'Greg Fields',
         url: 'https://www.facebook.com/profile.php?id=100010813144385',
-        image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13427889_250280918675678_5370749653591396420_n.jpg?oh=9aa02e82273c010a39f05d514b5de0a0&oe=592889E0',
+        image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/18275189_421428051560963_5376017426783629784_n.jpg?oh=5a6d97d9543514b55ba63d0155db7429&oe=59EF79F3',
         affiliation: {
           name: 'Lake Elsinore, California',
           url: 'https://www.facebook.com/places/Things-to-do-in-Lake-Elsinore-California/112042925478201/',
