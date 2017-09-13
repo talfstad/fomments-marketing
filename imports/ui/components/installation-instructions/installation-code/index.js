@@ -94,6 +94,8 @@ class InstallationInstructions extends Component {
     if (!section.purchase && section.language !== 'english') {
       sectionId = 'purchase-to-unlock';
     }
+    const { FOMMENTS_CDN } = Meteor.settings.public;
+
     // set new value and refresh
     const codeMirrorValue =
 `<!-- Step 1: Place this code on your landing page
@@ -104,7 +106,7 @@ where you want comments to appear. -->
 <!-- Step 2: Include fomments on your page once,
 ideally right before the closing </body> tag. -->
 
-<script type="text/javascript" src="http://localhost:8080/fomments.min.js"></script>`;
+<script type="text/javascript" src="${FOMMENTS_CDN}/fomments.min.js"></script>`;
 
     this.codemirror.setValue(codeMirrorValue);
 

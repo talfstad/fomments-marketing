@@ -1,0 +1,10 @@
+{
+  "public": {
+    "FOMMENTS_CDN": "https://cdn.fomments.com"
+  },
+  "galaxy.meteor.com": {
+    "env": {
+      "MONGO_URL": "mongodb://buildcave:Wewillrockyou1986!@ds147373-a0.mlab.com:47373,ds147373-a1.mlab.com:47373/prod?replicaSet=rs-ds147373"
+    }
+  }
+}
