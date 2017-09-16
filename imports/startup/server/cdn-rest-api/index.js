@@ -47,7 +47,7 @@ JsonRoutes.setResponseHeaders({
 
 // ONLY FOR TESTING: return the right static section for general comments.
 // deployment will be to a CDN for these free sections.
-JsonRoutes.add('get', '/sections/:sectionId', (req, res) => {
+JsonRoutes.add('get', '/:sectionId', (req, res) => {
   const sectionId = req.params.sectionId;
   // get section back..
   switch (sectionId) {
