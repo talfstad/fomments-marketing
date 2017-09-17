@@ -72,17 +72,18 @@ class InstallationInstructions extends Component {
   updateCodeMirrorValueFromProps() {
     const {
       activeState,
+      user,
     } = this.props;
     const { section } = activeState;
     const { productName } = activeState;
     const productAttribute =
       (productName.replace(/ /g, '').length > 0 ? ` data-product-name="${productName}"` : '');
 
-    // Intent: add overlay to make sure anytime the value has a 'purchase-to-unlock'
+    // Intent: add overlay to make sure anytime the value has a 'join-to-unlock'
     // keyword, we blur it!
     this.codemirror.addOverlay({
       token(stream) {
-        if (stream.match('purchase-to-unlock')) {
+        if (stream.match('join-to-unlock')) {
           return 'blur-text';
         }
         stream.next();
@@ -91,8 +92,8 @@ class InstallationInstructions extends Component {
     });
 
     let { sectionId } = section;
-    if (!section.purchase && section.language !== 'english') {
-      sectionId = 'purchase-to-unlock';
+    if (!_.has(user, '_id')) {
+      sectionId = 'join-to-unlock';
     }
     const { FOMMENTS_CDN } = Meteor.settings.public;
 
@@ -175,6 +176,7 @@ ideally right before the closing </body> tag. -->
 }
 
 InstallationInstructions.propTypes = {
+  user: PropTypes.shape({}),
   activeState: PropTypes.shape({}),
   languages: PropTypes.shape({}),
   verticals: PropTypes.shape({}),
@@ -182,6 +184,7 @@ InstallationInstructions.propTypes = {
 
 const mapStateToProps = state => ({
   ...state.sections,
+  user: state.user,
 });
 
 export default connect(mapStateToProps)(InstallationInstructions);
