@@ -109,6 +109,17 @@ class LoginDropDown extends Component {
       >
         <button
           type="button"
+          className="header-list-button btn dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span>
+            Support
+          </span>
+        </button>
+        <button
+          type="button"
           className="login-button btn dropdown-toggle"
           data-toggle="dropdown"
           aria-haspopup="true"
@@ -116,7 +127,7 @@ class LoginDropDown extends Component {
         >
           {user._id ?
             <span>
-              <i className="gold-member fa fa-trophy" /> {user.emails[0].address}
+              {user.emails[0].address}
             </span> :
             <span>Sign in</span>
           } <span className="caret" />

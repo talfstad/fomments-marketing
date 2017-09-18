@@ -30,7 +30,7 @@ class AboveTheFold extends PureComponent {
             </span>
             <h1>The new standard in landing page comments</h1>
             <p className="common-body-text">
-              You hope your landing page comments will help conversions, but these really do.
+              Trigger your user&apos;s urge to buy using comments proven to sell more.
             </p>
             <ul>
               <li>
@@ -40,9 +40,9 @@ class AboveTheFold extends PureComponent {
                 </a>
               </li>
               <li>
-                <a href="" className="common-button">
-          create your own
-        </a>
+                <a href="" className="find-out-more-btn common-button">
+                  Find out more
+                </a>
               </li>
             </ul>
           </div>

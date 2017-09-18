@@ -102,7 +102,7 @@ class Login extends Component {
             </button>
             <button
               onClick={(e) => { e.preventDefault(); showCreateAccount(true); }}
-              className="create-account pull-right btn"
+              className="create-account pull-left btn"
             >
               Create Account
             </button>

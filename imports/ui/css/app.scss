@@ -146,7 +146,7 @@ main header {
 #intro .announcement {
   align-items: center;
   line-height: 26px;
-  margin: 0 0 35px;
+  margin: 0 0 55px;
   padding-right: 15px;
   border-radius: 50px;
   width: auto;
@@ -187,16 +187,16 @@ main header {
 }
 
 .common-body-text {
-    margin-top: 55px;
+    margin-top: 15px;
     color: #eafdff;
 }
 
 #intro .container-lg {
-  padding-top: 115px;
+  padding-top: 90px;
 }
 
 #intro p {
-  max-width: 50%;
+  max-width: 60%;
   line-height: 30px;
   font-size: 18px;
 }
@@ -405,7 +405,7 @@ a.signup-button {
 
 
 #intro ul {
-  margin-top: 40px;
+  margin-top: 80px;
   display: flex;
 }
 
@@ -927,44 +927,96 @@ form.section-control .form-group small {
   text-transform: capitalize;
 }
 
-.dropdown-menu:before {
-  position: absolute;
-  top: -7px;
-  right: 9px;
-  display: inline-block;
-  border-right: 7px solid transparent;
-  border-bottom: 7px solid #ccc;
-  border-left: 7px solid transparent;
-  border-bottom-color: rgba(0, 0, 0, 0.2);
-  content: '';
+.dropdown-menu {
+  margin: 10px 0 0;
+
+  li {
+    display: list-item;
+  }
+
+  &:before {
+    position: absolute;
+    top: -7px;
+    right: 9px;
+    display: inline-block;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid #ccc;
+    border-left: 7px solid transparent;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    content: '';
+  }
+
+  &:after {
+    position: absolute;
+    top: -6px;
+    right: 10px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    border-left: 6px solid transparent;
+    content: '';
+  }
 }
 
-.dropdown-menu:after {
-  position: absolute;
-  top: -6px;
-  right: 10px;
-  display: inline-block;
-  border-right: 6px solid transparent;
-  border-bottom: 6px solid #ffffff;
-  border-left: 6px solid transparent;
-  content: '';
+.product-info-list {
+  margin-top: 15px;
+  .features-button {
+    margin-left: 10px;
+  }
 }
 
-.dropdown-menu li {
-  display: list-item;
-}
-
-.login-button:hover,
-.login-button:focus {
-  color: #efefef;
-}
-.login-button {
+.header-list-button {
+  opacity: 0.8;
   padding-top: 2px;
   font-size: 16px;
-  color: #fff;
+  color: hsla(0,0%,100%,.85);
+  margin-right: 10px;
   outline: none !important;
   background: transparent !important;
   box-shadow: none !important;
+
+  &:hover,
+  &focus {
+    opacity: 1;
+  }
+
+  span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+.login-button {
+  border: 1px solid #fff;
+  opacity: 0.8;
+  padding-top: 2px;
+  font-size: 16px;
+  color: hsla(0,0%,100%,.85);
+  outline: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+
+  &:hover,
+  &focus {
+    opacity: 1;
+  }
+
+  span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+  }
+}
+
+.find-out-more-btn {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .gold-member {
