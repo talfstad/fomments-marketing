@@ -175,7 +175,6 @@ main header {
 #intro .message a {
   color: #fff;
   font-weight: 600;
-  text-decoration: underline;
 }
 
 #intro h1 {
@@ -184,6 +183,30 @@ main header {
   padding: 0;
   font-weight: 400;
   color: #fff;
+}
+
+a.new-pill-button {
+  display: inline-block;
+  padding: 0px 5px;
+  margin-left: 5px;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  text-decoration: none;
+  transition: all .15s ease;
+
+  color: #fff;
+  background: #3ecf8e;
+  text-shadow: 0 1px 3px rgba(36,180,126,.4);
+  white-space: nowrap;
+
+  &:hover {
+    color: #fff;
+    transform: translateX(1px);
+  }
 }
 
 .common-body-text {
@@ -196,7 +219,6 @@ main header {
 }
 
 #intro p {
-  max-width: 60%;
   line-height: 30px;
   font-size: 18px;
 }
@@ -531,6 +553,7 @@ a.signup-button {
   filter: invert(100%);
   width: 40px;
   display: flex;
+  opacity: 0.8;
 }
 .nav-section.github-seal:hover {
   opacity: 0.6;

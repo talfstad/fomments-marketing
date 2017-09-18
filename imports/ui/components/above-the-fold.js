@@ -1,4 +1,5 @@
 import React, { PureComponent, PropTypes } from 'react';
+import { Link } from 'react-router-dom';
 
 class AboveTheFold extends PureComponent {
   render() {
@@ -21,16 +22,16 @@ class AboveTheFold extends PureComponent {
             <span href="" className="announcement">
               <span className="new-pill">
                 <span className="nav-section github-seal">
-                  <img alt="" src="/images/GitHub-Mark-120px-plus.png" />
+                  <img alt="" src="/images/fomments-inverted.png" />
                 </span>
               </span>
               <span className="message">
-                Code examples &amp; full feature list proudly hosted at <a href="3f">github.com</a>
+                Early Registration is now <Link to="/signup/one" className="new-pill-button">OPEN <i className="fa fa-angle-double-right" /></Link>
               </span>
             </span>
             <h1>The new standard in landing page comments</h1>
             <p className="common-body-text">
-              Trigger your user&apos;s urge to buy using comments proven to sell more.
+              Trigger a consumer&apos;s urge to purchase by using comments proven to sell more.
             </p>
             <ul>
               <li>
