@@ -1,28 +1,35 @@
 import React, { Component } from 'react';
 
 class AtTheFold extends Component {
-  componentDidMount() {
-    setTimeout(() => {
-      $(this.tabletEl).animate({
-        scrollTop: 150,
-      }, 2500, () => {
-        setTimeout(() => {
-          $(this.tabletEl).animate({
-            scrollTop: 0,
-          }, 3000);
-        }, 3000);
-      });
-    }, 500);
-  }
-
   render() {
     return (
       <div>
         <div className="app-features-container container-lg">
           <section className="app-features">
             <div className="tablet-portrait">
-              <div ref={(c) => { this.tabletEl = c; }}>
-                <img alt="" src="/images/comments-example.png" />
+              <div>
+                <video
+                  autoPlay
+                  loop
+                  className="example-video"
+                  height="540px"
+                  poster="https://www.flowmail.com/images/index/poster.png"
+                >
+                  <source
+                    src="/videos/fomments-screencast-mov.mov"
+                    type="video/mov;"
+                  />
+                  <source
+                    src="/videos/fomments-screencast-webm.webm"
+                    type="video/webm; codecs="
+                  />
+                    vp8, vorbis
+                  <source
+                    src="/videos/fomments-screencast-mp4.mp4"
+                    type="video/mp4; codecs="
+                  />
+                    avc1.42E01E, mp4a.40.2
+                </video>
               </div>
             </div>
           </section>
