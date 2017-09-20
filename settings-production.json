@@ -1,5 +1,6 @@
 {
   "public": {
+    "env": "production",
     "FOMMENTS_CDN": "https://cdn.fomments.com"
   },
   "galaxy.meteor.com": {

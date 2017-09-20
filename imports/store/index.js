@@ -12,10 +12,15 @@ const {
   subscriptions,
 } = createReactiveMiddlewares(Tracker);
 
+const { env } = Meteor.settings.public;
+
 const logger = createLogger();
+const middleware = [sources, subscriptions, thunk, sendFommentsExternalMessage];
+
+if (env === 'development') middleware.push(logger);
 
 const store = createStore(rootReducer, compose(
-  applyMiddleware(sources, subscriptions, thunk, logger, sendFommentsExternalMessage),
+  applyMiddleware(...middleware),
   window.devToolsExtension ? window.devToolsExtension() : f => f,
 ));
 

@@ -1,5 +1,6 @@
 {
   "public": {
+    "env": "development",
     "FOMMENTS_CDN": "http://localhost:8080"
   },
   "galaxy.meteor.com": {

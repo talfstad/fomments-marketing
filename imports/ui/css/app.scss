@@ -14,6 +14,15 @@ a:hover, a:focus {
   text-decoration: none;
 }
 
+.fomments-logo {
+  margin-top: 10px;
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1.0;
+  }
+}
+
 .mr5 { margin-right: 5px; }
 
 body {
@@ -556,7 +565,6 @@ a.signup-button {
   filter: invert(100%);
   width: 40px;
   display: flex;
-  opacity: 0.8;
 }
 .nav-section.github-seal:hover {
   opacity: 0.6;
