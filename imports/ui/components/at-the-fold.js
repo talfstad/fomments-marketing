@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class AtTheFold extends Component {
   render() {
@@ -49,6 +50,13 @@ class AtTheFold extends Component {
               <br />with no social media connection or tracking
               <br />so each user sees a unique copy.
             </p>
+            <Link
+              to="/demo-lander"
+              className="try-out-in-lander common-body-text"
+            >
+              Test out a live landing page demo
+              <i className="fa fa-window-restore" />
+            </Link>
           </section>
         </section></div>
     );

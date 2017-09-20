@@ -1290,3 +1290,20 @@ form.section-control .form-group small {
   position: relative;
   right: 246px;
 }
+
+a.try-out-in-lander {
+  border-top: 2px solid #f1f7fb;
+  padding-top: 15px;
+  margin-top: 25px;
+  color: #6772e5 !important;
+
+  &:hover {
+    color: #32325d !important;
+  }
+
+  i {
+    font-size: 16px !important;
+    margin-left: 10px !important;
+
+  }
+}
