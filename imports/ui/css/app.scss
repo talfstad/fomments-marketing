@@ -42,15 +42,15 @@ main header {
 #primary {
   position: relative;
 
-  @include medium-screens {
-    display: none;
-  }
+  // @include medium-screens {
+  //   display: none;
+  // }
 }
 
 .app-features-container {
-  @include medium-screens {
-    display: none;
-  }
+  // @include medium-screens {
+  //   display: none;
+  // }
 }
 
 #primary .white-tilted-bg {
@@ -58,7 +58,7 @@ main header {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  transform: skewY(-10deg);
+  transform: skewY(-6deg);
   transform-origin: 0;
   background-color: #fff;
 }
@@ -78,7 +78,7 @@ main header {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  transform: skewY(-10deg);
+  transform: skewY(-6deg);
   transform-origin: 0;
   background: linear-gradient(150deg,#4264aa 15%,#4264aa 70%,#5f7ec1 100%);
 }
@@ -199,12 +199,13 @@ a.new-pill-button {
   transition: all .15s ease;
 
   color: #fff;
-  background: #3ecf8e;
+  background: rgba(62, 207, 142, 0.9);
   text-shadow: 0 1px 3px rgba(36,180,126,.4);
   white-space: nowrap;
 
   &:hover {
     color: #fff;
+    background: rgba(62, 207, 142, 1.0);
     transform: translateX(1px);
   }
 }
@@ -439,14 +440,14 @@ a.signup-button {
 #choose-comment-section {
   position: relative;
   z-index: 1;
-  bottom: 80px;
+  bottom: 30px;
 }
 
 .app-features {
   z-index: 1;
   position: absolute;
   right: 0px;
-  bottom: -350px;
+  bottom: -425px;
   display: flex;
   pointer-events: none;
 }
@@ -473,8 +474,10 @@ a.signup-button {
 
 .tablet-portrait {
   display: flex;
-  width: 400px;
-  height: 625px;
+  // width: 400px;
+  // height: 625px;
+  width: 455px;
+  height: 655px;
   overflow: hidden;
 }
 
@@ -951,8 +954,6 @@ form.section-control .form-group small {
 }
 
 .dropdown-menu {
-  margin: 10px 0 0;
-
   li {
     display: list-item;
   }

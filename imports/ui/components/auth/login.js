@@ -98,13 +98,7 @@ class Login extends Component {
               type="submit"
               className="submit pull-right btn btn-default"
             >
-              Submit
-            </button>
-            <button
-              onClick={(e) => { e.preventDefault(); showCreateAccount(true); }}
-              className="create-account pull-left btn"
-            >
-              Create Account
+              Sign in
             </button>
           </div>
         </form>

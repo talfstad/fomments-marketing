@@ -185,10 +185,10 @@ export class ChooseCommentSectionComponent extends Component {
         <section className="stacked-container container-lg">
           <h2>
             <i className="fa fa-commenting-o section-icon" />
-            Choose a comment section
+            Choose a comment section.
           </h2>
           <p className="common-body-text">
-            Follow these steps to experience how real these fomments feel
+            Follow these steps to configure a custom comment section.
           </p>
           <section id="comment-choice-container">
             <header className="comment-choice-header">

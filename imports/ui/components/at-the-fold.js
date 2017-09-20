@@ -39,17 +39,15 @@ class AtTheFold extends Component {
           <section id="feels-real" className="container-lg">
             <h2>
               <span>
-                Poorly designed comments aren&apos;t helping your conversion rate.
-                <br /> we change that.
+                The comments are designed, but these profiles are real.
               </span>
               <i className="fa fa-angle-double-right" />
 
             </h2>
             <p className="common-body-text">
-              &quot;Nearly half (45%) of digital buyers worldwide said
-              <br />that reading reviews, comments and feedback
-              <br />influenced their digital shopping behavior.&quot;
-              <br /><em>&mdash; PricewaterhouseCoopers</em>
+              Fomments runs 100% in the consumer&apos;s browser
+              <br />with no social media connection or tracking
+              <br />so each user sees a unique copy.
             </p>
           </section>
         </section></div>

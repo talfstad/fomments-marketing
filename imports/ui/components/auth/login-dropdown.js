@@ -115,6 +115,17 @@ class LoginDropDown extends Component {
           aria-expanded="false"
         >
           <span>
+            Ideas
+          </span>
+        </button>
+        <button
+          type="button"
+          className="header-list-button btn dropdown-toggle"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          <span>
             Support
           </span>
         </button>
