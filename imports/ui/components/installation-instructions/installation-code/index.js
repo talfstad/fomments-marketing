@@ -51,7 +51,7 @@ class InstallationInstructions extends Component {
 
     return (
       <span>
-        <img className="clippy" src="/images/clippy-blue.svg" width="13" alt="Copy to clipboard" /> Clipboard
+        <img className="clippy" src="/images/clippy-blue.svg" width="13" alt="Copy to clipboard" /> Copy Code
       </span>
     );
   }
@@ -140,8 +140,8 @@ ideally right before the closing </body> tag. -->
 
     return (
       <section className="installation-instructions constainer-lg">
-        <h2><i className="fa fa-tachometer" /> Add to your landing page</h2>
-        <p className="common-body-text">Installation is simple and fast with 2 lines of code</p>
+        <h2><i className="fa fa-tachometer" /> add it to your landing page.</h2>
+        <p className="common-body-text">Just a quick copy &amp; paste where your old comments used to be.</p>
         <div className="installation-code-container">
           <div className="clearfix installation-code-header">
             <div className="pull-left title">

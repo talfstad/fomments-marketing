@@ -120,7 +120,7 @@ class LoginDropDown extends Component {
         </button>
         <button
           type="button"
-          className="header-list-button btn dropdown-toggle"
+          className="header-list-button btn dropdown-toggle last-no-border-button"
           data-toggle="dropdown"
           aria-haspopup="true"
           aria-expanded="false"

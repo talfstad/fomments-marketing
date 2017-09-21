@@ -997,12 +997,15 @@ form.section-control .form-group small {
   }
 }
 
+.last-no-border-button {
+  margin-right: 10px;
+}
+
 .header-list-button {
   opacity: 0.8;
   padding-top: 2px;
   font-size: 16px;
   color: hsla(0,0%,100%,.85);
-  margin-right: 10px;
   outline: none !important;
   background: transparent !important;
   box-shadow: none !important;
