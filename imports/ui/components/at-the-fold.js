@@ -17,16 +17,16 @@ class AtTheFold extends Component {
                   poster="https://www.flowmail.com/images/index/poster.png"
                 >
                   <source
-                    src="/videos/fomments-screencast-mov.mov"
+                    src="/videos/fomments-demo-video.mov"
                     type="video/mov;"
                   />
                   <source
-                    src="/videos/fomments-screencast-webm.webm"
+                    src="/videos/fomments-demo-video.webm"
                     type="video/webm; codecs="
                   />
                     vp8, vorbis
                   <source
-                    src="/videos/fomments-screencast-mp4.mp4"
+                    src="/videos/fomments-demo-video.mp4"
                     type="video/mp4; codecs="
                   />
                     avc1.42E01E, mp4a.40.2
