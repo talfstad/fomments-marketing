@@ -26,7 +26,7 @@ class DemoSection extends PureComponent {
                 </span>
               </span>
               <span className="message">
-                Limited free early registration is now <Link to="/signup/one" className="new-pill-button">OPEN <i className="fa fa-angle-double-right" /></Link>
+                <strong>Announcement:</strong> Limited free early registration is now open. <Link to="/signup/one" className="new-pill-button">Sign up <i className="fa fa-angle-double-right" /></Link>
               </span>
             </span>
             <h1>The new standard in landing page comments</h1>
