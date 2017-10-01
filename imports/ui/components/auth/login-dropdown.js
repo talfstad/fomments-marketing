@@ -126,7 +126,7 @@ class LoginDropDown extends Component {
           aria-expanded="false"
         >
           <span>
-            Support
+            Contact
           </span>
         </button>
         <button

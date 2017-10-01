@@ -7,6 +7,7 @@ import ChooseCommentSection from '/imports/ui/components/choose-comment-section'
 import ResetPasswordModal from '/imports/ui/components/auth/reset-password-modal';
 import AccountModal from '/imports/ui/components/auth/account/account-modal';
 import TryItNowSection from '/imports/ui/components/try-it-now-section';
+import FooterSection from '/imports/ui/components/footer-section';
 
 // Intent: load all Schemas onto collectionsttaches schemas to all
 import '/imports/api/meteor/collections';
@@ -44,7 +45,7 @@ class App extends Component {
                   ref={(el) => { this.chooseCommentSection = el; }}
                 />
                 <TryItNowSection />
-                <footer id="github-section" className="stacked-container" />
+                <FooterSection />
               </main>
               <Route path="/reset-password" component={ResetPasswordModal} />
               <Route
