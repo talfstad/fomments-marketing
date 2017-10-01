@@ -1,6 +1,6 @@
 import React from 'react';
 
-import LoginDropDown from './auth/login-dropdown';
+import LoginDropDown from '../auth/login-dropdown';
 
 const Header = () =>
   <header id="global-nav">

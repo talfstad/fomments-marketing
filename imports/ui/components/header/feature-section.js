@@ -1,7 +1,7 @@
 import React, { PureComponent, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
 
-class AboveTheFold extends PureComponent {
+class DemoSection extends PureComponent {
   render() {
     const {
       scrollToCommentSection,
@@ -26,7 +26,7 @@ class AboveTheFold extends PureComponent {
                 </span>
               </span>
               <span className="message">
-                Limited early registration is now <Link to="/signup/one" className="new-pill-button">OPEN <i className="fa fa-angle-double-right" /></Link>
+                Limited free early registration is now <Link to="/signup/one" className="new-pill-button">OPEN <i className="fa fa-angle-double-right" /></Link>
               </span>
             </span>
             <h1>The new standard in landing page comments</h1>
@@ -53,8 +53,8 @@ class AboveTheFold extends PureComponent {
   }
 }
 
-AboveTheFold.propTypes = {
+DemoSection.propTypes = {
   scrollToCommentSection: PropTypes.func.isRequired,
 };
 
-export default AboveTheFold;
+export default DemoSection;

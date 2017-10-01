@@ -450,6 +450,7 @@ a.signup-button {
   position: relative;
   z-index: 1;
   bottom: 30px;
+  padding-bottom: 20px;
 }
 
 .app-features {
@@ -575,7 +576,7 @@ a.signup-button {
 
 #github-section {
   background: #fff;
-  min-height: 250px;
+  min-height: 70px;
 }
 
 #github-section span,
@@ -1245,9 +1246,11 @@ form.section-control .form-group small {
   }
 
   button {
+    $borderColor: #ccdfeb;
     margin-right: 15px;
     color: #337ab7;
     outline: none;
+    border-color: $borderColor;
 
     &:active,
     &:focus {
@@ -1310,3 +1313,6 @@ a.try-out-in-lander {
 
   }
 }
+
+
+@import "{}/imports/ui/css/app_new.scss";

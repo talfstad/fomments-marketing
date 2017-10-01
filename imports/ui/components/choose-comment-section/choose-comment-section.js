@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import InstallationCodeComponent from '/imports/ui/components/installation-instructions/installation-code';
+import AddToLandingPageComponent from '/imports/ui/components/add-to-landing-page';
 
 export class ChooseCommentSectionComponent extends Component {
   componentDidMount() {
@@ -240,7 +240,7 @@ export class ChooseCommentSectionComponent extends Component {
             <section className="comments">
               <div id="fomments" />
             </section>
-            <InstallationCodeComponent />
+            <AddToLandingPageComponent />
           </section>
         </section>
       </section>

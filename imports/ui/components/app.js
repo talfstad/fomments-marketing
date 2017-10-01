@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Header from '/imports/ui/components/header';
-import AboveTheFold from '/imports/ui/components/above-the-fold';
-import AtTheFold from '/imports/ui/components/at-the-fold';
+import Header from '/imports/ui/components/header/';
+import FeatureSection from '/imports/ui/components/header/feature-section';
+import DemoSection from '/imports/ui/components/demo-section/';
 import ChooseCommentSection from '/imports/ui/components/choose-comment-section';
 import ResetPasswordModal from '/imports/ui/components/auth/reset-password-modal';
 import AccountModal from '/imports/ui/components/auth/account/account-modal';
+import TryItNowSection from '/imports/ui/components/try-it-now-section';
 
 // Intent: load all Schemas onto collectionsttaches schemas to all
 import '/imports/api/meteor/collections';
@@ -35,13 +36,14 @@ class App extends Component {
             <div>
               <Header />
               <main>
-                <AboveTheFold
+                <FeatureSection
                   scrollToCommentSection={e => App.scrollToCommentSection(e)}
                 />
-                <AtTheFold />
+                <DemoSection />
                 <ChooseCommentSection
                   ref={(el) => { this.chooseCommentSection = el; }}
                 />
+                <TryItNowSection />
                 <footer id="github-section" className="stacked-container" />
               </main>
               <Route path="/reset-password" component={ResetPasswordModal} />
