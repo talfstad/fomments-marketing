@@ -35,27 +35,28 @@ class LiveLandingPageDemo extends Component {
   }
 
   render() {
-    const {
-      modalTitle,
-    } = this.props;
-
     return (
       <div
         ref={(c) => { this.el = c; }}
         className="modal fade modal"
         tabIndex="-1"
       >
-        <div className="add-offer-modal modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-header">
-              <button type="button" className="close" data-dismiss="modal" aria-hidden="true" />
-              <h4 className="modal-title">{modalTitle}</h4>
-            </div>
-            <div className="modal-body">
-              Hey there
-            </div>
-            <div className="modal-footer">
-              <button type="button" className="btn dark btn-outline" data-dismiss="modal">Cancel</button>
+        <div className="tablet-container live-demo-modal" role="document">
+          <div className="tablet-portrait">
+            <div>
+              <video
+                autoPlay
+                loop
+                className="example-video"
+                height="540px"
+                poster="https://www.flowmail.com/images/index/poster.png"
+              >
+                <source src="/videos/fomments-demo-video.mov" type="video/mov;" />
+                <source src="/videos/fomments-demo-video.webm" type="video/webm; codecs=" />
+                  vp8, vorbis
+                <source src="/videos/fomments-demo-video.mp4" type="video/mp4; codecs=" />
+                  avc1.42E01E, mp4a.40.2
+              </video>
             </div>
           </div>
         </div>
