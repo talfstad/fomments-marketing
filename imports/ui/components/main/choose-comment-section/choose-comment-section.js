@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import AddToLandingPageComponent from '/imports/ui/components/choose-comment-section/add-to-landing-page';
+import AddToLandingPageComponent from './add-to-landing-page';
 
 export class ChooseCommentSectionComponent extends Component {
   componentDidMount() {

@@ -10,7 +10,6 @@ class LiveLandingPageDemo extends Component {
     } = this.props;
 
     $(this.el).modal('show');
-    $(this.el).draggable({ handle: '.modal-header' });
 
     $(this.el).on('shown.bs.modal', () => {
       $(this.offerNameInput).focus();
@@ -43,9 +42,8 @@ class LiveLandingPageDemo extends Component {
     return (
       <div
         ref={(c) => { this.el = c; }}
-        className="modal fade draggable-modal"
+        className="modal fade modal"
         tabIndex="-1"
-        data-backdrop="static"
       >
         <div className="add-offer-modal modal-dialog" role="document">
           <div className="modal-content">

@@ -1,5 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import {
+  Link,
+  Route,
+  withRouter,
+} from 'react-router-dom';
+
+import LiveLandingPageDemo from './live-landing-page-demo';
 
 class AtTheFold extends Component {
   render() {
@@ -51,16 +57,25 @@ class AtTheFold extends Component {
               <br />so each user sees a unique copy.
             </p>
             <Link
-              to="/demo-lander"
+              to="/live-landing-page-demo"
               className="try-out-in-lander common-body-text"
             >
               Test out a live landing page demo
               <i className="fa fa-window-restore" />
             </Link>
           </section>
-        </section></div>
+        </section>
+        <Route
+          path="/live-landing-page-demo"
+          exact
+          component={LiveLandingPageDemo}
+        />
+      </div>
     );
   }
 }
 
-export default AtTheFold;
+AtTheFold.propTypes = {
+};
+
+export default withRouter(AtTheFold);
