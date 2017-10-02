@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from '/imports/ui/components/header/';
-import FeatureSection from '/imports/ui/components/header/feature-section';
+import FeatureSection from '/imports/ui/components/feature-section';
 import DemoSection from '/imports/ui/components/demo-section/';
 import ChooseCommentSection from '/imports/ui/components/choose-comment-section';
 import ResetPasswordModal from '/imports/ui/components/auth/reset-password-modal';

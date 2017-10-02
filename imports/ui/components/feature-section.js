@@ -1,9 +1,11 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-class DemoSection extends PureComponent {
+class FeatureSection extends Component {
   render() {
     const {
+      user,
       scrollToCommentSection,
     } = this.props;
 
@@ -26,7 +28,13 @@ class DemoSection extends PureComponent {
                 </span>
               </span>
               <span className="message">
-                <strong>Announcement:</strong> Limited free early registration is now open. <Link to="/signup/one" className="new-pill-button">Sign up <i className="fa fa-angle-double-right" /></Link>
+                <strong>Announcement:</strong> Limited free early registration is now open.
+                {
+                  !_.has(user, '_id') ?
+                    <Link to="/signup/one" className="new-pill-button"> Sign up <i className="fa fa-angle-double-right" /></Link>
+                  :
+                    <noscript />
+                }
               </span>
             </span>
             <h1>The new standard in landing page comments</h1>
@@ -53,8 +61,13 @@ class DemoSection extends PureComponent {
   }
 }
 
-DemoSection.propTypes = {
+FeatureSection.propTypes = {
   scrollToCommentSection: PropTypes.func.isRequired,
+  user: PropTypes.shape({}),
 };
 
-export default DemoSection;
+const mapStateToProps = state => ({
+  user: state.user,
+});
+
+export default connect(mapStateToProps)(FeatureSection);
