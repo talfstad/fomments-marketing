@@ -152,24 +152,24 @@ ideally right before the closing </body> tag. -->
               <span className="capitialize"> {vertical} </span>
               &middot; {section.name} &middot; <span className="capitialize">{section.language}</span>
             </div>
-            <CopyToClipboard
-              text={this.getCodeMirrorValue()}
-              onCopy={() => this.handleCopyToClipboard()}
-            >
-              { !_.has(user, '_id') ?
-                <button
-                  className="btn btn-default pull-right"
-                  onClick={e => handleScrollOpenSignin(e)}
-                >
-                  <span>Sign in </span>
-                  <i className="ml5 fa fa-arrow-up" />
-                </button>
-                :
+            { !_.has(user, '_id') ?
+              <button
+                className="btn btn-default pull-right"
+                onClick={e => handleScrollOpenSignin(e)}
+              >
+                <span>Sign in </span>
+                <i className="ml5 fa fa-arrow-up" />
+              </button>
+              :
+              <CopyToClipboard
+                text={this.getCodeMirrorValue()}
+                onCopy={() => this.handleCopyToClipboard()}
+              >
                 <button className="btn btn-default pull-right">
                   {this.buildCopyToClipboardButton()}
                 </button>
-              }
-            </CopyToClipboard>
+              </CopyToClipboard>
+            }
           </div>
           <div>
             <textarea ref={(c) => { this.editor = c; }} />
