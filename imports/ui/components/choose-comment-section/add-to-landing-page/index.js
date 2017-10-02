@@ -41,6 +41,7 @@ class InstallationInstructions extends Component {
 
   buildCopyToClipboardButton() {
     const { copied } = this.state;
+
     if (copied) {
       return (
         <span className="green">
@@ -91,9 +92,9 @@ class InstallationInstructions extends Component {
       },
     });
 
-    let { sectionId } = section;
-    if (!_.has(user, '_id')) {
-      sectionId = 'join-to-unlock';
+    let sectionId = 'join-to-unlock';
+    if (_.has(user, '_id')) {
+      sectionId = `${user._id}-${section.sectionId}`;
     }
     const { FOMMENTS_CDN } = Meteor.settings.public;
 
@@ -133,6 +134,8 @@ ideally right before the closing </body> tag. -->
       activeState,
       languages,
       verticals,
+      user,
+      handleScrollOpenSignin,
     } = this.props;
     const { section } = activeState;
     const vertical = section.vertical ? (verticals[section.vertical]).name : '';
@@ -153,22 +156,24 @@ ideally right before the closing </body> tag. -->
               text={this.getCodeMirrorValue()}
               onCopy={() => this.handleCopyToClipboard()}
             >
-              <button className="btn btn-default pull-right">
-                {this.buildCopyToClipboardButton()}
-              </button>
+              { !_.has(user, '_id') ?
+                <button
+                  className="btn btn-default pull-right"
+                  onClick={e => handleScrollOpenSignin(e)}
+                >
+                  <span>Sign in </span>
+                  <i className="ml5 fa fa-arrow-up" />
+                </button>
+                :
+                <button className="btn btn-default pull-right">
+                  {this.buildCopyToClipboardButton()}
+                </button>
+              }
             </CopyToClipboard>
           </div>
           <div>
             <textarea ref={(c) => { this.editor = c; }} />
           </div>
-          {/* <div className="row">
-            <div className="col-sm-6 code-col-section">
-              <FeatureHighlights section={section} />
-            </div>
-            <div className="col-sm-6 code-col-section">
-              <PurchaseSection />
-            </div>
-          </div> */}
         </div>
       </section>
     );
@@ -176,6 +181,7 @@ ideally right before the closing </body> tag. -->
 }
 
 InstallationInstructions.propTypes = {
+  handleScrollOpenSignin: PropTypes.func,
   user: PropTypes.shape({}),
   activeState: PropTypes.shape({}),
   languages: PropTypes.shape({}),

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import AddToLandingPageComponent from '/imports/ui/components/add-to-landing-page';
+import AddToLandingPageComponent from '/imports/ui/components/choose-comment-section/add-to-landing-page';
 
 export class ChooseCommentSectionComponent extends Component {
   componentDidMount() {
@@ -180,6 +180,8 @@ export class ChooseCommentSectionComponent extends Component {
   }
 
   render() {
+    const { handleScrollOpenSignin } = this.props;
+
     return (
       <section id="choose-comment-section">
         <section className="stacked-container container-lg">
@@ -240,7 +242,9 @@ export class ChooseCommentSectionComponent extends Component {
             <section className="comments">
               <div id="fomments" />
             </section>
-            <AddToLandingPageComponent />
+            <AddToLandingPageComponent
+              handleScrollOpenSignin={handleScrollOpenSignin}
+            />
           </section>
         </section>
       </section>
@@ -249,6 +253,7 @@ export class ChooseCommentSectionComponent extends Component {
 }
 
 ChooseCommentSectionComponent.propTypes = {
+  handleScrollOpenSignin: PropTypes.func,
   changeFommentSectionProductName: PropTypes.func,
   activeSections: PropTypes.arrayOf(PropTypes.object),
   updateActiveState: PropTypes.func,

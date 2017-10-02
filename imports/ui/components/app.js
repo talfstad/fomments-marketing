@@ -43,6 +43,7 @@ class App extends Component {
                 <DemoSection />
                 <ChooseCommentSection
                   ref={(el) => { this.chooseCommentSection = el; }}
+                  handleScrollOpenSignin={e => App.handleScrollOpenSignin(e)}
                 />
                 <TryItNowSection />
                 <FooterSection />
@@ -67,10 +68,20 @@ class App extends Component {
   }
 }
 
+App.handleScrollOpenSignin = (e) => {
+  e.preventDefault();
+  const el = $('#global-nav');
+  $('html').animate({
+    scrollTop: $(el).position().top,
+  }, 'slow', () => {
+    $('.login-button').dropdown('toggle');
+  });
+};
+
 App.scrollToCommentSection = (e) => {
   e.preventDefault();
   const el = $('#choose-comment-section');
-  $('html, body').animate({
+  $('html').animate({
     scrollTop: $(el).position().top,
   }, 'slow');
 };
