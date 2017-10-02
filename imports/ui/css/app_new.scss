@@ -142,24 +142,62 @@
   float: left !important;
 }
 
+.ohidden {
+  overflow: hidden !important;
+}
+
 .live-demo-modal {
-  margin: 100px auto;
-  width: 455px;
+  margin: 50px auto;
+  width: 500px;
+  height: 700px;
+
+  iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .tablet-container {
   align-items: center;
   border-radius: 38px;
-  overflow: hidden;
   background: #fff;
   box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173, 186, 204, 0.25), 0 2px 6px rgba(0, 21, 64, 0.14), 0 10px 20px rgba(0, 21, 64, 0.05);
+
+  .tablet-portrait {
+    width: 100%;
+    height: 100%;
+  }
+
+  .close-tablet-button {
+    position: relative;
+    width: 43px;
+    height: 43px;
+    border-radius: 30px;
+    text-align: center;
+    bottom: 52px;
+    margin: 0 auto;
+    padding: 0px;
+    color: #337ab7;
+    border: 1px solid #337ab7;
+    box-shadow: none;
+    float: none;
+    display: block;
+    outline: none;
+
+    i {
+      font-size: 50px;
+      position: relative;
+      bottom: 10px;
+    }
+  }
 }
 
 
 .tablet-container > div {
   align-items: center;
   border-radius: 38px;
-  padding: 100px 0;
+  padding: 60px 0;
   overflow: hidden;
   background: #fff;
   box-shadow: inset 0 4px 7px 1px #fff, inset 0 -5px 20px rgba(173,186,204,.25), 0 2px 6px rgba(0,21,64,.14), 0 10px 20px rgba(0,21,64,.05);
@@ -168,9 +206,9 @@
 .tablet-container div > div {
   overflow: hidden;
   width: 100%;
+  height: 100%;
   padding: 0;
   align-items: center;
-  height: 540px;
   /*border-radius: 0;*/
   background: #fff;
   border-top: 1px solid #dedede;
@@ -184,4 +222,8 @@
   width: 455px;
   height: 655px;
   overflow: hidden;
+}
+
+.fa-times-thin:before {
+	content: '\00d7';
 }
