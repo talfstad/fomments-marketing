@@ -32,9 +32,9 @@ class LiveLandingPageDemo extends Component {
     $('.modal-backdrop').remove();
   }
 
-  // Maintain a 4:3 aspect ration on modal for 80% modal height.
+  // Maintain a 4:3 aspect ration on modal for 90% modal height.
   keepAspectRatio() {
-    const modalHeight = $(this.el).height() * 0.8;
+    const modalHeight = $(this.el).height() * 0.9;
     const modalWidth = modalHeight * 0.75;
     $('.live-demo-modal').css('width', `${modalWidth}px`);
   }
