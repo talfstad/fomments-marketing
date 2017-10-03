@@ -1,4 +1,6 @@
 import React, { Component, PropTypes } from 'react';
+import { DEMO_USER_ID } from '/imports/actions/fomments/message';
+
 import AddToLandingPageComponent from './add-to-landing-page';
 
 export class ChooseCommentSectionComponent extends Component {
@@ -88,7 +90,7 @@ export class ChooseCommentSectionComponent extends Component {
 
     const { sectionId } = activeState.section;
 
-    localStorage.removeItem(sectionId);
+    localStorage.removeItem(`${DEMO_USER_ID}-${sectionId}`);
     loadFommentSection(sectionId, this.productNameInput.value);
   }
 

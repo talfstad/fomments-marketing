@@ -55,112 +55,112 @@ JsonRoutes.add('get', 'sections/:sectionId', (req, res) => {
   // get section back..
   switch (sectionId) {
     case 'skin-1-english':
-      JsonRoutes.sendResult(res, { data: Skin1English });
+      JsonRoutes.sendResult(res, { data: Skin1English({ userId }) });
       break;
     case 'skin-1-portuguese':
-      JsonRoutes.sendResult(res, { data: Skin1Portuguese });
+      JsonRoutes.sendResult(res, { data: Skin1Portuguese({ userId }) });
       break;
     case 'skin-1-german':
-      JsonRoutes.sendResult(res, { data: Skin1German });
+      JsonRoutes.sendResult(res, { data: Skin1German({ userId }) });
       break;
     case 'skin-1-french':
-      JsonRoutes.sendResult(res, { data: Skin1French });
+      JsonRoutes.sendResult(res, { data: Skin1French({ userId }) });
       break;
     case 'skin-1-chinese':
-      JsonRoutes.sendResult(res, { data: Skin1Chinese });
+      JsonRoutes.sendResult(res, { data: Skin1Chinese({ userId }) });
       break;
     case 'skin-1-spanish':
-      JsonRoutes.sendResult(res, { data: Skin1Spanish });
+      JsonRoutes.sendResult(res, { data: Skin1Spanish({ userId }) });
       break;
     case 'diet-1-english':
-      JsonRoutes.sendResult(res, { data: Diet1English });
+      JsonRoutes.sendResult(res, { data: Diet1English({ userId }) });
       break;
     case 'diet-1-french':
-      JsonRoutes.sendResult(res, { data: Diet1French });
+      JsonRoutes.sendResult(res, { data: Diet1French({ userId }) });
       break;
     case 'diet-1-portuguese':
-      JsonRoutes.sendResult(res, { data: Diet1Portuguese });
+      JsonRoutes.sendResult(res, { data: Diet1Portuguese({ userId }) });
       break;
     case 'diet-1-spanish':
-      JsonRoutes.sendResult(res, { data: Diet1Spanish });
+      JsonRoutes.sendResult(res, { data: Diet1Spanish({ userId }) });
       break;
     case 'diet-1-chinese':
-      JsonRoutes.sendResult(res, { data: Diet1Chinese });
+      JsonRoutes.sendResult(res, { data: Diet1Chinese({ userId }) });
       break;
     case 'diet-1-german':
-      JsonRoutes.sendResult(res, { data: Diet1German });
+      JsonRoutes.sendResult(res, { data: Diet1German({ userId }) });
       break;
     case 'muscle-1-english':
-      JsonRoutes.sendResult(res, { data: Muscle1English });
+      JsonRoutes.sendResult(res, { data: Muscle1English({ userId }) });
       break;
     case 'muscle-1-french':
-      JsonRoutes.sendResult(res, { data: Muscle1French });
+      JsonRoutes.sendResult(res, { data: Muscle1French({ userId }) });
       break;
     case 'muscle-1-chinese':
-      JsonRoutes.sendResult(res, { data: Muscle1Chinese });
+      JsonRoutes.sendResult(res, { data: Muscle1Chinese({ userId }) });
       break;
     case 'muscle-1-german':
-      JsonRoutes.sendResult(res, { data: Muscle1German });
+      JsonRoutes.sendResult(res, { data: Muscle1German({ userId }) });
       break;
     case 'muscle-1-spanish':
-      JsonRoutes.sendResult(res, { data: Muscle1Spanish });
+      JsonRoutes.sendResult(res, { data: Muscle1Spanish({ userId }) });
       break;
     case 'muscle-1-portuguese':
-      JsonRoutes.sendResult(res, { data: Muscle1Portuguese });
+      JsonRoutes.sendResult(res, { data: Muscle1Portuguese({ userId }) });
       break;
     case 'app-download-1-english':
-      JsonRoutes.sendResult(res, { data: AppDownload1English });
+      JsonRoutes.sendResult(res, { data: AppDownload1English({ userId }) });
       break;
     case 'app-download-1-spanish':
-      JsonRoutes.sendResult(res, { data: AppDownload1Spanish });
+      JsonRoutes.sendResult(res, { data: AppDownload1Spanish({ userId }) });
       break;
     case 'app-download-1-french':
-      JsonRoutes.sendResult(res, { data: AppDownload1French });
+      JsonRoutes.sendResult(res, { data: AppDownload1French({ userId }) });
       break;
     case 'app-download-1-portuguese':
-      JsonRoutes.sendResult(res, { data: AppDownload1Portuguese });
+      JsonRoutes.sendResult(res, { data: AppDownload1Portuguese({ userId }) });
       break;
     case 'app-download-1-german':
-      JsonRoutes.sendResult(res, { data: AppDownload1German });
+      JsonRoutes.sendResult(res, { data: AppDownload1German({ userId }) });
       break;
     case 'app-download-1-chinese':
-      JsonRoutes.sendResult(res, { data: AppDownload1Chinese });
+      JsonRoutes.sendResult(res, { data: AppDownload1Chinese({ userId }) });
       break;
     case 'erectile-dysfunction-1-english':
-      JsonRoutes.sendResult(res, { data: ErectileDysfunction1English });
+      JsonRoutes.sendResult(res, { data: ErectileDysfunction1English({ userId }) });
       break;
     case 'erectile-dysfunction-1-german':
-      JsonRoutes.sendResult(res, { data: ErectileDysfunction1German });
+      JsonRoutes.sendResult(res, { data: ErectileDysfunction1German({ userId }) });
       break;
     case 'erectile-dysfunction-1-spanish':
-      JsonRoutes.sendResult(res, { data: ErectileDysfunction1Spanish });
+      JsonRoutes.sendResult(res, { data: ErectileDysfunction1Spanish({ userId }) });
       break;
     case 'erectile-dysfunction-1-french':
-      JsonRoutes.sendResult(res, { data: ErectileDysfunction1French });
+      JsonRoutes.sendResult(res, { data: ErectileDysfunction1French({ userId }) });
       break;
     case 'erectile-dysfunction-1-portuguese':
-      JsonRoutes.sendResult(res, { data: ErectileDysfunction1Portuguese });
+      JsonRoutes.sendResult(res, { data: ErectileDysfunction1Portuguese({ userId }) });
       break;
     case 'erectile-dysfunction-1-chinese':
-      JsonRoutes.sendResult(res, { data: ErectileDysfunction1Chinese });
+      JsonRoutes.sendResult(res, { data: ErectileDysfunction1Chinese({ userId }) });
       break;
     case 'giveaway-1-english':
-      JsonRoutes.sendResult(res, { data: Giveaway1English });
+      JsonRoutes.sendResult(res, { data: Giveaway1English({ userId }) });
       break;
     case 'giveaway-1-german':
-      JsonRoutes.sendResult(res, { data: Giveaway1German });
+      JsonRoutes.sendResult(res, { data: Giveaway1German({ userId }) });
       break;
     case 'giveaway-1-french':
-      JsonRoutes.sendResult(res, { data: Giveaway1French });
+      JsonRoutes.sendResult(res, { data: Giveaway1French({ userId }) });
       break;
     case 'giveaway-1-portuguese':
-      JsonRoutes.sendResult(res, { data: Giveaway1Portuguese });
+      JsonRoutes.sendResult(res, { data: Giveaway1Portuguese({ userId }) });
       break;
     case 'giveaway-1-chinese':
-      JsonRoutes.sendResult(res, { data: Giveaway1Chinese });
+      JsonRoutes.sendResult(res, { data: Giveaway1Chinese({ userId }) });
       break;
     case 'giveaway-1-spanish':
-      JsonRoutes.sendResult(res, { data: Giveaway1Spanish });
+      JsonRoutes.sendResult(res, { data: Giveaway1Spanish({ userId }) });
       break;
     default: {
       JsonRoutes.sendResult(res, { data: 'No section found for this id' });
