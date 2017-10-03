@@ -9,11 +9,13 @@ class LiveLandingPageDemo extends Component {
       modalRedirectRouteOnClose,
     } = this.props;
 
-    $(this.el).modal('show');
-
-    $(this.el).on('shown.bs.modal', () => {
-      $(this.offerNameInput).focus();
+    this.keepAspectRatio();
+    // On resize, resize aspect ratio
+    $(window).resize(() => {
+      this.keepAspectRatio();
     });
+
+    $(this.el).modal('show');
 
     $(this.el).on('hidden.bs.modal', () => {
       // Intent: redirect on close if we have a prop.
@@ -30,6 +32,13 @@ class LiveLandingPageDemo extends Component {
     $('.modal-backdrop').remove();
   }
 
+  // Maintain a 4:3 aspect ration on modal for 80% modal height.
+  keepAspectRatio() {
+    const modalHeight = $(this.el).height() * 0.8;
+    const modalWidth = modalHeight * 0.75;
+    $('.live-demo-modal').css('width', `${modalWidth}px`);
+  }
+
   closeModal() {
     $(this.el).modal('hide');
   }
@@ -41,7 +50,10 @@ class LiveLandingPageDemo extends Component {
         className="modal fade ohidden"
         tabIndex="-1"
       >
-        <div className="tablet-container live-demo-modal" role="document">
+        <div
+          className="tablet-container live-demo-modal"
+          role="document"
+        >
           <div className="tablet-portrait">
             <div>
               <iframe
