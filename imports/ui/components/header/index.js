@@ -11,7 +11,7 @@ const Header = () =>
             <img
               className="fomments-logo"
               alt="fomments logo"
-              src="/images/fomments-logo.png"
+              src="/images/fomments-logo-white.svg"
             />
           </a>
           <div className="button-group product-info-list">

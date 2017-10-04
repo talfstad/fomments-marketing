@@ -9,9 +9,9 @@ class Footer extends Component {
           <div className="fl">
             <Link to="/">
               <img
-                className="f-logo-footer"
-                src="images/fomments-logo-blue.png"
-                alt="fomments logo in blue"
+                className="fomments-logo f-logo-footer"
+                src="images/fomments-logo-blue.svg"
+                alt="fomments logo"
               />
             </Link>
             <Link className="footer-link" to="/features">
