@@ -14,6 +14,7 @@ import Footer from './footer-section';
 
 import ResetPasswordModal from './auth/reset-password-modal';
 import AccountModal from './auth/account/account-modal';
+import SignupModal from './auth/signup-modal';
 
 // Intent: load all Schemas onto collectionsttaches schemas to all
 import '../../../imports/api/meteor/collections';
@@ -45,6 +46,7 @@ class App extends Component {
             <Route render={() => <Redirect to="/" />} />
           </Switch>
           <Route path="*" component={Footer} />
+          <Route path="/signup" component={SignupModal} />
           <Route path="/reset-password" component={ResetPasswordModal} />
           <Route
             path="/account"

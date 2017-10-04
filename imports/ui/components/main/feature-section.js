@@ -31,7 +31,7 @@ class FeatureSection extends Component {
                 <strong>Announcement:</strong> Limited free early registration is now open.
                 {
                   !_.has(user, '_id') ?
-                    <Link to="/signup/one" className="new-pill-button"> Sign up <i className="fa fa-angle-double-right" /></Link>
+                    <Link to="/signup" className="new-pill-button"> Sign up <i className="fa fa-angle-double-right" /></Link>
                   :
                     <noscript />
                 }

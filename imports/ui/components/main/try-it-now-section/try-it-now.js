@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const TryItNow = () => (
   <section className="try-it-now-section">
@@ -11,7 +12,11 @@ const TryItNow = () => (
           </h2>
         </div>
         <div className="action-buttons">
-          <button className="f-action-button green mr10">Test it out now</button>
+          <Link to="/signup">
+            <button className="f-action-button green mr10">
+              Test it out now
+            </button>
+          </Link>
           <button className="f-action-button">Find out more</button>
         </div>
       </div>
