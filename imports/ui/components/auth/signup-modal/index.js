@@ -5,6 +5,7 @@ import {
   Route,
   Switch,
   Redirect,
+  Link,
 } from 'react-router-dom';
 
 import OneComponent from './one';
@@ -35,7 +36,8 @@ class SignupModal extends Component {
   componentWillUnmount() {
     // Intent: Remove backdrop to allow for a quick
     // back button press.
-    $('.modal-backdrop').remove();
+    // $('.modal-backdrop').remove();
+    this.closeModal();
   }
 
   redirectOnClose() {
@@ -73,6 +75,7 @@ class SignupModal extends Component {
       <div
         ref={(c) => { this.el = c; }}
         className="modal fade ohidden"
+        data-backdrop="static"
         tabIndex="-1"
       >
         <div
@@ -103,9 +106,17 @@ class SignupModal extends Component {
               <Route render={() => <Redirect to="/signup/one" />} />
             </Switch>
           </div>
-          <button type="button" className="close-tablet-button close" data-dismiss="modal" aria-hidden="true">
-            <i className="fa fa-times fa-times-thin" />
-          </button>
+          <Route
+            exact
+            path={`${match.url}/one`}
+            render={() =>
+              <Link to={`${match.url}/two`}>
+                <button className="home-tablet-button f-action-button green">
+                  Create your account <i className="fa fa-angle-double-right" />
+                </button>
+              </Link>
+            }
+          />
         </div>
       </div>
     );

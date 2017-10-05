@@ -55,13 +55,13 @@ class LiveLandingPageDemo extends Component {
           role="document"
         >
           <div className="tablet-portrait">
-            <div>
+            <div className="inner-content-container">
               <iframe
                 src="/landing-page/index.html"
               />
             </div>
           </div>
-          <button type="button" className="close-tablet-button close" data-dismiss="modal" aria-hidden="true">
+          <button type="button" className="home-tablet-button close-tablet-button close" data-dismiss="modal" aria-hidden="true">
             <i className="fa fa-times fa-times-thin" />
           </button>
         </div>
