@@ -117,6 +117,17 @@ class SignupModal extends Component {
               </Link>
             }
           />
+          <Route
+            exact
+            path={`${match.url}/two`}
+            render={() =>
+              <Link to={`${match.url}/two`}>
+                <button className="home-tablet-button f-action-button green">
+                  Last step: Invite your team <i className="fa fa-angle-double-right" />
+                </button>
+              </Link>
+            }
+          />
         </div>
       </div>
     );
