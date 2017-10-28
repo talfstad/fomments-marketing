@@ -38,6 +38,9 @@ import Giveaway1Chinese from './giveaway/giveaway-1-chinese';
 import Casino1English from './casino/casino-1-english';
 import CBD1English from './cbd/cbd-1-english';
 import CBD2English from './cbd/cbd-2-english';
+import CBD3English from './cbd/cbd-3-english';
+import CBD4English from './cbd/cbd-4-english';
+import CBD5English from './cbd/cbd-5-english';
 
 // Enable cross origin requests for all endpoints
 JsonRoutes.setResponseHeaders({
@@ -60,9 +63,18 @@ JsonRoutes.add('get', 'sections/:sectionId', (req, res) => {
     case 'cbd-1-english':
       JsonRoutes.sendResult(res, { data: CBD1English({ userId }) });
       break;
-      case 'cbd-2-english':
+    case 'cbd-2-english':
         JsonRoutes.sendResult(res, { data: CBD2English({ userId }) });
         break;
+    case 'cbd-3-english':
+        JsonRoutes.sendResult(res, { data: CBD3English({ userId }) });
+        break;
+    case 'cbd-4-english':
+      JsonRoutes.sendResult(res, { data: CBD4English({ userId }) });
+      break;
+    case 'cbd-5-english':
+      JsonRoutes.sendResult(res, { data: CBD5English({ userId }) });
+      break;
     case 'casino-1-english':
       JsonRoutes.sendResult(res, { data: Casino1English({ userId }) });
       break;
