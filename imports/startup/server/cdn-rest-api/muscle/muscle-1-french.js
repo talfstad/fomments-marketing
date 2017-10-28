@@ -295,7 +295,7 @@ export default ({ userId }) => {
           id: 36,
           name: 'Thomas Gould',
           url: 'https://www.facebook.com/profile.php?id=100012123661834',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13087761_100605053686950_3124049041644943436_n.jpg?oh=4363e22cd94faaaa6fe728137ff36999&oe=59EB2D4F',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13087761_100605053686950_3124049041644943436_n.jpg?oh=3db1896c8093d19ac2eb1affee117a28&oe=5A61D44F',
           affiliation: {
             name: 'Los Angeles, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-Los-Angeles-California/110970792260960/',
@@ -339,7 +339,7 @@ export default ({ userId }) => {
           id: 37,
           name: 'William Smith',
           url: 'https://www.facebook.com/profile.php?id=100013487350302',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/15319118_203169946809249_3270410878857022282_n.jpg?oh=97bd38946a52c4be9d9ca14a35cc4ce3&oe=59EEC17D',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/15319118_203169946809249_3270410878857022282_n.jpg?oh=f92b3a03ab8f7ea5c202ddb2131e7262&oe=5A65687D',
           affiliation: {
             name: 'Oceanside, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-Oceanside-California/108109819210122/',
@@ -428,7 +428,7 @@ export default ({ userId }) => {
               id: 39,
               name: 'Donald Bourn',
               url: 'https://www.facebook.com/donald.bourn.1',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/15241989_214513569000578_3420332291771427357_n.jpg?oh=1a61efc88b36ad8d9ee4d5bf0fa48ee8&oe=59EBEAB7',
+              image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/15241989_214513569000578_3420332291771427357_n.jpg?oh=492699ddd6ebb228690495e732372a06&oe=5A6291B7',
               affiliation: {
                 name: 'Tyler, Texas',
                 url: 'https://www.facebook.com/places/Things-to-do-in-Tyler-Texas/112917412056610/',
@@ -515,7 +515,7 @@ export default ({ userId }) => {
           id: 39,
           name: 'Donald Bourn',
           url: 'https://www.facebook.com/donald.bourn.1',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/15241989_214513569000578_3420332291771427357_n.jpg?oh=1a61efc88b36ad8d9ee4d5bf0fa48ee8&oe=59EBEAB7',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/15241989_214513569000578_3420332291771427357_n.jpg?oh=492699ddd6ebb228690495e732372a06&oe=5A6291B7',
           affiliation: {
             name: 'Tyler, Texas',
             url: 'https://www.facebook.com/places/Things-to-do-in-Tyler-Texas/112917412056610/',
@@ -560,7 +560,7 @@ export default ({ userId }) => {
               id: 39,
               name: 'Donald Bourn',
               url: 'https://www.facebook.com/donald.bourn.1',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/15241989_214513569000578_3420332291771427357_n.jpg?oh=1a61efc88b36ad8d9ee4d5bf0fa48ee8&oe=59EBEAB7',
+              image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/15241989_214513569000578_3420332291771427357_n.jpg?oh=492699ddd6ebb228690495e732372a06&oe=5A6291B7',
               affiliation: {
                 name: 'Tyler, Texas',
                 url: 'https://www.facebook.com/places/Things-to-do-in-Tyler-Texas/112917412056610/',

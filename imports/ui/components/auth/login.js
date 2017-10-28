@@ -49,7 +49,6 @@ class Login extends Component {
 
   render() {
     const {
-      showCreateAccount,
       user,
       forgotPassword,
     } = this.props;
@@ -109,7 +108,6 @@ class Login extends Component {
 Login.propTypes = {
   forgotPassword: PropTypes.func,
   showForgotPassword: PropTypes.func,
-  showCreateAccount: PropTypes.func,
   closeDropdown: PropTypes.func,
   logUserIn: PropTypes.func,
   user: PropTypes.shape({

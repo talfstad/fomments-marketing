@@ -75,7 +75,7 @@ class LoginDropDown extends Component {
 
     if (showing) {
       return (
-        isShowingCreateAccount ?
+        !isShowingCreateAccount ?
           <CreateAccount
             showCreateAccount={show => this.showCreateAccount(show)}
             createAccount={createAccount}

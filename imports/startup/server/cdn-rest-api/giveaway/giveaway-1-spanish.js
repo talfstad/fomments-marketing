@@ -120,7 +120,7 @@ export default ({ userId }) => {
           id: 62,
           name: 'Bobbie Marsh',
           url: 'https://www.facebook.com/profile.php?id=100011953211991',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13082731_106892633052510_4388890863487426587_n.jpg?oh=2a843190e1774a4fe4cddde0d6aeadca&oe=59EEC7E2',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13082731_106892633052510_4388890863487426587_n.jpg?oh=2469d271dc6a26cb8858da5a2de86790&oe=5A656EE2',
           affiliation: {
             name: '',
             url: '',

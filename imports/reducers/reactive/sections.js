@@ -16,12 +16,84 @@ const INITIAL_STATE = {
     productName: '',
   },
   verticals: {
-    appDownload: { name: 'App Download' },
-    diet: { name: 'Diet' },
-    erectileDysfunction: { name: 'Erectile Dysfunction' },
-    giveaway: { name: 'Giveaway' },
-    muscle: { name: 'Muscle' },
-    skin: { name: 'Skin' },
+    appDownload: {
+      name: 'App Download',
+      availableLanguages: [
+        'english',
+        'chinese',
+        'french',
+        'german',
+        'portuguese',
+        'spanish',
+      ],
+    },
+    diet: {
+      name: 'Diet',
+      availableLanguages: [
+        'english',
+        'chinese',
+        'french',
+        'german',
+        'portuguese',
+        'spanish',
+      ],
+    },
+    erectileDysfunction: {
+      name: 'Erectile Dysfunction',
+      availableLanguages: [
+        'english',
+        'chinese',
+        'french',
+        'german',
+        'portuguese',
+        'spanish',
+      ],
+    },
+    giveaway: {
+      name: 'Giveaway',
+      availableLanguages: [
+        'english',
+        'chinese',
+        'french',
+        'german',
+        'portuguese',
+        'spanish',
+      ],
+    },
+    muscle: {
+      name: 'Muscle',
+      availableLanguages: [
+        'english',
+        'chinese',
+        'french',
+        'german',
+        'portuguese',
+        'spanish',
+      ],
+    },
+    skin: {
+      name: 'Skin',
+      availableLanguages: [
+        'english',
+        'chinese',
+        'french',
+        'german',
+        'portuguese',
+        'spanish',
+      ],
+    },
+    cbd: {
+      name: 'CBD Oil',
+      availableLanguages: [
+        'english',
+      ],
+    },
+    casino: {
+      name: 'Casino',
+      availableLanguages: [
+        'english',
+      ],
+    },
   },
   languages: {
     english: {

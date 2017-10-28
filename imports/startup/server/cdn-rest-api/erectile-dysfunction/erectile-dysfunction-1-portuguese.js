@@ -296,7 +296,7 @@ export default ({ userId }) => {
           id: 55,
           name: 'Chris Gonser',
           url: 'https://www.facebook.com/profile.php?id=100010682209081',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/c0.14.160.160/p160x160/12342634_133880436978029_3690309777400325362_n.jpg?oh=101fc4ae7534527ed5f5a55a957df5ff&oe=59EF62E4',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/c0.14.160.160/p160x160/12342634_133880436978029_3690309777400325362_n.jpg?oh=784cd3b9726cc2bf69dc146798447039&oe=5A6609E4',
           affiliation: {
             name: 'Palomar College',
             url: 'https://www.facebook.com/palomarcollege/?pnref=lhc',
@@ -384,7 +384,7 @@ export default ({ userId }) => {
           id: 57,
           name: 'Rodney Hubbard',
           url: 'https://www.facebook.com/profile.php?id=100010821693436',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/18199548_418653151838738_2116672655278962897_n.jpg?oh=4f36f9b75cc0b46c83388129f2324f3c&oe=59F0A511',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/18199548_418653151838738_2116672655278962897_n.jpg?oh=51cc5432aabd3f433808a335e1148d8a&oe=5A674C11',
           affiliation: {
             name: 'Riverside City College',
             url: 'https://www.facebook.com/RiversideCityCollege/?pnref=lhc',
@@ -472,7 +472,7 @@ export default ({ userId }) => {
           id: 59,
           name: 'Greg Fields',
           url: 'https://www.facebook.com/profile.php?id=100010813144385',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/18275189_421428051560963_5376017426783629784_n.jpg?oh=5a6d97d9543514b55ba63d0155db7429&oe=59EF79F3',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/18275189_421428051560963_5376017426783629784_n.jpg?oh=a28af2791a4527801038eb664147aff8&oe=5A6620F3',
           affiliation: {
             name: 'Lake Elsinore, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-Lake-Elsinore-California/112042925478201/',

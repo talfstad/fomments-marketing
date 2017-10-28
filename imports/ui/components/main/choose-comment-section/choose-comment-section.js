@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import React, { Component, PropTypes } from 'react';
 import { DEMO_USER_ID } from '/imports/actions/fomments/message';
 
@@ -37,11 +38,24 @@ export class ChooseCommentSectionComponent extends Component {
 
     const {
       updateActiveState,
+      activeState,
+      verticals,
     } = this.props;
 
-    updateActiveState({
-      vertical,
-    });
+    // if we're updating to a language we don't have, instead use the
+    // first language we do have!
+    const { availableLanguages } = verticals[vertical];
+
+    if (_.includes(availableLanguages, activeState.language)) {
+      updateActiveState({
+        vertical,
+      });
+    } else {
+      updateActiveState({
+        vertical,
+        language: 'english',
+      });
+    }
   }
 
   handleLanguageChange(e) {
@@ -128,17 +142,25 @@ export class ChooseCommentSectionComponent extends Component {
     const {
       activeState,
       languages,
+      verticals,
     } = this.props;
+    // get activeState vertical and check if the language is in it's availableLanguages
+    const { availableLanguages } = verticals[activeState.vertical];
 
     const languageOptions = () =>
-      Object.keys(languages).map(
-        key =>
-          <option
-            key={key}
-            value={key}
-            data-content={`<span class="flag-icon ${languages[key].flag}">${languages[key].name}</span>`}
-          />,
-      );
+      Object.keys(languages).reduce((accumulator, language) => {
+        if (_.includes(availableLanguages, language)) {
+          return [
+            ...accumulator,
+            <option
+              key={language}
+              value={language}
+              data-content={`<span class="flag-icon ${languages[language].flag}">${languages[language].name}</span>`}
+            />,
+          ];
+        }
+        return [...accumulator];
+      }, []);
 
     return (
       <select
@@ -160,7 +182,11 @@ export class ChooseCommentSectionComponent extends Component {
     } = this.props;
 
     const sectionOptions = () =>
-      activeSections.map(section =>
+      activeSections.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      }).map(section =>
         <option
           key={section._id}
           value={section._id}

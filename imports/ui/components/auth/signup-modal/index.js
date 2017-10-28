@@ -5,7 +5,6 @@ import {
   Route,
   Switch,
   Redirect,
-  Link,
 } from 'react-router-dom';
 
 import OneComponent from './one';
@@ -33,10 +32,11 @@ class SignupModal extends Component {
     $(this.el).modal('show');
   }
 
+  componentDidUpdate() {
+    this.keepAspectRatio();
+  }
+
   componentWillUnmount() {
-    // Intent: Remove backdrop to allow for a quick
-    // back button press.
-    // $('.modal-backdrop').remove();
     this.closeModal();
   }
 
@@ -78,57 +78,28 @@ class SignupModal extends Component {
         data-backdrop="static"
         tabIndex="-1"
       >
-        <div
-          className="tablet-container live-demo-modal"
-          role="document"
-        >
-          <div className="tablet-portrait">
-            <Switch>
-              <Route
-                exact
-                path={`${match.url}/one`}
-                component={OneComponent}
-              />
-              <Route
-                exact
-                path={`${match.url}/two`}
-                component={TwoComponent}
-              />
-              <Route
-                exact
-                path={`${match.url}/three`}
-                component={() =>
-                  <ThreeComponent
-                    updateShouldClose={val => this.updateShouldClose(val)}
-                  />
-                }
-              />
-              <Route render={() => <Redirect to="/signup/one" />} />
-            </Switch>
-          </div>
+        <Switch>
           <Route
             exact
             path={`${match.url}/one`}
-            render={() =>
-              <Link to={`${match.url}/two`}>
-                <button className="home-tablet-button f-action-button green">
-                  Create your account <i className="fa fa-angle-double-right" />
-                </button>
-              </Link>
-            }
+            component={OneComponent}
           />
           <Route
             exact
             path={`${match.url}/two`}
-            render={() =>
-              <Link to={`${match.url}/two`}>
-                <button className="home-tablet-button f-action-button green">
-                  Last step: Invite your team <i className="fa fa-angle-double-right" />
-                </button>
-              </Link>
+            component={TwoComponent}
+          />
+          <Route
+            exact
+            path={`${match.url}/three`}
+            component={() =>
+              <ThreeComponent
+                updateShouldClose={val => this.updateShouldClose(val)}
+              />
             }
           />
-        </div>
+          <Route render={() => <Redirect to="/signup/one" />} />
+        </Switch>
       </div>
     );
   }

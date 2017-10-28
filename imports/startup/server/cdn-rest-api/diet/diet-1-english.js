@@ -32,7 +32,7 @@ export default ({ userId }) => {
           id: 20,
           name: 'Shawn Markum',
           url: 'https://www.facebook.com/profile.php?id=100011156805047',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13654344_259320557783169_246698169767573020_n.jpg?oh=e637407e23f15aa5a033a6a548eb70a8&oe=59EF8AB2',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13654344_259320557783169_246698169767573020_n.jpg?oh=0a9e0e085f4fa38b70a34283df0196f6&oe=5A6631B2',
           affiliation: {
             name: 'Phoenix, Arizona',
             url: 'https://www.facebook.com/places/Things-to-do-in-Phoenix-Arizona/105540216147364/',
@@ -76,7 +76,7 @@ export default ({ userId }) => {
           id: 21,
           name: 'Amy Rundt',
           url: 'https://www.facebook.com/profile.php?id=100011832856163',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13083214_115980738806354_4982907304538696246_n.jpg?oh=66576bdbda96b6acf725fd8cec43881f&oe=59EB0CE1',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13083214_115980738806354_4982907304538696246_n.jpg?oh=e902a4e570fef86e339f40b7f36ff9ee&oe=5A61B3E1',
           affiliation: {
             name: 'Los Angeles, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-Los-Angeles-California/110970792260960/',
@@ -473,7 +473,7 @@ export default ({ userId }) => {
               id: 23,
               name: 'Kelly Clark',
               url: 'https://www.facebook.com/profile.php?id=100011348220945',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12647010_100950806959860_1371791499132826737_n.jpg?oh=d341bc728bc18f54a0e3eebb2b6d6cd3&oe=59F28A92',
+              image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12647010_100950806959860_1371791499132826737_n.jpg?oh=86fc2d9c5a283971733dda4406d12e6c&oe=5A693192',
               affiliation: {
                 name: 'San Diego, California',
                 url: 'https://www.facebook.com/places/Things-to-do-in-San-Diego-California/110714572282163/',
@@ -516,7 +516,7 @@ export default ({ userId }) => {
               id: 30,
               name: 'Brie Young',
               url: 'https://www.facebook.com/profile.php?id=100010868470418',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13614945_261536890885258_7295318734645234627_n.jpg?oh=e53351c79cfdc0e308591e90833c4b94&oe=59F039BD',
+              image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13614945_261536890885258_7295318734645234627_n.jpg?oh=d8e87406006803a1fb75ee71b28d6a96&oe=5A66E0BD',
               affiliation: {
                 name: 'Miami, Florida',
                 url: 'https://www.facebook.com/places/Things-to-do-in-Miami-Florida/110148382341970/',

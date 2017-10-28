@@ -120,7 +120,7 @@ export default ({ userId }) => {
           id: 10,
           name: 'Erica Andrews',
           url: 'https://www.facebook.com/erica.andrews.9277',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/14947510_203899380056756_6266137659386474274_n.jpg?oh=3195dbe6c7c1b68dbcace9d573db19cd&oe=59ECF750',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/14947510_203899380056756_6266137659386474274_n.jpg?oh=812079c1500b411fb2ad8ee9deb94a17&oe=5A639E50',
           affiliation: {
             name: 'Moreno Valley, Califonira',
             url: 'https://www.facebook.com/places/Things-to-do-in-Moreno-Valley-California/108010312560935/',
