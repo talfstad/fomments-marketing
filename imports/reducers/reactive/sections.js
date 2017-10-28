@@ -11,7 +11,7 @@ const INITIAL_STATE = {
   activeSections: [],
   activeState: {
     language: 'english',
-    vertical: 'skin',
+    vertical: 'muscle',
     section: {},
     productName: '',
   },

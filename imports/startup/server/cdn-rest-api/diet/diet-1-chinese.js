@@ -164,7 +164,7 @@ export default ({ userId }) => {
           id: 23,
           name: 'Kelly Clark',
           url: 'https://www.facebook.com/profile.php?id=100011348220945',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12647010_100950806959860_1371791499132826737_n.jpg?oh=d341bc728bc18f54a0e3eebb2b6d6cd3&oe=59F28A92',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12647010_100950806959860_1371791499132826737_n.jpg?oh=86fc2d9c5a283971733dda4406d12e6c&oe=5A693192',
           affiliation: {
             name: 'San Diego, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-San-Diego-California/110714572282163/',

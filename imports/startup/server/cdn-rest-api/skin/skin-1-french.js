@@ -252,7 +252,7 @@ export default ({ userId }) => {
           id: 14,
           name: 'Natalie Cruz',
           url: 'https://www.facebook.com/profile.php?id=100011149472047',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12800358_170083336706648_5524710852176825560_n.jpg?oh=674ddaea19598528bbc9483d63ab45a3&oe=59EC625B',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12800358_170083336706648_5524710852176825560_n.jpg?oh=d51bcb88ba9927262cb6746054fed4b7&oe=5A63095B',
           affiliation: {
             name: 'San Diego, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-San-Diego-California/110714572282163/',
