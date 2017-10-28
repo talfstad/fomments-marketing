@@ -35,6 +35,8 @@ import Giveaway1Spanish from './giveaway/giveaway-1-spanish';
 import Giveaway1Portuguese from './giveaway/giveaway-1-portuguese';
 import Giveaway1French from './giveaway/giveaway-1-french';
 import Giveaway1Chinese from './giveaway/giveaway-1-chinese';
+import Casino1English from './casino/casino-1-english';
+import CBD1English from './cbd/cbd-1-english';
 
 // Enable cross origin requests for all endpoints
 JsonRoutes.setResponseHeaders({
@@ -54,6 +56,12 @@ JsonRoutes.add('get', 'sections/:sectionId', (req, res) => {
 
   // get section back..
   switch (sectionId) {
+    case 'cbd-1-english':
+      JsonRoutes.sendResult(res, { data: CBD1English({ userId }) });
+      break;
+    case 'casino-1-english':
+      JsonRoutes.sendResult(res, { data: Casino1English({ userId }) });
+      break;
     case 'skin-1-english':
       JsonRoutes.sendResult(res, { data: Skin1English({ userId }) });
       break;

@@ -76,7 +76,7 @@ export default ({ userId }) => {
           id: 44,
           name: 'Delbert Lewis',
           url: 'https://www.facebook.com/profile.php?id=100011828388623',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12963732_118257518578527_3860056592369409209_n.jpg?oh=a70c4decb5e9ceb3dbc1c65d3598cd4e&oe=5A332023',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12963732_118257518578527_3860056592369409209_n.jpg?oh=565e142c46e0193c50ddc17c261ed2b2&oe=5AA9C723',
           affiliation: {
             name: 'UCLA',
             url: 'https://www.facebook.com/uclabruins/?pnref=lhc',
