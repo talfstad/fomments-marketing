@@ -1,1 +1,1 @@
-export const RESET_PASSWORD_TEMPLATE_ID = 2;
+export const RESET_PASSWORD_TEMPLATE_ID = 4;

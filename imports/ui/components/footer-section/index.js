@@ -14,21 +14,25 @@ class Footer extends Component {
                 alt="fomments logo"
               />
             </Link>
-            <Link className="footer-link" to="/features">
-              <span className="ml10 pr t4">Features</span>
-            </Link>
+            {
+              // <Link className="footer-link" to="/features">
+              //   <span className="ml10 pr t4">Features</span>
+              // </Link>
+            }
           </div>
-          <div className="fr">
-            <Link className="footer-link" to="/terms-of-use">
-              <span className="uppercase mr20">terms of use</span>
-            </Link>
-            <Link className="footer-link" to="/privacy-policy">
-              <span className="uppercase mr20">privacy policy</span>
-            </Link>
-            <Link className="footer-link" to="/contact">
-              <span className="uppercase">contact</span>
-            </Link>
-          </div>
+          {
+            // <div className="fr">
+            //   <Link className="footer-link" to="/terms-of-use">
+            //     <span className="uppercase mr20">terms of use</span>
+            //   </Link>
+            //   <Link className="footer-link" to="/privacy-policy">
+            //     <span className="uppercase mr20">privacy policy</span>
+            //   </Link>
+            //   <Link className="footer-link" to="/contact">
+            //     <span className="uppercase">contact</span>
+            //   </Link>
+            // </div>
+          }
         </div>
       </footer>
     );

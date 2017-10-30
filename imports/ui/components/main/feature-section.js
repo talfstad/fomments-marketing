@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class FeatureSection extends Component {
   render() {
     const {
-      user,
+      // user,
       scrollToCommentSection,
     } = this.props;
 
@@ -28,12 +28,16 @@ class FeatureSection extends Component {
                 </span>
               </span>
               <span className="message">
-                <strong>Announcement:</strong> Limited free early registration is now open.
+                <strong>Announcement:</strong>
+                <span> Fomments is in a limited private release.
+                   Public registration is temporarily closed.
+                </span>
                 {
-                  !_.has(user, '_id') ?
-                    <Link to="/signup" className="new-pill-button"> Sign up <i className="fa fa-angle-double-right" /></Link>
-                  :
-                    <noscript />
+                  // !_.has(user, '_id') ?
+                  //    <Link to="/signup" className="new-pill-button">
+                          // Sign up <i className="fa fa-angle-double-right" /></Link>
+                  // :
+                  //   <noscript />
                 }
               </span>
             </span>
@@ -48,11 +52,13 @@ class FeatureSection extends Component {
                   Choose a comment section
                 </a>
               </li>
-              <li>
-                <a href="" className="find-out-more-btn common-button">
-                  Find out more
-                </a>
-              </li>
+              {
+                // <li>
+                //   <a href="" className="find-out-more-btn common-button">
+                //     Find out more
+                //   </a>
+                // </li>
+              }
             </ul>
           </div>
         </section>
@@ -63,7 +69,7 @@ class FeatureSection extends Component {
 
 FeatureSection.propTypes = {
   scrollToCommentSection: PropTypes.func.isRequired,
-  user: PropTypes.shape({}),
+  // user: PropTypes.shape({}),
 };
 
 const mapStateToProps = state => ({

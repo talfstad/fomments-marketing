@@ -253,7 +253,7 @@ a.new-pill-button {
 }
 
 .installation-instructions {
-  padding: 0 30px;
+  padding: 0 30px 150px; // TODO remove 100px after adding back try it now!
 }
 
 #choose-comment-section .installation-instructions > p {
@@ -1062,6 +1062,7 @@ form.section-control .form-group small {
 
 .header-login {
   width: 230px;
+  top: 125%; // TODO remove when private release done
 
   .login-form {
     padding: 10px;

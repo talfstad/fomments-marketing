@@ -15,12 +15,14 @@ const Header = () =>
             />
           </a>
           <div className="button-group product-info-list">
-            <button
-              type="button"
-              className="header-list-button btn"
-            >
-              <span>Features</span>
-            </button>
+            {
+              // <button
+              //   type="button"
+              //   className="header-list-button btn"
+              // >
+              //   <span>Features</span>
+              // </button>
+            }
           </div>
         </li>
         <li className="nav-section signin">
