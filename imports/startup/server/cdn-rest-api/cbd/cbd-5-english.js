@@ -1,7 +1,7 @@
 export default ({ userId }) => {
   const state = {
     sectionInfo: {
-      id: `${userId}-cbd-1-english`,
+      id: `${userId}-cbd-5-english`,
       translateText: 'Translated from',
       defaultCommentsToShow: 5,
       defaultCommentsToLoadAtOnce: 10,

@@ -12,6 +12,9 @@ import Diet1Spanish from './diet/diet-1-spanish';
 import Diet1Chinese from './diet/diet-1-chinese';
 import Diet1Portuguese from './diet/diet-1-portuguese';
 import Muscle1English from './muscle/muscle-1-english';
+import Muscle2English from './muscle/muscle-2-english';
+import Muscle3English from './muscle/muscle-3-english';
+import Muscle4English from './muscle/muscle-4-english';
 import Muscle1German from './muscle/muscle-1-german';
 import Muscle1Spanish from './muscle/muscle-1-spanish';
 import Muscle1French from './muscle/muscle-1-french';
@@ -24,6 +27,9 @@ import AppDownload1Chinese from './app-download/app-download-1-chinese';
 import AppDownload1French from './app-download/app-download-1-french';
 import AppDownload1Spanish from './app-download/app-download-1-spanish';
 import ErectileDysfunction1English from './erectile-dysfunction/erectile-dysfunction-1-english';
+import ErectileDysfunction2English from './erectile-dysfunction/erectile-dysfunction-2-english';
+import ErectileDysfunction3English from './erectile-dysfunction/erectile-dysfunction-3-english';
+import ErectileDysfunction4English from './erectile-dysfunction/erectile-dysfunction-4-english';
 import ErectileDysfunction1Portuguese from './erectile-dysfunction/erectile-dysfunction-1-portuguese';
 import ErectileDysfunction1Spanish from './erectile-dysfunction/erectile-dysfunction-1-spanish';
 import ErectileDysfunction1German from './erectile-dysfunction/erectile-dysfunction-1-german';
@@ -117,6 +123,15 @@ JsonRoutes.add('get', 'sections/:sectionId', (req, res) => {
     case 'muscle-1-english':
       JsonRoutes.sendResult(res, { data: Muscle1English({ userId }) });
       break;
+    case 'muscle-2-english':
+      JsonRoutes.sendResult(res, { data: Muscle2English({ userId }) });
+      break;
+    case 'muscle-3-english':
+      JsonRoutes.sendResult(res, { data: Muscle3English({ userId }) });
+      break;
+    case 'muscle-4-english':
+      JsonRoutes.sendResult(res, { data: Muscle4English({ userId }) });
+      break;
     case 'muscle-1-french':
       JsonRoutes.sendResult(res, { data: Muscle1French({ userId }) });
       break;
@@ -152,6 +167,15 @@ JsonRoutes.add('get', 'sections/:sectionId', (req, res) => {
       break;
     case 'erectile-dysfunction-1-english':
       JsonRoutes.sendResult(res, { data: ErectileDysfunction1English({ userId }) });
+      break;
+    case 'erectile-dysfunction-2-english':
+      JsonRoutes.sendResult(res, { data: ErectileDysfunction2English({ userId }) });
+      break;
+    case 'erectile-dysfunction-3-english':
+      JsonRoutes.sendResult(res, { data: ErectileDysfunction3English({ userId }) });
+      break;
+    case 'erectile-dysfunction-4-english':
+      JsonRoutes.sendResult(res, { data: ErectileDysfunction4English({ userId }) });
       break;
     case 'erectile-dysfunction-1-german':
       JsonRoutes.sendResult(res, { data: ErectileDysfunction1German({ userId }) });
