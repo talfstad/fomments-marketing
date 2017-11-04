@@ -1,19 +1,24 @@
 import React from 'react';
 
+import { Link } from 'react-router-dom';
+
 import LoginDropDown from '../auth/login-dropdown';
 
-const Header = () =>
+const Header = () => (
   <header id="global-nav">
     <div className="container-lg">
       <ul className="nav-root">
         <li className="nav-section logo">
-          <a href="" className="root-link">
+          <Link
+            to="/signup/one"
+            className="root-link"
+          >
             <img
               className="fomments-logo"
               alt="fomments logo"
               src="/images/fomments-logo-white.svg"
             />
-          </a>
+          </Link>
           <div className="button-group product-info-list">
             {
               // <button
@@ -30,6 +35,7 @@ const Header = () =>
         </li>
       </ul>
     </div>
-  </header>;
+  </header>
+);
 
 export default Header;

@@ -29,9 +29,7 @@ class Main extends Component {
             ref={(el) => { this.chooseCommentSection = el; }}
             handleScrollOpenSignin={e => Main.handleScrollOpenSignin(e)}
           />
-          {
-            // <TryItNowSection />
-          }
+          <TryItNowSection />
         </main>
       </div>
     );

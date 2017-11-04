@@ -42,6 +42,8 @@ import Giveaway1Portuguese from './giveaway/giveaway-1-portuguese';
 import Giveaway1French from './giveaway/giveaway-1-french';
 import Giveaway1Chinese from './giveaway/giveaway-1-chinese';
 import Casino1English from './casino/casino-1-english';
+import Casino2English from './casino/casino-2-english';
+import Casino3English from './casino/casino-3-english';
 import CBD1English from './cbd/cbd-1-english';
 import CBD2English from './cbd/cbd-2-english';
 import CBD3English from './cbd/cbd-3-english';
@@ -83,6 +85,12 @@ JsonRoutes.add('get', 'sections/:sectionId', (req, res) => {
       break;
     case 'casino-1-english':
       JsonRoutes.sendResult(res, { data: Casino1English({ userId }) });
+      break;
+    case 'casino-2-english':
+      JsonRoutes.sendResult(res, { data: Casino2English({ userId }) });
+      break;
+    case 'casino-3-english':
+      JsonRoutes.sendResult(res, { data: Casino3English({ userId }) });
       break;
     case 'skin-1-english':
       JsonRoutes.sendResult(res, { data: Skin1English({ userId }) });

@@ -1,5 +1,6 @@
 import _ from 'lodash';
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { DEMO_USER_ID } from '/imports/actions/fomments/message';
 
 import AddToLandingPageComponent from './add-to-landing-page';
