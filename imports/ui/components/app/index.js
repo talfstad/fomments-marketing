@@ -2,6 +2,7 @@ import React from 'react';
 import {
   BrowserRouter as Router,
 } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 import 'font-awesome/css/font-awesome.css';
 
@@ -12,8 +13,15 @@ import '../../../../imports/api/meteor/collections';
 
 import '../../../../imports/ui/css/app.scss';
 
+ReactGA.initialize('UA-109148552-1');
+
+function logPageView() {
+  ReactGA.set({ page: window.location.pathname + window.location.search });
+  ReactGA.pageview(window.location.pathname + window.location.search);
+}
+
 const App = () => (
-  <Router>
+  <Router onUpdate={logPageView}>
     <AppComponent />
   </Router>
 );

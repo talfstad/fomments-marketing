@@ -83,6 +83,14 @@ class ForgotPassword extends Component {
   }
 }
 
+ForgotPassword.defaultProps = {
+  forgotPassword: null,
+  showForgotPassword: null,
+  user: {
+    errors: [],
+  },
+};
+
 ForgotPassword.propTypes = {
   forgotPassword: PropTypes.func,
   showForgotPassword: PropTypes.func,

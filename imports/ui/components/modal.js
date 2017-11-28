@@ -37,7 +37,8 @@ class Modal extends Component {
           </div>
         </div>
       </Provider>,
-      this.modalTarget);
+      this.modalTarget,
+    );
   }
 
   render() {

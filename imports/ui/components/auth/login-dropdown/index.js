@@ -4,8 +4,8 @@ import { connect } from 'react-redux';
 
 import Login from './login';
 import Logout from './logout';
-import CreateAccount from './create-account';
-import * as loginActions from '../../../actions/user/login';
+import CreateAccount from '../create-account';
+import * as loginActions from '../../../../actions/user/login';
 
 class LoginDropDown extends Component {
   constructor(props) {
@@ -83,7 +83,7 @@ class LoginDropDown extends Component {
             closeDropdown={() => this.closeDropdown()}
             user={user}
           />
-        :
+          :
           <Login
             showForgotPassword={showForgotPassword}
             forgotPassword={forgotPassword}
@@ -150,6 +150,18 @@ class LoginDropDown extends Component {
     );
   }
 }
+
+LoginDropDown.defaultProps = {
+  forgotPassword: null,
+  showForgotPassword: null,
+  logUserIn: null,
+  createAccount: null,
+  showCreateAccount: null,
+  logUserOut: null,
+  user: {
+    errors: [],
+  },
+};
 
 LoginDropDown.propTypes = {
   forgotPassword: PropTypes.func,

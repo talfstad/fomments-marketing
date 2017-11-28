@@ -64,7 +64,7 @@ class Login extends Component {
           closeDropdown={() => this.closeDropdown()}
           user={user}
         />
-      :
+        :
         <form className="clearfix login-form" onSubmit={e => this.handleSignIn(e)}>
           <h3>Account Sign in</h3>
           <div className="form-group">

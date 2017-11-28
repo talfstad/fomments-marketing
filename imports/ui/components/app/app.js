@@ -6,8 +6,6 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import ReactGA from 'react-ga';
-
 import Main from '../main';
 import Header from '../header/';
 import Footer from '../footer-section';
@@ -40,18 +38,19 @@ class App extends Component {
           <Route render={() => <Redirect to="/" />} />
         </Switch>
         <Route path="*" component={Footer} />
-        <Route path="/signup" component={SignupModal} />
-        <Route path="/reset-password" component={ResetPasswordModal} />
         <Route
+          exact
+          path="/signup"
+          component={SignupModal}
+        />
+        <Route
+          path="/reset-password"
+          component={ResetPasswordModal}
+        />
+        <Route
+          exact
           path="/account"
-          render={props =>
-            (this.state.showAccountModal ?
-              <AccountModal
-                {...props}
-                setShowAccountModal={show => this.setShowAccountModal(show)}
-              />
-              :
-              <noscript />)}
+          component={AccountModal}
         />
       </div>
     );

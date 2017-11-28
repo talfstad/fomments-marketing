@@ -1,20 +1,29 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Modal from '../../modal';
 import AccountTabs from './account-tabs';
 
 class AccountModal extends Component {
   componentDidMount() {
     const {
-      setShowAccountModal,
+      modalRedirectRouteOnClose,
+      history,
     } = this.props;
 
-    this.show();
+    $(this.el).modal('show');
 
-    $(this.modal.el).on('hidden.bs.modal', () => {
-      if (setShowAccountModal) setShowAccountModal(false);
-      this.redirectToHome();
+    $(this.el).on('shown.bs.modal', () => {
+      $(this.passwordInput).focus();
+    });
+
+    $(this.el).on('hidden.bs.modal', () => {
+      // Intent: redirect on close if we have a prop.
+      // If not, just close.
+      if (!_.isEmpty(modalRedirectRouteOnClose)) {
+        history.push(modalRedirectRouteOnClose);
+      } else {
+        history.push('/');
+      }
     });
   }
 
@@ -29,7 +38,9 @@ class AccountModal extends Component {
   }
 
   componentWillUnmount() {
-    this.hide();
+    // Intent: Remove backdrop to allow for a quick
+    // back button press.
+    $('.modal-backdrop').remove();
   }
 
   redirectToHome() {
@@ -42,18 +53,19 @@ class AccountModal extends Component {
     }
   }
 
-  show() {
-    $(this.modal.el).modal('show');
-    $(this.passwordInput).focus();
-  }
-
-  hide() {
-    $(this.modal.el).modal('hide');
+  closeModal() {
+    $(this.el).modal('hide');
   }
 
   render() {
     return (
-      <Modal ref={(c) => { this.modal = c; }}>
+      <div
+        ref={(c) => { this.el = c; }}
+        className="modal fade"
+        tabIndex="-1"
+        data-backdrop="static"
+        role="dialog"
+      >
         <div className="account-modal modal-dialog" role="document">
           <div className="modal-content no-footer clearfix">
             <div className="modal-header">
@@ -65,22 +77,25 @@ class AccountModal extends Component {
             </div>
           </div>
         </div>
-      </Modal>
+      </div>
     );
   }
 }
 
+AccountModal.defaultProps = {
+  history: {},
+  user: {},
+  modalRedirectRouteOnClose: null,
+};
+
 AccountModal.propTypes = {
   history: PropTypes.shape({}),
   user: PropTypes.shape({}),
-  setShowAccountModal: PropTypes.func,
-};
-
-const actions = {
+  modalRedirectRouteOnClose: PropTypes.string,
 };
 
 const mapStateToProps = state => ({
   user: state.user,
 });
 
-export default connect(mapStateToProps, actions)(AccountModal);
+export default connect(mapStateToProps)(AccountModal);
