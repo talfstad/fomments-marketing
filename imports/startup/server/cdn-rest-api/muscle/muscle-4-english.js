@@ -76,7 +76,7 @@ export default ({ userId }) => {
           id: 271,
           name: 'Ervin Stanley',
           url: 'https://www.facebook.com/profile.php?id=100012422494815',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13346715_105560969867986_8294787214521151644_n.jpg?oh=0a9035cbf8c253aebda357df6087f323&oe=5A7D39CC',
+          image: '/images/profilepics/ervin_stanley.jpg',
           affiliation: {
             name: 'The University of Arizona',
             url: 'https://www.facebook.com/uarizona/?timeline_context_item_type=intro_card_education&timeline_context_item_source=100012422494815&pnref=lhc',

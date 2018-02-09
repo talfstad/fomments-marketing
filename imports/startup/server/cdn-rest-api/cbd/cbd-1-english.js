@@ -294,13 +294,13 @@ export default ({ userId }) => {
         id: 'cbdo2enspo005a',
         content: "Thought I'd try this after reading all the Reviews. I started with a tsp. and that is what sold me on it. I actually felt a LIFT in my mood. Been taking it ever since. Got another family member to try it-and they too feel the LIFT, and energized after ONE tsp. a day.",
         user: {
-          id: 213,
-          name: 'Jill Higgins',
-          url: 'https://www.facebook.com/jill.higgins.984',
-          image: '',
+          id: 221,
+          name: 'Kristina James',
+          url: 'https://www.facebook.com/profile.php?id=100010679206739',
+          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/c0.0.160.160/p160x160/12301721_129161534116486_2963296447613971648_n.jpg?oh=a15691c46064f9ff8e1f13d9a91a12ce&oe=5A7F5A1B',
           affiliation: {
-            name: 'Corona Public Library',
-            url: 'https://www.facebook.com/CoronaLibrary/?timeline_context_item_type=intro_card_work&timeline_context_item_source=100010742174155&pnref=lhc',
+            name: 'University of Southern California',
+            url: 'https://www.facebook.com/usc/?timeline_context_item_type=intro_card_education&timeline_context_item_source=100010679206739&pnref=lhc',
           },
         },
         options: {

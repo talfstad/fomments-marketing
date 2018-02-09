@@ -161,13 +161,13 @@ export default ({ userId }) => {
         id: 'give3spanu004a',
         content: 'Ha pasado algo más de un mes desde que he empezado a participar en todo tipo de sorteos que veo aquí y todavía no he ganado nada. Sé que puede llevar tiempo, pero me pregunto si lo estoy haciendo mal. Normalmente no completo todos los campos o sólo visito la página/veo la película... Porque normalmente no me suscribo/sigo algo desde que mis redes sociales personales están vinculadas en servidores Gleam, y tal vez se requiere rellenar todos los campos en la mayoría de ellos para tener posibilidades de ganar y no sé sobre ello.',
         user: {
-          id: 63,
-          name: 'Ashley Houston',
-          url: 'https://www.facebook.com/profile.php?id=100010731075519',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13010846_224697677897933_3685544167206442586_n.jpg?oh=013043aa20c6131d04b8dd2d3d6baa26&oe=5A3575A5',
+          id: 227,
+          name: 'April Hodges',
+          url: 'https://www.facebook.com/profile.php?id=100010807747029',
+          image: '/images/profilepics/april_hodges.jpg',
           affiliation: {
-            name: 'San Diego, California',
-            url: 'https://www.facebook.com/places/Things-to-do-in-San-Diego-California/110714572282163/',
+            name: 'Pet Lost and Found Wildomar/Lake Elsinore/Menifee',
+            url: 'https://www.facebook.com/petlostandfoundwildomarlakeelsinoremenifee/?timeline_context_item_type=intro_card_work&timeline_context_item_source=100010807747029&pnref=lhc',
           },
         },
         options: {
