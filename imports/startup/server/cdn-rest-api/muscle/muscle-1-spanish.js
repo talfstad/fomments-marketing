@@ -76,7 +76,7 @@ export default ({ userId }) => {
           id: 32,
           name: 'Erwin Aguirre',
           url: 'https://www.facebook.com/erwin.aguirre.543',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/14906818_170857943375856_2215210283168533046_n.jpg?oh=6ada9ee81f627bfc14a5d67318dbb782&oe=5A30E88A',
+          image: '/images/profilepics/erwin_aguirre.jpg',
           affiliation: {
             name: 'Danville, Virginia',
             url: 'https://www.facebook.com/places/Things-to-do-in-Danville-Virginia/111958528817427/',
@@ -120,7 +120,7 @@ export default ({ userId }) => {
           id: 33,
           name: 'Ryan Shaw',
           url: 'https://www.facebook.com/profile.php?id=100011024079581',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13962548_280954205615380_7119314089275863482_n.jpg?oh=ce30b2a76c56260c4378ea1a2cb43cfb&oe=5A204D04',
+          image: '/images/profilepics/ryan_shaw.jpg',
           affiliation: {
             name: '',
             url: '',
@@ -165,7 +165,7 @@ export default ({ userId }) => {
               id: 34,
               name: 'Andrew Metz',
               url: 'https://www.facebook.com/profile.php?id=100010922196040',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12376691_108190379555035_6647796803245931892_n.jpg?oh=e1355fc5687e5f8926ea694d60a98497&oe=5A1FAD04',
+              image: '/images/profilepics/andrew_metz.jpg',
               affiliation: {
                 name: 'San Diego State University',
                 url: 'https://www.facebook.com/SanDiegoState/?pnref=lhc&rf=105454902822165',
@@ -208,7 +208,7 @@ export default ({ userId }) => {
               id: 35,
               name: 'Arthur Sanchez',
               url: 'https://www.facebook.com/profile.php?id=100011021021734',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13775830_266706540373378_701284331387696349_n.jpg?oh=5f87e3b191ee5dbb3021bceb4f980d51&oe=5A379E31',
+              image: '/images/profilepics/arthur_sanchez.jpg',
               affiliation: {
                 name: '',
                 url: '',
@@ -295,7 +295,7 @@ export default ({ userId }) => {
           id: 36,
           name: 'Thomas Gould',
           url: 'https://www.facebook.com/profile.php?id=100012123661834',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13087761_100605053686950_3124049041644943436_n.jpg?oh=3db1896c8093d19ac2eb1affee117a28&oe=5A61D44F',
+          image: '/images/profilepics/thomas_gould.jpg',
           affiliation: {
             name: 'Los Angeles, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-Los-Angeles-California/110970792260960/',
@@ -339,7 +339,7 @@ export default ({ userId }) => {
           id: 37,
           name: 'William Smith',
           url: 'https://www.facebook.com/profile.php?id=100013487350302',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/15319118_203169946809249_3270410878857022282_n.jpg?oh=f92b3a03ab8f7ea5c202ddb2131e7262&oe=5A65687D',
+          image: '/images/profilepics/william_smith.jpg',
           affiliation: {
             name: 'Oceanside, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-Oceanside-California/108109819210122/',
@@ -383,7 +383,7 @@ export default ({ userId }) => {
           id: 38,
           name: 'Anthony Kerr',
           url: 'https://www.facebook.com/profile.php?id=100010932758383',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/14063993_298696993838057_1565088349232347568_n.jpg?oh=85f2d541852afe325074a5088b31d57b&oe=5A22D293',
+          image: '/images/profilepics/anthony_kerr.jpg',
           affiliation: {
             name: 'Miami, Florida',
             url: 'https://www.facebook.com/places/Things-to-do-in-Miami-Florida/110148382341970/',
@@ -428,7 +428,7 @@ export default ({ userId }) => {
               id: 39,
               name: 'Donald Bourn',
               url: 'https://www.facebook.com/donald.bourn.1',
-              image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/15241989_214513569000578_3420332291771427357_n.jpg?oh=492699ddd6ebb228690495e732372a06&oe=5A6291B7',
+              image: '/images/profilepics/donald_bourn.jpg',
               affiliation: {
                 name: 'Tyler, Texas',
                 url: 'https://www.facebook.com/places/Things-to-do-in-Tyler-Texas/112917412056610/',
@@ -471,7 +471,7 @@ export default ({ userId }) => {
               id: 40,
               name: 'Greg Mathis',
               url: 'https://www.facebook.com/profile.php?id=100011254382732',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13700079_253917538326724_7073315529828015213_n.jpg?oh=2452b4e233a9792657a7a6bf19eb57eb&oe=5A38AED0',
+              image: '/images/profilepics/greg_mathis.jpg',
               affiliation: {
                 name: 'San Diego, California',
                 url: 'https://www.facebook.com/places/Things-to-do-in-San-Diego-California/110714572282163/',
@@ -515,7 +515,7 @@ export default ({ userId }) => {
           id: 39,
           name: 'Donald Bourn',
           url: 'https://www.facebook.com/donald.bourn.1',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/15241989_214513569000578_3420332291771427357_n.jpg?oh=492699ddd6ebb228690495e732372a06&oe=5A6291B7',
+          image: '/images/profilepics/donald_bourn.jpg',
           affiliation: {
             name: 'Tyler, Texas',
             url: 'https://www.facebook.com/places/Things-to-do-in-Tyler-Texas/112917412056610/',
@@ -560,7 +560,7 @@ export default ({ userId }) => {
               id: 39,
               name: 'Donald Bourn',
               url: 'https://www.facebook.com/donald.bourn.1',
-              image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/15241989_214513569000578_3420332291771427357_n.jpg?oh=492699ddd6ebb228690495e732372a06&oe=5A6291B7',
+              image: '/images/profilepics/donald_bourn.jpg',
               affiliation: {
                 name: 'Tyler, Texas',
                 url: 'https://www.facebook.com/places/Things-to-do-in-Tyler-Texas/112917412056610/',
@@ -604,7 +604,7 @@ export default ({ userId }) => {
           id: 41,
           name: 'Howard Reynolds',
           url: 'https://www.facebook.com/profile.php?id=100012007329355',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13100822_104751579935086_659758065158108282_n.jpg?oh=4d2cb5b8af5a800ea4def9704f03431a&oe=5A1B0E44',
+          image: '/images/profilepics/howard_reynolds.jpg',
           affiliation: {
             name: 'Ohio Christian University',
             url: 'https://www.facebook.com/OhioChristian/?pnref=lhc',
@@ -649,7 +649,7 @@ export default ({ userId }) => {
               id: 42,
               name: 'Kyle Stokes',
               url: 'https://www.facebook.com/profile.php?id=100010847341053',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/c0.0.160.160/p160x160/12279225_101298560241722_632505774365292155_n.jpg?oh=3023d2b8facd2b660b4c818963a64d0d&oe=5A22D280',
+              image: '/images/profilepics/kyle_stokes.jpg',
               affiliation: {
                 name: 'Corona, California',
                 url: 'https://www.facebook.com/places/Things-to-do-in-Corona-California/107633995923829/',
@@ -692,7 +692,7 @@ export default ({ userId }) => {
               id: 33,
               name: 'Ryan Shaw',
               url: 'https://www.facebook.com/profile.php?id=100011024079581',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13962548_280954205615380_7119314089275863482_n.jpg?oh=ce30b2a76c56260c4378ea1a2cb43cfb&oe=5A204D04',
+              image: '/images/profilepics/ryan_shaw.jpg',
               affiliation: {
                 name: '',
                 url: '',

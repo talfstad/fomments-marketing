@@ -30,9 +30,9 @@ export default ({ userId }) => {
         content: 'Aplicação muito divertida e fácil de utilizar. Talvez a coisa mais interessante que faço no meu telemóvel o dia todo. Uma app maravilhosa.',
         user: {
           id: 43,
-          name: 'Pearl Payne',
+          name: 'Paige Payne',
           url: 'https://www.facebook.com/profile.php?id=100011902093978',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13095826_110173682722701_1341484227958984727_n.jpg?oh=52f5b914145e7fc6d7c3f7254b25b061&oe=5A28BE28',
+          image: '/images/profilepics/paige_payne.jpg',
           affiliation: {
             name: 'Columbus, Ohio',
             url: 'https://www.facebook.com/places/Things-to-do-in-Columbus-Ohio/108450559178997/',
@@ -76,7 +76,7 @@ export default ({ userId }) => {
           id: 44,
           name: 'Delbert Lewis',
           url: 'https://www.facebook.com/profile.php?id=100011828388623',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12963732_118257518578527_3860056592369409209_n.jpg?oh=565e142c46e0193c50ddc17c261ed2b2&oe=5AA9C723',
+          image: '/images/profilepics/delbert_lewis.jpg',
           affiliation: {
             name: 'UCLA',
             url: 'https://www.facebook.com/uclabruins/?pnref=lhc',
@@ -120,7 +120,7 @@ export default ({ userId }) => {
           id: 45,
           name: 'Travis Brand',
           url: 'https://www.facebook.com/profile.php?id=100012109652446',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13043755_101061386974183_3608661232540613120_n.jpg?oh=2c91f2d178bb3fed3c5136b8bb09bcbf&oe=5A3243ED',
+          image: '/images/profilepics/travis_brand.jpg',
           affiliation: {
             name: 'Rockford, Illinois',
             url: 'https://www.facebook.com/places/Things-to-do-in-Rockford-Illinois/108768365814696/',
@@ -164,7 +164,7 @@ export default ({ userId }) => {
           id: 46,
           name: 'Dianne Sims',
           url: 'https://www.facebook.com/profile.php?id=100012226446821',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/1936218_109506162800265_8496987438568521002_n.jpg?oh=ee769e27267a7868a3501e95e2bb07cb&oe=5A260881',
+          image: '/images/profilepics/dianne_sims.jpg',
           affiliation: {
             name: 'Alabama State University',
             url: 'https://www.facebook.com/asu/?pnref=lhc',
@@ -208,7 +208,7 @@ export default ({ userId }) => {
           id: 47,
           name: 'Luke Harper',
           url: 'https://www.facebook.com/luke.harper.908347',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/18342334_447161465651420_2896612628069735869_n.jpg?oh=4595a6c03f7f29e16ea5cbac6ec9c252&oe=5A2D71C9',
+          image: '/images/profilepics/luke_harper.jpg',
           affiliation: {
             name: 'Redlands High School',
             url: 'https://www.facebook.com/pages/Redlands-High-School/103111156395467?pnref=lhc',
@@ -253,7 +253,7 @@ export default ({ userId }) => {
               id: 46,
               name: 'Dianne Sims',
               url: 'https://www.facebook.com/profile.php?id=100012226446821',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/1936218_109506162800265_8496987438568521002_n.jpg?oh=ee769e27267a7868a3501e95e2bb07cb&oe=5A260881',
+              image: '/images/profilepics/dianne_sims.jpg',
               affiliation: {
                 name: 'Alabama State University',
                 url: 'https://www.facebook.com/asu/?pnref=lhc',
@@ -296,7 +296,7 @@ export default ({ userId }) => {
               id: 45,
               name: 'Travis Brand',
               url: 'https://www.facebook.com/profile.php?id=100012109652446',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13043755_101061386974183_3608661232540613120_n.jpg?oh=2c91f2d178bb3fed3c5136b8bb09bcbf&oe=5A3243ED',
+              image: '/images/profilepics/travis_brand.jpg',
               affiliation: {
                 name: 'Rockford, Illinois',
                 url: 'https://www.facebook.com/places/Things-to-do-in-Rockford-Illinois/108768365814696/',
@@ -340,7 +340,7 @@ export default ({ userId }) => {
           id: 48,
           name: 'Tyler Woods',
           url: 'https://www.facebook.com/profile.php?id=100010685238227',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/12974265_219624658403707_8629702924861256796_n.jpg?oh=57a56ef2e229384566fdf987cf3a7338&oe=5A226C64',
+          image: '/images/profilepics/tyler_woods.jpg',
           affiliation: {
             name: 'California State University, Fullerton',
             url: 'https://www.facebook.com/CSUFofficial/?pnref=lhc',
@@ -384,7 +384,7 @@ export default ({ userId }) => {
           id: 49,
           name: 'Robert Vasquez',
           url: 'https://www.facebook.com/profile.php?id=100013324870056',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/15285097_208022642985230_5406988519776284846_n.jpg?oh=e50b1619ca15b2562a543c58f18311dc&oe=5A215C68',
+          image: '/images/profilepics/robert_vasquez.jpg',
           affiliation: {
             name: 'Vancouver, Washington',
             url: 'https://www.facebook.com/places/Things-to-do-in-Vancouver-Washington/108565719168398/',

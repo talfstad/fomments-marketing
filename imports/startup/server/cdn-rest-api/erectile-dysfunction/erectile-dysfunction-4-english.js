@@ -32,7 +32,7 @@ export default ({ userId }) => {
           id: 214,
           name: 'Rufus Harris',
           url: 'https://www.facebook.com/profile.php?id=100010703297162',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12108762_204919739874801_4994152430261422329_n.jpg?oh=6035f80c5d90baa642216221ffd3315a&oe=5A7307F3',
+          image: '/images/profilepics/rufus_harris.jpg',
           affiliation: {
             name: 'La Jolla, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-La-Jolla-California/105799006127640/',
@@ -76,7 +76,7 @@ export default ({ userId }) => {
           id: 219,
           name: 'Orville Brewers',
           url: 'https://www.facebook.com/profile.php?id=100012401288766',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13406878_111741549249221_4790230251512045680_n.jpg?oh=1071bffe5be64be3374baa179df701a5&oe=5A8543E4',
+          image: '/images/profilepics/orville_brewers.jpg',
           affiliation: {
             name: 'Boulder, Colorado',
             url: 'https://www.facebook.com/places/Things-to-do-in-Boulder-Colorado/106083096088679/',
@@ -120,7 +120,7 @@ export default ({ userId }) => {
           id: 213,
           name: 'Donald Jensen',
           url: 'https://www.facebook.com/profile.php?id=100010821154068',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12341102_105154926521879_4298732014239424723_n.jpg?oh=7eaf49f3bf98937bd2d39b67a83d7dd6&oe=5A7ED149',
+          image: '/images/profilepics/donald_jensen.jpg',
           affiliation: {
             name: 'Navy Base San Diego',
             url: 'https://www.facebook.com/NavalBaseCoronado/?timeline_context_item_type=intro_card_work&timeline_context_item_source=100010821154068&pnref=lhc&rf=172197609507153',
@@ -164,7 +164,7 @@ export default ({ userId }) => {
           id: 273,
           name: 'Evan Willis',
           url: 'https://www.facebook.com/profile.php?id=100010713067806',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/12235074_111361265897642_3274192437705397633_n.jpg?oh=1c0937addf51bdd0ddc191a7dc8633a2&oe=5A7BFB84',
+          image: '/images/profilepics/evan_willis.jpg',
           affiliation: {
             name: 'T-Mobile',
             url: 'https://www.facebook.com/pages/T-Mobile/105906606108360?timeline_context_item_type=intro_card_work&timeline_context_item_source=100010713067806&pnref=lhc&rf=105596429474625',
@@ -208,7 +208,7 @@ export default ({ userId }) => {
           id: 210,
           name: 'Trevor Szymczak',
           url: 'https://www.facebook.com/profile.php?id=100012404979375',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13346727_111999592556873_4717159578249476297_n.jpg?oh=a6b9cf5cddd743c2cb7781a0a9114fe7&oe=5A7D94F7',
+          image: '/images/profilepics/trevor_szymczak.jpg',
           affiliation: {
             name: 'Los Angeles, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-Los-Angeles-California/110970792260960/',
@@ -252,7 +252,7 @@ export default ({ userId }) => {
           id: 220,
           name: 'Clint Chandler',
           url: 'https://www.facebook.com/profile.php?id=100011577220226',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/10610500_119880258407881_1341120978579402265_n.jpg?oh=cf478d79d4548cbeca0511ab43792b31&oe=5A6686F3',
+          image: '/images/profilepics/clint_chandler.jpg',
           affiliation: {
             name: 'San Diego City College',
             url: 'https://www.facebook.com/SanDiegoCityCollege/?timeline_context_item_type=intro_card_education&timeline_context_item_source=100011577220226&pnref=lhc',
@@ -296,7 +296,7 @@ export default ({ userId }) => {
           id: 54,
           name: 'Brett Fletcher',
           url: 'https://www.facebook.com/profile.php?id=100012091775653',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13076961_102611140151945_5588378468461390978_n.jpg?oh=69edc207c40c048cecdb20a6a11e0e51&oe=5A1E51FB',
+          image: '/images/profilepics/brett_fletcher.jpg',
           affiliation: {
             name: 'Encinitas, California',
             url: 'https://www.facebook.com/places/Things-to-do-in-Encinitas-California/109680939058152/',
@@ -340,7 +340,7 @@ export default ({ userId }) => {
           id: 41,
           name: 'Howard Reynolds',
           url: 'https://www.facebook.com/profile.php?id=100012007329355',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13100822_104751579935086_659758065158108282_n.jpg?oh=4d2cb5b8af5a800ea4def9704f03431a&oe=5A1B0E44',
+          image: '/images/profilepics/howard_reynolds.jpg',
           affiliation: {
             name: 'Ohio Christian University',
             url: 'https://www.facebook.com/OhioChristian/?pnref=lhc',
@@ -384,7 +384,7 @@ export default ({ userId }) => {
           id: 218,
           name: 'Jed Dawkins',
           url: 'https://www.facebook.com/profile.php?id=100012229806866',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13239480_109217112829282_6839279822883517532_n.jpg?oh=cf2e342779978ba9433e7fa37b6ec12d&oe=5A3DF02B',
+          image: '/images/profilepics/jed_dawkins.jpg',
           affiliation: {
             name: '',
             url: '',
@@ -428,7 +428,7 @@ export default ({ userId }) => {
           id: 235,
           name: 'Griffin Loehner',
           url: 'https://www.facebook.com/profile.php?id=100012499531647',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/13413789_101484856944832_2324625171318909720_n.jpg?oh=00563f3a2f35c83c6ff070d454c008ee&oe=5A7A4ED4',
+          image: '/images/profilepics/griffin_loehner.jpg',
           affiliation: {
             name: 'Spokane, Washington',
             url: 'https://www.facebook.com/places/Things-to-do-in-Spokane-Washington/105658682801419/',
@@ -472,7 +472,7 @@ export default ({ userId }) => {
           id: 261,
           name: 'Marshall Cannon',
           url: 'https://www.facebook.com/profile.php?id=100009196620250',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/10155366_1378547965795078_1883343799525519238_n.jpg?oh=ea6b5421bc55300b4e361cc50f9c1a9a&oe=5A45584F',
+          image: '/images/profilepics/marshall_cannon.jpg',
           affiliation: {
             name: 'Costco',
             url: 'https://www.facebook.com/Costco/?timeline_context_item_type=intro_card_work&timeline_context_item_source=100009196620250&pnref=lhc',
