@@ -29,13 +29,13 @@ export default ({ userId }) => {
         id: 'musc3chipo002a',
         content: '肌 肉 哥，你希望肌肉結實嗎？你想要超人的耐力嗎？你想要更多精力嗎？沒問題, 用這就沒錯。',
         user: {
-          id: 31,
-          name: 'Steve Wilburn',
-          url: 'https://www.facebook.com/steve.wilburn.7547',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/18222154_423982387971204_6847227343208469749_n.jpg?oh=2078362788374e682a44b0c0412f00e2&oe=5A25ED7B',
+          id: 1005,
+          name: 'Daniel Grant',
+          url: 'https://www.facebook.com/profile.php?id=100010753321960',
+          image: '/images/profilepics/daniel_grant.jpg',
           affiliation: {
-            name: 'San Marcos, Texas',
-            url: 'https://www.facebook.com/places/Things-to-do-in-San-Marcos-Texas/108013242560899/',
+            name: 'H&M',
+            url: 'https://www.facebook.com/pages/HM/105835336124103?timeline_context_item_type=intro_card_work&timeline_context_item_source=100010753321960&pnref=lhc',
           },
         },
         options: {
@@ -248,13 +248,13 @@ export default ({ userId }) => {
             parentId: 'musc3chipo007b',
             content: '不了，大概看他們的存貨量吧。我第一次買的時候，不敢多買。結果他們賣完了。再不會再犯那樣的錯誤。',
             user: {
-              id: 31,
-              name: 'Steve Wilburn',
-              url: 'https://www.facebook.com/steve.wilburn.7547',
-              image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/18222154_423982387971204_6847227343208469749_n.jpg?oh=2078362788374e682a44b0c0412f00e2&oe=5A25ED7B',
+              id: 1005,
+              name: 'Daniel Grant',
+              url: 'https://www.facebook.com/profile.php?id=100010753321960',
+              image: '/images/profilepics/daniel_grant.jpg',
               affiliation: {
-                name: 'San Marcos, Texas',
-                url: 'https://www.facebook.com/places/Things-to-do-in-San-Marcos-Texas/108013242560899/',
+                name: 'H&M',
+                url: 'https://www.facebook.com/pages/HM/105835336124103?timeline_context_item_type=intro_card_work&timeline_context_item_source=100010753321960&pnref=lhc',
               },
             },
             options: {

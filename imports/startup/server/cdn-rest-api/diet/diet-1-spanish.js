@@ -341,7 +341,7 @@ export default ({ userId }) => {
           id: 27,
           name: 'Heather Jackson',
           url: 'https://www.facebook.com/profile.php?id=100012639579438',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/p160x160/13925377_166742037090448_8792391243972420509_n.jpg?oh=c206f63ac06a1eb0b04eb181f7292758&oe=5A1DB333',
+          image: '/images/noprofilepic.jpg',
           affiliation: {
             name: 'San Diego State University',
             url: 'https://www.facebook.com/SanDiegoState/?pnref=lhc&rf=105454902822165',

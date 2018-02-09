@@ -73,13 +73,13 @@ export default ({ userId }) => {
         id: 'edys4spapo010a',
         content: 'Sin dudarlo siento una diferencia. Empecé a tomarlo hace unas semanas y estoy muy contento con mis resultados hasta el día de hoy, compraré otro pronto para mantener este ciclo en marcha, cada vez mejoro más y más y chica se dio cuenta de la diferencia desde el principio.',
         user: {
-          id: 51,
-          name: 'Steve Wilburn',
-          url: 'https://www.facebook.com/steve.wilburn.7547',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/18222154_423982387971204_6847227343208469749_n.jpg?oh=2078362788374e682a44b0c0412f00e2&oe=5A25ED7B',
+          id: 1005,
+          name: 'Daniel Grant',
+          url: 'https://www.facebook.com/profile.php?id=100010753321960',
+          image: '/images/profilepics/daniel_grant.jpg',
           affiliation: {
-            name: 'Aliso Viejo, California',
-            url: 'https://www.facebook.com/places/Things-to-do-in-Aliso-Viejo-California/107460889283809/',
+            name: 'H&M',
+            url: 'https://www.facebook.com/pages/HM/105835336124103?timeline_context_item_type=intro_card_work&timeline_context_item_source=100010753321960&pnref=lhc',
           },
         },
         options: {

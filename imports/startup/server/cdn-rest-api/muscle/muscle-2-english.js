@@ -340,7 +340,7 @@ export default ({ userId }) => {
           id: 263,
           name: 'Seth Wright',
           url: 'https://www.facebook.com/profile.php?id=100012287114085',
-          image: 'https://scontent-lax3-1.xx.fbcdn.net/v/t1.0-1/p160x160/14355636_210068519412717_4764121635957287121_n.jpg?oh=f1193a4a1fb5d523a121f1ffd550b05f&oe=5A720B20',
+          image: '/images/profilepics/seth_wright.jpg',
           affiliation: {
             name: 'Eau Claire, Wisconsin',
             url: 'https://www.facebook.com/places/Things-to-do-in-Eau-Claire-Wisconsin/103106229729097/',

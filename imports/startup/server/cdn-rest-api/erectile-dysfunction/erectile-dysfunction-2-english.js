@@ -161,13 +161,13 @@ export default ({ userId }) => {
         id: 'edys3enspo017b',
         content: 'Im in my younger thirties and was experiencing little performance issues recently. Ive attributed it to nerves since im back in the dating game and looking to impress. haha. Anyway...i wasnt impressing. After looking into some products, I figured I would give this a try. Seriously...ive used it twice and both times have exceeded expectations. Idk what it is but I havent been having any issue when its time to perform. Everything works like its supposed to and honestly, works a little better. lol. First time i took one pill a few hours before. The second time I took a pill a few hours before, then about an hour or so after taking the first, I opened a capsule and mixed half of it with a small glass of water and let me tell you....the stuffed worked perfectly. Im sure it affects everybody different but so far I have been happy with my purchase. Havent felt any side affects either. Great stuff.',
         user: {
-          id: 51,
-          name: 'Steve Wilburn',
-          url: 'https://www.facebook.com/steve.wilburn.7547',
-          image: 'https://scontent-sjc2-1.xx.fbcdn.net/v/t1.0-1/18222154_423982387971204_6847227343208469749_n.jpg?oh=2078362788374e682a44b0c0412f00e2&oe=5A25ED7B',
+          id: 1005,
+          name: 'Daniel Grant',
+          url: 'https://www.facebook.com/profile.php?id=100010753321960',
+          image: '/images/profilepics/daniel_grant.jpg',
           affiliation: {
-            name: 'Aliso Viejo, California',
-            url: 'https://www.facebook.com/places/Things-to-do-in-Aliso-Viejo-California/107460889283809/',
+            name: 'H&M',
+            url: 'https://www.facebook.com/pages/HM/105835336124103?timeline_context_item_type=intro_card_work&timeline_context_item_source=100010753321960&pnref=lhc',
           },
         },
         options: {
