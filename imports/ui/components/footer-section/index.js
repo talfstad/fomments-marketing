@@ -8,10 +8,10 @@ class Footer extends Component {
         <div className="container-lg">
           <div className="fl">
             <Link to="/">
-              <img
+              <object
                 className="fomments-logo f-logo-footer"
-                src="images/fomments-logo-blue.svg"
-                alt="fomments logo"
+                data="/images/fomments-logo-blue.svg"
+                type="image/svg+xml"
               />
             </Link>
             {

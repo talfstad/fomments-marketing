@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 class FeatureSection extends Component {
   render() {
     const {
-      // user,
+      user,
       scrollToCommentSection,
     } = this.props;
 
@@ -29,22 +29,18 @@ class FeatureSection extends Component {
                 </span>
               </span>
               <span className="message">
-                <strong>Announcement:</strong>
-                <span> Fomments is in a limited private release.
-                   Public registration is temporarily closed.
+                <strong>
+                  NOTICE:
+                </strong>
+                <span> We will add requested verticals!
+                  Don&apos;t see a vertical you need? Gives us a heads up!
                 </span>
-                {
-                  // !_.has(user, '_id') ?
-                  //    <Link to="/signup" className="new-pill-button">
-                          // Sign up <i className="fa fa-angle-double-right" /></Link>
-                  // :
-                  //   <noscript />
-                }
               </span>
             </span>
             <h1>The new standard in landing page comments</h1>
             <p className="common-body-text">
-              Trigger a consumer&apos;s urge to purchase by using comments proven to sell more.
+              Privacy, ease of use, and beauty all
+              wrapped together to make your life a little happier.
             </p>
             <ul>
               <li>
@@ -54,11 +50,14 @@ class FeatureSection extends Component {
                 </a>
               </li>
               {
-                // <li>
-                //   <a href="" className="find-out-more-btn common-button">
-                //     Find out more
-                //   </a>
-                // </li>
+                !_.has(user, '_id') ?
+                  <li>
+                    <Link to="/signup" className="find-out-more-btn common-button">
+                      Sign up now
+                    </Link>
+                  </li>
+                :
+                  <noscript />
               }
             </ul>
           </div>
@@ -70,7 +69,7 @@ class FeatureSection extends Component {
 
 FeatureSection.propTypes = {
   scrollToCommentSection: PropTypes.func.isRequired,
-  // user: PropTypes.shape({}),
+  user: PropTypes.shape({}),
 };
 
 const mapStateToProps = state => ({

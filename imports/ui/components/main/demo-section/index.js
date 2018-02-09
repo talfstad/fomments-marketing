@@ -46,15 +46,15 @@ class AtTheFold extends Component {
           <section id="feels-real" className="container-lg">
             <h2>
               <span>
-                The comments are designed, but these profiles are real.
+                Easily use at scale, with split tests, and integrate in minutes.
               </span>
               <i className="fa fa-angle-double-right" />
 
             </h2>
             <p className="common-body-text">
-              Fomments runs 100% in the consumer&apos;s browser
-              <br />with no social media connection or tracking
-              <br />so each user sees a unique copy.
+              Fomments runs 100% in the browser and
+              <br />can update the section, language and product name
+              <br />dynamically, giving you more time for life.
             </p>
             <Link
               to="/live-landing-page-demo"

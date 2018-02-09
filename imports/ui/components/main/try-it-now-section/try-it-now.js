@@ -8,16 +8,15 @@ const TryItNow = () => (
         <div className="action-text">
           <h2>
             <strong>Ready to give it a try? </strong>
-            <span> Join our free early registration &amp; enjoy full access.</span>
+            <span> Sign up and make your comment sections beautiful!</span>
           </h2>
         </div>
         <div className="action-buttons">
           <Link to="/signup">
             <button className="f-action-button green mr10">
-              Test it out now
+              Sign up now
             </button>
           </Link>
-          <button className="f-action-button">Find out more</button>
         </div>
       </div>
     </section>

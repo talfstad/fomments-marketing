@@ -15,19 +15,19 @@ class SignupModal extends Component {
   componentDidMount() {
     this.keepAspectRatio();
     // On resize, resize aspect ratio
-    $(window).resize(() => {
-      this.keepAspectRatio();
-    });
+    // $(window).resize(() => {
+    //   this.keepAspectRatio();
+    // });
 
-    $(this.el).on('shown.bs.modal', () => {
-      if (this.shouldClose) {
-        this.closeModal();
-      }
-    });
-
-    $(this.el).on('hidden.bs.modal', () => {
-      this.redirectOnClose();
-    });
+    // $(this.el).on('shown.bs.modal', () => {
+    //   if (this.shouldClose) {
+    //     this.closeModal();
+    //   }
+    // });
+    //
+    // $(this.el).on('hidden.bs.modal', () => {
+    //   this.redirectOnClose();
+    // });
 
     $(this.el).modal('show');
   }
@@ -70,7 +70,6 @@ class SignupModal extends Component {
 
   render() {
     const { match } = this.props;
-
     return (
       <div
         ref={(c) => { this.el = c; }}

@@ -110,17 +110,6 @@ class LoginDropDown extends Component {
       >
         <button
           type="button"
-          className="header-list-button btn dropdown-toggle last-no-border-button"
-          data-toggle="dropdown"
-          aria-haspopup="true"
-          aria-expanded="false"
-        >
-          <span>
-            Contact
-          </span>
-        </button>
-        <button
-          type="button"
           className="login-button btn dropdown-toggle"
           data-toggle="dropdown"
           aria-haspopup="true"

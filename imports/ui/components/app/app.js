@@ -39,7 +39,6 @@ class App extends Component {
         </Switch>
         <Route path="*" component={Footer} />
         <Route
-          exact
           path="/signup"
           component={SignupModal}
         />

@@ -10,25 +10,15 @@ const Header = () => (
       <ul className="nav-root">
         <li className="nav-section logo">
           <Link
-            to="/signup/one"
+            to="/"
             className="root-link"
           >
-            <img
+            <object
               className="fomments-logo"
-              alt="fomments logo"
-              src="/images/fomments-logo-white.svg"
+              data="/images/fomments-logo-white.svg"
+              type="image/svg+xml"
             />
           </Link>
-          <div className="button-group product-info-list">
-            {
-              // <button
-              //   type="button"
-              //   className="header-list-button btn"
-              // >
-              //   <span>Features</span>
-              // </button>
-            }
-          </div>
         </li>
         <li className="nav-section signin">
           <LoginDropDown />
