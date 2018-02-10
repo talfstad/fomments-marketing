@@ -45,8 +45,8 @@ class SignupModalOne extends Component {
             </div>
             <div className="signup-content vertical-align-center">
               <h3>
-            Welcome to <strong>fomments</strong>!
-          </h3>
+                Welcome to <strong>fomments</strong>!
+              </h3>
               <p className="title">
                 <span>Starting today, enjoy full access including over </span>
                 <em>50</em>
@@ -54,9 +54,32 @@ class SignupModalOne extends Component {
                 <em>8</em>
                 <span> verticals and </span>
                 <em>6</em>
-                <span> languages.</span>
+                <span> languages. We are constantly working to add more
+                verticals and languages at your request!</span>
               </p>
               <img src="/images/signup-flow-one-feat.png" alt="sign up feature" />
+              <section className="container-lg">
+                <div className="f-container checkout-one-pricing full-width pt0 pb0 clearfix">
+                  <div className="action-text ptb10">
+                    <h2>
+                      <strong>Instantly unlock all sections, languages, features
+                      and more including:</strong>
+                    </h2>
+                    <ul className="normal-slash">
+                      <li><span>Request new verticals and sections at any time</span></li>
+                      <li><span>Unlimited usage in your landing pages</span></li>
+                      <li><span>Custom product names</span></li>
+                      <li><span>Comments in over 6 languages and growing</span></li>
+                      <li><span>Constant feature improvement</span></li>
+                    </ul>
+                  </div>
+                  <div className="full-height-actions">
+                    <div className="full-height-action-button">
+                      <h1>$29<small>/mo</small></h1>
+                    </div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>

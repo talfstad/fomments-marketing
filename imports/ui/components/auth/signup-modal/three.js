@@ -15,6 +15,7 @@ class SignupModalThree extends Component {
   }
 
   render() {
+    // Instantly unlock all comment sections and features.
     return (
       <div>
         Hello 3

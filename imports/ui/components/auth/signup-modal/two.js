@@ -112,7 +112,7 @@ class SignupModalTwo extends Component {
             type="submit"
             className="home-tablet-button f-action-button green"
           >
-            Last step: Invite your team <i className="fa fa-angle-double-right" />
+            Last step: Unlock All Sections &amp; Features <i className="fa fa-angle-double-right" />
           </button>
         </div>
       </form>
