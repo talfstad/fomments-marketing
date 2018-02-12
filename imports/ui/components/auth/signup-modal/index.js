@@ -13,27 +13,7 @@ import ThreeComponent from './three';
 
 class SignupModal extends Component {
   componentDidMount() {
-    this.keepAspectRatio();
-    // On resize, resize aspect ratio
-    // $(window).resize(() => {
-    //   this.keepAspectRatio();
-    // });
-
-    // $(this.el).on('shown.bs.modal', () => {
-    //   if (this.shouldClose) {
-    //     this.closeModal();
-    //   }
-    // });
-    //
-    // $(this.el).on('hidden.bs.modal', () => {
-    //   this.redirectOnClose();
-    // });
-
     $(this.el).modal('show');
-  }
-
-  componentDidUpdate() {
-    this.keepAspectRatio();
   }
 
   componentWillUnmount() {
@@ -52,13 +32,6 @@ class SignupModal extends Component {
     }
   }
 
-  // Maintain a 4:3 aspect ration on modal for 90% modal height.
-  keepAspectRatio() {
-    const modalHeight = $(this.el).height() * 0.9;
-    const modalWidth = modalHeight * 0.75;
-    $('.live-demo-modal').css('width', `${modalWidth}px`);
-  }
-
   closeModal() {
     $(this.el).modal('hide');
   }
@@ -73,7 +46,7 @@ class SignupModal extends Component {
     return (
       <div
         ref={(c) => { this.el = c; }}
-        className="modal fade ohidden"
+        className="modal fade"
         data-backdrop="static"
         tabIndex="-1"
       >

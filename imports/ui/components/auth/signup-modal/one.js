@@ -48,34 +48,29 @@ class SignupModalOne extends Component {
                 Welcome to <strong>fomments</strong>!
               </h3>
               <p className="title">
-                <span>Starting today, enjoy full access including over </span>
+                <span>Starting today enjoy full access including over </span>
                 <em>50</em>
                 <span> sections in </span>
                 <em>8</em>
                 <span> verticals and </span>
                 <em>6</em>
-                <span> languages. We are constantly working to add more
-                verticals and languages at your request!</span>
+                <span> languages.</span>
               </p>
               <img src="/images/signup-flow-one-feat.png" alt="sign up feature" />
               <section className="container-lg">
-                <div className="f-container checkout-one-pricing full-width pt0 pb0 clearfix">
+                <div className="checkout-one-pricing full-width pt0 pb0 clearfix">
                   <div className="action-text ptb10">
-                    <h2>
-                      <strong>Instantly unlock all sections, languages, features
-                      and more including:</strong>
-                    </h2>
                     <ul className="normal-slash">
-                      <li><span>Request new verticals and sections at any time</span></li>
-                      <li><span>Unlimited usage in your landing pages</span></li>
-                      <li><span>Custom product names</span></li>
-                      <li><span>Comments in over 6 languages and growing</span></li>
-                      <li><span>Constant feature improvement</span></li>
+                      <li><span>Unlimited usage</span></li>
+                      <li><span>Custom product name</span></li>
+                      <li><span>Comments in over 6 languages</span></li>
+                      <li><span>New verticals, features and comments added every month</span></li>
+                      <li><span>Quick response live chat support</span></li>
                     </ul>
-                  </div>
-                  <div className="full-height-actions">
-                    <div className="full-height-action-button">
-                      <h1>$29<small>/mo</small></h1>
+                    <div className="full-height-actions">
+                      <div className="full-height-action-button">
+                        <h1>$29<small>/mo</small></h1>
+                      </div>
                     </div>
                   </div>
                 </div>
