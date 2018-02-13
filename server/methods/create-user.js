@@ -13,3 +13,8 @@
 //
 // export default CreateNewUser;
 //
+
+Accounts.onCreateUser((options, user) => ({
+  ...user,
+  fullName: options.profile.fullName,
+}));

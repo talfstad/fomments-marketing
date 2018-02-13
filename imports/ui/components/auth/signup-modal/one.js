@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 class SignupModalOne extends Component {
+  componentDidUpdate() {
+    const { user } = this.props;
+    if (_.has(user, '_id')) {
+      this.props.closeModal();
+    }
+  }
+
   render() {
     return (
       <div
-        className="tablet-container live-demo-modal"
+        className="tablet-container live-demo-modal signup-modal"
         role="document"
       >
         <div className="tablet-portrait">
@@ -45,7 +54,7 @@ class SignupModalOne extends Component {
             </div>
             <div className="signup-content vertical-align-center">
               <h3>
-                Welcome to <strong>fomments</strong>!
+      Welcome to <strong>fomments</strong>!
               </h3>
               <p className="title">
                 <span>Starting today enjoy full access including over </span>
@@ -80,7 +89,7 @@ class SignupModalOne extends Component {
         </div>
         <Link to="/signup/two">
           <button className="home-tablet-button f-action-button green">
-            Create your account <i className="fa fa-angle-double-right" />
+      Create your account <i className="fa fa-angle-double-right" />
           </button>
         </Link>
       </div>
@@ -88,4 +97,18 @@ class SignupModalOne extends Component {
   }
 }
 
-export default SignupModalOne;
+SignupModalOne.propTypes = {
+  user: PropTypes.shape({}),
+  closeModal: PropTypes.func,
+};
+
+SignupModalOne.defaultProps = {
+  user: {},
+  closeModal: null,
+};
+
+const mapStateToProps = state => ({
+  user: state.user,
+});
+
+export default connect(mapStateToProps)(SignupModalOne);

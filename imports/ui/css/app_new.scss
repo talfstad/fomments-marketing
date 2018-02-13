@@ -208,10 +208,14 @@ ul {
   overflow: hidden !important;
 }
 
+.signup-modal {
+  height: 800px !important;
+  width: 600px !important;
+}
+
 .live-demo-modal {
   margin: 50px auto;
-  height: 800px;
-  width: 600px;
+  height: 90%;
 
   p {
     margin-top: 20px;
@@ -558,17 +562,6 @@ ul {
     }
   }
 
-  .f-error {
-    .f-input-icon {
-      svg {
-        fill: #f05230;
-      }
-    }
-    .f-response {
-      color: #f05230;
-    }
-  }
-
   .f-input-icon {
     position: relative;
 
@@ -616,6 +609,21 @@ ul {
     }
   }
 
+  &.f-error {
+    .f-input-icon {
+      svg {
+        fill: #f05230;
+      }
+    }
+    .f-response {
+      color: #f05230;
+    }
+  }
+
+  .f-error-text {
+    color: #f05230;
+  }
+
   // #signup-password {
   //   background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat;
   //   background-attachment: scroll;
@@ -647,4 +655,12 @@ ul {
 
 .StripeElement {
   -webkit-font-smoothing: 'antialiased';
+}
+
+.mt8 {
+  margin-top: 8px !important;
+}
+
+.mb5 {
+  margin-bottom: 5px !important;
 }

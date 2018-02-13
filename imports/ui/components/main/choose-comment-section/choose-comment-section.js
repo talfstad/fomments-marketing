@@ -9,6 +9,7 @@ export class ChooseCommentSectionComponent extends Component {
   componentDidMount() {
     this.props.loadUser();
     this.props.loadSections();
+    this.props.loadPurchases();
     $('.selectpicker').selectpicker({
       style: 'btn-default btn-lg',
     });
@@ -289,6 +290,7 @@ ChooseCommentSectionComponent.propTypes = {
   verticals: PropTypes.shape({}),
   loadFommentSection: PropTypes.func,
   loadSections: PropTypes.func,
+  loadPurchases: PropTypes.func,
   loadUser: PropTypes.func,
   languages: PropTypes.shape({}),
   activeState: PropTypes.shape({

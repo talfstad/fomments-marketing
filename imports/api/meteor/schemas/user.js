@@ -23,6 +23,9 @@ const UserSchema = new SimpleSchema({
   createdAt: {
     type: Date,
   },
+  fullName: {
+    type: String,
+  },
 });
 
 export default UserSchema;

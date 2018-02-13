@@ -29,4 +29,9 @@ SignupModalThree.propTypes = {
   updateShouldClose: PropTypes.func,
 };
 
+SignupModalThree.defaultProps = {
+  location: {},
+  updateShouldClose: null,
+};
+
 export default withRouter(SignupModalThree);

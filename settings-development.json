@@ -1,8 +1,10 @@
 {
   "public": {
     "env": "development",
-    "FOMMENTS_CDN": "http://localhost:8080"
+    "FOMMENTS_CDN": "http://localhost:8080",
+    "STRIPE_API_KEY": "pk_test_Z8taSFO4d9xGEzRqwtoacbIr"
   },
+  "STRIPE_API_KEY": "sk_test_19DeIP3XC4T1OpcSLVTCCXyw",
   "galaxy.meteor.com": {
     "env": {
       "MONGO_URL": "mongodb://buildcave:Wewillrockyou1986!@ds147373-a0.mlab.com:47373,ds147373-a1.mlab.com:47373/prod?replicaSet=rs-ds147373"

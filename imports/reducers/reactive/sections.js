@@ -166,8 +166,8 @@ export default (state = INITIAL_STATE, action) => {
     }
 
     const activeSections = getActiveSections();
-    const updatedActiveSection = activeSections.find(
-      activeSection => activeSection._id === activeState.section._id);
+    const updatedActiveSection = activeSections.find(activeSection =>
+      activeSection._id === activeState.section._id);
 
     // Intent: Don't reset activeState.section on update unless
     // we have changed a select option that impacts it or it has been deleted.

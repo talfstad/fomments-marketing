@@ -28,7 +28,8 @@
     "redux-logger": "^2.10.2",
     "redux-thunk": "^2.2.0",
     "sendinblue-api": "^1.0.8",
-    "simpl-schema": "^0.3.2"
+    "simpl-schema": "^0.3.2",
+    "stripe": "^5.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",

@@ -13,7 +13,11 @@ import ThreeComponent from './three';
 
 class SignupModal extends Component {
   componentDidMount() {
-    $(this.el).modal('show');
+    if (this.shouldClose) {
+      this.redirectOnClose();
+    } else {
+      $(this.el).modal('show');
+    }
   }
 
   componentWillUnmount() {
@@ -22,11 +26,11 @@ class SignupModal extends Component {
 
   redirectOnClose() {
     const {
-        history,
-        modalRedirectRouteOnClose,
-      } = this.props;
-      // Intent: redirect on close if we have a prop.
-      // If not, just close.
+      history,
+      modalRedirectRouteOnClose,
+    } = this.props;
+    // Intent: redirect on close if we have a prop.
+    // If not, just close.
     if (!_.isEmpty(modalRedirectRouteOnClose)) {
       history.push(modalRedirectRouteOnClose);
     }
@@ -54,21 +58,29 @@ class SignupModal extends Component {
           <Route
             exact
             path={`${match.url}/one`}
-            component={OneComponent}
+            component={() => (
+              <OneComponent
+                closeModal={() => this.redirectOnClose()}
+              />
+            )}
           />
           <Route
             exact
             path={`${match.url}/two`}
-            component={TwoComponent}
+            component={() => (
+              <TwoComponent
+                closeModal={() => this.redirectOnClose()}
+              />
+            )}
           />
           <Route
             exact
             path={`${match.url}/three`}
-            component={() =>
+            component={() => (
               <ThreeComponent
                 updateShouldClose={val => this.updateShouldClose(val)}
               />
-            }
+            )}
           />
           <Route render={() => <Redirect to="/signup/one" />} />
         </Switch>
