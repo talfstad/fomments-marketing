@@ -6,6 +6,8 @@ import {
   Redirect,
 } from 'react-router-dom';
 
+import { bootIntercom } from '/imports/actions/intercom';
+
 import Main from '../main';
 import Header from '../header/';
 import Footer from '../footer-section';
@@ -15,15 +17,8 @@ import AccountModal from '../auth/account/account-modal';
 import SignupModal from '../auth/signup-modal';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showAccountModal: true,
-    };
-  }
-
-  setShowAccountModal(show) {
-    this.setState({ showAccountModal: show });
+  componentDidMount() {
+    bootIntercom();
   }
 
   render() {

@@ -4,6 +4,10 @@ import ValidateLoginSchema from '../../api/meteor/schemas/validation/login';
 import ForgotPasswordValidationSchema from '../../api/meteor/schemas/validation/forgot-password';
 import ValidateResetPasswordSchema from '../../api/meteor/schemas/validation/reset-password';
 import ValidateChangePasswordSchema from '../../api/meteor/schemas/validation/change-password';
+import {
+  updateIntercom,
+  shutdownIntercom,
+} from '../intercom';
 
 export const HEADER_LOGIN_ERRORS = 'HEADER_LOGIN_ERRORS';
 export const HEADER_SHOW_CREATE_ACCOUNT = 'SHOW_CREATE_ACCOUNT';
@@ -13,8 +17,10 @@ export const RESET_PASSWORD_ERRORS = 'RESET_PASSWORD_ERRORS';
 export const CHANGE_PASSWORD_ERRORS = 'CHANGE_PASSWORD_ERRORS';
 
 // Intent: thunk, never calls dispatch, just logs user out
-export const logUserOut = () => () =>
+export const logUserOut = () => () => {
+  shutdownIntercom();
   Meteor.logout();
+};
 
 export const logUserIn = ({ email, password }) => (dispatch) => {
   const loginFormValidationContext = ValidateLoginSchema.namedContext();
@@ -31,6 +37,7 @@ export const logUserIn = ({ email, password }) => (dispatch) => {
           }],
         });
       } else {
+        updateIntercom({ email });
         dispatch({
           type: HEADER_LOGIN_ERRORS,
           payload: [],

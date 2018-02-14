@@ -11,7 +11,8 @@ class SignupModalThree extends Component {
       },
     } = this.props;
 
-    if (!state.authorized) updateShouldClose(true);
+    // if (!state.authorized) updateShouldClose(true);
+    updateShouldClose(true); // temp to just make it close for now
   }
 
   render() {

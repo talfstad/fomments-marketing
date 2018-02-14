@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { withRouter } from 'react-router-dom';
+
+import { updateIntercom } from '/imports/actions/intercom';
+import {
+  loadGoogleAnalytics,
+  logPageView,
+} from '/imports/actions/google-analytics';
 
 import FeatureSection from './feature-section';
 import DemoSection from './demo-section/';
@@ -6,17 +14,15 @@ import ChooseCommentSection from './choose-comment-section';
 import TryItNowSection from './try-it-now-section';
 
 class Main extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      showAccountModal: true,
-    };
-  }
+  componentDidMount() {
+    loadGoogleAnalytics();
 
-  setShowAccountModal(show) {
-    this.setState({ showAccountModal: show });
+    const { history } = this.props;
+    history.listen(() => {
+      updateIntercom();
+      logPageView();
+    });
   }
-
   render() {
     return (
       <div>
@@ -54,4 +60,12 @@ Main.scrollToCommentSection = (e) => {
   }, 'slow');
 };
 
-export default Main;
+Main.propTypes = {
+  history: PropTypes.shape({}),
+};
+
+Main.defaultProps = {
+  history: {},
+};
+
+export default withRouter(Main);

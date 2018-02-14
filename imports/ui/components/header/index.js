@@ -15,7 +15,7 @@ const Header = () => (
           >
             <object
               className="fomments-logo"
-              data="/images/fomments-logo-white.svg"
+              data="/images/fomments-logo-white-1.svg"
               type="image/svg+xml"
             />
           </Link>

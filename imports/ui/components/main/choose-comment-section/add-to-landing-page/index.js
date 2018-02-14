@@ -75,6 +75,7 @@ class InstallationInstructions extends Component {
     const {
       activeState,
       user,
+      purchases,
     } = this.props;
     const { section } = activeState;
     const { productName } = activeState;
@@ -94,7 +95,7 @@ class InstallationInstructions extends Component {
     });
 
     let sectionId = 'join-to-unlock';
-    if (_.has(user, '_id')) {
+    if (!_.isEmpty(purchases)) {
       sectionId = `${user._id}-${section.sectionId}`;
     }
     const { FOMMENTS_CDN } = Meteor.settings.public;
@@ -135,8 +136,9 @@ ideally right before the closing </body> tag. -->
       activeState,
       languages,
       verticals,
-      user,
+      purchases,
       handleScrollOpenSignin,
+      user,
     } = this.props;
     const { section } = activeState;
     const vertical = section.vertical ? (verticals[section.vertical]).name : '';
@@ -153,12 +155,12 @@ ideally right before the closing </body> tag. -->
               <span className="capitialize"> {vertical} </span>
               &middot; {section.name} &middot; <span className="capitialize">{section.language}</span>
             </div>
-            { !_.has(user, '_id') ?
+            { _.isEmpty(purchases) ?
               <button
                 className="btn btn-default pull-right"
                 onClick={e => handleScrollOpenSignin(e)}
               >
-                <span>Sign in </span>
+                {_.has(user, '_id') ? <span>Subscribe to Unlock</span> : <span>Sign in </span> }
                 <i className="ml5 fa fa-arrow-up" />
               </button>
               :
@@ -182,6 +184,7 @@ ideally right before the closing </body> tag. -->
 }
 
 InstallationInstructions.propTypes = {
+  purchases: PropTypes.arrayOf(PropTypes.object),
   handleScrollOpenSignin: PropTypes.func,
   user: PropTypes.shape({}),
   activeState: PropTypes.shape({}),
@@ -189,9 +192,19 @@ InstallationInstructions.propTypes = {
   verticals: PropTypes.shape({}),
 };
 
+InstallationInstructions.defaultProps = {
+  purchases: [],
+  handleScrollOpenSignin: null,
+  user: {},
+  activeState: {},
+  languages: {},
+  verticals: {},
+};
+
 const mapStateToProps = state => ({
   ...state.sections,
   user: state.user,
+  purchases: state.purchases,
 });
 
 export default connect(mapStateToProps)(InstallationInstructions);

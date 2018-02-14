@@ -10,7 +10,7 @@ class Footer extends Component {
             <Link to="/">
               <object
                 className="fomments-logo f-logo-footer"
-                data="/images/fomments-logo-blue.svg"
+                data="/images/fomments-logo-blue-1.svg"
                 type="image/svg+xml"
               />
             </Link>
