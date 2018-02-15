@@ -3,20 +3,21 @@ import { check } from 'meteor/check';
 import Stripe from 'stripe';
 import PurchasesCollection from '/imports/api/meteor/collections/purchases';
 
-// TODO: we can get duplicate customers if charge fails still if they refresh
-// to avoid this we need to persist customerId with purchase. need to make sure
-// we know the purchase has a key for this product type and that it states
-// the product is not active. we can call find one on the collection for the
-// input email and boom we have customerId.
 Meteor.methods({
-  processSubscription(args, previousAttemptData = {}) {
+  processSubscription(args) {
     check(args, { email: String, fullName: String, cardInformation: Object });
     const { email, cardInformation } = args;
 
+    // previous attempt data
+    const customerPurchase = PurchasesCollection.findOne({ email });
+
     let paymentTransactionToSave = {
-      ...previousAttemptData,
+      ...customerPurchase,
       email,
       createdAt: new Date(),
+      pendingCancelation: false,
+      canceled: false,
+      active: false,
     }; // Object will hold our final payment info
     const updatePaymentTransactionToSave = (newInfo) => {
       paymentTransactionToSave = {
@@ -71,6 +72,7 @@ Meteor.methods({
               currentPeriodEnd: new Date(response.current_period_end * 1000), // unix timestamp
               canceled: false,
               pendingCancelation: false,
+              active: true,
             });
             resolve();
           })
@@ -83,12 +85,26 @@ Meteor.methods({
     const runner = (callback) => {
       createCustomer()
         .then(() => attachCustomerToSubscription())
-        .then(() => PurchasesCollection.insert(paymentTransactionToSave))
+        .then(() => PurchasesCollection.upsert({
+          email,
+        }, {
+          $set: {
+            ...paymentTransactionToSave,
+          },
+        }))
         .then(() => {
           callback(null);
         })
         .catch(({ message }) => {
-          callback(new Meteor.Error('subscriptionError', message, paymentTransactionToSave));
+          // Error, persist current state of purchase
+          PurchasesCollection.upsert({
+            email,
+          }, {
+            $set: {
+              ...paymentTransactionToSave,
+            },
+          });
+          callback(new Meteor.Error('subscriptionError', message));
         });
     };
 

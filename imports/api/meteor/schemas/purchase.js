@@ -9,12 +9,18 @@ const PurchaseSchema = new SimpleSchema({
   },
   customerId: {
     type: String,
+    optional: true,
   },
   subscriptionId: {
+    type: String,
+    optional: true,
+  },
+  active: {
     type: String,
   },
   currentPeriodEnd: {
     type: Date,
+    optional: true,
   },
   pendingCancelation: {
     type: Boolean,

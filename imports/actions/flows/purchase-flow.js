@@ -6,7 +6,6 @@ import ValidateLoginSchema from '../../api/meteor/schemas/validation/login';
 import ValidateCreateAccountAndPurchaseSchema from '../../api/meteor/schemas/validation/purchase-flow';
 
 export const PURCHASE_FLOW_USER_LOGIN_ERRORS = 'PURCHASE_FLOW_USER_LOGIN_ERROR';
-export const PURCHASE_PREVIOUS_ATTEMPT_DATA = 'PURCHASE_PREVIOUS_ATTEMPT_DATA';
 export const CREATE_ACCOUNT_AND_PURCHASE_FLOW_ERRORS = 'CREATE_ACCOUNT_AND_PURCHASE_FLOW_ERRORS';
 
 export const resetLoginErrors = () => ({
@@ -26,7 +25,6 @@ export const createAccountAndPurchase = (
     password,
     cardInformation,
   },
-  previousAttemptData,
   callback,
 ) => (dispatch) => {
   // validate email, fullName, password
@@ -40,7 +38,7 @@ export const createAccountAndPurchase = (
 
   if (validateCreateAccountAndPurchaseContext.isValid()) {
     // call method to create user in stripe, attach source, and attach to subscription
-    Meteor.call('processSubscription', { email, fullName, cardInformation }, previousAttemptData, (processError) => {
+    Meteor.call('processSubscription', { email, fullName, cardInformation }, (processError) => {
       if (processError) {
         dispatch({
           type: CREATE_ACCOUNT_AND_PURCHASE_FLOW_ERRORS,
@@ -48,11 +46,6 @@ export const createAccountAndPurchase = (
             name: 'password',
             message: processError.reason,
           }],
-        });
-
-        dispatch({
-          type: PURCHASE_PREVIOUS_ATTEMPT_DATA,
-          payload: processError.details, // previous attempt data passed as details
         });
       } else {
         // processed subscription successfully
