@@ -7,7 +7,7 @@ Meteor.publish(PURCHASES_SUB, () => {
     const { emails = [{}] } = user;
     const [email] = emails;
 
-    return Purchases.findOne({
+    return Purchases.find({
       email: email.address,
       canceled: false,
     });

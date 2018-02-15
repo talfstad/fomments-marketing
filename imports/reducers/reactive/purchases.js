@@ -12,9 +12,10 @@ export default (state = INITIAL_STATE, action) => {
     // always keep user purchases up to date.
     // Use this to determine if user is subscribed or not
     case PURCHASES_SUBSCRIPTION_CHANGED: {
+      const [purchases] = action.payload;
       return {
         ...state,
-        purchases: action.payload,
+        purchases,
       };
     }
     default:

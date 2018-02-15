@@ -69,11 +69,7 @@ class SignupModalTwo extends Component {
 
   redirectToWelcome() {
     const { history } = this.props;
-
-    history.push({
-      pathname: '/signup/three',
-      state: { authorized: true },
-    });
+    history.push('/');
   }
 
   handleSubmit(e) {

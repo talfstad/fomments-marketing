@@ -13,11 +13,7 @@ import ThreeComponent from './three';
 
 class SignupModal extends Component {
   componentDidMount() {
-    if (this.shouldClose) {
-      this.redirectOnClose();
-    } else {
-      $(this.el).modal('show');
-    }
+    $(this.el).modal('show');
   }
 
   componentWillUnmount() {
@@ -38,11 +34,6 @@ class SignupModal extends Component {
 
   closeModal() {
     $(this.el).modal('hide');
-  }
-
-  updateShouldClose(shouldClose) {
-    this.shouldClose = shouldClose;
-    if (this.el) this.closeModal();
   }
 
   render() {
@@ -77,9 +68,7 @@ class SignupModal extends Component {
             exact
             path={`${match.url}/three`}
             component={() => (
-              <ThreeComponent
-                updateShouldClose={val => this.updateShouldClose(val)}
-              />
+              <ThreeComponent />
             )}
           />
           <Route render={() => <Redirect to="/signup/one" />} />

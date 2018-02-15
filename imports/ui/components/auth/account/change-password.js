@@ -44,7 +44,7 @@ class ChangePassword extends Component {
 
   render() {
     return (
-      <div>
+      <div className="clearfix f-container">
         <form className="clearfix reset-password-form" onSubmit={e => this.handleResetPassword(e)}>
           <p>change password</p>
           <div className="form-group">
@@ -92,6 +92,12 @@ class ChangePassword extends Component {
             </div>
           </div>
         </form>
+        <div className="reset-password-instructions">
+          <small>
+            Follow the form to create a new password. Once changed,
+            you will remain logged in, but your new password will be activated immediately.
+          </small>
+        </div>
       </div>
     );
   }

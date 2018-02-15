@@ -17,6 +17,7 @@
     "jquery": "^2.2.4",
     "meteor-node-stubs": "^0.2.11",
     "meteor-redux-middlewares": "^3.0.6",
+    "moment": "^2.20.1",
     "react": "^16.2.0",
     "react-copy-to-clipboard": "^5.0.1",
     "react-dom": "^16.2.0",

@@ -3,9 +3,11 @@ import SimpleSchema from 'simpl-schema';
 const PurchaseSchema = new SimpleSchema({
   email: {
     type: String,
+    optional: true,
   },
   createdAt: {
     type: Date,
+    optional: true,
   },
   customerId: {
     type: String,
@@ -17,6 +19,7 @@ const PurchaseSchema = new SimpleSchema({
   },
   active: {
     type: String,
+    optional: true,
   },
   currentPeriodEnd: {
     type: Date,
@@ -24,9 +27,11 @@ const PurchaseSchema = new SimpleSchema({
   },
   pendingCancelation: {
     type: Boolean,
+    optional: true,
   },
   canceled: {
     type: Boolean,
+    optional: true,
   },
 });
 

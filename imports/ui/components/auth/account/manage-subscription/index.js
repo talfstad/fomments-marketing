@@ -5,6 +5,7 @@ import * as loginActions from '/imports/actions/user/login';
 
 import SubscribeToFommentsForm from './subscribe-to-fomments';
 import UnsubscribeFromFommentsForm from './unsubscribe-from-fomments';
+import ReactivateSubscription from './reactivate-subscription';
 
 class ManageSubscription extends Component {
   componentDidMount() {
@@ -34,21 +35,22 @@ class ManageSubscription extends Component {
     return <noscript />;
   }
 
-  // if logged in and do not have a subscription show a form that allows
-  // them to sign up.
-
-  // if they have a subscription and want to cancel allow them to cancel
   render() {
     const { purchases } = this.props;
 
+    const getAccountSubscriptionOptions = () => {
+      if (purchases.canceled || _.isEmpty(purchases)) {
+        return <SubscribeToFommentsForm />;
+      } else if (purchases.pendingCancelation) {
+        return <ReactivateSubscription />;
+      }
+      return <UnsubscribeFromFommentsForm />;
+    };
+
     return (
-      <div className="reset-password-form">
+      <div className="manage-subscription-form">
         <p>Manage Subscription</p>
-        { _.isEmpty(purchases) ?
-          <SubscribeToFommentsForm />
-        :
-          <UnsubscribeFromFommentsForm />
-        }
+        { getAccountSubscriptionOptions() }
       </div>
     );
   }
@@ -57,13 +59,13 @@ class ManageSubscription extends Component {
 ManageSubscription.propTypes = {
   purchases: PropTypes.shape({}),
   changePasswordErrors: PropTypes.arrayOf(PropTypes.object),
-  resetChangePasswordErrors: PropTypes.arrayOf(PropTypes.object),
+  resetChangePasswordErrors: PropTypes.func,
 };
 
 ManageSubscription.defaultProps = {
   purchases: {},
-  changePasswordErrors: {},
-  resetChangePasswordErrors: {},
+  changePasswordErrors: [],
+  resetChangePasswordErrors: null,
 };
 
 const actions = {

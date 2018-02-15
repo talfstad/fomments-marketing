@@ -1271,7 +1271,32 @@ form.section-control .form-group small {
   }
 }
 
+.account-modal .reset-password-instructions {
+  margin: 25px;
+  width: 370px;
+  float: left;
+}
+
 .account-modal .reset-password-form {
+  float: left;
+  width: 400px;
+  margin-bottom: 25px;
+
+  button {
+    color: #fff;
+    background: #3ecf8e;
+  }
+  p {
+    color: #6772e5;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  label {
+    font-size: 14px;
+  }
+}
+
+.account-modal .manage-subscription-form {
   button {
     color: #fff;
     background: #3ecf8e;
