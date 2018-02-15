@@ -75,7 +75,7 @@ class InstallationInstructions extends Component {
     const {
       activeState,
       user,
-      purchases,
+      purchases: { active = false },
     } = this.props;
     const { section } = activeState;
     const { productName } = activeState;
@@ -95,7 +95,7 @@ class InstallationInstructions extends Component {
     });
 
     let sectionId = 'join-to-unlock';
-    if (!_.isEmpty(purchases)) {
+    if (active) {
       sectionId = `${user._id}-${section.sectionId}`;
     }
     const { FOMMENTS_CDN } = Meteor.settings.public;
@@ -136,7 +136,7 @@ ideally right before the closing </body> tag. -->
       activeState,
       languages,
       verticals,
-      purchases,
+      purchases: { active = false },
       handleScrollOpenSignin,
       user,
     } = this.props;
@@ -155,7 +155,7 @@ ideally right before the closing </body> tag. -->
               <span className="capitialize"> {vertical} </span>
               &middot; {section.name} &middot; <span className="capitialize">{section.language}</span>
             </div>
-            { _.isEmpty(purchases) ?
+            { active ?
               <button
                 className="btn btn-default pull-right"
                 onClick={e => handleScrollOpenSignin(e)}
@@ -184,7 +184,7 @@ ideally right before the closing </body> tag. -->
 }
 
 InstallationInstructions.propTypes = {
-  purchases: PropTypes.arrayOf(PropTypes.object),
+  purchases: PropTypes.shape({}),
   handleScrollOpenSignin: PropTypes.func,
   user: PropTypes.shape({}),
   activeState: PropTypes.shape({}),
@@ -193,7 +193,7 @@ InstallationInstructions.propTypes = {
 };
 
 InstallationInstructions.defaultProps = {
-  purchases: [],
+  purchases: {},
   handleScrollOpenSignin: null,
   user: {},
   activeState: {},

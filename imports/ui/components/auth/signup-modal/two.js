@@ -278,7 +278,6 @@ const actions = {
 const mapStateToProps = state => ({
   user: state.user,
   errors: state.purchaseFlow.errors,
-  purchases: state.purchases.purchases,
 });
 
 export default withRouter(connect(mapStateToProps, actions)(SignupModalTwo));

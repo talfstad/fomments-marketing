@@ -55,11 +55,15 @@ class ManageSubscription extends Component {
 }
 
 ManageSubscription.propTypes = {
-  purchases: PropTypes.arrayOf(PropTypes.object),
+  purchases: PropTypes.shape({}),
+  changePasswordErrors: PropTypes.arrayOf(PropTypes.object),
+  resetChangePasswordErrors: PropTypes.arrayOf(PropTypes.object),
 };
 
 ManageSubscription.defaultProps = {
-  purchases: [],
+  purchases: {},
+  changePasswordErrors: {},
+  resetChangePasswordErrors: {},
 };
 
 const actions = {

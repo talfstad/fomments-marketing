@@ -3,7 +3,7 @@ import {
 } from '/imports/actions/products/purchases/load';
 
 const INITIAL_STATE = {
-  purchases: [],
+  purchases: {},
   previousAttemptData: {},
 };
 
