@@ -15,4 +15,5 @@ export const updateIntercom = (data = {}) => {
 
 export const shutdownIntercom = () => {
   window.Intercom('shutdown');
+  bootIntercom();
 };

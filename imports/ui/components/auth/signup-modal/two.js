@@ -78,7 +78,10 @@ class SignupModalTwo extends Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { createAccountAndPurchaseAction } = this.props;
+    const {
+      createAccountAndPurchaseAction,
+      previousAttemptData,
+    } = this.props;
 
     this.stripeCardElement.state.stripe.createSource({
       type: 'card',
@@ -89,14 +92,18 @@ class SignupModalTwo extends Component {
 
         if (!cardInformation.error) {
           // call action which will do validation and call methods
-          createAccountAndPurchaseAction({
-            email: this.emailInput.value,
-            fullName: this.fullNameInput.value,
-            password: this.passwordInput.value,
-            cardInformation,
-          }, () => {
-            this.redirectToWelcome();
-          });
+          createAccountAndPurchaseAction(
+            {
+              email: this.emailInput.value,
+              fullName: this.fullNameInput.value,
+              password: this.passwordInput.value,
+              cardInformation,
+            },
+            previousAttemptData,
+            () => {
+              this.redirectToWelcome();
+            },
+          );
         }
       });
   }
@@ -256,6 +263,7 @@ SignupModalTwo.propTypes = {
   history: PropTypes.shape({}),
   closeModal: PropTypes.func,
   user: PropTypes.shape({}),
+  previousAttemptData: PropTypes.shape({}),
 };
 
 SignupModalTwo.defaultProps = {
@@ -264,6 +272,7 @@ SignupModalTwo.defaultProps = {
   user: {},
   history: {},
   closeModal: null,
+  previousAttemptData: {},
 };
 
 const actions = {
@@ -273,7 +282,8 @@ const actions = {
 const mapStateToProps = state => ({
   user: state.user,
   errors: state.purchaseFlow.errors,
-  purchases: state.purchases,
+  purchases: state.purchases.purchases,
+  previousAttemptData: state.purchases.previousAttemptData,
 });
 
 export default withRouter(connect(mapStateToProps, actions)(SignupModalTwo));

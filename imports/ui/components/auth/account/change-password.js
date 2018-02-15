@@ -82,12 +82,14 @@ class ChangePassword extends Component {
             {this.getErrorForField('confirmNewPassword')}
           </div>
           <div className="form-group">
-            <button
-              type="submit"
-              className="submit pull-right btn"
-            >
-              Submit
-            </button>
+            <div style={{ float: 'right' }}>
+              <button
+                type="submit"
+                className="signup-button common-button"
+              >
+                <i className="fa fa-times-circle mr5" />Change Password
+              </button>
+            </div>
           </div>
         </form>
       </div>

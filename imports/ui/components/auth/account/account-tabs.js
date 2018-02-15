@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ChangePassword from './change-password';
+import ManageSubscription from './manage-subscription';
 
 class AccountTabs extends Component {
   constructor(props) {
@@ -29,14 +30,6 @@ class AccountTabs extends Component {
               className="nav nav-stacked nav-pills"
               ref={(c) => { this.tabs = c; }}
             >
-              {/* <li className="active">
-                <a data-toggle="pill" href="#purchases">
-                  <i className="fa fa-shopping-cart" />
-                  <span>
-                    Purchases
-                  </span>
-                </a>
-              </li> */}
               <li className="active">
                 <a data-toggle="pill" href="#change-password">
                   <i className="fa fa-key" />
@@ -45,33 +38,25 @@ class AccountTabs extends Component {
                   </span>
                 </a>
               </li>
-              {/* <li>
-                <a data-toggle="pill" href="#support">
-                  <i className="fa fa-phone" />
+              <li>
+                <a data-toggle="pill" href="#subscription">
+                  <i className="fa fa-shopping-cart" />
                   <span>
-                    Support
+                    Manage Subscription
                   </span>
                 </a>
-              </li>*/}
+              </li>
             </ul>
           </nav>
         </div>
         <div className="col-sm-9">
           <div className="tab-content">
-            {/* <div id="purchases" className="tab-pane fade in active">
-              <h2>purchases</h2>
-            </div>*/}
             <div id="change-password" className="tab-pane fade in active">
-              {/* this.state.currentTab === '#change-password' ?
-                <ChangePassword />
-              : <noscript /> */}
               <ChangePassword />
             </div>
-            {/* <div id="support" className="tab-pane fade">
-              <div>
-                <h2>suppport</h2>
-              </div>
-            </div> */ }
+            <div id="subscription" className="tab-pane fade">
+              <ManageSubscription />
+            </div>
           </div>
         </div>
       </section>

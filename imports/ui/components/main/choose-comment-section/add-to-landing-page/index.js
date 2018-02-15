@@ -204,7 +204,7 @@ InstallationInstructions.defaultProps = {
 const mapStateToProps = state => ({
   ...state.sections,
   user: state.user,
-  purchases: state.purchases,
+  purchases: state.purchases.purchases,
 });
 
 export default connect(mapStateToProps)(InstallationInstructions);

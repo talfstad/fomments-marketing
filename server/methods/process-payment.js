@@ -1,21 +1,21 @@
 import { Meteor } from 'meteor/meteor';
 import { check } from 'meteor/check';
-import { handleError } from '/imports/api/meteor/methods-common/method-helpers';
 import Stripe from 'stripe';
 import PurchasesCollection from '/imports/api/meteor/collections/purchases';
 
+// TODO: we can get duplicate customers if charge fails still if they refresh
+// to avoid this we need to persist customerId with purchase. need to make sure
+// we know the purchase has a key for this product type and that it states
+// the product is not active. we can call find one on the collection for the
+// input email and boom we have customerId.
 Meteor.methods({
-  processSubscription(args) {
+  processSubscription(args, previousAttemptData = {}) {
     check(args, { email: String, fullName: String, cardInformation: Object });
     const { email, cardInformation } = args;
 
-    const user = Accounts.findUserByEmail(email);
-    if (!user) {
-      handleError('User not found');
-    }
-
     let paymentTransactionToSave = {
-      userId: user._id,
+      ...previousAttemptData,
+      email,
       createdAt: new Date(),
     }; // Object will hold our final payment info
     const updatePaymentTransactionToSave = (newInfo) => {
@@ -29,37 +29,71 @@ Meteor.methods({
     const stripe = Stripe(STRIPE_API_KEY);
 
     const createCustomer = () => new Promise((resolve, reject) => {
-      stripe.customers.create({
-        email,
-        source: cardInformation.source.id,
-      })
-        .then(({ id }) => resolve(id))
-        .catch(err => reject(err));
+      const { customerId } = paymentTransactionToSave;
+      if (!customerId) {
+        stripe.customers.create({
+          email,
+          source: cardInformation.source.id,
+        })
+          .then(({ id }) => {
+            updatePaymentTransactionToSave({
+              customerId: id,
+            });
+            resolve();
+          })
+          .catch(err => reject(err));
+      } else {
+        // Update customer's source to incoming source
+        stripe.customers.update(customerId, {
+          source: cardInformation.source.id,
+        })
+          .then(() => {
+            resolve();
+          })
+          .catch(err => reject(err));
+      }
     });
 
     const attachCustomerToSubscription = () => new Promise((resolve, reject) => {
-      stripe.subscriptions.create({
-        customer: paymentTransactionToSave.customerId,
-        items: [
-          {
-            plan: 'fomments',
-          },
-        ],
-      })
-        .then(({ id }) => resolve(id))
-        .catch(err => reject(err));
+      const { subscriptionId } = paymentTransactionToSave;
+      if (!subscriptionId) {
+        stripe.subscriptions.create({
+          customer: paymentTransactionToSave.customerId,
+          items: [
+            {
+              plan: 'fomments',
+            },
+          ],
+        })
+          .then((response) => {
+            updatePaymentTransactionToSave({
+              subscriptionId: response.id,
+              currentPeriodEnd: new Date(response.current_period_end * 1000), // unix timestamp
+              canceled: false,
+              pendingCancelation: false,
+            });
+            resolve();
+          })
+          .catch(err => reject(err));
+      } else {
+        resolve();
+      }
     });
 
-    createCustomer()
-      .then(id => updatePaymentTransactionToSave({
-        customerId: id,
-      }))
-      .then(() => attachCustomerToSubscription())
-      .then(id => updatePaymentTransactionToSave({
-        subscriptionId: id,
-      }))
-      .then(() => PurchasesCollection.insert(paymentTransactionToSave))
-      .catch(err => handleError(err));
+    const runner = (callback) => {
+      createCustomer()
+        .then(() => attachCustomerToSubscription())
+        .then(() => PurchasesCollection.insert(paymentTransactionToSave))
+        .then(() => {
+          callback(null);
+        })
+        .catch(({ message }) => {
+          callback(new Meteor.Error('subscriptionError', message, paymentTransactionToSave));
+        });
+    };
+
+    const runnerSync = Meteor.wrapAsync(runner);
+    return runnerSync();
   },
 });
 
