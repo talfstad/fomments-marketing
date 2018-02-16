@@ -39,7 +39,7 @@ class FeatureSection extends Component {
             </span>
             <h1>The new standard in landing page comments</h1>
             <p className="common-body-text">
-              Privacy, ease of use, and beauty all
+              Customization, Ease of use, and beauty all
               wrapped together to make your life a little happier.
             </p>
             <ul>

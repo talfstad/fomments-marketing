@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 import { unsubscribeFromFommentsAction } from '/imports/actions/products/purchases/manage';
 import * as loginActions from '/imports/actions/user/login';
 
-// 3. need to re-activate membership if not canceled
 // 4. need to subscribe if logged in but not subscribed.
 //
 // 5. need to set up a rest endpoint to consume a stripe webhook and deploy

@@ -35,7 +35,8 @@ class ReactivateSubscriptionForm extends Component {
           <div className="fl" style={{ width: '450px' }}>
             <small>
               <strong>It&apos;s not too late!</strong> You can reactivate your subscription
-              seamlessly until { moment(currentPeriodEnd).format('dddd MMMM Do') }.
+              seamlessly until { moment(currentPeriodEnd).format('dddd MMMM Do') }. If
+              you do not, no further charges will be inquired. Thank you for your business!
             </small>
           </div>
         </div>
