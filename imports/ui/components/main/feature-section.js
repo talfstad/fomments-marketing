@@ -72,6 +72,10 @@ FeatureSection.propTypes = {
   user: PropTypes.shape({}),
 };
 
+FeatureSection.defaultProps = {
+  user: {},
+};
+
 const mapStateToProps = state => ({
   user: state.user,
 });

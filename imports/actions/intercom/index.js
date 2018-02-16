@@ -10,7 +10,7 @@ export const bootIntercom = () => {
 };
 
 export const updateIntercom = (data = {}) => {
-  window.Intercom('update', data);
+  if (window.Intercom) window.Intercom('update', data);
 };
 
 export const shutdownIntercom = () => {

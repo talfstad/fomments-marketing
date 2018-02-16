@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import AccountTabs from './account-tabs';
+import OperationTabs from './operation-tabs';
 
-class AccountModal extends Component {
+class OperationAgreements extends Component {
   componentDidMount() {
     const {
       modalRedirectRouteOnClose,
@@ -22,19 +22,9 @@ class AccountModal extends Component {
       if (!_.isEmpty(modalRedirectRouteOnClose)) {
         history.push(modalRedirectRouteOnClose);
       } else {
-        history.push('/');
+        this.redirectToHome();
       }
     });
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const {
-      user,
-    } = nextProps;
-
-    if (!user.loggingIn && !user._id) {
-      this.redirectToHome();
-    }
   }
 
   componentWillUnmount() {
@@ -68,10 +58,10 @@ class AccountModal extends Component {
           <div className="modal-content no-footer clearfix">
             <div className="modal-header">
               <button type="button" className="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              <h4 className="modal-title">Account</h4>
+              <h4 className="modal-title">Operation Agreements</h4>
             </div>
             <div className="modal-body">
-              <AccountTabs />
+              <OperationTabs />
             </div>
           </div>
         </div>
@@ -80,13 +70,13 @@ class AccountModal extends Component {
   }
 }
 
-AccountModal.defaultProps = {
+OperationAgreements.defaultProps = {
   history: {},
   user: {},
   modalRedirectRouteOnClose: null,
 };
 
-AccountModal.propTypes = {
+OperationAgreements.propTypes = {
   history: PropTypes.shape({}),
   user: PropTypes.shape({}),
   modalRedirectRouteOnClose: PropTypes.string,
@@ -96,4 +86,4 @@ const mapStateToProps = state => ({
   user: state.user,
 });
 
-export default connect(mapStateToProps)(AccountModal);
+export default connect(mapStateToProps)(OperationAgreements);

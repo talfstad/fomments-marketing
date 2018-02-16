@@ -14,6 +14,7 @@ import Footer from '../footer-section';
 
 import ResetPasswordModal from '../auth/reset-password-modal';
 import AccountModal from '../auth/account/account-modal';
+import OperationAgreements from '../operation-agreements';
 import SignupModal from '../auth/signup-modal';
 
 class App extends Component {
@@ -45,6 +46,10 @@ class App extends Component {
           exact
           path="/account"
           component={AccountModal}
+        />
+        <Route
+          path="/operation-agreements"
+          component={OperationAgreements}
         />
       </div>
     );
