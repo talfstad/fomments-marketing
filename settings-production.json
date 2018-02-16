@@ -5,6 +5,7 @@
     "STRIPE_API_KEY": "pk_live_7Jr6qIIURxH8WTJEk7rVWtn7"
   },
   "STRIPE_API_KEY": "sk_live_Y7q5b6H2iK0kKMUv0d0YLfS0",
+  "FOMMENTS_STRIPE_PLAN_ID": "fomments",
   "galaxy.meteor.com": {
     "env": {
       "MONGO_URL": "mongodb://buildcave:Wewillrockyou1986!@ds147373-a0.mlab.com:47373,ds147373-a1.mlab.com:47373/prod?replicaSet=rs-ds147373"

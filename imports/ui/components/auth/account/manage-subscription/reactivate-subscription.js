@@ -3,11 +3,17 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import moment from 'moment';
 
+import { reactivateSubscriptionAction } from '/imports/actions/products/purchases/manage';
 import * as loginActions from '/imports/actions/user/login';
 
-class UnsubscribeFromFommentsForm extends Component {
-  componentDidMount() {
-
+class ReactivateSubscriptionForm extends Component {
+  handleReactivateSubscription(e) {
+    const {
+      reactivateSubscription,
+      purchases,
+    } = this.props;
+    reactivateSubscription(purchases);
+    e.preventDefault();
   }
 
   render() {
@@ -19,7 +25,10 @@ class UnsubscribeFromFommentsForm extends Component {
         Current Subscription: <strong>Pending Cancelation</strong>
         <div className="cancel-box clearfix">
           <div className="fl" style={{ width: '305px' }}>
-            <button className="signup-button common-button">
+            <button
+              onClick={e => this.handleReactivateSubscription(e)}
+              className="signup-button common-button"
+            >
               <i className="fa fa-times-circle mr5" />Reactivate Subscription
             </button>
           </div>
@@ -35,17 +44,20 @@ class UnsubscribeFromFommentsForm extends Component {
   }
 }
 
-UnsubscribeFromFommentsForm.propTypes = {
+ReactivateSubscriptionForm.propTypes = {
+  reactivateSubscription: PropTypes.func,
   purchases: PropTypes.shape({}),
 };
 
-UnsubscribeFromFommentsForm.defaultProps = {
+ReactivateSubscriptionForm.defaultProps = {
+  reactivateSubscription: null,
   purchases: {},
 };
 
 const actions = {
   changePassword: loginActions.changePassword,
   resetChangePasswordErrors: loginActions.resetChangePasswordErrors,
+  reactivateSubscription: reactivateSubscriptionAction,
 };
 
 const mapStateToProps = state => ({
@@ -53,4 +65,4 @@ const mapStateToProps = state => ({
   purchases: state.purchases.purchases,
 });
 
-export default connect(mapStateToProps, actions)(UnsubscribeFromFommentsForm);
+export default connect(mapStateToProps, actions)(ReactivateSubscriptionForm);
